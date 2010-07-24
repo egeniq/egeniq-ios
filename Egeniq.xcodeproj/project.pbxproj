@@ -1,0 +1,217 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D067DCED11FB130E0047EFAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D067DCE211FB130E0047EFAA = {
+			isa = PBXGroup;
+			children = (
+				D067DCE911FB130E0047EFAA /* Classes */,
+				D067DCEA11FB130E0047EFAA /* Other Sources */,
+				D067DCEB11FB130E0047EFAA /* Frameworks */,
+				D067DCF111FB130E0047EFAA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D067DCE911FB130E0047EFAA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D067DCEA11FB130E0047EFAA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		D067DCEB11FB130E0047EFAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D067DCF211FB130E0047EFAA /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D067DCF111FB130E0047EFAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D067DCF011FB130E0047EFAA /* libEgeniq.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D067DCEE11FB130E0047EFAA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D067DCEF11FB130E0047EFAA /* Egeniq */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D067DCF711FB130E0047EFAA /* Build configuration list for PBXNativeTarget "Egeniq" */;
+			buildPhases = (
+				D067DCEC11FB130E0047EFAA /* Sources */,
+				D067DCED11FB130E0047EFAA /* Frameworks */,
+				D067DCEE11FB130E0047EFAA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Egeniq;
+			productName = Egeniq;
+			productReference = D067DCF011FB130E0047EFAA /* libEgeniq.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D067DCE411FB130E0047EFAA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = D067DCE711FB130E0047EFAA /* Build configuration list for PBXProject "Egeniq" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D067DCE211FB130E0047EFAA;
+			productRefGroup = D067DCF111FB130E0047EFAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D067DCEF11FB130E0047EFAA /* Egeniq */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D067DCEC11FB130E0047EFAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D067DCF511FB130E0047EFAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Debug;
+		};
+		D067DCF611FB130E0047EFAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0;
+			};
+			name = Release;
+		};
+		D067DCF811FB130E0047EFAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				DSTROOT = /tmp/Egeniq.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Egeniq_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Egeniq;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Debug;
+		};
+		D067DCF911FB130E0047EFAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				DSTROOT = /tmp/Egeniq.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Egeniq_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Egeniq;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D067DCE711FB130E0047EFAA /* Build configuration list for PBXProject "Egeniq" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D067DCF511FB130E0047EFAA /* Debug */,
+				D067DCF611FB130E0047EFAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D067DCF711FB130E0047EFAA /* Build configuration list for PBXNativeTarget "Egeniq" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D067DCF811FB130E0047EFAA /* Debug */,
+				D067DCF911FB130E0047EFAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D067DCE411FB130E0047EFAA /* Project object */;
+}

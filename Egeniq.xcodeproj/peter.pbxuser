@@ -1,0 +1,19 @@
+// !$*UTF8*$!
+{
+	D067DCE411FB130E0047EFAA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = D067DCEF11FB130E0047EFAA /* Egeniq */;
+		codeSenseManager = D067DCE811FB130E0047EFAA /* Code sense */;
+		ignoreBreakpointsInProjectsDict = {
+		};
+		userBuildSettings = {
+		};
+	};
+	D067DCE811FB130E0047EFAA /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	D067DCEF11FB130E0047EFAA /* Egeniq */ = {
+		activeExec = 0;
+	};
+}
