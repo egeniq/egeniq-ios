@@ -7,29 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D011F501120C827700A07E28 /* EFPhotoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFPhotoModel.h */; };
+		D011F503120C839000A07E28 /* EFPhotoModelDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFPhotoModelDelegate.h */; };
+		D011F505120C85E400A07E28 /* EFPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F504120C85E400A07E28 /* EFPhoto.h */; };
+		D011F507120C865800A07E28 /* EFPhotoVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F506120C865800A07E28 /* EFPhotoVersion.h */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
-		D0EBF3FD11FB18820024C8BD /* ImageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EBF3F911FB18820024C8BD /* ImageScrollView.h */; };
-		D0EBF3FE11FB18820024C8BD /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EBF3FA11FB18820024C8BD /* ImageScrollView.m */; };
-		D0EBF3FF11FB18820024C8BD /* PhotoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EBF3FB11FB18820024C8BD /* PhotoViewController.h */; };
-		D0EBF40011FB18820024C8BD /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EBF3FC11FB18820024C8BD /* PhotoViewController.m */; };
-		D0EBF40B11FB18AA0024C8BD /* TilingView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EBF40911FB18AA0024C8BD /* TilingView.h */; };
-		D0EBF40C11FB18AA0024C8BD /* TilingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EBF40A11FB18AA0024C8BD /* TilingView.m */; };
-		D0EBF40F11FB18C70024C8BD /* FastTiledLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EBF40D11FB18C70024C8BD /* FastTiledLayer.h */; };
-		D0EBF41011FB18C70024C8BD /* FastTiledLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EBF40E11FB18C70024C8BD /* FastTiledLayer.m */; };
+		D093CD3611FC62A5000B51D8 /* EFPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = D093CD3411FC62A5000B51D8 /* EFPhotoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D093CD3711FC62A5000B51D8 /* EFPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D093CD3511FC62A5000B51D8 /* EFPhotoView.m */; };
+		D0BD8B43120ED7530034356B /* EFPhotoView-private.h in Headers */ = {isa = PBXBuildFile; fileRef = D0BD8B42120ED7530034356B /* EFPhotoView-private.h */; };
+		D0BD8B58120EDA7E0034356B /* EFImageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0BD8B56120EDA7E0034356B /* EFImageScrollView.h */; };
+		D0BD8B59120EDA7E0034356B /* EFImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BD8B57120EDA7E0034356B /* EFImageScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D011F500120C827700A07E28 /* EFPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoModel.h; sourceTree = "<group>"; };
+		D011F502120C839000A07E28 /* EFPhotoModelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoModelDelegate.h; sourceTree = "<group>"; };
+		D011F504120C85E400A07E28 /* EFPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhoto.h; sourceTree = "<group>"; };
+		D011F506120C865800A07E28 /* EFPhotoVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoVersion.h; sourceTree = "<group>"; };
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
-		D0EBF3F911FB18820024C8BD /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
-		D0EBF3FA11FB18820024C8BD /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = "<group>"; };
-		D0EBF3FB11FB18820024C8BD /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
-		D0EBF3FC11FB18820024C8BD /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
-		D0EBF40911FB18AA0024C8BD /* TilingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TilingView.h; sourceTree = "<group>"; };
-		D0EBF40A11FB18AA0024C8BD /* TilingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TilingView.m; sourceTree = "<group>"; };
-		D0EBF40D11FB18C70024C8BD /* FastTiledLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastTiledLayer.h; sourceTree = "<group>"; };
-		D0EBF40E11FB18C70024C8BD /* FastTiledLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastTiledLayer.m; sourceTree = "<group>"; };
+		D093CD3411FC62A5000B51D8 /* EFPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoView.h; sourceTree = "<group>"; };
+		D093CD3511FC62A5000B51D8 /* EFPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFPhotoView.m; sourceTree = "<group>"; };
+		D0BD8B42120ED7530034356B /* EFPhotoView-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EFPhotoView-private.h"; sourceTree = "<group>"; };
+		D0BD8B56120EDA7E0034356B /* EFImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageScrollView.h; sourceTree = "<group>"; };
+		D0BD8B57120EDA7E0034356B /* EFImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +59,7 @@
 		D067DCE911FB130E0047EFAA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D0EBF40D11FB18C70024C8BD /* FastTiledLayer.h */,
-				D0EBF40E11FB18C70024C8BD /* FastTiledLayer.m */,
-				D0EBF40911FB18AA0024C8BD /* TilingView.h */,
-				D0EBF40A11FB18AA0024C8BD /* TilingView.m */,
-				D0EBF3F911FB18820024C8BD /* ImageScrollView.h */,
-				D0EBF3FA11FB18820024C8BD /* ImageScrollView.m */,
-				D0EBF3FB11FB18820024C8BD /* PhotoViewController.h */,
-				D0EBF3FC11FB18820024C8BD /* PhotoViewController.m */,
+				D093CD3211FC627B000B51D8 /* UI */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -93,6 +88,38 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D093CD3211FC627B000B51D8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D093CD3311FC6284000B51D8 /* Photo */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		D093CD3311FC6284000B51D8 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				D0BD8B5A120EDAB10034356B /* Private */,
+				D011F504120C85E400A07E28 /* EFPhoto.h */,
+				D011F506120C865800A07E28 /* EFPhotoVersion.h */,
+				D011F500120C827700A07E28 /* EFPhotoModel.h */,
+				D011F502120C839000A07E28 /* EFPhotoModelDelegate.h */,
+				D093CD3411FC62A5000B51D8 /* EFPhotoView.h */,
+				D093CD3511FC62A5000B51D8 /* EFPhotoView.m */,
+			);
+			name = Photo;
+			sourceTree = "<group>";
+		};
+		D0BD8B5A120EDAB10034356B /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				D0BD8B42120ED7530034356B /* EFPhotoView-private.h */,
+				D0BD8B56120EDA7E0034356B /* EFImageScrollView.h */,
+				D0BD8B57120EDA7E0034356B /* EFImageScrollView.m */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -100,10 +127,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0EBF3FD11FB18820024C8BD /* ImageScrollView.h in Headers */,
-				D0EBF3FF11FB18820024C8BD /* PhotoViewController.h in Headers */,
-				D0EBF40B11FB18AA0024C8BD /* TilingView.h in Headers */,
-				D0EBF40F11FB18C70024C8BD /* FastTiledLayer.h in Headers */,
+				D093CD3611FC62A5000B51D8 /* EFPhotoView.h in Headers */,
+				D011F501120C827700A07E28 /* EFPhotoModel.h in Headers */,
+				D011F503120C839000A07E28 /* EFPhotoModelDelegate.h in Headers */,
+				D011F505120C85E400A07E28 /* EFPhoto.h in Headers */,
+				D011F507120C865800A07E28 /* EFPhotoVersion.h in Headers */,
+				D0BD8B43120ED7530034356B /* EFPhotoView-private.h in Headers */,
+				D0BD8B58120EDA7E0034356B /* EFImageScrollView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +164,7 @@
 			isa = PBXProject;
 			buildConfigurationList = D067DCE711FB130E0047EFAA /* Build configuration list for PBXProject "Egeniq" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -153,10 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0EBF3FE11FB18820024C8BD /* ImageScrollView.m in Sources */,
-				D0EBF40011FB18820024C8BD /* PhotoViewController.m in Sources */,
-				D0EBF40C11FB18AA0024C8BD /* TilingView.m in Sources */,
-				D0EBF41011FB18C70024C8BD /* FastTiledLayer.m in Sources */,
+				D093CD3711FC62A5000B51D8 /* EFPhotoView.m in Sources */,
+				D0BD8B59120EDA7E0034356B /* EFImageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
