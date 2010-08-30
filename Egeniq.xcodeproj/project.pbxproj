@@ -7,31 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D011F501120C827700A07E28 /* EFPhotoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFPhotoModel.h */; };
-		D011F503120C839000A07E28 /* EFPhotoModelDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFPhotoModelDelegate.h */; };
+		D011F501120C827700A07E28 /* EFPhotoViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */; };
+		D011F503120C839000A07E28 /* EFPhotoViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */; };
 		D011F505120C85E400A07E28 /* EFPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F504120C85E400A07E28 /* EFPhoto.h */; };
 		D011F507120C865800A07E28 /* EFPhotoVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F506120C865800A07E28 /* EFPhotoVersion.h */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
-		D093CD3611FC62A5000B51D8 /* EFPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = D093CD3411FC62A5000B51D8 /* EFPhotoView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D093CD3711FC62A5000B51D8 /* EFPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D093CD3511FC62A5000B51D8 /* EFPhotoView.m */; };
-		D0BD8B43120ED7530034356B /* EFPhotoView-private.h in Headers */ = {isa = PBXBuildFile; fileRef = D0BD8B42120ED7530034356B /* EFPhotoView-private.h */; };
-		D0BD8B58120EDA7E0034356B /* EFImageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0BD8B56120EDA7E0034356B /* EFImageScrollView.h */; };
-		D0BD8B59120EDA7E0034356B /* EFImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BD8B57120EDA7E0034356B /* EFImageScrollView.m */; };
+		D0826FBE122BD17E003EE4E6 /* EFPhotoView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0826FBC122BD17E003EE4E6 /* EFPhotoView.h */; };
+		D0826FBF122BD17E003EE4E6 /* EFPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0826FBD122BD17E003EE4E6 /* EFPhotoView.m */; };
+		D093CD3611FC62A5000B51D8 /* EFPhotoScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = D093CD3411FC62A5000B51D8 /* EFPhotoScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D093CD3711FC62A5000B51D8 /* EFPhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D093CD3511FC62A5000B51D8 /* EFPhotoScrollView.m */; };
+		D0BD8B58120EDA7E0034356B /* EFImageZoomView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */; };
+		D0BD8B59120EDA7E0034356B /* EFImageZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D011F500120C827700A07E28 /* EFPhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoModel.h; sourceTree = "<group>"; };
-		D011F502120C839000A07E28 /* EFPhotoModelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoModelDelegate.h; sourceTree = "<group>"; };
+		D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoViewDataSource.h; sourceTree = "<group>"; };
+		D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoViewDelegate.h; sourceTree = "<group>"; };
 		D011F504120C85E400A07E28 /* EFPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhoto.h; sourceTree = "<group>"; };
 		D011F506120C865800A07E28 /* EFPhotoVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoVersion.h; sourceTree = "<group>"; };
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
-		D093CD3411FC62A5000B51D8 /* EFPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoView.h; sourceTree = "<group>"; };
-		D093CD3511FC62A5000B51D8 /* EFPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFPhotoView.m; sourceTree = "<group>"; };
-		D0BD8B42120ED7530034356B /* EFPhotoView-private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EFPhotoView-private.h"; sourceTree = "<group>"; };
-		D0BD8B56120EDA7E0034356B /* EFImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageScrollView.h; sourceTree = "<group>"; };
-		D0BD8B57120EDA7E0034356B /* EFImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageScrollView.m; sourceTree = "<group>"; };
+		D0826FBC122BD17E003EE4E6 /* EFPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoView.h; sourceTree = "<group>"; };
+		D0826FBD122BD17E003EE4E6 /* EFPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFPhotoView.m; sourceTree = "<group>"; };
+		D093CD3411FC62A5000B51D8 /* EFPhotoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoScrollView.h; sourceTree = "<group>"; };
+		D093CD3511FC62A5000B51D8 /* EFPhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFPhotoScrollView.m; sourceTree = "<group>"; };
+		D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageZoomView.h; sourceTree = "<group>"; };
+		D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageZoomView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +104,12 @@
 				D0BD8B5A120EDAB10034356B /* Private */,
 				D011F504120C85E400A07E28 /* EFPhoto.h */,
 				D011F506120C865800A07E28 /* EFPhotoVersion.h */,
-				D011F500120C827700A07E28 /* EFPhotoModel.h */,
-				D011F502120C839000A07E28 /* EFPhotoModelDelegate.h */,
-				D093CD3411FC62A5000B51D8 /* EFPhotoView.h */,
-				D093CD3511FC62A5000B51D8 /* EFPhotoView.m */,
+				D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */,
+				D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */,
+				D093CD3411FC62A5000B51D8 /* EFPhotoScrollView.h */,
+				D093CD3511FC62A5000B51D8 /* EFPhotoScrollView.m */,
+				D0826FBC122BD17E003EE4E6 /* EFPhotoView.h */,
+				D0826FBD122BD17E003EE4E6 /* EFPhotoView.m */,
 			);
 			name = Photo;
 			sourceTree = "<group>";
@@ -113,9 +117,8 @@
 		D0BD8B5A120EDAB10034356B /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				D0BD8B42120ED7530034356B /* EFPhotoView-private.h */,
-				D0BD8B56120EDA7E0034356B /* EFImageScrollView.h */,
-				D0BD8B57120EDA7E0034356B /* EFImageScrollView.m */,
+				D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */,
+				D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */,
 			);
 			name = Private;
 			sourceTree = "<group>";
@@ -127,13 +130,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D093CD3611FC62A5000B51D8 /* EFPhotoView.h in Headers */,
-				D011F501120C827700A07E28 /* EFPhotoModel.h in Headers */,
-				D011F503120C839000A07E28 /* EFPhotoModelDelegate.h in Headers */,
+				D093CD3611FC62A5000B51D8 /* EFPhotoScrollView.h in Headers */,
+				D011F501120C827700A07E28 /* EFPhotoViewDataSource.h in Headers */,
+				D011F503120C839000A07E28 /* EFPhotoViewDelegate.h in Headers */,
 				D011F505120C85E400A07E28 /* EFPhoto.h in Headers */,
 				D011F507120C865800A07E28 /* EFPhotoVersion.h in Headers */,
-				D0BD8B43120ED7530034356B /* EFPhotoView-private.h in Headers */,
-				D0BD8B58120EDA7E0034356B /* EFImageScrollView.h in Headers */,
+				D0BD8B58120EDA7E0034356B /* EFImageZoomView.h in Headers */,
+				D0826FBE122BD17E003EE4E6 /* EFPhotoView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +167,6 @@
 			isa = PBXProject;
 			buildConfigurationList = D067DCE711FB130E0047EFAA /* Build configuration list for PBXProject "Egeniq" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -184,8 +186,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D093CD3711FC62A5000B51D8 /* EFPhotoView.m in Sources */,
-				D0BD8B59120EDA7E0034356B /* EFImageScrollView.m in Sources */,
+				D093CD3711FC62A5000B51D8 /* EFPhotoScrollView.m in Sources */,
+				D0BD8B59120EDA7E0034356B /* EFImageZoomView.m in Sources */,
+				D0826FBF122BD17E003EE4E6 /* EFPhotoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

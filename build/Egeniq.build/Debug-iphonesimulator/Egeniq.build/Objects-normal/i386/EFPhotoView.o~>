@@ -1,0 +1,9 @@
+In file included from /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoView.h:3,
+                 from /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoView.m:1:
+/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoViewDataSource.h:7: error: expected ')' before 'EFPhotoView'
+/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoViewDataSource.h:8: error: expected ')' before 'EFPhotoView'
+/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoViewDataSource.h:12: error: expected ')' before 'EFPhotoView'
+In file included from /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoView.m:1:
+/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoView.h:8: error: cannot find interface declaration for 'NSView', superclass of 'EFPhotoView'
+/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoView.m:8: warning: incomplete implementation of class 'EFPhotoView'
+/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoView.m:8: warning: method definition for '-reloadData' not found

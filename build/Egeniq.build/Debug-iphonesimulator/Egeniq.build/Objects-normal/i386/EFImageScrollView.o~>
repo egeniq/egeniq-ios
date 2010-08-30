@@ -1,0 +1,2 @@
+/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFImageScrollView.m:149: warning: property 'index' requires method '-index' to be defined - use @synthesize, @dynamic or provide a method implementation
+/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFImageScrollView.m:149: warning: property 'index' requires the method 'setIndex:' to be defined - use @synthesize, @dynamic or provide a method implementation

@@ -1,5 +1,33 @@
 // !$*UTF8*$!
 {
+	D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 786}}";
+			sepNavSelRange = "{69, 0}";
+			sepNavVisRange = "{0, 345}";
+		};
+	};
+	D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 786}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 472}";
+		};
+	};
+	D011F504120C85E400A07E28 /* EFPhoto.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 786}}";
+			sepNavSelRange = "{188, 0}";
+			sepNavVisRange = "{0, 657}";
+		};
+	};
+	D011F506120C865800A07E28 /* EFPhotoVersion.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 786}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 286}";
+		};
+	};
 	D067DCE411FB130E0047EFAA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeTarget = D067DCEF11FB130E0047EFAA /* Egeniq */;
@@ -15,7 +43,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					260,
+					1392,
 					20,
 					48,
 					43,
@@ -54,16 +82,21 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 301751997;
-			PBXWorkspaceStateSaveDate = 301751997;
+			PBXPerProjectTemplateStateSaveDate = 304859951;
+			PBXWorkspaceStateSaveDate = 304859951;
 		};
 		perUserProjectItems = {
-			D093CD3B11FC62B5000B51D8 = D093CD3B11FC62B5000B51D8 /* PBXTextBookmark */;
-			D093CD3C11FC62B5000B51D8 = D093CD3C11FC62B5000B51D8 /* PBXTextBookmark */;
-			D093CD3D11FC62B5000B51D8 = D093CD3D11FC62B5000B51D8 /* PBXTextBookmark */;
-			D093CD3E11FC62B5000B51D8 = D093CD3E11FC62B5000B51D8 /* PBXTextBookmark */;
-			D093CD3F11FC62B5000B51D8 = D093CD3F11FC62B5000B51D8 /* PBXTextBookmark */;
-			D093CD4011FC62B5000B51D8 = D093CD4011FC62B5000B51D8 /* PBXTextBookmark */;
+			D0826FD0122C025A003EE4E6 /* PBXTextBookmark */ = D0826FD0122C025A003EE4E6 /* PBXTextBookmark */;
+			D0826FD1122C025A003EE4E6 /* PBXTextBookmark */ = D0826FD1122C025A003EE4E6 /* PBXTextBookmark */;
+			D0826FD2122C025A003EE4E6 /* PBXTextBookmark */ = D0826FD2122C025A003EE4E6 /* PBXTextBookmark */;
+			D0826FD3122C025A003EE4E6 /* PBXTextBookmark */ = D0826FD3122C025A003EE4E6 /* PBXTextBookmark */;
+			D0826FD4122C025A003EE4E6 /* PBXTextBookmark */ = D0826FD4122C025A003EE4E6 /* PBXTextBookmark */;
+			D0826FD5122C025A003EE4E6 /* PBXTextBookmark */ = D0826FD5122C025A003EE4E6 /* PBXTextBookmark */;
+			D0826FD6122C025A003EE4E6 /* PBXTextBookmark */ = D0826FD6122C025A003EE4E6 /* PBXTextBookmark */;
+			D0826FD7122C025A003EE4E6 /* PBXTextBookmark */ = D0826FD7122C025A003EE4E6 /* PBXTextBookmark */;
+			D0826FD8122C025A003EE4E6 /* PBXTextBookmark */ = D0826FD8122C025A003EE4E6 /* PBXTextBookmark */;
+			D0826FD9122C025A003EE4E6 /* PBXTextBookmark */ = D0826FD9122C025A003EE4E6 /* PBXTextBookmark */;
+			D0826FDA122C025A003EE4E6 /* PBXTextBookmark */ = D0826FDA122C025A003EE4E6 /* PBXTextBookmark */;
 		};
 		sourceControlManager = D0EBF3F811FB18540024C8BD /* Source Control */;
 		userBuildSettings = {
@@ -76,111 +109,157 @@
 	D067DCEF11FB130E0047EFAA /* Egeniq */ = {
 		activeExec = 0;
 	};
-	D093CD0611FC61B7000B51D8 /* FastTiledLayer.h */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.h;
-		name = FastTiledLayer.h;
-		path = /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/UI/Photo/FastTiledLayer.h;
-		sourceTree = "<absolute>";
-	};
-	D093CD0711FC61B7000B51D8 /* FastTiledLayer.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = FastTiledLayer.m;
-		path = /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/UI/Photo/FastTiledLayer.m;
-		sourceTree = "<absolute>";
-	};
-	D093CD2211FC626B000B51D8 /* FastTiledLayer.h */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.h;
-		name = FastTiledLayer.h;
-		path = /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/FastTiledLayer.h;
-		sourceTree = "<absolute>";
+	D0826FBC122BD17E003EE4E6 /* EFPhotoView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {438, 237}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 786}}";
+			sepNavSelRange = "{256, 0}";
+			sepNavVisRange = "{0, 294}";
+		};
+	};
+	D0826FBD122BD17E003EE4E6 /* EFPhotoView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 786}}";
+			sepNavSelRange = "{99, 0}";
+			sepNavVisRange = "{0, 106}";
+		};
+	};
+	D0826FD0122C025A003EE4E6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0826FBD122BD17E003EE4E6 /* EFPhotoView.m */;
+		name = "EFPhotoView.m: 6";
+		rLen = 0;
+		rLoc = 99;
+		rType = 0;
+		vrLen = 106;
+		vrLoc = 0;
+	};
+	D0826FD1122C025A003EE4E6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0826FBC122BD17E003EE4E6 /* EFPhotoView.h */;
+		name = "EFPhotoView.h: 9";
+		rLen = 0;
+		rLoc = 256;
+		rType = 0;
+		vrLen = 294;
+		vrLoc = 0;
+	};
+	D0826FD2122C025A003EE4E6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */;
+		name = "EFImageZoomView.h: 60";
+		rLen = 0;
+		rLoc = 2721;
+		rType = 0;
+		vrLen = 2721;
+		vrLoc = 0;
+	};
+	D0826FD3122C025A003EE4E6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 104";
+		rLen = 0;
+		rLoc = 3903;
+		rType = 0;
+		vrLen = 1592;
+		vrLoc = 2285;
+	};
+	D0826FD4122C025A003EE4E6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D011F504120C85E400A07E28 /* EFPhoto.h */;
+		name = "EFPhoto.h: 11";
+		rLen = 0;
+		rLoc = 188;
+		rType = 0;
+		vrLen = 657;
+		vrLoc = 0;
+	};
+	D0826FD5122C025A003EE4E6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D011F506120C865800A07E28 /* EFPhotoVersion.h */;
+		name = "EFPhotoVersion.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 286;
+		vrLoc = 0;
+	};
+	D0826FD6122C025A003EE4E6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */;
+		name = "EFPhotoViewDataSource.h: 7";
+		rLen = 0;
+		rLoc = 69;
+		rType = 0;
+		vrLen = 345;
+		vrLoc = 0;
+	};
+	D0826FD7122C025A003EE4E6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D093CD3411FC62A5000B51D8 /* EFPhotoScrollView.h */;
+		name = "EFPhotoScrollView.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 336;
+		vrLoc = 0;
+	};
+	D0826FD8122C025A003EE4E6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */;
+		name = "EFPhotoViewDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 472;
+		vrLoc = 0;
+	};
+	D0826FD9122C025A003EE4E6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D093CD3511FC62A5000B51D8 /* EFPhotoScrollView.m */;
+		name = "EFPhotoScrollView.m: 69";
+		rLen = 0;
+		rLoc = 1573;
+		rType = 0;
+		vrLen = 2070;
+		vrLoc = 852;
+	};
+	D0826FDA122C025A003EE4E6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D093CD3511FC62A5000B51D8 /* EFPhotoScrollView.m */;
+		name = "EFPhotoScrollView.m: 69";
+		rLen = 0;
+		rLoc = 1573;
+		rType = 0;
+		vrLen = 1224;
+		vrLoc = 0;
+	};
+	D093CD3411FC62A5000B51D8 /* EFPhotoScrollView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 786}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 82}";
+			sepNavVisRange = "{0, 336}";
 		};
 	};
-	D093CD2311FC626B000B51D8 /* FastTiledLayer.m */ = {
-		isa = PBXFileReference;
-		fileEncoding = 4;
-		lastKnownFileType = sourcecode.c.objc;
-		name = FastTiledLayer.m;
-		path = /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/FastTiledLayer.m;
-		sourceTree = "<absolute>";
+	D093CD3511FC62A5000B51D8 /* EFPhotoScrollView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {438, 237}}";
-			sepNavSelRange = "{26, 0}";
-			sepNavVisRange = "{0, 113}";
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 2392}}";
+			sepNavSelRange = "{1573, 0}";
+			sepNavVisRange = "{0, 1224}";
 		};
 	};
-	D093CD3411FC62A5000B51D8 /* EFPhotoView.h */ = {
+	D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {438, 237}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 224}";
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 786}}";
+			sepNavSelRange = "{2721, 0}";
+			sepNavVisRange = "{0, 2721}";
 		};
 	};
-	D093CD3B11FC62B5000B51D8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D093CD0611FC61B7000B51D8 /* FastTiledLayer.h */;
-		name = "FastTiledLayer.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 82;
-		vrLoc = 0;
-	};
-	D093CD3C11FC62B5000B51D8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D093CD0711FC61B7000B51D8 /* FastTiledLayer.m */;
-		name = "FastTiledLayer.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 113;
-		vrLoc = 0;
-	};
-	D093CD3D11FC62B5000B51D8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D093CD2311FC626B000B51D8 /* FastTiledLayer.m */;
-		name = "FastTiledLayer.m: 1";
-		rLen = 0;
-		rLoc = 26;
-		rType = 0;
-		vrLen = 113;
-		vrLoc = 0;
-	};
-	D093CD3E11FC62B5000B51D8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D093CD2211FC626B000B51D8 /* FastTiledLayer.h */;
-		name = "FastTiledLayer.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 82;
-		vrLoc = 0;
-	};
-	D093CD3F11FC62B5000B51D8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D093CD3411FC62A5000B51D8 /* EFPhotoView.h */;
-		rLen = 0;
-		rLoc = 9223372036854775808;
-		rType = 0;
-	};
-	D093CD4011FC62B5000B51D8 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D093CD3411FC62A5000B51D8 /* EFPhotoView.h */;
-		name = "EFPhotoView.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 224;
-		vrLoc = 0;
+	D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 1950}}";
+			sepNavSelRange = "{3903, 0}";
+			sepNavVisRange = "{2285, 1592}";
+		};
 	};
 	D0EBF3F811FB18540024C8BD /* Source Control */ = {
 		isa = PBXSourceControlManager;
