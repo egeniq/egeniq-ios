@@ -27,12 +27,12 @@
 /**
  * The name of the photo.
  */
-@property (nonatomic, assign) NSString* name;
+@property (nonatomic, retain) NSString* name;
 
 /**
  * The caption of the photo.
  */
-@property (nonatomic, assign) NSString* caption;
+@property (nonatomic, retain) NSString* caption;
 
 
 @end

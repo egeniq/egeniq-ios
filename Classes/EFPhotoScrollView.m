@@ -36,6 +36,7 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
+	NSLog(@"initWithFrame");
     if ((self = [super initWithFrame: frame])) {
         [self initPagingScrollView];
     }
@@ -45,12 +46,40 @@
 
 - (id)initWithCoder:(NSCoder*)coder
 {
+	NSLog(@"initWithCoder");
     if ((self = [super initWithCoder: coder])) {
         [self initPagingScrollView];
     }
     
     return self;
 
+}
+
+
+
+#pragma mark -
+#pragma mark  Frame calculations
+#define PADDING 10
+
+- (CGRect)frameForPagingScrollViewWithFrame:(CGRect)frame {
+    frame.origin.x -= PADDING;
+    frame.size.width += (2 * PADDING);
+    return frame;
+}
+
+
+- (CGRect)frameForPagingScrollView {
+    return [self frameForPagingScrollViewWithFrame:[[UIScreen mainScreen] bounds]];
+}
+
+
+- (CGRect)frameForPageAtIndex:(NSUInteger)index {
+    CGRect pagingScrollViewFrame = [self frameForPagingScrollView];
+    
+    CGRect pageFrame = pagingScrollViewFrame;
+    pageFrame.size.width -= (2 * PADDING);
+    pageFrame.origin.x = (pagingScrollViewFrame.size.width * index) + PADDING;
+    return pageFrame;
 }
 
 - (void)initPagingScrollView
@@ -61,9 +90,10 @@
     pagingScrollView.pagingEnabled = YES;
     pagingScrollView.backgroundColor = [UIColor blackColor];
     pagingScrollView.showsVerticalScrollIndicator = NO;
+    pagingScrollView.showsHorizontalScrollIndicator = NO;
     pagingScrollView.delegate = self;
     [self addSubview: pagingScrollView];
-    
+	
     // Step 2: prepare to tile content
     recycledPages = [[NSMutableSet alloc] init];
     visiblePages  = [[NSMutableSet alloc] init];
@@ -71,11 +101,19 @@
 
 - (void)reloadData {
     CGRect pagingScrollViewFrame = [pagingScrollView frame];
-    pagingScrollView.showsHorizontalScrollIndicator = NO;
     NSUInteger count = [self.dataSource photoView:self numberOfPhotosInCollection:0];
-    pagingScrollView.contentSize = CGSizeMake(pagingScrollViewFrame.size.width * count,
-                                              pagingScrollViewFrame.size.height);
+    pagingScrollView.contentSize = CGSizeMake(pagingScrollViewFrame.size.width * count, pagingScrollViewFrame.size.height);
     [self tilePages];
+}
+
+- (void)layoutSubviews {
+	[super layoutSubviews];
+/*    CGRect pagingScrollViewFrame = [self frameForPagingScrollViewWithFrame:[self bounds]];
+    pagingScrollView.frame = pagingScrollViewFrame;
+    NSUInteger count = [self.dataSource photoView:self numberOfPhotosInCollection:0];
+    pagingScrollView.contentSize = CGSizeMake(pagingScrollViewFrame.size.width * count, pagingScrollViewFrame.size.height);
+	[self tilePages]; */
+	
 }
 
 #pragma mark -
@@ -88,6 +126,7 @@
     int firstNeededPageIndex = floorf(CGRectGetMinX(visibleBounds) / CGRectGetWidth(visibleBounds));
     int lastNeededPageIndex  = floorf((CGRectGetMaxX(visibleBounds)-1) / CGRectGetWidth(visibleBounds));
     firstNeededPageIndex = MAX(firstNeededPageIndex, 0);
+	
     NSUInteger count = [self.dataSource photoView:self numberOfPhotosInCollection:0];
     lastNeededPageIndex  = MIN(lastNeededPageIndex, count - 1);
     
@@ -153,26 +192,6 @@
 
 
 #pragma mark -
-#pragma mark  Frame calculations
-#define PADDING 10
-
-- (CGRect)frameForPagingScrollView {
-    CGRect frame = [[UIScreen mainScreen] bounds];
-    frame.origin.x -= PADDING;
-    frame.size.width += (2 * PADDING);
-    return frame;
-}
-
-- (CGRect)frameForPageAtIndex:(NSUInteger)index {
-    CGRect pagingScrollViewFrame = [self frameForPagingScrollView];
-    
-    CGRect pageFrame = pagingScrollViewFrame;
-    pageFrame.size.width -= (2 * PADDING);
-    pageFrame.origin.x = (pagingScrollViewFrame.size.width * index) + PADDING;
-    return pageFrame;
-}
-
-#pragma mark -
 #pragma mark Image wrangling
 
 - (UIImage *)imageAtIndex:(NSUInteger)index {
@@ -182,6 +201,7 @@
 }
 
 - (void)setDataSource:(id<EFPhotoViewDataSource>)newDataSource {
+	NSLog(@"set datasource");	
     dataSource = newDataSource;
     [self reloadData];
 }
@@ -194,5 +214,17 @@
 - (void)selectPhotoAtIndexPath:(NSIndexPath *)indexPath {
     indexPathForSelectedPhoto = [indexPath copy];
 }
+
+- (void)dealloc {
+	[super dealloc];
+	[pagingScrollView release];
+    pagingScrollView = nil;
+	[recycledPages release];
+	recycledPages = nil;
+	[visiblePages release];
+	visiblePages = nil;
+	[indexPathForSelectedPhoto release];
+	indexPathForSelectedPhoto = nil;
+}	
 
 @end
