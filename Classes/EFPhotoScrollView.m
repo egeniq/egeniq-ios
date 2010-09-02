@@ -201,7 +201,6 @@
 }
 
 - (void)setDataSource:(id<EFPhotoViewDataSource>)newDataSource {
-	NSLog(@"set datasource");	
     dataSource = newDataSource;
     [self reloadData];
 }
