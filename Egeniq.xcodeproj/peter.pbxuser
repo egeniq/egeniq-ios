@@ -40,26 +40,6 @@
 		vrLen = 380;
 		vrLoc = 0;
 	};
-	D00FA4AB122D3FAE00DE4F7C /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D093CD3511FC62A5000B51D8 /* EFPhotoScrollView.m */;
-		name = "EFPhotoScrollView.m: 220";
-		rLen = 0;
-		rLoc = 6357;
-		rType = 0;
-		vrLen = 1326;
-		vrLoc = 4814;
-	};
-	D00FA4AC122D3FAE00DE4F7C /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D093CD3511FC62A5000B51D8 /* EFPhotoScrollView.m */;
-		name = "EFPhotoScrollView.m: 184";
-		rLen = 0;
-		rLoc = 5272;
-		rType = 0;
-		vrLen = 1336;
-		vrLoc = 5028;
-	};
 	D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1570, 782}}";
@@ -83,7 +63,7 @@
 	};
 	D011F506120C865800A07E28 /* EFPhotoVersion.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1570, 786}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 760}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 286}";
 		};
@@ -143,21 +123,21 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 304951916;
-			PBXWorkspaceStateSaveDate = 304951916;
+			PBXPerProjectTemplateStateSaveDate = 305386522;
+			PBXWorkspaceStateSaveDate = 305386522;
 		};
 		perUserProjectItems = {
 			D00FA4A7122D3FAE00DE4F7C /* PBXTextBookmark */ = D00FA4A7122D3FAE00DE4F7C /* PBXTextBookmark */;
 			D00FA4A8122D3FAE00DE4F7C /* PBXTextBookmark */ = D00FA4A8122D3FAE00DE4F7C /* PBXTextBookmark */;
 			D00FA4A9122D3FAE00DE4F7C /* PBXTextBookmark */ = D00FA4A9122D3FAE00DE4F7C /* PBXTextBookmark */;
 			D00FA4AA122D3FAE00DE4F7C /* PBXTextBookmark */ = D00FA4AA122D3FAE00DE4F7C /* PBXTextBookmark */;
-			D00FA4AB122D3FAE00DE4F7C /* PBXTextBookmark */ = D00FA4AB122D3FAE00DE4F7C /* PBXTextBookmark */;
-			D00FA4AC122D3FAE00DE4F7C /* PBXTextBookmark */ = D00FA4AC122D3FAE00DE4F7C /* PBXTextBookmark */;
 			D07C151F122CF07000E77BFB /* PBXTextBookmark */ = D07C151F122CF07000E77BFB /* PBXTextBookmark */;
 			D07C1547122CF15300E77BFB /* PBXTextBookmark */ = D07C1547122CF15300E77BFB /* PBXTextBookmark */;
 			D0826FD2122C025A003EE4E6 /* PBXTextBookmark */ = D0826FD2122C025A003EE4E6 /* PBXTextBookmark */;
-			D0826FD5122C025A003EE4E6 /* PBXTextBookmark */ = D0826FD5122C025A003EE4E6 /* PBXTextBookmark */;
 			D0826FD8122C025A003EE4E6 /* PBXTextBookmark */ = D0826FD8122C025A003EE4E6 /* PBXTextBookmark */;
+			D08A1C661233D42800C7CD19 /* PBXTextBookmark */ = D08A1C661233D42800C7CD19 /* PBXTextBookmark */;
+			D08A1C671233D42800C7CD19 /* PBXTextBookmark */ = D08A1C671233D42800C7CD19 /* PBXTextBookmark */;
+			D08A1C6C1233D4F100C7CD19 /* PBXTextBookmark */ = D08A1C6C1233D4F100C7CD19 /* PBXTextBookmark */;
 		};
 		sourceControlManager = D0EBF3F811FB18540024C8BD /* Source Control */;
 		userBuildSettings = {
@@ -214,7 +194,27 @@
 		vrLen = 2721;
 		vrLoc = 0;
 	};
-	D0826FD5122C025A003EE4E6 /* PBXTextBookmark */ = {
+	D0826FD8122C025A003EE4E6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */;
+		name = "EFPhotoViewDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 472;
+		vrLoc = 0;
+	};
+	D08A1C661233D42800C7CD19 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D093CD3511FC62A5000B51D8 /* EFPhotoScrollView.m */;
+		name = "EFPhotoScrollView.m: 184";
+		rLen = 0;
+		rLoc = 5272;
+		rType = 0;
+		vrLen = 1327;
+		vrLoc = 5009;
+	};
+	D08A1C671233D42800C7CD19 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D011F506120C865800A07E28 /* EFPhotoVersion.h */;
 		name = "EFPhotoVersion.h: 1";
@@ -224,14 +224,14 @@
 		vrLen = 286;
 		vrLoc = 0;
 	};
-	D0826FD8122C025A003EE4E6 /* PBXTextBookmark */ = {
+	D08A1C6C1233D4F100C7CD19 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */;
-		name = "EFPhotoViewDelegate.h: 1";
+		fRef = D011F506120C865800A07E28 /* EFPhotoVersion.h */;
+		name = "EFPhotoVersion.h: 1";
 		rLen = 0;
 		rLoc = 0;
 		rType = 0;
-		vrLen = 472;
+		vrLen = 286;
 		vrLoc = 0;
 	};
 	D093CD3411FC62A5000B51D8 /* EFPhotoScrollView.h */ = {
@@ -243,9 +243,9 @@
 	};
 	D093CD3511FC62A5000B51D8 /* EFPhotoScrollView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1570, 2769}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 2756}}";
 			sepNavSelRange = "{5272, 0}";
-			sepNavVisRange = "{5028, 1336}";
+			sepNavVisRange = "{5009, 1327}";
 			sepNavWindowFrame = "{{153, 250}, {1021, 797}}";
 		};
 	};
