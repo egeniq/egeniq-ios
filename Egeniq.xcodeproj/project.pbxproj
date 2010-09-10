@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		923CDD7A123A8CC300247AD5 /* EFDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 923CDD74123A8CC300247AD5 /* EFDownload.h */; };
+		923CDD7B123A8CC300247AD5 /* EFDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDD75123A8CC300247AD5 /* EFDownload.m */; };
+		923CDD7C123A8CC300247AD5 /* EFDownloadQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 923CDD76123A8CC300247AD5 /* EFDownloadQueue.h */; };
+		923CDD7D123A8CC300247AD5 /* EFDownloadQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDD77123A8CC300247AD5 /* EFDownloadQueue.m */; };
+		923CDD7E123A8CC300247AD5 /* EFNibViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 923CDD78123A8CC300247AD5 /* EFNibViewController.h */; };
+		923CDD7F123A8CC300247AD5 /* EFNibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDD79123A8CC300247AD5 /* EFNibViewController.m */; };
 		D011F501120C827700A07E28 /* EFPhotoViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */; };
 		D011F503120C839000A07E28 /* EFPhotoViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */; };
 		D011F505120C85E400A07E28 /* EFPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F504120C85E400A07E28 /* EFPhoto.h */; };
@@ -21,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		923CDD74123A8CC300247AD5 /* EFDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDownload.h; sourceTree = "<group>"; };
+		923CDD75123A8CC300247AD5 /* EFDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDownload.m; sourceTree = "<group>"; };
+		923CDD76123A8CC300247AD5 /* EFDownloadQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDownloadQueue.h; sourceTree = "<group>"; };
+		923CDD77123A8CC300247AD5 /* EFDownloadQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDownloadQueue.m; sourceTree = "<group>"; };
+		923CDD78123A8CC300247AD5 /* EFNibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFNibViewController.h; sourceTree = "<group>"; };
+		923CDD79123A8CC300247AD5 /* EFNibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFNibViewController.m; sourceTree = "<group>"; };
 		D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoViewDataSource.h; sourceTree = "<group>"; };
 		D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoViewDelegate.h; sourceTree = "<group>"; };
 		D011F504120C85E400A07E28 /* EFPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhoto.h; sourceTree = "<group>"; };
@@ -48,6 +60,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		923CDD81123A8CDC00247AD5 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				923CDD74123A8CC300247AD5 /* EFDownload.h */,
+				923CDD75123A8CC300247AD5 /* EFDownload.m */,
+				923CDD76123A8CC300247AD5 /* EFDownloadQueue.h */,
+				923CDD77123A8CC300247AD5 /* EFDownloadQueue.m */,
+			);
+			name = Net;
+			sourceTree = "<group>";
+		};
 		D067DCE211FB130E0047EFAA = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +84,7 @@
 		D067DCE911FB130E0047EFAA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				923CDD81123A8CDC00247AD5 /* Net */,
 				D093CD3211FC627B000B51D8 /* UI */,
 			);
 			path = Classes;
@@ -93,6 +117,8 @@
 		D093CD3211FC627B000B51D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				923CDD78123A8CC300247AD5 /* EFNibViewController.h */,
+				923CDD79123A8CC300247AD5 /* EFNibViewController.m */,
 				D093CD3311FC6284000B51D8 /* Photo */,
 			);
 			name = UI;
@@ -137,6 +163,9 @@
 				D011F507120C865800A07E28 /* EFPhotoVersion.h in Headers */,
 				D0BD8B58120EDA7E0034356B /* EFImageZoomView.h in Headers */,
 				D0826FBE122BD17E003EE4E6 /* EFPhotoView.h in Headers */,
+				923CDD7A123A8CC300247AD5 /* EFDownload.h in Headers */,
+				923CDD7C123A8CC300247AD5 /* EFDownloadQueue.h in Headers */,
+				923CDD7E123A8CC300247AD5 /* EFNibViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +218,9 @@
 				D093CD3711FC62A5000B51D8 /* EFPhotoScrollView.m in Sources */,
 				D0BD8B59120EDA7E0034356B /* EFImageZoomView.m in Sources */,
 				D0826FBF122BD17E003EE4E6 /* EFPhotoView.m in Sources */,
+				923CDD7B123A8CC300247AD5 /* EFDownload.m in Sources */,
+				923CDD7D123A8CC300247AD5 /* EFDownloadQueue.m in Sources */,
+				923CDD7F123A8CC300247AD5 /* EFNibViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
