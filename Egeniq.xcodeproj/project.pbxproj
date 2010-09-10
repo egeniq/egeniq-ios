@@ -13,6 +13,8 @@
 		923CDD7D123A8CC300247AD5 /* EFDownloadQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDD77123A8CC300247AD5 /* EFDownloadQueue.m */; };
 		923CDD7E123A8CC300247AD5 /* EFNibViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 923CDD78123A8CC300247AD5 /* EFNibViewController.h */; };
 		923CDD7F123A8CC300247AD5 /* EFNibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDD79123A8CC300247AD5 /* EFNibViewController.m */; };
+		923CDDA8123A8F0A00247AD5 /* EFReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 923CDDA6123A8F0A00247AD5 /* EFReachability.h */; };
+		923CDDA9123A8F0A00247AD5 /* EFReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDDA7123A8F0A00247AD5 /* EFReachability.m */; };
 		D011F501120C827700A07E28 /* EFPhotoViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */; };
 		D011F503120C839000A07E28 /* EFPhotoViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */; };
 		D011F505120C85E400A07E28 /* EFPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F504120C85E400A07E28 /* EFPhoto.h */; };
@@ -33,6 +35,8 @@
 		923CDD77123A8CC300247AD5 /* EFDownloadQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDownloadQueue.m; sourceTree = "<group>"; };
 		923CDD78123A8CC300247AD5 /* EFNibViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFNibViewController.h; sourceTree = "<group>"; };
 		923CDD79123A8CC300247AD5 /* EFNibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFNibViewController.m; sourceTree = "<group>"; };
+		923CDDA6123A8F0A00247AD5 /* EFReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFReachability.h; sourceTree = "<group>"; };
+		923CDDA7123A8F0A00247AD5 /* EFReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFReachability.m; sourceTree = "<group>"; };
 		D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoViewDataSource.h; sourceTree = "<group>"; };
 		D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoViewDelegate.h; sourceTree = "<group>"; };
 		D011F504120C85E400A07E28 /* EFPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhoto.h; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 		923CDD81123A8CDC00247AD5 /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				923CDDA6123A8F0A00247AD5 /* EFReachability.h */,
+				923CDDA7123A8F0A00247AD5 /* EFReachability.m */,
 				923CDD74123A8CC300247AD5 /* EFDownload.h */,
 				923CDD75123A8CC300247AD5 /* EFDownload.m */,
 				923CDD76123A8CC300247AD5 /* EFDownloadQueue.h */,
@@ -166,6 +172,7 @@
 				923CDD7A123A8CC300247AD5 /* EFDownload.h in Headers */,
 				923CDD7C123A8CC300247AD5 /* EFDownloadQueue.h in Headers */,
 				923CDD7E123A8CC300247AD5 /* EFNibViewController.h in Headers */,
+				923CDDA8123A8F0A00247AD5 /* EFReachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +228,7 @@
 				923CDD7B123A8CC300247AD5 /* EFDownload.m in Sources */,
 				923CDD7D123A8CC300247AD5 /* EFDownloadQueue.m in Sources */,
 				923CDD7F123A8CC300247AD5 /* EFNibViewController.m in Sources */,
+				923CDDA9123A8F0A00247AD5 /* EFReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
