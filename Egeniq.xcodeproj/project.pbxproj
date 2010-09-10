@@ -15,6 +15,7 @@
 		923CDD7F123A8CC300247AD5 /* EFNibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDD79123A8CC300247AD5 /* EFNibViewController.m */; };
 		923CDDA8123A8F0A00247AD5 /* EFReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 923CDDA6123A8F0A00247AD5 /* EFReachability.h */; };
 		923CDDA9123A8F0A00247AD5 /* EFReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDDA7123A8F0A00247AD5 /* EFReachability.m */; };
+		923CDE2B123A963900247AD5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CDE2A123A963800247AD5 /* SystemConfiguration.framework */; };
 		D011F501120C827700A07E28 /* EFPhotoViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */; };
 		D011F503120C839000A07E28 /* EFPhotoViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */; };
 		D011F505120C85E400A07E28 /* EFPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F504120C85E400A07E28 /* EFPhoto.h */; };
@@ -37,6 +38,7 @@
 		923CDD79123A8CC300247AD5 /* EFNibViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFNibViewController.m; sourceTree = "<group>"; };
 		923CDDA6123A8F0A00247AD5 /* EFReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFReachability.h; sourceTree = "<group>"; };
 		923CDDA7123A8F0A00247AD5 /* EFReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFReachability.m; sourceTree = "<group>"; };
+		923CDE2A123A963800247AD5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoViewDataSource.h; sourceTree = "<group>"; };
 		D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoViewDelegate.h; sourceTree = "<group>"; };
 		D011F504120C85E400A07E28 /* EFPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhoto.h; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */,
+				923CDE2B123A963900247AD5 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +110,7 @@
 		D067DCEB11FB130E0047EFAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				923CDE2A123A963800247AD5 /* SystemConfiguration.framework */,
 				D067DCF211FB130E0047EFAA /* Foundation.framework */,
 			);
 			name = Frameworks;
