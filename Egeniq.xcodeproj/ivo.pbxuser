@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	923CDD72123A8C8700247AD5 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	923CDD73123A8C8700247AD5 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	923CDD74123A8CC300247AD5 /* EFDownload.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 650}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 395}";
+		};
+	};
+	923CDD78123A8CC300247AD5 /* EFNibViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1512, 901}}";
+			sepNavSelRange = "{186, 0}";
+			sepNavVisRange = "{0, 365}";
+		};
+	};
+	923CDD79123A8CC300247AD5 /* EFNibViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 416}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 579}";
+		};
+	};
+	923CDD86123A8D1A00247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDD79123A8CC300247AD5 /* EFNibViewController.m */;
+		name = "EFNibViewController.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 579;
+		vrLoc = 0;
+	};
+	923CDD87123A8D1A00247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDD74123A8CC300247AD5 /* EFDownload.h */;
+		name = "EFDownload.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 395;
+		vrLoc = 0;
+	};
+	923CDD88123A8D1A00247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */;
+		name = "EFPhotoViewDataSource.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 367;
+		vrLoc = 0;
+	};
+	923CDD89123A8D1A00247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D011F506120C865800A07E28 /* EFPhotoVersion.h */;
+		name = "EFPhotoVersion.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 285;
+		vrLoc = 0;
+	};
+	923CDD8A123A8D1A00247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D011F504120C85E400A07E28 /* EFPhoto.h */;
+		name = "EFPhoto.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 487;
+		vrLoc = 0;
+	};
+	923CDDA6123A8F0A00247AD5 /* EFReachability.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1512, 1170}}";
+			sepNavSelRange = "{2785, 0}";
+			sepNavVisRange = "{1037, 2938}";
+		};
+	};
+	923CDDA7123A8F0A00247AD5 /* EFReachability.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1512, 3562}}";
+			sepNavSelRange = "{9107, 0}";
+			sepNavVisRange = "{2796, 2412}";
+		};
+	};
+	923CDDB2123A918900247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDDB3123A918900247AD5 /* ReachabilityAppDelegate.h */;
+		name = "ReachabilityAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 3080;
+		vrLoc = 3;
+	};
+	923CDDB3123A918900247AD5 /* ReachabilityAppDelegate.h */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = ReachabilityAppDelegate.h;
+		path = /Users/ivo/Downloads/Reachability/Classes/ReachabilityAppDelegate.h;
+		sourceTree = "<absolute>";
+	};
+	923CDDB6123A918900247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0826FBC122BD17E003EE4E6 /* EFPhotoView.h */;
+		name = "EFPhotoView.h: 1";
+		rLen = 24;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 367;
+		vrLoc = 0;
+	};
+	923CDDC7123A92CC00247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDD78123A8CC300247AD5 /* EFNibViewController.h */;
+		name = "EFNibViewController.h: 10";
+		rLen = 0;
+		rLoc = 186;
+		rType = 0;
+		vrLen = 365;
+		vrLoc = 0;
+	};
+	923CDDC8123A92CC00247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDDA7123A8F0A00247AD5 /* EFReachability.m */;
+		name = "EFReachability.m: 260";
+		rLen = 0;
+		rLoc = 9107;
+		rType = 0;
+		vrLen = 2412;
+		vrLoc = 2796;
+	};
+	923CDDD3123A955E00247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDDA6123A8F0A00247AD5 /* EFReachability.h */;
+		name = "EFReachability.h: 58";
+		rLen = 0;
+		rLoc = 2785;
+		rType = 0;
+		vrLen = 2858;
+		vrLoc = 1117;
+	};
+	923CDE10123A959000247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDDA6123A8F0A00247AD5 /* EFReachability.h */;
+		name = "EFReachability.h: 58";
+		rLen = 0;
+		rLoc = 2785;
+		rType = 0;
+		vrLen = 2938;
+		vrLoc = 1037;
+	};
+	D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 342}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 367}";
+		};
+	};
+	D011F504120C85E400A07E28 /* EFPhoto.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 481}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 487}";
+		};
+	};
+	D011F506120C865800A07E28 /* EFPhotoVersion.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {924, 342}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 285}";
+		};
+	};
+	D067DCE411FB130E0047EFAA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeTarget = D067DCEF11FB130E0047EFAA /* Egeniq */;
+		addToTargets = (
+			D067DCEF11FB130E0047EFAA /* Egeniq */,
+		);
+		codeSenseManager = 923CDD73123A8C8700247AD5 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1334,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1294,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 305829386;
+			PBXWorkspaceStateSaveDate = 305829386;
+		};
+		perUserProjectItems = {
+			923CDD86123A8D1A00247AD5 /* PBXTextBookmark */ = 923CDD86123A8D1A00247AD5 /* PBXTextBookmark */;
+			923CDD87123A8D1A00247AD5 /* PBXTextBookmark */ = 923CDD87123A8D1A00247AD5 /* PBXTextBookmark */;
+			923CDD88123A8D1A00247AD5 /* PBXTextBookmark */ = 923CDD88123A8D1A00247AD5 /* PBXTextBookmark */;
+			923CDD89123A8D1A00247AD5 /* PBXTextBookmark */ = 923CDD89123A8D1A00247AD5 /* PBXTextBookmark */;
+			923CDD8A123A8D1A00247AD5 /* PBXTextBookmark */ = 923CDD8A123A8D1A00247AD5 /* PBXTextBookmark */;
+			923CDDB2123A918900247AD5 /* PBXTextBookmark */ = 923CDDB2123A918900247AD5 /* PBXTextBookmark */;
+			923CDDB6123A918900247AD5 /* PBXTextBookmark */ = 923CDDB6123A918900247AD5 /* PBXTextBookmark */;
+			923CDDC7123A92CC00247AD5 /* PBXTextBookmark */ = 923CDDC7123A92CC00247AD5 /* PBXTextBookmark */;
+			923CDDC8123A92CC00247AD5 /* PBXTextBookmark */ = 923CDDC8123A92CC00247AD5 /* PBXTextBookmark */;
+			923CDDD3123A955E00247AD5 /* PBXTextBookmark */ = 923CDDD3123A955E00247AD5 /* PBXTextBookmark */;
+			923CDE10123A959000247AD5 /* PBXTextBookmark */ = 923CDE10123A959000247AD5 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 923CDD72123A8C8700247AD5 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	D067DCEF11FB130E0047EFAA /* Egeniq */ = {
+		activeExec = 0;
+	};
+	D0826FBC122BD17E003EE4E6 /* EFPhotoView.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1512, 901}}";
+			sepNavSelRange = "{0, 24}";
+			sepNavVisRange = "{0, 367}";
+		};
+	};
+}
