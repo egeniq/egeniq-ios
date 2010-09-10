@@ -1,672 +1,0 @@
-TEgeniq
-v7
-r0
-t304943588.858416
-cCheck dependencies
-cProcessPCH /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-dabylycbykayqngxlgxpexefplmb/Egeniq_Prefix.pch.gch Egeniq_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFPhotoScrollView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFImageZoomView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFPhotoView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-cLibtool /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos/libEgeniq.a normal armv7
-cCpHeader build/Debug-iphoneos/usr/local/include/EFPhotoScrollView.h Classes/EFPhotoScrollView.h
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk
-c000000004C059C0E0000000000000110
-t1275436046
-s272
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004B9F26D2000000000036A650
-t1268721362
-s3581520
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004B9F26B90000000000001355
-t1268721337
-s4949
-
-N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004B9F318D000000000000098F
-t1268724109
-s2447
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk
-c000000004BD236930000000000000110
-t1272067731
-s272
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000004BD1FFC200000000002A96A0
-t1272053698
-s2791072
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000004BD1FF9E0000000000001355
-t1272053662
-s4949
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/CATiledLayer.h
-c000000004BD1D01F0000000000000807
-t1272041503
-s2055
-
-N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
-c000000004BD20412000000000000098F
-t1272054802
-s2447
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFImageScrollView.h
-c000000004C5EA2BD0000000000000AA3
-t1281270461
-s2723
-i<UIKit/UIKit.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFImageScrollView.m
-c000000004C5EA38400000000000015F1
-t1281270660
-s5617
-i"EFImageScrollView.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhoto.h
-c000000004C5EF3690000000000000285
-t1281291113
-s645
-i"EFPhotoVersion.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoModel.h
-c000000004C5D45500000000000000262
-t1281181008
-s610
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoVersion.h
-c000000004C5C4F04000000000000011E
-t1281117956
-s286
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoView-private.h
-c000000004C5EA60300000000000001D4
-t1281271299
-s468
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoView.h
-c000000004C5EA43F00000000000002F4
-t1281270847
-s756
-i<UIKit/UIKit.h>
-i"EFPhotoModel.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoView.m
-c000000004C5EF7B30000000000001259
-t1281292211
-s4697
-i"EFPhotoView.h"
-i"EFPhotoView-private.h"
-i"EFPhoto.h"
-i"EFPhotoVersion.h"
-i"EFImageScrollView.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/FastTiledLayer.h
-c000000004C3CC5490000000000000052
-t1279051081
-s82
-i<QuartzCore/CATiledLayer.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/FastTiledLayer.m
-c000000004C4C2A770000000000000081
-t1280060023
-s129
-i"Egeniq/UI/Photo/FastTiledLayer.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/ImageScrollView.h
-c000000004C097E720000000000000AEE
-t1275690610
-s2798
-i<UIKit/UIKit.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/ImageScrollView.m
-c000000004C3B82D40000000000001A23
-t1278968532
-s6691
-i"ImageScrollView.h"
-i"TilingView.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/PhotoViewController.h
-c000000004C097E720000000000000C35
-t1275690610
-s3125
-i<UIKit/UIKit.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/PhotoViewController.m
-c000000004C3CDCF90000000000002353
-t1279057145
-s9043
-i"PhotoViewController.h"
-i"ImageScrollView.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/TilingView.h
-c000000004C097E720000000000000A9B
-t1275690610
-s2715
-i<UIKit/UIKit.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/TilingView.m
-c000000004C3CD8710000000000002A80
-t1279055985
-s10880
-i"TilingView.h"
-i"FastTiledLayer.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/FastTiledLayer.h
-c000000004C3CC5490000000000000052
-t1279051081
-s82
-i<QuartzCore/CATiledLayer.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/FastTiledLayer.m
-c000000004C4C2AF80000000000000071
-t1280060152
-s113
-i"FastTiledLayer.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/ImageScrollView.h
-c000000004C097E720000000000000AEE
-t1275690610
-s2798
-i<UIKit/UIKit.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/ImageScrollView.m
-c000000004C3B82D40000000000001A23
-t1278968532
-s6691
-i"ImageScrollView.h"
-i"TilingView.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Photo/FastTiledLayer.h
-c000000004C3CC5490000000000000052
-t1279051081
-s82
-i<QuartzCore/CATiledLayer.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Photo/FastTiledLayer.m
-c000000004C3CC5D80000000000000071
-t1279051224
-s113
-i"FastTiledLayer.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Photo/ImageScrollView.h
-c000000004C097E720000000000000AEE
-t1275690610
-s2798
-i<UIKit/UIKit.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Photo/ImageScrollView.m
-c000000004C3B82D40000000000001A23
-t1278968532
-s6691
-i"ImageScrollView.h"
-i"TilingView.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Photo/PhotoViewController.h
-c000000004C097E720000000000000C35
-t1275690610
-s3125
-i<UIKit/UIKit.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Photo/PhotoViewController.m
-c000000004C3CDCF90000000000002353
-t1279057145
-s9043
-i"PhotoViewController.h"
-i"ImageScrollView.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Photo/TilingView.h
-c000000004C097E720000000000000A9B
-t1275690610
-s2715
-i<UIKit/UIKit.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Photo/TilingView.m
-c000000004C3CD8710000000000002A80
-t1279055985
-s10880
-i"TilingView.h"
-i"FastTiledLayer.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/PhotoViewController.h
-c000000004C097E720000000000000C35
-t1275690610
-s3125
-i<UIKit/UIKit.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/PhotoViewController.m
-c000000004C3CDCF90000000000002353
-t1279057145
-s9043
-i"PhotoViewController.h"
-i"ImageScrollView.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/TilingView.h
-c000000004C097E720000000000000A9B
-t1275690610
-s2715
-i<UIKit/UIKit.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/TilingView.m
-c000000004C3CD8710000000000002A80
-t1279055985
-s10880
-i"TilingView.h"
-i"FastTiledLayer.h"
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/UI/Photo/FastTiledLayer.m
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/UI/Photo/ImageScrollView.m
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/UI/Photo/PhotoViewController.m
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/UI/Photo/TilingView.m
-c00000000000000000000000000000000
-t2
-s0
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Egeniq_Prefix.pch
-c000000004C4ADB8E000000000000009A
-t1279974286
-s154
-i<Foundation/Foundation.h>
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/libEgeniq.a
-t1280059987
-s109216
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/usr/local/include/EFPhotoView.h
-t2
-s0
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFImageScrollView.o
-t2
-s0
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoView.o
-t2
-s0
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/Egeniq.LinkFileList
-c000000004C4C2A520000000000000232
-t1280059986
-s562
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/FastTiledLayer.o
-t2
-s0
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/ImageScrollView.o
-t1280059987
-s24772
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/PhotoViewController.o
-t1280059987
-s55472
-
-N/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/TilingView.o
-t1280059987
-s21332
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.h
-c000000004C7C20830000000000000AA1
-t1283203203
-s2721
-i<UIKit/UIKit.h>
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.m
-c000000004C7C208300000000000015EE
-t1283203203
-s5614
-i"EFImageZoomView.h"
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhoto.h
-c000000004C7CB3980000000000000291
-t1283240856
-s657
-i"EFPhotoVersion.h"
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.h
-c000000004C7C2083000000000000017C
-t1283203203
-s380
-i<UIKit/UIKit.h>
-i"EFPhotoView.h"
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m
-c000000004C7CBDCA0000000000001608
-t1283243466
-s5640
-i"EFPhotoScrollView.h"
-i"EFPhoto.h"
-i"EFPhotoVersion.h"
-i"EFImageZoomView.h"
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoVersion.h
-c000000004C7C2083000000000000011E
-t1283203203
-s286
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoView.h
-c000000004C7C2083000000000000016F
-t1283203203
-s367
-i<UIKit/UIKit.h>
-i"EFPhotoViewDataSource.h"
-i"EFPhotoViewDelegate.h"
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoView.m
-c000000004C7C20830000000000000087
-t1283203203
-s135
-i"EFPhotoView.h"
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoViewDataSource.h
-c000000004C7C2083000000000000016F
-t1283203203
-s367
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoViewDelegate.h
-c000000004C7C208300000000000001D8
-t1283203203
-s472
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Egeniq_Prefix.pch
-c000000004C7C2083000000000000009A
-t1283203203
-s154
-i<Foundation/Foundation.h>
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos/libEgeniq.a
-t1283250788
-s65280
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos/usr/local/include/EFPhotoScrollView.h
-t1283250788
-s380
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFImageZoomView.o
-t1283250788
-s22056
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFPhotoScrollView.o
-t1283250788
-s31904
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFPhotoView.o
-t1283250788
-s9852
-
-N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/Egeniq.LinkFileList
-c000000004C7CDA63000000000000018A
-t1283250787
-s394
-
-N/var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-dabylycbykayqngxlgxpexefplmb/Egeniq_Prefix.pch.gch
-t1283250788
-s6289092
-
-N/var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-ekhazmyxydhoyfgtfalidupzlwtr/Egeniq_Prefix.pch.gch
-t1279975691
-s9034256
-
-CCheck dependencies
-r0
-lSLF07#2@18"Check dependencies304943587#304943587#0(0"0(0#1#0"8628473792#0"0#
-
-CCompileC build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFImageZoomView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s304943588.213606
-e304943588.605537
-r1
-xCompileC
-xbuild/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFImageZoomView.o
-x/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@79"Compile /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.m304943588#304943588#0(0"0(0#0#71"/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.m8622070272#1801"    cd /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos/include -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/DerivedSources/armv7 -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-dabylycbykayqngxlgxpexefplmb/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.m -o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFImageZoomView.o0#
-
-CCompileC build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFPhotoScrollView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s304943588.211434
-e304943588.723851
-r1
-xCompileC
-xbuild/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFPhotoScrollView.o
-x/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m304943588#304943588#0(0"0(0#0#73"/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m8626740960#1805"    cd /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos/include -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/DerivedSources/armv7 -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-dabylycbykayqngxlgxpexefplmb/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m -o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFPhotoScrollView.o0#
-
-CCompileC build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFPhotoView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
-s304943588.605646
-e304943588.840738
-r1
-xCompileC
-xbuild/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFPhotoView.o
-x/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoView.m
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@75"Compile /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoView.m304943588#304943588#0(0"0(0#0#67"/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoView.m8631780768#1793"    cd /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos/include -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/DerivedSources/armv7 -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-dabylycbykayqngxlgxpexefplmb/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoView.m -o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFPhotoView.o0#
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFImageScrollView.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFImageScrollView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoView.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/EFPhotoView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/FastTiledLayer.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/FastTiledLayer.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s301752824.259826
-e301752824.383490
-r0
-xCompileC
-xbuild/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/FastTiledLayer.o
-x/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/FastTiledLayer.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/FastTiledLayer.m:1:43: error: Egeniq/UI/Photo/FastTiledLayer.h: No such file or directory
-o/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/FastTiledLayer.m:5: warning: cannot find interface declaration for 'FastTiledLayer'
-lSLF07#2@97"Compile /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/FastTiledLayer.m301752824#301752824#0(320"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/FastTiledLayer.m:1:43: error: Egeniq/UI/Photo/FastTiledLayer.h: No such file or directory/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/FastTiledLayer.m:5: warning: cannot find interface declaration for 'FastTiledLayer'2(4@59"Egeniq/UI/Photo/FastTiledLayer.h: No such file or directory301752824#0#163#0(6@89"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/FastTiledLayer.m301752823#1#0#1#0#28"*: No such file or directory0(22@54"Cannot find interface declaration for 'FastTiledLayer'301752824#163#157#0(6@89"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/FastTiledLayer.m301752823#5#0#5#0#0"0(0#0#89"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/FastTiledLayer.m8596321824#2025"    cd /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/include -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386 -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-ekhazmyxydhoyfgtfalidupzlwtr/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/FastTiledLayer.m -o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/FastTiledLayer.o1#
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/FastTiledLayer.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/FastTiledLayer.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s301668556.742779
-e301668556.848019
-r1
-xCompileC
-xbuild/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/FastTiledLayer.o
-x/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/FastTiledLayer.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/FastTiledLayer.m301668556#301668556#0(0"0(0#0#73"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/FastTiledLayer.m8603776416#2009"    cd /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/include -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386 -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-ekhazmyxydhoyfgtfalidupzlwtr/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/FastTiledLayer.m -o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/FastTiledLayer.o0#
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/FastTiledLayer.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Photo/FastTiledLayer.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/FastTiledLayer.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/UI/Photo/FastTiledLayer.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/ImageScrollView.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/ImageScrollView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s301752786.188954
-e301752787.376112
-r1
-xCompileC
-xbuild/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/ImageScrollView.o
-x/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/ImageScrollView.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@98"Compile /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/ImageScrollView.m301752786#301752787#0(0"0(0#0#90"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/ImageScrollView.m8603405600#2027"    cd /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/include -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386 -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-ekhazmyxydhoyfgtfalidupzlwtr/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/ImageScrollView.m -o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/ImageScrollView.o0#
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/ImageScrollView.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/ImageScrollView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s301668556.445168
-e301668556.742677
-r1
-xCompileC
-xbuild/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/ImageScrollView.o
-x/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/ImageScrollView.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@82"Compile /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/ImageScrollView.m301668556#301668556#0(0"0(0#0#74"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/ImageScrollView.m8600178944#2011"    cd /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/include -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386 -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-ekhazmyxydhoyfgtfalidupzlwtr/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/ImageScrollView.m -o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/ImageScrollView.o0#
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/ImageScrollView.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Photo/ImageScrollView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/ImageScrollView.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/UI/Photo/ImageScrollView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/PhotoViewController.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/PhotoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s301752787.354712
-e301752787.660560
-r1
-xCompileC
-xbuild/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/PhotoViewController.o
-x/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/PhotoViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/PhotoViewController.m: In function '-[PhotoViewController imageAtIndex:]':
-o/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/PhotoViewController.m:222: warning: unused variable 'path'
-lSLF07#2@102"Compile /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/PhotoViewController.m301752787#301752787#0(280"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/PhotoViewController.m: In function '-[PhotoViewController imageAtIndex:]':/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/PhotoViewController.m:222: warning: unused variable 'path'1(22@22"Unused variable 'path'301752787#148#132#0(6@94"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/PhotoViewController.m300749945#222#0#222#0#19"unused variable '*'0(0#0#94"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/PhotoViewController.m8598055136#2035"    cd /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/include -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386 -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-ekhazmyxydhoyfgtfalidupzlwtr/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/PhotoViewController.m -o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/PhotoViewController.o0#
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/PhotoViewController.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Photo/PhotoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/PhotoViewController.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/PhotoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s301668491.693891
-e301668492.093875
-r1
-xCompileC
-xbuild/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/PhotoViewController.o
-x/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/PhotoViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/PhotoViewController.m: In function '-[PhotoViewController imageAtIndex:]':
-o/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/PhotoViewController.m:222: warning: unused variable 'path'
-lSLF07#2@86"Compile /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/PhotoViewController.m301668491#301668492#0(248"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/PhotoViewController.m: In function '-[PhotoViewController imageAtIndex:]':/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/PhotoViewController.m:222: warning: unused variable 'path'1(22@22"Unused variable 'path'301668492#132#116#0(6@78"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/PhotoViewController.m300749945#222#0#222#0#19"unused variable '*'0(0#0#78"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/PhotoViewController.m8602134944#2019"    cd /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/include -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386 -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-ekhazmyxydhoyfgtfalidupzlwtr/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/PhotoViewController.m -o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/PhotoViewController.o0#
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/PhotoViewController.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/UI/Photo/PhotoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/TilingView.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/TilingView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s301752787.376216
-e301752787.563566
-r1
-xCompileC
-xbuild/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/TilingView.o
-x/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/TilingView.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/TilingView.m: In function '-[TilingView initWithImageName:size:]':
-o/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/TilingView.m:64: warning: unused variable 'tiledLayer'
-lSLF07#2@93"Compile /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/TilingView.m301752787#301752787#0(268"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/TilingView.m: In function '-[TilingView initWithImageName:size:]':/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/TilingView.m:64: warning: unused variable 'tiledLayer'1(22@28"Unused variable 'tiledLayer'301752787#140#128#0(6@85"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/TilingView.m300748785#64#0#64#0#19"unused variable '*'0(0#0#85"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/TilingView.m8609055808#2017"    cd /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/include -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386 -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-ekhazmyxydhoyfgtfalidupzlwtr/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Egeniq/UI/Photo/TilingView.m -o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/TilingView.o0#
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/TilingView.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/Photo/TilingView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/TilingView.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/TilingView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s301668556.446265
-e301668556.866003
-r1
-xCompileC
-xbuild/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/TilingView.o
-x/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/TilingView.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-o/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/TilingView.m: In function '-[TilingView initWithImageName:size:]':
-o/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/TilingView.m:64: warning: unused variable 'tiledLayer'
-lSLF07#2@77"Compile /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/TilingView.m301668556#301668556#0(236"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/TilingView.m: In function '-[TilingView initWithImageName:size:]':/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/TilingView.m:64: warning: unused variable 'tiledLayer'1(22@28"Unused variable 'tiledLayer'301668556#124#112#0(6@69"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/TilingView.m300748785#64#0#64#0#19"unused variable '*'0(0#0#69"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/TilingView.m8602364256#2001"    cd /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/include -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386 -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-ekhazmyxydhoyfgtfalidupzlwtr/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/TilingView.m -o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/TilingView.o0#
-
-CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/TilingView.o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Classes/UI/Photo/TilingView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-r0
-
-CCpHeader build/Debug-iphoneos/usr/local/include/EFPhotoScrollView.h Classes/EFPhotoScrollView.h
-s304943588.851257
-e304943588.858373
-r1
-xCpHeader
-xbuild/Debug-iphoneos/usr/local/include/EFPhotoScrollView.h
-xClasses/EFPhotoScrollView.h
-lSLF07#2@32"Copy Classes/EFPhotoScrollView.h304943588#304943588#0(0"0(0#0#73"/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.h8600884608#505"    cd /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.h /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos/usr/local/include0#
-
-CCpHeader build/Debug-iphonesimulator/usr/local/include/EFPhotoView.h Classes/EFPhotoView.h
-r0
-
-CLibtool /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/libEgeniq.a normal i386
-s301752787.660741
-e301752787.713652
-r1
-xLibtool
-x/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/libEgeniq.a
-xnormal
-xi386
-o/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
-lSLF07#2@59"Libtool build/Debug-iphonesimulator/libEgeniq.a normal i386301752787#301752787#0(136"/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 0(0#0#0"28992425118793828#776"    cd /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool -static -arch_only i386 -syslibroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -L/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator -filelist /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/Egeniq.LinkFileList -ObjC -framework Foundation -o /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/libEgeniq.a0#
-
-CLibtool /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos/libEgeniq.a normal armv7
-s304943588.840831
-e304943588.851168
-r1
-xLibtool
-x/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos/libEgeniq.a
-xnormal
-xarmv7
-o/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
-lSLF07#2@53"Libtool build/Debug-iphoneos/libEgeniq.a normal armv7304943588#304943588#0(129"/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 0(0#0#0"8613977536#718"    cd /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq    setenv IPHONEOS_DEPLOYMENT_TARGET 3.2    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/libtool -static -arch_only armv7 -syslibroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -L/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos -filelist /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/Egeniq.LinkFileList -ObjC -framework Foundation -o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos/libEgeniq.a0#
-
-CProcessPCH /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-dabylycbykayqngxlgxpexefplmb/Egeniq_Prefix.pch.gch Egeniq_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
-s304943587.551954
-e304943588.211327
-r1
-xProcessPCH
-x/var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-dabylycbykayqngxlgxpexefplmb/Egeniq_Prefix.pch.gch
-xEgeniq_Prefix.pch
-xnormal
-xarmv7
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@28"Precompile Egeniq_Prefix.pch304943587#304943588#0(0"0(0#0#63"/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Egeniq_Prefix.pch8631765280#1663"    cd /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos/include -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/DerivedSources/armv7 -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphoneos/Egeniq.build/DerivedSources -c /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Egeniq_Prefix.pch -o /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-dabylycbykayqngxlgxpexefplmb/Egeniq_Prefix.pch.gch0#
-
-CProcessPCH /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-ekhazmyxydhoyfgtfalidupzlwtr/Egeniq_Prefix.pch.gch Egeniq_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-s301668490.908539
-e301668491.692681
-r1
-xProcessPCH
-x/var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-ekhazmyxydhoyfgtfalidupzlwtr/Egeniq_Prefix.pch.gch
-xEgeniq_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.gcc.4_2
-lSLF07#2@28"Precompile Egeniq_Prefix.pch301668490#301668491#0(0"0(0#0#66"/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Egeniq_Prefix.pch7309993516030586880#1864"    cd /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Debug-iphonesimulator/include -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386 -I/Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources -c /Users/peter/Dropbox/iPhone/PhotoDirector/Egeniq/Egeniq_Prefix.pch -o /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-ekhazmyxydhoyfgtfalidupzlwtr/Egeniq_Prefix.pch.gch0#
-
