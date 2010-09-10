@@ -1,13 +1,13 @@
 TEgeniq
 v7
 r0
-t304948299.192623
+t305808403.933741
 cCheck dependencies
-cProcessPCH /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-edcdilqbqpuuqhafuxhafwapmprs/Egeniq_Prefix.pch.gch Egeniq_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoScrollView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFImageZoomView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-cLibtool /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator/libEgeniq.a normal i386
+cProcessPCH /var/folders/7R/7RF9loC4FNKOtG8xmyF-YU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-fhrjcbjidmxymkamjjlhdlaoyxxb/Egeniq_Prefix.pch.gch Egeniq_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoScrollView.o "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoScrollView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFImageZoomView.o "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFImageZoomView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoView.o "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+cLibtool "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator/libEgeniq.a" normal i386
 cCpHeader build/Debug-iphonesimulator/usr/local/include/EFPhotoScrollView.h Classes/EFPhotoScrollView.h
 
 N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk
@@ -31,8 +31,8 @@ t1275094060
 s2447
 
 N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk
-c000000004C7CE92C0000000000000110
-t1283254572
+c000000004BD236930000000000000110
+t1272067731
 s272
 
 N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
@@ -49,6 +49,100 @@ N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2
 c000000004BD20412000000000000098F
 t1272054802
 s2447
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFImageZoomView.h
+c000000004C83BEB90000000000000AA1
+t1283702457
+s2721
+i<UIKit/UIKit.h>
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFImageZoomView.m
+c000000004C83BEB900000000000015EE
+t1283702457
+s5614
+i"EFImageZoomView.h"
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhoto.h
+c000000004C83BEB90000000000000291
+t1283702457
+s657
+i"EFPhotoVersion.h"
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoScrollView.h
+c000000004C83BEB9000000000000017C
+t1283702457
+s380
+i<UIKit/UIKit.h>
+i"EFPhotoView.h"
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoScrollView.m
+c000000004C83BEB900000000000018C0
+t1283702457
+s6336
+i"EFPhotoScrollView.h"
+i"EFPhoto.h"
+i"EFPhotoVersion.h"
+i"EFImageZoomView.h"
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoVersion.h
+c000000004C83BEB9000000000000011E
+t1283702457
+s286
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoView.h
+c000000004C83BEB9000000000000016F
+t1283702457
+s367
+i<UIKit/UIKit.h>
+i"EFPhotoViewDataSource.h"
+i"EFPhotoViewDelegate.h"
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoView.m
+c000000004C83BEB90000000000000087
+t1283702457
+s135
+i"EFPhotoView.h"
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoViewDataSource.h
+c000000004C83BEB9000000000000016F
+t1283702457
+s367
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoViewDelegate.h
+c000000004C83BEB900000000000001D8
+t1283702457
+s472
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Egeniq_Prefix.pch
+c000000004C83BEB9000000000000009A
+t1283702457
+s154
+i<Foundation/Foundation.h>
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator/libEgeniq.a
+t1284115603
+s70456
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator/usr/local/include/EFPhotoScrollView.h
+t1284115603
+s380
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFImageZoomView.o
+t1284115603
+s22956
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoScrollView.o
+t1284115603
+s36124
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoView.o
+t1284115603
+s9904
+
+N/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/Egeniq.LinkFileList
+c000000004C8A0C9100000000000001B4
+t1284115601
+s436
 
 N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.h
 c000000004C7C20830000000000000AA1
@@ -76,9 +170,9 @@ i<UIKit/UIKit.h>
 i"EFPhotoView.h"
 
 N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m
-c000000004C7CE68E0000000000001755
-t1283253902
-s5973
+c000000004C7CF73C00000000000017D5
+t1283258172
+s6101
 i"EFPhotoScrollView.h"
 i"EFPhoto.h"
 i"EFPhotoVersion.h"
@@ -128,8 +222,8 @@ t1283250788
 s380
 
 N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator/libEgeniq.a
-t1283255499
-s69088
+t1283259020
+s69472
 
 N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator/usr/local/include/EFPhotoScrollView.h
 t1283255499
@@ -157,8 +251,8 @@ t1283255498
 s22940
 
 N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoScrollView.o
-t1283255498
-s34788
+t1283259020
+s35172
 
 N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoView.o
 t1283255499
@@ -168,6 +262,10 @@ N/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesi
 c000000004C7CECC7000000000000019C
 t1283255495
 s412
+
+N/var/folders/7R/7RF9loC4FNKOtG8xmyF-YU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-fhrjcbjidmxymkamjjlhdlaoyxxb/Egeniq_Prefix.pch.gch
+t1284115603
+s9034256
 
 N/var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-dabylycbykayqngxlgxpexefplmb/Egeniq_Prefix.pch.gch
 t1283250788
@@ -179,7 +277,7 @@ s9034256
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies304948295#304948295#0(0"0(0#1#0"8628773728#0"0#
+lSLF07#2@18"Check dependencies305808401#305808402#0(0"0(0#1#0"8616115680#0"0#
 
 CCompileC build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFImageZoomView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 r0
@@ -189,6 +287,19 @@ r0
 
 CCompileC build/Egeniq.build/Debug-iphoneos/Egeniq.build/Objects-normal/armv7/EFPhotoView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoView.m normal armv7 objective-c com.apple.compilers.gcc.4_2
 r0
+
+CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFImageZoomView.o "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFImageZoomView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s305808403.440994
+e305808403.724919
+r1
+xCompileC
+xbuild/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFImageZoomView.o
+x/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFImageZoomView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@87"Compile /Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFImageZoomView.m305808403#305808403#0(0"0(0#0#79"/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFImageZoomView.m8625306272#2088"    cd "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap" -iquote "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap" "-F/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator/include" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources" -include /var/folders/7R/7RF9loC4FNKOtG8xmyF-YU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-fhrjcbjidmxymkamjjlhdlaoyxxb/Egeniq_Prefix.pch -c "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFImageZoomView.m" -o "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFImageZoomView.o"0#
 
 CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFImageZoomView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s304948298.237028
@@ -203,9 +314,22 @@ xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@79"Compile /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.m304948298#304948298#0(0"0(0#0#71"/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.m8627114656#1978"    cd /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator/include -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386 -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-edcdilqbqpuuqhafuxhafwapmprs/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFImageZoomView.m -o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFImageZoomView.o0#
 
+CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoScrollView.o "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoScrollView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s305808403.439954
+e305808403.738683
+r1
+xCompileC
+xbuild/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoScrollView.o
+x/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoScrollView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@89"Compile /Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoScrollView.m305808403#305808403#0(0"0(0#0#81"/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoScrollView.m8626720672#2092"    cd "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap" -iquote "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap" "-F/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator/include" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources" -include /var/folders/7R/7RF9loC4FNKOtG8xmyF-YU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-fhrjcbjidmxymkamjjlhdlaoyxxb/Egeniq_Prefix.pch -c "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoScrollView.m" -o "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoScrollView.o"0#
+
 CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoScrollView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s304948298.235649
-e304948298.947415
+s304951819.575386
+e304951820.232624
 r1
 xCompileC
 xbuild/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoScrollView.o
@@ -214,7 +338,20 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@81"Compile /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m304948298#304948298#0(0"0(0#0#73"/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m8627227296#1982"    cd /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator/include -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386 -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-edcdilqbqpuuqhafuxhafwapmprs/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m -o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoScrollView.o0#
+lSLF07#2@81"Compile /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m304951819#304951820#0(0"0(0#0#73"/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m8609373600#1982"    cd /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap -iquote /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap -F/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator/include -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386 -I/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources -include /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-edcdilqbqpuuqhafuxhafwapmprs/Egeniq_Prefix.pch -c /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.m -o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoScrollView.o0#
+
+CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoView.o "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoView.m" normal i386 objective-c com.apple.compilers.gcc.4_2
+s305808403.725096
+e305808403.879766
+r1
+xCompileC
+xbuild/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoView.o
+x/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@83"Compile /Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoView.m305808403#305808403#0(0"0(0#0#75"/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoView.m8625051232#2080"    cd "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap" -iquote "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap" "-F/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator/include" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources" -include /var/folders/7R/7RF9loC4FNKOtG8xmyF-YU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-fhrjcbjidmxymkamjjlhdlaoyxxb/Egeniq_Prefix.pch -c "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoView.m" -o "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoView.o"0#
 
 CCompileC build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/EFPhotoView.o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoView.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s304948298.818780
@@ -233,27 +370,51 @@ CCpHeader build/Debug-iphoneos/usr/local/include/EFPhotoScrollView.h Classes/EFP
 r0
 
 CCpHeader build/Debug-iphonesimulator/usr/local/include/EFPhotoScrollView.h Classes/EFPhotoScrollView.h
-s304948299.119393
-e304948299.192575
+s305808403.889545
+e305808403.933695
 r1
 xCpHeader
 xbuild/Debug-iphonesimulator/usr/local/include/EFPhotoScrollView.h
 xClasses/EFPhotoScrollView.h
-lSLF07#2@32"Copy Classes/EFPhotoScrollView.h304948299#304948299#0(0"0(0#0#73"/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.h8628694464#519"    cd /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/Classes/EFPhotoScrollView.h /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator/usr/local/include0#
+lSLF07#2@32"Copy Classes/EFPhotoScrollView.h305808403#305808403#0(0"0(0#0#81"/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoScrollView.h8615894144#549"    cd "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq"    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -strip-debug-symbols -resolve-src-symlinks "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Classes/EFPhotoScrollView.h" "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator/usr/local/include"0#
+
+CLibtool "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator/libEgeniq.a" normal i386
+s305808403.879859
+e305808403.889461
+r1
+xLibtool
+x/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator/libEgeniq.a
+xnormal
+xi386
+o/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
+lSLF07#2@59"Libtool build/Debug-iphonesimulator/libEgeniq.a normal i386305808403#305808403#0(136"/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 0(0#0#0"8618073312#804"    cd "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq"    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool -static -arch_only i386 -syslibroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk "-L/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator" -filelist "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/Egeniq.LinkFileList" -ObjC -framework Foundation -o "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator/libEgeniq.a"0#
 
 CLibtool /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphoneos/libEgeniq.a normal armv7
 r0
 
 CLibtool /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator/libEgeniq.a normal i386
-s304948299.081140
-e304948299.119307
+s304951820.232720
+e304951820.322722
 r1
 xLibtool
 x/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator/libEgeniq.a
 xnormal
 xi386
 o/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
-lSLF07#2@59"Libtool build/Debug-iphonesimulator/libEgeniq.a normal i386304948299#304948299#0(136"/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 0(0#0#0"8626716416#764"    cd /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool -static -arch_only i386 -syslibroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -L/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator -filelist /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/Egeniq.LinkFileList -ObjC -framework Foundation -o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator/libEgeniq.a0#
+lSLF07#2@59"Libtool build/Debug-iphonesimulator/libEgeniq.a normal i386304951820#304951820#0(136"/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 0(0#0#0"8616421728#764"    cd /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/libtool -static -arch_only i386 -syslibroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -L/Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator -filelist /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Objects-normal/i386/Egeniq.LinkFileList -ObjC -framework Foundation -o /Users/peter/Dropbox/iPhone/iPortfolio/Egeniq/build/Debug-iphonesimulator/libEgeniq.a0#
+
+CProcessPCH /var/folders/7R/7RF9loC4FNKOtG8xmyF-YU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-fhrjcbjidmxymkamjjlhdlaoyxxb/Egeniq_Prefix.pch.gch Egeniq_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s305808402.316576
+e305808403.439848
+r1
+xProcessPCH
+x/var/folders/7R/7RF9loC4FNKOtG8xmyF-YU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-fhrjcbjidmxymkamjjlhdlaoyxxb/Egeniq_Prefix.pch.gch
+xEgeniq_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@28"Precompile Egeniq_Prefix.pch305808402#305808403#0(0"0(0#0#71"/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Egeniq_Prefix.pch8617934016#1934"    cd "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq"    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-generated-files.hmap" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-own-target-headers.hmap" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-all-target-headers.hmap" -iquote "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/Egeniq-project-headers.hmap" "-F/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Debug-iphonesimulator/include" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources/i386" "-I/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/build/Egeniq.build/Debug-iphonesimulator/Egeniq.build/DerivedSources" -c "/Users/ivo/Documents/Xcode Projects/iportfolio/Egeniq/Egeniq_Prefix.pch" -o /var/folders/7R/7RF9loC4FNKOtG8xmyF-YU+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-fhrjcbjidmxymkamjjlhdlaoyxxb/Egeniq_Prefix.pch.gch0#
 
 CProcessPCH /var/folders/mA/mAg6+6ISHcWqGAsdr5n7Kk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Egeniq_Prefix-dabylycbykayqngxlgxpexefplmb/Egeniq_Prefix.pch.gch Egeniq_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
 r0

@@ -7,8 +7,8 @@
 //
 
 typedef enum {
-    EFPhotoVersionLarge,
-    EFPhotoVersionMedium,
-    EFPhotoVersionSmall,
+    EFPhotoVersionOriginal,
+    EFPhotoVersionPad,
+    EFPhotoVersionKey,
     EFPhotoVersionThumbnail
 } EFPhotoVersion;
