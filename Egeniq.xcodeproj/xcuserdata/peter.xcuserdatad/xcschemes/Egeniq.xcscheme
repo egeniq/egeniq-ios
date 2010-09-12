@@ -8,11 +8,15 @@
          </BuildableProductReference>
       </BuildableProductReferences>
    </BuildAction>
-   <TestAction>
+   <TestAction
+      failureAction = "0">
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB">
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      loadSymbolsForSpecifiedModules = "NO"
+      displayScaleIsEnabled = "NO"
+      displayScale = "1.00">
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
