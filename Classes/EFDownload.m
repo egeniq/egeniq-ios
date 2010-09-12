@@ -14,13 +14,12 @@
 @synthesize delegate;
 @synthesize data;
 @synthesize targetPath;
-@synthesize url;
 
 - (id) initWithURL: (NSURL *)anUrl {
     
     self = [super init];
     
-    self.url = anUrl;
+    url = [anUrl copy];
     
     payload = nil;
     
@@ -112,6 +111,9 @@
     }
     
     [data release];
+    
+    [url release];
+    
     [super dealloc];
     
     

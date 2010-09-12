@@ -33,7 +33,6 @@
 @property (assign) id delegate;
 @property (nonatomic, retain, readonly) NSMutableData *data;
 @property (nonatomic, retain) NSString* targetPath;
-@property (nonatomic, retain) NSURL* url;
 
 @end
 
