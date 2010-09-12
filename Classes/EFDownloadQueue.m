@@ -22,14 +22,20 @@
     
     queue = [[NSMutableArray alloc] initWithCapacity:10];
     
+    queueStarted = NO;
+    
     return self;
     
     
 }
 
+- (NSUInteger) count {
+    return [queue count];
+}
+
 - (void) processQueue {
     
-    if (downloadsRunning < downloadConcurrency) {
+    if (queueStarted && (downloadsRunning < downloadConcurrency)) {
      
         if ([queue count]>0) {
             
@@ -45,11 +51,26 @@
     
 }
 
+- (void) start {
+    if (!queueStarted) {
+        queueStarted = YES;
+        [self processQueue];
+    }
+}
+
+- (void) clear {
+    [queue removeAllObjects];
+}
+
 - (void) addDownload: (EFDownload *)download {
     
     [download setDelegate:self];
     
     [queue addObject:download];
+    
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(queue:didQueueDownload:)]) {
+        [delegate queue:self didQueueDownload:download];
+    }
     
     [self processQueue];
     
@@ -61,6 +82,10 @@
     
     [queue insertObject:download atIndex:0];
     
+    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(queue:didQueueDownload:)]) {
+        [delegate queue:self didQueueDownload:download];
+    }
+        
     [self processQueue];
     
 }

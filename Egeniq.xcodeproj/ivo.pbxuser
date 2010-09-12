@@ -21,6 +21,20 @@
 			sepNavVisRange = "{0, 395}";
 		};
 	};
+	923CDD76123A8CC300247AD5 /* EFDownloadQueue.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1512, 892}}";
+			sepNavSelRange = "{511, 0}";
+			sepNavVisRange = "{0, 982}";
+		};
+	};
+	923CDD77123A8CC300247AD5 /* EFDownloadQueue.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1512, 1716}}";
+			sepNavSelRange = "{1094, 0}";
+			sepNavVisRange = "{514, 1579}";
+		};
+	};
 	923CDD78123A8CC300247AD5 /* EFNibViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1512, 901}}";
@@ -89,14 +103,14 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1512, 1170}}";
 			sepNavSelRange = "{2785, 0}";
-			sepNavVisRange = "{1037, 2938}";
+			sepNavVisRange = "{1037, 2937}";
 		};
 	};
 	923CDDA7123A8F0A00247AD5 /* EFReachability.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1512, 3562}}";
-			sepNavSelRange = "{9107, 0}";
-			sepNavVisRange = "{2796, 2412}";
+			sepNavIntBoundsRect = "{{0, 0}, {1512, 3146}}";
+			sepNavSelRange = "{2794, 0}";
+			sepNavVisRange = "{1141, 2905}";
 		};
 	};
 	923CDDB2123A918900247AD5 /* PBXTextBookmark */ = {
@@ -166,6 +180,66 @@
 		vrLen = 2938;
 		vrLoc = 1037;
 	};
+	923CDF46123CBE0600247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D011F506120C865800A07E28 /* EFPhotoVersion.h */;
+		name = "EFPhotoVersion.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 285;
+		vrLoc = 0;
+	};
+	923CDF47123CBE0600247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDD76123A8CC300247AD5 /* EFDownloadQueue.h */;
+		name = "EFDownloadQueue.h: 28";
+		rLen = 0;
+		rLoc = 511;
+		rType = 0;
+		vrLen = 982;
+		vrLoc = 0;
+	};
+	923CDF48123CBE0600247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDD77123A8CC300247AD5 /* EFDownloadQueue.m */;
+		name = "EFDownloadQueue.m: 62";
+		rLen = 0;
+		rLoc = 1094;
+		rType = 0;
+		vrLen = 1579;
+		vrLoc = 514;
+	};
+	923CDF49123CBE0600247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDDA6123A8F0A00247AD5 /* EFReachability.h */;
+		name = "EFReachability.h: 58";
+		rLen = 0;
+		rLoc = 2785;
+		rType = 0;
+		vrLen = 2937;
+		vrLoc = 1037;
+	};
+	923CDF4A123CBE0600247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDDA7123A8F0A00247AD5 /* EFReachability.m */;
+		name = "EFReachability.m: 59";
+		rLen = 0;
+		rLoc = 2794;
+		rType = 0;
+		vrLen = 2905;
+		vrLoc = 1141;
+	};
+	923CDF50123CBE1900247AD5 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDDA7123A8F0A00247AD5 /* EFReachability.m */;
+		name = "EFReachability.m: 59";
+		rLen = 0;
+		rLoc = 2794;
+		rType = 0;
+		vrLen = 2905;
+		vrLoc = 1141;
+	};
 	D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {924, 342}}";
@@ -182,7 +256,7 @@
 	};
 	D011F506120C865800A07E28 /* EFPhotoVersion.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {924, 342}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1512, 892}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 285}";
 		};
@@ -254,6 +328,12 @@
 			923CDDC8123A92CC00247AD5 /* PBXTextBookmark */ = 923CDDC8123A92CC00247AD5 /* PBXTextBookmark */;
 			923CDDD3123A955E00247AD5 /* PBXTextBookmark */ = 923CDDD3123A955E00247AD5 /* PBXTextBookmark */;
 			923CDE10123A959000247AD5 /* PBXTextBookmark */ = 923CDE10123A959000247AD5 /* PBXTextBookmark */;
+			923CDF46123CBE0600247AD5 /* PBXTextBookmark */ = 923CDF46123CBE0600247AD5 /* PBXTextBookmark */;
+			923CDF47123CBE0600247AD5 /* PBXTextBookmark */ = 923CDF47123CBE0600247AD5 /* PBXTextBookmark */;
+			923CDF48123CBE0600247AD5 /* PBXTextBookmark */ = 923CDF48123CBE0600247AD5 /* PBXTextBookmark */;
+			923CDF49123CBE0600247AD5 /* PBXTextBookmark */ = 923CDF49123CBE0600247AD5 /* PBXTextBookmark */;
+			923CDF4A123CBE0600247AD5 /* PBXTextBookmark */ = 923CDF4A123CBE0600247AD5 /* PBXTextBookmark */;
+			923CDF50123CBE1900247AD5 /* PBXTextBookmark */ = 923CDF50123CBE1900247AD5 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 923CDD72123A8C8700247AD5 /* Source Control */;
 		userBuildSettings = {

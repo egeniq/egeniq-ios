@@ -18,9 +18,14 @@
     
     id delegate;
     
+    BOOL queueStarted;
+    
 }
 
 - (id)initWithConcurrency: (NSUInteger)concurrency;
+- (NSUInteger) count;
+- (void) start;
+- (void) clear;
 - (void) addDownload: (EFDownload *)download;
 - (void) addPrioritizedDownload: (EFDownload *)download;
 
@@ -30,6 +35,7 @@
 
 @interface NSObject (EFDownloadQueueDelegateMethods)
 
+- (void)queue: (EFDownloadQueue *)queue didQueueDownload:(EFDownload*)download;
 - (void)queue: (EFDownloadQueue *)queue didFinishDownload:(EFDownload*)download;
 - (void)queue: (EFDownloadQueue *)queue didFailDownload:(EFDownload*)download withError:(NSError*)error;
 
