@@ -15,8 +15,10 @@
 /**
  * Private methods for the EFPhotoView class.
  */
-@interface EFPhotoScrollView ()
- 
+@interface EFPhotoScrollView () <UIScrollViewDelegate>
+
+- (void)setup;
+
 - (CGSize)contentSizeForPagingScrollView;
 - (void)configurePage:(EFImageZoomView *)page forIndex:(NSUInteger)index;
 - (BOOL)isDisplayingPageForIndex:(NSUInteger)index;
@@ -34,28 +36,38 @@
 
 @implementation EFPhotoScrollView
 
+- (id)initWithFrame:(CGRect)frame {
+	self = [super initWithFrame:frame];	
+	if (self != nil) {
+		[self setup];
+	}
+	return self;
+}
+
 - (id)initWithCoder:(NSCoder *)coder {
 	self = [super initWithCoder:coder];
+	if (self != nil) {
+		[self setup];
+	}
+	return self;
+}
+
+- (void)setup {
+	// Step 1: make the outer paging scroll view
+	CGRect pagingScrollViewFrame = [self frameForPagingScrollView];
+	pagingScrollView = [[UIScrollView alloc] initWithFrame:pagingScrollViewFrame];
+	pagingScrollView.pagingEnabled = YES;
+	pagingScrollView.backgroundColor = [UIColor blackColor];
+	pagingScrollView.showsVerticalScrollIndicator = NO;
+	pagingScrollView.showsHorizontalScrollIndicator = NO;
+	pagingScrollView.contentSize = [self contentSizeForPagingScrollView];
+	pagingScrollView.delegate = self;
+	[self addSubview:pagingScrollView];
 	
-    if (self != nil) {
-		// Step 1: make the outer paging scroll view
-		CGRect pagingScrollViewFrame = [self frameForPagingScrollView];
-		pagingScrollView = [[UIScrollView alloc] initWithFrame:pagingScrollViewFrame];
-		pagingScrollView.pagingEnabled = YES;
-		pagingScrollView.backgroundColor = [UIColor blackColor];
-		pagingScrollView.showsVerticalScrollIndicator = NO;
-		pagingScrollView.showsHorizontalScrollIndicator = NO;
-		pagingScrollView.contentSize = [self contentSizeForPagingScrollView];
-		pagingScrollView.delegate = self;
-		[self addSubview: pagingScrollView];
-		
-		// Step 2: prepare to tile content
-		recycledPages = [[NSMutableSet alloc] init];
-		visiblePages  = [[NSMutableSet alloc] init];
-		[self tilePages];
-    }
-    
-    return self;
+	// Step 2: prepare to tile content
+	recycledPages = [[NSMutableSet alloc] init];
+	visiblePages  = [[NSMutableSet alloc] init];
+	[self tilePages];
 }
 
 - (void)dealloc {
@@ -232,7 +244,7 @@
 #pragma mark Photo view method overrides
 
 - (void)setDataSource:(id<EFPhotoViewDataSource>)newDataSource {
-    dataSource = newDataSource;
+    [super setDataSource:newDataSource];
     [self reloadData];
 }
 

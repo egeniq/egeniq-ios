@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "EFPhotoView.h"
 
-@interface EFPhotoScrollView : EFPhotoView <UIScrollViewDelegate> {
+@interface EFPhotoScrollView : EFPhotoView {
     UIScrollView *pagingScrollView;    
     NSMutableSet *recycledPages;
     NSMutableSet *visiblePages;

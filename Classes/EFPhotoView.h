@@ -2,6 +2,7 @@
 
 #import "EFPhotoViewDataSource.h"
 #import "EFPhotoViewDelegate.h"
+#import "EFPhoto.h"
 
 @interface EFPhotoView : UIView {
     id<EFPhotoViewDataSource> dataSource;
