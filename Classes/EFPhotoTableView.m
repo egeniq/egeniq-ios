@@ -26,6 +26,8 @@
 	self.autoresizesSubviews = YES;
 	tableView = [[UITableView alloc] initWithFrame:[self frame]];
 	tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+	tableView.backgroundColor = [UIColor blackColor];
+	tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 	tableView.delegate = self;
 	[self addSubview:tableView];
 }
@@ -42,20 +44,37 @@
 #pragma mark Table view delegate / dataSource methods
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:indexPath];
+	NSIndexPath *photoIndexPath = [NSIndexPath indexPathWithIndex:[indexPath indexAtPosition:1]];
+	id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:photoIndexPath];
 	CGSize size = [photo sizeForVersion:EFPhotoVersionThumbnail];
-	return size.height;
+	CGFloat height = round(size.height / (size.width / 90));
+	return height;
 }
+
+
+#define PHOTOVIEW_TAG 1
 
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"PhotoTableViewCell";
     
+	UIImageView *photoView = nil;
+	
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
-    }
-    
-    cell.textLabel.text = @"Test";
+        photoView = [[[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 90.0, 90.0)] autorelease];
+        photoView.tag = PHOTOVIEW_TAG;
+        [cell.contentView addSubview:photoView];
+    } else {
+		photoView = (UIImageView *)[cell.contentView viewWithTag:PHOTOVIEW_TAG];
+	}
+	NSIndexPath *photoIndexPath = [NSIndexPath indexPathWithIndex:[indexPath indexAtPosition:1]];
+	id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:photoIndexPath];	
+	NSString *path = [photo pathForVersion:EFPhotoVersionThumbnail];
+	photoView.image = [UIImage imageWithContentsOfFile:path];
+	CGRect frame = photoView.frame;
+	frame.size.height = [self tableView:tableView heightForRowAtIndexPath:indexPath];
+	photoView.frame = frame;
     return cell;	
 }
 
