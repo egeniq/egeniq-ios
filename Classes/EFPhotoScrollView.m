@@ -235,7 +235,7 @@
 
 - (UIImage *)imageAtIndex:(NSUInteger)index {
     id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:[NSIndexPath indexPathWithIndex:index]];    
-    NSString *path = [photo pathForVersion: EFPhotoVersionOriginal];
+    NSString *path = [photo pathForVersion: EFPhotoVersionPad];
     return [UIImage imageWithContentsOfFile: path];    
 }
 
