@@ -46,13 +46,6 @@
 #pragma mark -
 #pragma mark Table view delegate / dataSource methods
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:indexPath];
-	CGSize size = [photo sizeForVersion:EFPhotoVersionThumbnail];
-	CGFloat height = round(size.height / (size.width / 90));
-	return height;
-}
-
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if ([self.delegate respondsToSelector:@selector(photoView:willSelectPhotoAtIndexPath:)]) {
 		indexPath = [delegate photoView:self willSelectPhotoAtIndexPath:indexPath];
@@ -81,6 +74,13 @@
 	}	
 }
 
+- (CGFloat)tableView:(UITableView *)theTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:indexPath];
+	CGSize size = [photo sizeForVersion:EFPhotoVersionThumbnail];
+	CGFloat height = round(size.height / (size.width / tableView.bounds.size.width));
+	return height;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)theTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"PhotoTableViewCell";
     
@@ -89,7 +89,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
-        photoView = [[[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, 90.0, 90.0)] autorelease];
+        photoView = [[[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, tableView.bounds.size.width, tableView.bounds.size.width)] autorelease];
         photoView.tag = PHOTOVIEW_TAG;
         [cell.contentView addSubview:photoView];
     } else {
@@ -138,7 +138,7 @@
 
 - (void)selectPhotoAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
     indexPathForSelectedPhoto = [indexPath copy];
-	[tableView selectRowAtIndexPath:indexPath animated:animated scrollPosition:UITableViewScrollPositionMiddle];
+	[tableView selectRowAtIndexPath:indexPath animated:animated scrollPosition:UITableViewScrollPositionBottom];
 }
 
 - (NSIndexPath *)indexPathForSelectedPhoto {

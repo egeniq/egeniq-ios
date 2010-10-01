@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>D084BEA312562B2C008A4816</string>
+						<string>D084BF1F125661B5008A4816</string>
 						<key>history</key>
 						<array>
 							<string>D084BE021255CF7E008A4816</string>
@@ -317,7 +317,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>15</integer>
+									<integer>19</integer>
 									<integer>6</integer>
 									<integer>3</integer>
 									<integer>1</integer>
@@ -362,7 +362,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EFPhotoScrollView.m</string>
+								<string>EFPhotoTableView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -370,11 +370,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EFPhotoScrollView.m</string>
+										<string>EFPhotoTableView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D084BEA212562B2C008A4816</string>
+										<string>D084BF1E125661B5008A4816</string>
 										<key>history</key>
 										<array>
 											<string>D0409AF5123CFDE60089A241</string>
@@ -383,12 +383,12 @@
 											<string>D0C5788B124E2BC50014A2DF</string>
 											<string>D0C578D2124E2FC70014A2DF</string>
 											<string>D084BE231255F721008A4816</string>
-											<string>D084BE241255F721008A4816</string>
 											<string>D084BE261255F721008A4816</string>
 											<string>D084BE6B12561669008A4816</string>
 											<string>D084BE8912562755008A4816</string>
 											<string>D084BE9C12562A49008A4816</string>
-											<string>D084BE9D12562A49008A4816</string>
+											<string>D084BEA612563262008A4816</string>
+											<string>D084BEA712563262008A4816</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
