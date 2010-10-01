@@ -1,8 +1,17 @@
 #import <UIKit/UIKit.h>
 
+#import "EFPhoto.h"
 #import "EFPhotoViewDataSource.h"
 #import "EFPhotoViewDelegate.h"
-#import "EFPhoto.h"
+
+@interface NSIndexPath (EFPhotoView) 
+
+@property(readonly) NSUInteger photo;
+@property(readonly) NSUInteger collection;
+
++ (NSIndexPath *)indexPathForPhoto:(NSUInteger)photo inCollection:(NSUInteger)collection;
+
+@end
 
 @interface EFPhotoView : UIView {
     id<EFPhotoViewDataSource> dataSource;

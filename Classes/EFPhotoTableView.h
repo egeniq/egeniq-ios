@@ -6,7 +6,7 @@
     NSIndexPath *indexPathForSelectedPhoto;	
 }
 
-- (void)selectPhotoAtIndexPath:(NSIndexPath *)indexPath;
+- (void)selectPhotoAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated;
 - (NSIndexPath *)indexPathForSelectedPhoto;
 
 @end

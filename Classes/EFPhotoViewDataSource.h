@@ -1,7 +1,6 @@
 @class EFPhotoView;
-@protocol EFPhoto;
 
-@protocol EFPhotoViewDataSource
+@protocol EFPhotoViewDataSource <NSObject>
 
 @required
 

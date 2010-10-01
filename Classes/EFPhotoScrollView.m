@@ -102,7 +102,7 @@
 		
 		// adjust contentOffset to preserve page location based on values collected prior to location
 		CGFloat pageWidth = pagingScrollView.bounds.size.width;
-		CGFloat newOffset = (firstVisiblePageIndexBeforeRotation * pageWidth) + (percentScrolledIntoFirstVisiblePage * pageWidth);
+		CGFloat newOffset = (indexPathForSelectedPhoto.photo * pageWidth) + (percentScrolledIntoFirstVisiblePage * pageWidth);
 		pagingScrollView.contentOffset = CGPointMake(newOffset, 0);	
 	}
 	
@@ -117,15 +117,18 @@
     // Calculate the content offset in case the orientation changes
     CGFloat offset = pagingScrollView.contentOffset.x;
     CGFloat pageWidth = pagingScrollView.bounds.size.width;
-    
+
+	NSUInteger firstVisiblePageIndex = 0;
+
     if (offset >= 0) {
-        firstVisiblePageIndexBeforeRotation = floorf(offset / pageWidth);
-        percentScrolledIntoFirstVisiblePage = (offset - (firstVisiblePageIndexBeforeRotation * pageWidth)) / pageWidth;
+		firstVisiblePageIndex = floorf(offset / pageWidth);
+        percentScrolledIntoFirstVisiblePage = (offset - (firstVisiblePageIndex * pageWidth)) / pageWidth;
     } else {
-        firstVisiblePageIndexBeforeRotation = 0;
         percentScrolledIntoFirstVisiblePage = offset / pageWidth;
     } 	
 	
+	indexPathForSelectedPhoto = [NSIndexPath indexPathForPhoto:firstVisiblePageIndex inCollection:0];
+
     // Calculate which pages are visible
     CGRect visibleBounds = pagingScrollView.bounds;
     int firstNeededPageIndex = floorf(CGRectGetMinX(visibleBounds) / CGRectGetWidth(visibleBounds));
@@ -179,13 +182,6 @@
 - (void)configurePage:(EFImageZoomView *)page forIndex:(NSUInteger)index {
     page.index = index;
     page.frame = [self frameForPageAtIndex:index];
-    
-    // Use tiled images
-    // [page displayTiledImageNamed:[self imageNameAtIndex:index]
-    //                        size:[self imageSizeAtIndex:index]];
-    
-    // To use full images instead of tiled images, replace the "displayTiledImageNamed:" call
-    // above by the following line:
     [page displayImage:[self imageAtIndex:index]];
 }
 
@@ -194,7 +190,38 @@
 #pragma mark ScrollView delegate methods
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    // Calculate index path for newly selected photo
+    CGFloat offset = pagingScrollView.contentOffset.x;
+    CGFloat pageWidth = pagingScrollView.bounds.size.width;
+	NSUInteger pageIndex = floorf(offset / pageWidth);
+	NSIndexPath *indexPath = [NSIndexPath indexPathForPhoto:pageIndex inCollection:0];	
+	
+	if ([self.delegate respondsToSelector:@selector(photoView:willDeselectPhotoAtIndexPath:)]) {
+		// We only currently support the selection of 1 photo, so we don't do anything with the return value
+		[self.delegate photoView:self willDeselectPhotoAtIndexPath:indexPathForSelectedPhoto];
+	}
+
+	indexPathForSelectedPhoto = nil;
+	
+	if ([self.delegate respondsToSelector:@selector(photoView:didDeselectPhotoAtIndexPath:)]) {
+		[self.delegate photoView:self didDeselectPhotoAtIndexPath:indexPathForSelectedPhoto];
+	}
+	
+	if ([self.delegate respondsToSelector:@selector(photoView:didDeselectPhotoAtIndexPath:)]) {
+		NSIndexPath *resultIndexPath = [self.delegate photoView:self willSelectPhotoAtIndexPath:indexPath];
+		
+		// If a different index path is returned, let's select the photo specified.
+		if ([resultIndexPath compare:indexPath] != NSOrderedSame) {
+			[self selectPhotoAtIndexPath:resultIndexPath animated:YES];
+			return;
+		}
+	}
+	
     [self tilePages];
+	
+	if ([self.delegate respondsToSelector:@selector(photoView:didSelectPhotoAtIndexPath:)]) {
+		[self.delegate photoView:self didSelectPhotoAtIndexPath:indexPath];
+	}
 }
 
 #pragma mark -
@@ -234,9 +261,9 @@
 }
 
 - (UIImage *)imageAtIndex:(NSUInteger)index {
-    id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:[NSIndexPath indexPathWithIndex:index]];    
-    NSString *path = [photo pathForVersion: EFPhotoVersionPad];
-    return [UIImage imageWithContentsOfFile: path];    
+    id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:[NSIndexPath indexPathForPhoto:index inCollection:0]];    
+    NSString *path = [photo pathForVersion:EFPhotoVersionPad];
+    return [UIImage imageWithContentsOfFile:path];    
 }
 
 
@@ -267,11 +294,29 @@
 #pragma mark Photo scroll view specific public methods
 
 - (NSIndexPath *)indexPathForSelectedPhoto {
-    return indexPathForSelectedPhoto;
+    return [[indexPathForSelectedPhoto copy] autorelease];
 }
 
-- (void)selectPhotoAtIndexPath:(NSIndexPath *)indexPath {
+- (void)selectPhotoAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
     indexPathForSelectedPhoto = [indexPath copy];
+
+    CGFloat pageWidth = pagingScrollView.bounds.size.width;	
+	CGFloat newOffset = (indexPathForSelectedPhoto.photo * pageWidth);
+
+	if (animated) {
+		[UIView beginAnimations:nil context:nil];	
+		pagingScrollView.alpha = 0.0;
+		[UIView commitAnimations];
+	}
+	
+	pagingScrollView.contentOffset = CGPointMake(newOffset, 0);		
+	[self tilePages];
+	
+	if (animated) {
+		[UIView beginAnimations:nil context:nil];	
+		pagingScrollView.alpha = 1.0;	
+		[UIView commitAnimations];
+	}
 }
 
 @end
