@@ -7,6 +7,8 @@
     NSMutableSet *visiblePages;
 	
     NSIndexPath *indexPathForSelectedPhoto;
+	
+	NSUInteger firstVisiblePageIndex;
     CGFloat percentScrolledIntoFirstVisiblePage;	
 }
 

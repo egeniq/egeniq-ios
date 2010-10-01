@@ -8,7 +8,7 @@
 
 #import "EFPhotoVersion.h"
 
-@protocol EFPhoto
+@protocol EFPhoto <NSObject>
 
 @required
 
