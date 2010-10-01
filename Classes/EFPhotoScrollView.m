@@ -221,18 +221,16 @@
 	}
 	
 	// Notify delegate that we are going to select a different photo
-	if ([self.delegate respondsToSelector:@selector(photoView:didDeselectPhotoAtIndexPath:)]) {
-		NSIndexPath *resultIndexPath = [self.delegate photoView:self willSelectPhotoAtIndexPath:indexPath];
-		
-		// If a different index path is returned, let's select the photo specified.
-		if ([resultIndexPath compare:indexPath] != NSOrderedSame) {
-			[self selectPhotoAtIndexPath:resultIndexPath animated:YES];
+	if ([self.delegate respondsToSelector:@selector(photoView:willSelectPhotoAtIndexPath:)]) {
+		NSIndexPath *otherIndexPath = [self.delegate photoView:self willSelectPhotoAtIndexPath:indexPath];
+		if (otherIndexPath != nil && [indexPath compare:otherIndexPath] != NSOrderedSame) {
+			[self selectPhotoAtIndexPath:indexPath animated:YES];
 			return;
 		}
 	}
 	
-	indexPathForSelectedPhoto = [indexPath retain];
-    [self tilePages];
+	indexPathForSelectedPhoto = indexPath;
+	[self tilePages];
 	
 	// Notify delegate that another photo has been selected
 	if ([self.delegate respondsToSelector:@selector(photoView:didSelectPhotoAtIndexPath:)]) {
@@ -303,7 +301,21 @@
 	
 	// Step 2: prepare to tile content
 	pagingScrollView.contentSize = [self contentSizeForPagingScrollView];	
-	[self tilePages];
+	
+	
+	// Notify delegate that we are going to select a different photo
+	NSIndexPath *indexPath = [NSIndexPath indexPathForPhoto:0 inCollection:0];
+	
+	if ([self.delegate respondsToSelector:@selector(photoView:willSelectPhotoAtIndexPath:)]) {
+		indexPath = [self.delegate photoView:self willSelectPhotoAtIndexPath:indexPath];
+	}
+	
+	[self selectPhotoAtIndexPath:indexPath animated:NO];
+	
+	// Notify delegate that another photo has been selected
+	if ([self.delegate respondsToSelector:@selector(photoView:didSelectPhotoAtIndexPath:)]) {
+		[self.delegate photoView:self didSelectPhotoAtIndexPath:indexPath];
+	}	
 }
 
 #pragma mark -
