@@ -32,6 +32,8 @@
 
 - (void)dealloc
 {
+	[contentView release];
+	[backgroundImageView release];
     [imageView release];
     [super dealloc];
 }
@@ -46,7 +48,7 @@
     // center the image as it becomes smaller than the size of the screen
     
     CGSize boundsSize = self.bounds.size;
-    CGRect frameToCenter = imageView.frame;
+    CGRect frameToCenter = contentView.frame;
     
     // center horizontally
     if (frameToCenter.size.width < boundsSize.width)
@@ -60,7 +62,7 @@
     else
         frameToCenter.origin.y = 0;
     
-    imageView.frame = frameToCenter;
+    contentView.frame = frameToCenter;
 }
 
 #pragma mark -
@@ -68,35 +70,53 @@
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
-    return imageView;
+    return contentView;
 }
 
 #pragma mark -
 #pragma mark Configure scrollView to display new image (tiled or not)
 
-- (void)displayImage:(UIImage *)image
+- (void)displayImage:(UIImage *)image backgroundImage:(UIImage *)backgroundImage size:(CGSize)size
 {
-    // clear the previous imageView
-    [imageView removeFromSuperview];
-    [imageView release];
-    imageView = nil;
-    
+	// clear previous views
+	[contentView removeFromSuperview];
+	[contentView release];
+	contentView = nil;
+	
+	[backgroundImageView release];
+	backgroundImageView = nil;
+	
+	[imageView release];
+	imageView = nil;
+	
     // reset our zoomScale to 1.0 before doing any further calculations
     self.zoomScale = 1.0;
-    
-    // make a new UIImageView for the new image
-    imageView = [[UIImageView alloc] initWithImage:image];
-    [self addSubview:imageView];
-    
-    self.contentSize = [image size];
+
+	// create the content view
+	contentView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, size.width, size.height)];
+	contentView.backgroundColor = [UIColor redColor];
+	[self addSubview:contentView];
+	
+    // make a new view for the background image
+	backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
+	backgroundImageView.frame = contentView.frame;
+	[contentView addSubview:backgroundImageView];
+	[contentView sendSubviewToBack:backgroundImageView];
+
+    self.contentSize = size;
     [self setMaxMinZoomScalesForCurrentBounds];
     self.zoomScale = self.minimumZoomScale;
+	
+    // make a new UIImageView for the new image
+    imageView = [[UIImageView alloc] initWithImage:image];
+    [contentView addSubview:imageView];
+	
 }
 
 - (void)setMaxMinZoomScalesForCurrentBounds
 {
     CGSize boundsSize = self.bounds.size;
-    CGSize imageSize = imageView.bounds.size;
+    CGSize imageSize = contentView.bounds.size;
     
     // calculate min/max zoomscale
     CGFloat xScale = boundsSize.width / imageSize.width;    // the scale needed to perfectly fit the image width-wise
@@ -124,7 +144,7 @@
 - (CGPoint)pointToCenterAfterRotation
 {
     CGPoint boundsCenter = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
-    return [self convertPoint:boundsCenter toView:imageView];
+    return [self convertPoint:boundsCenter toView:contentView];
 }
 
 // returns the zoom scale to attempt to restore after rotation. 

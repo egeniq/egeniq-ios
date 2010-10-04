@@ -7,12 +7,14 @@
 #import <UIKit/UIKit.h>
 
 @interface EFImageZoomView : UIScrollView <UIScrollViewDelegate> {
-    UIView        *imageView;
-    NSUInteger     index;
+	UIView *contentView;
+    UIImageView *imageView;
+	UIImageView *backgroundImageView;
+    NSUInteger index;
 }
 @property (assign) NSUInteger index;
 
-- (void)displayImage:(UIImage *)image;
+- (void)displayImage:(UIImage *)image backgroundImage:(UIImage *)backgroundImage size:(CGSize)size;
 - (void)setMaxMinZoomScalesForCurrentBounds;
 
 - (CGPoint)pointToCenterAfterRotation;

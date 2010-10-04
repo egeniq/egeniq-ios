@@ -29,7 +29,9 @@
 - (EFImageZoomView *)dequeueRecycledPage;
 
 - (NSUInteger)imageCount;
+- (CGSize)imageSizeAtIndex:(NSUInteger)index;
 - (UIImage *)imageAtIndex:(NSUInteger)index;
+- (UIImage *)backgroundImageAtIndex:(NSUInteger)index;
 
 
 @end
@@ -180,7 +182,7 @@
 - (void)configurePage:(EFImageZoomView *)page forIndex:(NSUInteger)index {
     page.index = index;
     page.frame = [self frameForPageAtIndex:index];
-    [page displayImage:[self imageAtIndex:index]];
+    [page displayImage:[self imageAtIndex:index] backgroundImage:[self backgroundImageAtIndex:index] size:[self imageSizeAtIndex:index]];
 }
 
 
@@ -229,7 +231,7 @@
 		}
 	}
 	
-	indexPathForSelectedPhoto = indexPath;
+	indexPathForSelectedPhoto = [indexPath retain];
 	[self tilePages];
 	
 	// Notify delegate that another photo has been selected
@@ -274,12 +276,22 @@
 	return dataSource == nil ? NSNotFound : [dataSource photoView:self numberOfPhotosInCollection:0];
 }
 
+- (CGSize)imageSizeAtIndex:(NSUInteger)index {
+    id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:[NSIndexPath indexPathForPhoto:index inCollection:0]];    
+    return [photo sizeForVersion:EFPhotoVersionOriginal];
+}
+
 - (UIImage *)imageAtIndex:(NSUInteger)index {
     id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:[NSIndexPath indexPathForPhoto:index inCollection:0]];    
     NSString *path = [photo pathForVersion:EFPhotoVersionOriginal];
     return [UIImage imageWithContentsOfFile:path];    
 }
 
+- (UIImage *)backgroundImageAtIndex:(NSUInteger)index {
+    id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:[NSIndexPath indexPathForPhoto:index inCollection:0]];    
+    NSString *path = [photo pathForVersion:EFPhotoVersionThumbnail];
+    return [UIImage imageWithContentsOfFile:path];    
+}
 
 #pragma mark -
 #pragma mark Photo view method overrides
