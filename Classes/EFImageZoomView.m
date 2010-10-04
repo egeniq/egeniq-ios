@@ -10,6 +10,10 @@
 
 @synthesize index;
 
+- (void)zoomOut:(UITapGestureRecognizer *)recognizer {
+    self.zoomScale = self.minimumZoomScale;	
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     if ((self = [super initWithFrame:frame])) {
@@ -18,6 +22,10 @@
         self.bouncesZoom = YES;
         self.decelerationRate = UIScrollViewDecelerationRateFast;
         self.delegate = self;        
+		
+		UITapGestureRecognizer *tapRecognizer = [[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(zoomOut:)] autorelease];
+		[tapRecognizer setNumberOfTapsRequired:2];
+		[self addGestureRecognizer:tapRecognizer];
     }
     return self;
 }
