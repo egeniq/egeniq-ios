@@ -186,6 +186,16 @@
 			D0E247D21259FF1B00C78A2D /* PBXTextBookmark */ = D0E247D21259FF1B00C78A2D /* PBXTextBookmark */;
 			D0E247D61259FF4C00C78A2D /* PBXTextBookmark */ = D0E247D61259FF4C00C78A2D /* PBXTextBookmark */;
 			D0E247D81259FF6300C78A2D /* PBXTextBookmark */ = D0E247D81259FF6300C78A2D /* PBXTextBookmark */;
+			D0E247DF125A007700C78A2D /* PBXTextBookmark */ = D0E247DF125A007700C78A2D /* PBXTextBookmark */;
+			D0E247E1125A045000C78A2D /* PBXTextBookmark */ = D0E247E1125A045000C78A2D /* PBXTextBookmark */;
+			D0E247E9125A057600C78A2D /* PBXTextBookmark */ = D0E247E9125A057600C78A2D /* PBXTextBookmark */;
+			D0E247ED125A058A00C78A2D /* PBXTextBookmark */ = D0E247ED125A058A00C78A2D /* PBXTextBookmark */;
+			D0E247F8125A078A00C78A2D /* PBXTextBookmark */ = D0E247F8125A078A00C78A2D /* PBXTextBookmark */;
+			D0E24806125A0AF100C78A2D /* PBXTextBookmark */ = D0E24806125A0AF100C78A2D /* PBXTextBookmark */;
+			D0E24807125A0AF100C78A2D /* PBXTextBookmark */ = D0E24807125A0AF100C78A2D /* PBXTextBookmark */;
+			D0E24808125A0AF100C78A2D /* PBXTextBookmark */ = D0E24808125A0AF100C78A2D /* PBXTextBookmark */;
+			D0E24811125A0BA700C78A2D /* PBXTextBookmark */ = D0E24811125A0BA700C78A2D /* PBXTextBookmark */;
+			D0E24818125A0CC400C78A2D /* PBXTextBookmark */ = D0E24818125A0CC400C78A2D /* PBXTextBookmark */;
 		};
 		sourceControlManager = D0EBF3F811FB18540024C8BD /* Source Control */;
 		userBuildSettings = {
@@ -261,9 +271,9 @@
 	};
 	D093CD3511FC62A5000B51D8 /* EFPhotoScrollView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1570, 4771}}";
-			sepNavSelRange = "{3527, 0}";
-			sepNavVisRange = "{6217, 2009}";
+			sepNavIntBoundsRect = "{{0, 0}, {971, 4771}}";
+			sepNavSelRange = "{5929, 0}";
+			sepNavVisRange = "{5170, 987}";
 			sepNavWindowFrame = "{{382, 311}, {1021, 797}}";
 		};
 	};
@@ -282,7 +292,7 @@
 		fRef = D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */;
 		name = "EFImageZoomView.h: 15";
 		rLen = 0;
-		rLoc = 458;
+		rLoc = 475;
 		rType = 0;
 		vrLen = 548;
 		vrLoc = 0;
@@ -292,7 +302,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 111";
 		rLen = 0;
-		rLoc = 4033;
+		rLoc = 4256;
 		rType = 0;
 		vrLen = 1938;
 		vrLoc = 1843;
@@ -330,15 +340,15 @@
 	D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1570, 677}}";
-			sepNavSelRange = "{457, 0}";
-			sepNavVisRange = "{0, 660}";
+			sepNavSelRange = "{329, 0}";
+			sepNavVisRange = "{0, 677}";
 		};
 	};
 	D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1570, 2704}}";
-			sepNavSelRange = "{3082, 0}";
-			sepNavVisRange = "{2016, 2087}";
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 2782}}";
+			sepNavSelRange = "{3255, 0}";
+			sepNavVisRange = "{2177, 2017}";
 			sepNavWindowFrame = "{{15, 248}, {1612, 925}}";
 		};
 	};
@@ -417,7 +427,7 @@
 		fRef = D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */;
 		name = "EFImageZoomView.h: 16";
 		rLen = 0;
-		rLoc = 457;
+		rLoc = 474;
 		rType = 0;
 		vrLen = 620;
 		vrLoc = 0;
@@ -427,7 +437,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 94";
 		rLen = 0;
-		rLoc = 2826;
+		rLoc = 2888;
 		rType = 0;
 		vrLen = 1536;
 		vrLoc = 1460;
@@ -467,7 +477,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 94";
 		rLen = 0;
-		rLoc = 2826;
+		rLoc = 2888;
 		rType = 0;
 		vrLen = 1536;
 		vrLoc = 1460;
@@ -477,7 +487,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 94";
 		rLen = 0;
-		rLoc = 2805;
+		rLoc = 2867;
 		rType = 0;
 		vrLen = 1968;
 		vrLoc = 1841;
@@ -497,7 +507,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 101";
 		rLen = 0;
-		rLoc = 2906;
+		rLoc = 2968;
 		rType = 0;
 		vrLen = 1963;
 		vrLoc = 1716;
@@ -517,7 +527,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 95";
 		rLen = 0;
-		rLoc = 2599;
+		rLoc = 2661;
 		rType = 0;
 		vrLen = 1554;
 		vrLoc = 1715;
@@ -537,7 +547,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 95";
 		rLen = 0;
-		rLoc = 2599;
+		rLoc = 2661;
 		rType = 0;
 		vrLen = 1775;
 		vrLoc = 1845;
@@ -547,7 +557,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 106";
 		rLen = 0;
-		rLoc = 2906;
+		rLoc = 2968;
 		rType = 0;
 		vrLen = 1556;
 		vrLoc = 1720;
@@ -557,7 +567,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 100";
 		rLen = 0;
-		rLoc = 2805;
+		rLoc = 2867;
 		rType = 0;
 		vrLen = 1548;
 		vrLoc = 1720;
@@ -567,7 +577,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 101";
 		rLen = 0;
-		rLoc = 2805;
+		rLoc = 2867;
 		rType = 0;
 		vrLen = 2039;
 		vrLoc = 2099;
@@ -577,7 +587,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 97";
 		rLen = 0;
-		rLoc = 2599;
+		rLoc = 2661;
 		rType = 0;
 		vrLen = 2092;
 		vrLoc = 2099;
@@ -587,7 +597,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 119";
 		rLen = 0;
-		rLoc = 3318;
+		rLoc = 3541;
 		rType = 0;
 		vrLen = 2075;
 		vrLoc = 2099;
@@ -597,7 +607,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 119";
 		rLen = 0;
-		rLoc = 3318;
+		rLoc = 3541;
 		rType = 0;
 		vrLen = 2075;
 		vrLoc = 2099;
@@ -607,7 +617,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 97";
 		rLen = 0;
-		rLoc = 2599;
+		rLoc = 2661;
 		rType = 0;
 		vrLen = 2090;
 		vrLoc = 2124;
@@ -617,7 +627,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 98";
 		rLen = 0;
-		rLoc = 2599;
+		rLoc = 2661;
 		rType = 0;
 		vrLen = 2159;
 		vrLoc = 2124;
@@ -627,7 +637,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 97";
 		rLen = 0;
-		rLoc = 2599;
+		rLoc = 2661;
 		rType = 0;
 		vrLen = 2068;
 		vrLoc = 2097;
@@ -637,7 +647,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 94";
 		rLen = 0;
-		rLoc = 2426;
+		rLoc = 2488;
 		rType = 0;
 		vrLen = 2074;
 		vrLoc = 2097;
@@ -647,7 +657,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 105";
 		rLen = 0;
-		rLoc = 2906;
+		rLoc = 2968;
 		rType = 0;
 		vrLen = 2008;
 		vrLoc = 2097;
@@ -657,7 +667,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 111";
 		rLen = 0;
-		rLoc = 2907;
+		rLoc = 2969;
 		rType = 0;
 		vrLen = 1593;
 		vrLoc = 1901;
@@ -686,7 +696,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 111";
 		rLen = 0;
-		rLoc = 2935;
+		rLoc = 2997;
 		rType = 0;
 		vrLen = 1728;
 		vrLoc = 1901;
@@ -696,7 +706,7 @@
 		fRef = D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */;
 		name = "EFImageZoomView.h: 17";
 		rLen = 0;
-		rLoc = 457;
+		rLoc = 474;
 		rType = 0;
 		vrLen = 660;
 		vrLoc = 0;
@@ -735,7 +745,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 111";
 		rLen = 0;
-		rLoc = 2935;
+		rLoc = 2997;
 		rType = 0;
 		vrLen = 1728;
 		vrLoc = 1901;
@@ -745,7 +755,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 97";
 		rLen = 0;
-		rLoc = 2599;
+		rLoc = 2661;
 		rType = 0;
 		vrLen = 2096;
 		vrLoc = 2117;
@@ -755,7 +765,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 109";
 		rLen = 0;
-		rLoc = 2906;
+		rLoc = 2968;
 		rType = 0;
 		vrLen = 2088;
 		vrLoc = 2117;
@@ -765,7 +775,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 98";
 		rLen = 0;
-		rLoc = 2599;
+		rLoc = 2661;
 		rType = 0;
 		vrLen = 2131;
 		vrLoc = 2117;
@@ -775,7 +785,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 98";
 		rLen = 0;
-		rLoc = 2599;
+		rLoc = 2661;
 		rType = 0;
 		vrLen = 2149;
 		vrLoc = 2117;
@@ -785,7 +795,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 103";
 		rLen = 0;
-		rLoc = 2805;
+		rLoc = 2867;
 		rType = 0;
 		vrLen = 2203;
 		vrLoc = 2117;
@@ -805,7 +815,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 110";
 		rLen = 0;
-		rLoc = 2906;
+		rLoc = 2968;
 		rType = 0;
 		vrLen = 1331;
 		vrLoc = 0;
@@ -815,7 +825,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 98";
 		rLen = 0;
-		rLoc = 2599;
+		rLoc = 2661;
 		rType = 0;
 		vrLen = 1743;
 		vrLoc = 1835;
@@ -825,7 +835,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 97";
 		rLen = 0;
-		rLoc = 2546;
+		rLoc = 2608;
 		rType = 0;
 		vrLen = 1722;
 		vrLoc = 1835;
@@ -835,7 +845,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 103";
 		rLen = 0;
-		rLoc = 2805;
+		rLoc = 2867;
 		rType = 0;
 		vrLen = 1749;
 		vrLoc = 1835;
@@ -845,7 +855,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 106";
 		rLen = 0;
-		rLoc = 2805;
+		rLoc = 2867;
 		rType = 0;
 		vrLen = 1822;
 		vrLoc = 1835;
@@ -855,7 +865,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 99";
 		rLen = 0;
-		rLoc = 2599;
+		rLoc = 2661;
 		rType = 0;
 		vrLen = 1687;
 		vrLoc = 1835;
@@ -865,7 +875,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 108";
 		rLen = 0;
-		rLoc = 2906;
+		rLoc = 2968;
 		rType = 0;
 		vrLen = 1884;
 		vrLoc = 1835;
@@ -875,7 +885,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 112";
 		rLen = 0;
-		rLoc = 3141;
+		rLoc = 3337;
 		rType = 0;
 		vrLen = 2091;
 		vrLoc = 2016;
@@ -885,10 +895,110 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 111";
 		rLen = 0;
-		rLoc = 3082;
+		rLoc = 3337;
 		rType = 0;
 		vrLen = 2087;
 		vrLoc = 2016;
+	};
+	D0E247DF125A007700C78A2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 113";
+		rLen = 0;
+		rLoc = 3337;
+		rType = 0;
+		vrLen = 2177;
+		vrLoc = 2326;
+	};
+	D0E247E1125A045000C78A2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 116";
+		rLen = 0;
+		rLoc = 3400;
+		rType = 0;
+		vrLen = 2056;
+		vrLoc = 2222;
+	};
+	D0E247E9125A057600C78A2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 112";
+		rLen = 0;
+		rLoc = 3337;
+		rType = 0;
+		vrLen = 2077;
+		vrLoc = 2142;
+	};
+	D0E247ED125A058A00C78A2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 112";
+		rLen = 0;
+		rLoc = 3337;
+		rType = 0;
+		vrLen = 2086;
+		vrLoc = 2142;
+	};
+	D0E247F8125A078A00C78A2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 116";
+		rLen = 0;
+		rLoc = 3364;
+		rType = 0;
+		vrLen = 1915;
+		vrLoc = 2142;
+	};
+	D0E24806125A0AF100C78A2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */;
+		name = "EFImageZoomView.h: 14";
+		rLen = 0;
+		rLoc = 329;
+		rType = 0;
+		vrLen = 677;
+		vrLoc = 0;
+	};
+	D0E24807125A0AF100C78A2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 120";
+		rLen = 0;
+		rLoc = 3365;
+		rType = 0;
+		vrLen = 1958;
+		vrLoc = 2117;
+	};
+	D0E24808125A0AF100C78A2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 116";
+		rLen = 0;
+		rLoc = 3335;
+		rType = 0;
+		vrLen = 2128;
+		vrLoc = 2264;
+	};
+	D0E24811125A0BA700C78A2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 116";
+		rLen = 0;
+		rLoc = 3256;
+		rType = 0;
+		vrLen = 2018;
+		vrLoc = 2177;
+	};
+	D0E24818125A0CC400C78A2D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 116";
+		rLen = 0;
+		rLoc = 3255;
+		rType = 0;
+		vrLen = 2017;
+		vrLoc = 2177;
 	};
 	D0EBF3F811FB18540024C8BD /* Source Control */ = {
 		isa = PBXSourceControlManager;

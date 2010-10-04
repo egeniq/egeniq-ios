@@ -78,6 +78,10 @@
 
 - (void)displayImage:(UIImage *)image backgroundImage:(UIImage *)backgroundImage size:(CGSize)size
 {
+	// invalidate timer
+	[timer invalidate];
+	[timer release];
+	
 	// clear previous views
 	[contentView removeFromSuperview];
 	[contentView release];
@@ -106,11 +110,14 @@
     self.contentSize = size;
     [self setMaxMinZoomScalesForCurrentBounds];
     self.zoomScale = self.minimumZoomScale;
-	
-    // make a new UIImageView for the new image
-    imageView = [[UIImageView alloc] initWithImage:image];
-    [contentView addSubview:imageView];
-	
+
+    // make a new UIImageView for the new image	
+    imageView = [[UIImageView alloc] initWithImage:image];	
+    timer = [[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(loadMainImage) userInfo:nil repeats:NO] retain];
+}
+
+- (void)loadMainImage {
+	[contentView addSubview:imageView];	
 }
 
 - (void)setMaxMinZoomScalesForCurrentBounds

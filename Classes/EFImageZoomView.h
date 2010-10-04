@@ -11,6 +11,7 @@
     UIImageView *imageView;
 	UIImageView *backgroundImageView;
     NSUInteger index;
+	NSTimer *timer;
 }
 @property (assign) NSUInteger index;
 
