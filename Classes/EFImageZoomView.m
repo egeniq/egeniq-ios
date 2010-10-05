@@ -44,12 +44,12 @@
 - (void)layoutSubviews 
 {
     [super layoutSubviews];
-    
+
     // center the image as it becomes smaller than the size of the screen
     
     CGSize boundsSize = self.bounds.size;
     CGRect frameToCenter = contentView.frame;
-    
+
     // center horizontally
     if (frameToCenter.size.width < boundsSize.width)
         frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 2;
@@ -76,8 +76,11 @@
 #pragma mark -
 #pragma mark Configure scrollView to display new image (tiled or not)
 
-- (void)displayImage:(UIImage *)image backgroundImage:(UIImage *)backgroundImage size:(CGSize)size
+- (void)displayImage:(NSString *)imagePath backgroundImage:(NSString *)backgroundImagePath size:(CGSize)size
 {
+	//UIImage *image =  [UIImage imageWithContentsOfFile:imagePath];
+	UIImage *backgroundImage = [UIImage imageWithContentsOfFile:backgroundImagePath];
+	
 	// invalidate timer
 	[timer invalidate];
 	[timer release];
@@ -106,18 +109,13 @@
 	backgroundImageView.frame = contentView.frame;
 	[contentView addSubview:backgroundImageView];
 	[contentView sendSubviewToBack:backgroundImageView];
+	
+    imageView = [[EFTilingView alloc] initWithImageName:imagePath size:size];
+    [contentView addSubview:imageView];	
 
     self.contentSize = size;
     [self setMaxMinZoomScalesForCurrentBounds];
     self.zoomScale = self.minimumZoomScale;
-
-    // make a new UIImageView for the new image	
-    imageView = [[UIImageView alloc] initWithImage:image];	
-    timer = [[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(loadMainImage) userInfo:nil repeats:NO] retain];
-}
-
-- (void)loadMainImage {
-	[contentView addSubview:imageView];	
 }
 
 - (void)setMaxMinZoomScalesForCurrentBounds

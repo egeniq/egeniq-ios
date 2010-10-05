@@ -29,6 +29,10 @@
 		D093CD3711FC62A5000B51D8 /* EFPhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D093CD3511FC62A5000B51D8 /* EFPhotoScrollView.m */; };
 		D0BD8B58120EDA7E0034356B /* EFImageZoomView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */; };
 		D0BD8B59120EDA7E0034356B /* EFImageZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */; };
+		D0E248C1125B2DE800C78A2D /* EFFastTiledLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E248BD125B2DE800C78A2D /* EFFastTiledLayer.h */; };
+		D0E248C2125B2DE800C78A2D /* EFFastTiledLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E248BE125B2DE800C78A2D /* EFFastTiledLayer.m */; };
+		D0E248C3125B2DE800C78A2D /* EFTilingView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E248BF125B2DE800C78A2D /* EFTilingView.h */; };
+		D0E248C4125B2DE800C78A2D /* EFTilingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E248C0125B2DE800C78A2D /* EFTilingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		D093CD3511FC62A5000B51D8 /* EFPhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFPhotoScrollView.m; sourceTree = "<group>"; };
 		D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageZoomView.h; sourceTree = "<group>"; };
 		D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageZoomView.m; sourceTree = "<group>"; };
+		D0E248BD125B2DE800C78A2D /* EFFastTiledLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFFastTiledLayer.h; sourceTree = "<group>"; };
+		D0E248BE125B2DE800C78A2D /* EFFastTiledLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFFastTiledLayer.m; sourceTree = "<group>"; };
+		D0E248BF125B2DE800C78A2D /* EFTilingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTilingView.h; sourceTree = "<group>"; };
+		D0E248C0125B2DE800C78A2D /* EFTilingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTilingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +167,10 @@
 		D0BD8B5A120EDAB10034356B /* Private */ = {
 			isa = PBXGroup;
 			children = (
+				D0E248BD125B2DE800C78A2D /* EFFastTiledLayer.h */,
+				D0E248BE125B2DE800C78A2D /* EFFastTiledLayer.m */,
+				D0E248BF125B2DE800C78A2D /* EFTilingView.h */,
+				D0E248C0125B2DE800C78A2D /* EFTilingView.m */,
 				D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */,
 				D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */,
 			);
@@ -184,6 +196,8 @@
 				923CDD7E123A8CC300247AD5 /* EFNibViewController.h in Headers */,
 				923CDDA8123A8F0A00247AD5 /* EFReachability.h in Headers */,
 				D023E583123EA0B800389738 /* EFPhotoTableView.h in Headers */,
+				D0E248C1125B2DE800C78A2D /* EFFastTiledLayer.h in Headers */,
+				D0E248C3125B2DE800C78A2D /* EFTilingView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +256,8 @@
 				923CDD7F123A8CC300247AD5 /* EFNibViewController.m in Sources */,
 				923CDDA9123A8F0A00247AD5 /* EFReachability.m in Sources */,
 				D023E584123EA0B800389738 /* EFPhotoTableView.m in Sources */,
+				D0E248C2125B2DE800C78A2D /* EFFastTiledLayer.m in Sources */,
+				D0E248C4125B2DE800C78A2D /* EFTilingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

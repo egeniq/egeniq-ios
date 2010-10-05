@@ -30,8 +30,8 @@
 
 - (NSUInteger)imageCount;
 - (CGSize)imageSizeAtIndex:(NSUInteger)index;
-- (UIImage *)imageAtIndex:(NSUInteger)index;
-- (UIImage *)backgroundImageAtIndex:(NSUInteger)index;
+- (NSString *)imageAtIndex:(NSUInteger)index;
+- (NSString *)backgroundImageAtIndex:(NSUInteger)index;
 
 
 @end
@@ -281,16 +281,16 @@
     return [photo sizeForVersion:EFPhotoVersionOriginal];
 }
 
-- (UIImage *)imageAtIndex:(NSUInteger)index {
+- (NSString *)imageAtIndex:(NSUInteger)index {
     id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:[NSIndexPath indexPathForPhoto:index inCollection:0]];    
     NSString *path = [photo pathForVersion:EFPhotoVersionOriginal];
-    return [UIImage imageWithContentsOfFile:path];    
+	return path;
 }
 
-- (UIImage *)backgroundImageAtIndex:(NSUInteger)index {
+- (NSString *)backgroundImageAtIndex:(NSUInteger)index {
     id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:[NSIndexPath indexPathForPhoto:index inCollection:0]];    
     NSString *path = [photo pathForVersion:EFPhotoVersionThumbnail];
-    return [UIImage imageWithContentsOfFile:path];    
+	return path;
 }
 
 #pragma mark -

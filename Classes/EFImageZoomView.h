@@ -5,17 +5,18 @@
  */
 
 #import <UIKit/UIKit.h>
+#import "EFTilingView.h";
 
 @interface EFImageZoomView : UIScrollView <UIScrollViewDelegate> {
 	UIView *contentView;
-    UIImageView *imageView;
+    EFTilingView *imageView;
 	UIImageView *backgroundImageView;
     NSUInteger index;
 	NSTimer *timer;
 }
 @property (assign) NSUInteger index;
 
-- (void)displayImage:(UIImage *)image backgroundImage:(UIImage *)backgroundImage size:(CGSize)size;
+- (void)displayImage:(NSString *)imagePath backgroundImage:(NSString *)backgroundImagePath size:(CGSize)size;
 - (void)setMaxMinZoomScalesForCurrentBounds;
 
 - (CGPoint)pointToCenterAfterRotation;
