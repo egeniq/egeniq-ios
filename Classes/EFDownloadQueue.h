@@ -9,12 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "EFDownload.h"
 
+typedef enum {
+    EFDownloadPriorityMax=0,
+    EFDownloadPriorityHigh,
+    EFDownloadPriorityNormal,
+    EFDownloadPriorityLow,
+    EFDownloadPriorityMin
+} EFDownloadPriority;
+
 @interface EFDownloadQueue : NSObject {
 
     NSUInteger downloadConcurrency;
     NSUInteger downloadsRunning;
     
-    NSMutableArray *queue;
+    NSMutableArray *queues;
     
     id delegate;
     
@@ -27,7 +35,7 @@
 - (void) start;
 - (void) clear;
 - (void) addDownload: (EFDownload *)download;
-- (void) addPrioritizedDownload: (EFDownload *)download;
+- (void) addDownload: (EFDownload *)download withPriority: (EFDownloadPriority) priority;
 
 @property (assign) id delegate;
 

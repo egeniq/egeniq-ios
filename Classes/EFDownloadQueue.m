@@ -20,7 +20,14 @@
     downloadConcurrency = concurrency; 
     downloadsRunning = 0;
     
-    queue = [[NSMutableArray alloc] initWithCapacity:10];
+    // create the queue of queues
+    queues = [[NSMutableArray alloc] initWithCapacity:5];
+    
+    for (int i=0;i<5;i++) {
+        NSMutableArray* aQueue = [[NSMutableArray alloc] initWithCapacity:10];
+        [queues addObject:aQueue];
+        [aQueue release];
+    }
     
     queueStarted = NO;
     
@@ -30,22 +37,43 @@
 }
 
 - (NSUInteger) count {
-    return [queue count];
+    NSUInteger sum;
+    for (NSMutableArray *queue in queues) {
+        sum += [queue count];
+    }
+    return sum;
 }
 
 - (void) processQueue {
     
-    if (queueStarted && (downloadsRunning < downloadConcurrency)) {
-     
-        if ([queue count]>0) {
+    if (queueStarted) {
+        
+        // @todo First check max prio downloads, which run in isolation.
+        
+        if (downloadsRunning < downloadConcurrency) {
             
-            EFDownload* next = [[queue objectAtIndex:0] retain];
-          
-            [queue removeObjectAtIndex:0];
+            NSMutableArray* firstInLine = nil;
+            // Find highest priority queue that has items to download.
+            for (int i=0;i<5 && firstInLine == nil;i++) {
+                NSMutableArray* aQueue = [queues objectAtIndex:i];
+                if ([aQueue count]>0) {
+                    firstInLine = aQueue;
+                }
+            }
+        
+            if (firstInLine != nil) {
             
-            downloadsRunning++;
-            [next start];
-            
+                if ([firstInLine count]>0) {
+                    
+                    EFDownload* next = [[firstInLine objectAtIndex:0] retain];
+                  
+                    [firstInLine removeObjectAtIndex:0];
+                    
+                    downloadsRunning++;
+                    [next start];
+                    
+                }
+            }
         }
     }
     
@@ -59,12 +87,28 @@
 }
 
 - (void) clear {
-    [queue removeAllObjects];
+    for (int i=0;i<5;i++) {
+        NSMutableArray* queue = [queues objectAtIndex:i];
+        [queue removeAllObjects];
+    }
+}
+
+- (NSMutableArray *) queueForPriority: (EFDownloadPriority) priority {
+    
+    return [queues objectAtIndex:priority];   
 }
 
 - (void) addDownload: (EFDownload *)download {
     
+    [self addDownload:download withPriority:EFDownloadPriorityNormal];
+}
+
+
+- (void) addDownload: (EFDownload *)download withPriority: (EFDownloadPriority) priority {
+    
     [download setDelegate:self];
+    
+    NSMutableArray *queue = [self queueForPriority:priority];
     
     [queue addObject:download];
     
@@ -76,20 +120,6 @@
     
 }
                   
-- (void) addPrioritizedDownload: (EFDownload *)download {
-    
-    [download setDelegate:self];
-    
-    [queue insertObject:download atIndex:0];
-    
-    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(queue:didQueueDownload:)]) {
-        [delegate queue:self didQueueDownload:download];
-    }
-        
-    [self processQueue];
-    
-}
-
 
 - (void) downloadDidFinishLoading:(EFDownload *)download {
     
@@ -121,7 +151,7 @@
 
 
 - (void)dealloc {
-    [queue release];
+    [queues release];
     [super dealloc];
     
 }

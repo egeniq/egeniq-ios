@@ -14,6 +14,7 @@
 @synthesize delegate;
 @synthesize data;
 @synthesize targetPath;
+@synthesize url;
 
 - (id) initWithURL: (NSURL *)anUrl {
     
