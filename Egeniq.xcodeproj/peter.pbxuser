@@ -930,6 +930,36 @@
 		vrLen = 1955;
 		vrLoc = 1977;
 	};
+	D017EB46125D0C880077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 100";
+		rLen = 0;
+		rLoc = 2736;
+		rType = 0;
+		vrLen = 1955;
+		vrLoc = 1977;
+	};
+	D017EB47125D0C880077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D023E582123EA0B800389738 /* EFImageTableView.m */;
+		name = "EFImageTableView.m: 53";
+		rLen = 0;
+		rLoc = 1374;
+		rType = 0;
+		vrLen = 1332;
+		vrLoc = 131;
+	};
+	D017EB48125D0C880077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D023E582123EA0B800389738 /* EFImageTableView.m */;
+		name = "EFImageTableView.m: 143";
+		rLen = 0;
+		rLoc = 4877;
+		rType = 0;
+		vrLen = 1570;
+		vrLoc = 3425;
+	};
 	D023E581123EA0B800389738 /* EFImageTableView.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1570, 671}}";
@@ -939,9 +969,9 @@
 	};
 	D023E582123EA0B800389738 /* EFImageTableView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {834, 2041}}";
-			sepNavSelRange = "{1649, 0}";
-			sepNavVisRange = "{994, 1412}";
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 1911}}";
+			sepNavSelRange = "{4877, 0}";
+			sepNavVisRange = "{3425, 1570}";
 			sepNavWindowFrame = "{{84, 185}, {1612, 925}}";
 		};
 	};
@@ -1089,6 +1119,9 @@
 			D017EB37125D0BCB0077D9FD /* PBXTextBookmark */ = D017EB37125D0BCB0077D9FD /* PBXTextBookmark */;
 			D017EB38125D0BCB0077D9FD /* PBXTextBookmark */ = D017EB38125D0BCB0077D9FD /* PBXTextBookmark */;
 			D017EB3A125D0BE10077D9FD /* PBXTextBookmark */ = D017EB3A125D0BE10077D9FD /* PBXTextBookmark */;
+			D017EB46125D0C880077D9FD /* PBXTextBookmark */ = D017EB46125D0C880077D9FD /* PBXTextBookmark */;
+			D017EB47125D0C880077D9FD /* PBXTextBookmark */ = D017EB47125D0C880077D9FD /* PBXTextBookmark */;
+			D017EB48125D0C880077D9FD /* PBXTextBookmark */ = D017EB48125D0C880077D9FD /* PBXTextBookmark */;
 			D0E2472B1259EBA500C78A2D = D0E2472B1259EBA500C78A2D /* PBXTextBookmark */;
 			D0E248C6125B300B00C78A2D = D0E248C6125B300B00C78A2D /* PBXTextBookmark */;
 			D0E248C7125B300B00C78A2D = D0E248C7125B300B00C78A2D /* PBXTextBookmark */;

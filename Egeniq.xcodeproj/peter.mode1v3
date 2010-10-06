@@ -278,8 +278,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>19</integer>
-									<integer>13</integer>
+									<integer>28</integer>
 									<integer>12</integer>
 									<integer>9</integer>
 									<integer>1</integer>
@@ -324,7 +323,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EFImageZoomView.m</string>
+								<string>EFImageTableView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -332,11 +331,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EFImageZoomView.m</string>
+										<string>EFImageTableView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D017EB3A125D0BE10077D9FD</string>
+										<string>D017EB48125D0C880077D9FD</string>
 										<key>history</key>
 										<array>
 											<string>D0E2472B1259EBA500C78A2D</string>
@@ -347,7 +346,6 @@
 											<string>D017EACE125CFE950077D9FD</string>
 											<string>D017EAD0125CFE950077D9FD</string>
 											<string>D017EAD1125CFE950077D9FD</string>
-											<string>D017EAD2125CFE950077D9FD</string>
 											<string>D017EAD3125CFE950077D9FD</string>
 											<string>D017EAD4125CFE950077D9FD</string>
 											<string>D017EAD5125CFE950077D9FD</string>
@@ -357,7 +355,8 @@
 											<string>D017EB2A125D0B6D0077D9FD</string>
 											<string>D017EB2C125D0B6D0077D9FD</string>
 											<string>D017EB36125D0BCB0077D9FD</string>
-											<string>D017EB37125D0BCB0077D9FD</string>
+											<string>D017EB46125D0C880077D9FD</string>
+											<string>D017EB47125D0C880077D9FD</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

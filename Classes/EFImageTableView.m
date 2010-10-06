@@ -140,7 +140,7 @@
 
 - (void)selectImageAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
     indexPathForSelectedImage = [indexPath copy];
-	[tableView selectRowAtIndexPath:indexPath animated:animated scrollPosition:UITableViewScrollPositionBottom];
+	[tableView selectRowAtIndexPath:indexPath animated:animated scrollPosition:UITableViewScrollPositionMiddle];
 }
 
 - (NSIndexPath *)indexPathForSelectedImage {
