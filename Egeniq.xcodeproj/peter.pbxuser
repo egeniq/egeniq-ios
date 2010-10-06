@@ -326,6 +326,36 @@
 		vrLen = 2316;
 		vrLoc = 5191;
 	};
+	D017EA2F125CF5200077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0E248C0125B2DE800C78A2D /* EFTilingView.m */;
+		name = "EFTilingView.m: 116";
+		rLen = 0;
+		rLoc = 5675;
+		rType = 0;
+		vrLen = 2316;
+		vrLoc = 5191;
+	};
+	D017EA30125CF5200077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D093CD3411FC62A5000B51D8 /* EFPhotoScrollView.h */;
+		name = "EFPhotoScrollView.h: 23";
+		rLen = 0;
+		rLoc = 646;
+		rType = 0;
+		vrLen = 838;
+		vrLoc = 0;
+	};
+	D017EA31125CF5200077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D093CD3411FC62A5000B51D8 /* EFPhotoScrollView.h */;
+		name = "EFPhotoScrollView.h: 9";
+		rLen = 17;
+		rLoc = 182;
+		rType = 0;
+		vrLen = 838;
+		vrLoc = 0;
+	};
 	D023E581123EA0B800389738 /* EFPhotoTableView.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1570, 677}}";
@@ -426,6 +456,9 @@
 			D017EA1F125CF36C0077D9FD /* PBXTextBookmark */ = D017EA1F125CF36C0077D9FD /* PBXTextBookmark */;
 			D017EA20125CF36C0077D9FD /* PBXTextBookmark */ = D017EA20125CF36C0077D9FD /* PBXTextBookmark */;
 			D017EA21125CF36C0077D9FD /* PBXTextBookmark */ = D017EA21125CF36C0077D9FD /* PBXTextBookmark */;
+			D017EA2F125CF5200077D9FD /* PBXTextBookmark */ = D017EA2F125CF5200077D9FD /* PBXTextBookmark */;
+			D017EA30125CF5200077D9FD /* PBXTextBookmark */ = D017EA30125CF5200077D9FD /* PBXTextBookmark */;
+			D017EA31125CF5200077D9FD /* PBXTextBookmark */ = D017EA31125CF5200077D9FD /* PBXTextBookmark */;
 			D0E2472B1259EBA500C78A2D = D0E2472B1259EBA500C78A2D /* PBXTextBookmark */;
 			D0E248C6125B300B00C78A2D = D0E248C6125B300B00C78A2D /* PBXTextBookmark */;
 			D0E248C7125B300B00C78A2D = D0E248C7125B300B00C78A2D /* PBXTextBookmark */;
@@ -479,7 +512,7 @@
 	D093CD3411FC62A5000B51D8 /* EFPhotoScrollView.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1570, 671}}";
-			sepNavSelRange = "{646, 0}";
+			sepNavSelRange = "{182, 17}";
 			sepNavVisRange = "{0, 838}";
 		};
 	};
@@ -519,29 +552,32 @@
 	};
 	D0E248BD125B2DE800C78A2D /* EFFastTiledLayer.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1570, 677}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1553, 797}}";
 			sepNavSelRange = "{84, 0}";
 			sepNavVisRange = "{0, 84}";
+			sepNavWindowFrame = "{{38, 227}, {1612, 925}}";
 		};
 	};
 	D0E248BE125B2DE800C78A2D /* EFFastTiledLayer.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1570, 677}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1553, 797}}";
 			sepNavSelRange = "{117, 0}";
 			sepNavVisRange = "{0, 117}";
+			sepNavWindowFrame = "{{15, 248}, {1612, 925}}";
 		};
 	};
 	D0E248BF125B2DE800C78A2D /* EFTilingView.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1570, 677}}";
-			sepNavSelRange = "{96, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1553, 797}}";
+			sepNavSelRange = "{145, 5}";
 			sepNavVisRange = "{0, 283}";
+			sepNavWindowFrame = "{{61, 206}, {1612, 925}}";
 		};
 	};
 	D0E248C0125B2DE800C78A2D /* EFTilingView.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1570, 2054}}";
-			sepNavSelRange = "{7395, 0}";
+			sepNavSelRange = "{5675, 0}";
 			sepNavVisRange = "{5191, 2316}";
 			sepNavWindowFrame = "{{153, 122}, {1612, 925}}";
 		};

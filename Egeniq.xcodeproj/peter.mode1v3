@@ -278,8 +278,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>17</integer>
-									<integer>13</integer>
+									<integer>23</integer>
 									<integer>12</integer>
 									<integer>9</integer>
 									<integer>1</integer>
@@ -324,7 +323,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EFTilingView.m</string>
+								<string>EFPhotoScrollView.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -332,11 +331,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EFTilingView.m</string>
+										<string>EFPhotoScrollView.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D017EA21125CF36C0077D9FD</string>
+										<string>D017EA31125CF5200077D9FD</string>
 										<key>history</key>
 										<array>
 											<string>D0E2472B1259EBA500C78A2D</string>
@@ -354,10 +353,10 @@
 											<string>D0E24B5C125C56C400C78A2D</string>
 											<string>D017E9D1125CF0AF0077D9FD</string>
 											<string>D017E9F6125CF28B0077D9FD</string>
-											<string>D017E9F7125CF28B0077D9FD</string>
 											<string>D017EA1E125CF36C0077D9FD</string>
 											<string>D017EA1F125CF36C0077D9FD</string>
-											<string>D017EA20125CF36C0077D9FD</string>
+											<string>D017EA2F125CF5200077D9FD</string>
+											<string>D017EA30125CF5200077D9FD</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -555,6 +554,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>D0826FDC122C025A003EE4E6</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>D0EBF3F611FB18540024C8BD</string>
 		<string>/Users/peter/Documents/iPhone/iPortfolio/Egeniq/Egeniq.xcodeproj</string>
@@ -1428,7 +1428,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D0826FDC122C025A003EE4E6</string>
-				<string>D0826FDD122C025A003EE4E6</string>
+				<string>D017EA32125CF5200077D9FD</string>
 				<string>D0826FDB122C025A003EE4E6</string>
 			</array>
 			<key>WindowString</key>
