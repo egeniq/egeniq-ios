@@ -5,7 +5,7 @@
  */
 
 #import "EFImageZoomView.h"
-#import "EFPhotoScrollView.h"
+#import "EFImageScrollView.h"
 
 @implementation EFImageZoomView
 
@@ -78,8 +78,8 @@
 #pragma mark Configure scrollView to display new image (tiled or not)
 
 - (void)displayImage:(NSIndexPath *)indexPath {
-	id<EFPhoto> photo = [self.imageScrollView.dataSource photoView:self.imageScrollView photoAtIndexPath:indexPath];
-	CGSize size = [photo sizeForVersion:self.imageScrollView.imageVersion];
+	id<EFImage> image = [self.imageScrollView.dataSource imageView:self.imageScrollView imageAtIndexPath:indexPath];
+	CGSize size = [image sizeForVersion:self.imageScrollView.imageVersion];
 
 	// clear previous views
 	[contentView removeFromSuperview];
@@ -101,8 +101,8 @@
 	[self addSubview:contentView];
 	
     // make a new view for the low resolution image
-	if (self.imageScrollView.lowResolutionImageVersion != EFPhotoVersionNone) {
-		NSString *imagePath = [photo pathForVersion:self.imageScrollView.lowResolutionImageVersion];
+	if (self.imageScrollView.lowResolutionImageVersion != nil) {
+		NSString *imagePath = [image pathForVersion:self.imageScrollView.lowResolutionImageVersion];
 		UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
 		
 		lowResolutionImageView = [[UIImageView alloc] initWithImage:image];
@@ -113,7 +113,7 @@
 	}
 	
 	// make a new tiled view for the standard image
-    imageView = [[EFTilingView alloc] initWithPhoto:photo 
+    imageView = [[EFTilingView alloc] initWithImage:image 
 											version:self.imageScrollView.imageVersion
 										   tileSize:self.imageScrollView.tileSize
 									 levelsOfDetail:self.imageScrollView.levelsOfDetail];

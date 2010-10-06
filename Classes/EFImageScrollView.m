@@ -1,19 +1,19 @@
 //
-//  EFPhotoView.m
+//  EFImageView.m
 //  Egeniq
 //
 //  Created by Peter C. Verhage on 25-07-10.
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "EFPhotoScrollView.h"
-#import "EFPhoto.h"
+#import "EFImageScrollView.h"
+#import "EFImage.h"
 #import "EFImageZoomView.h"
 
 /**
- * Private methods for the EFPhotoView class.
+ * Private methods for the EFImageView class.
  */
-@interface EFPhotoScrollView () <UIScrollViewDelegate>
+@interface EFImageScrollView () <UIScrollViewDelegate>
 
 - (void)configureScrollView;
 
@@ -30,7 +30,7 @@
 
 @end
 
-@implementation EFPhotoScrollView
+@implementation EFImageScrollView
 
 @synthesize imageVersion, lowResolutionImageVersion, renderMode, tileSize, levelsOfDetail;
 
@@ -52,9 +52,9 @@
 
 - (void)configureScrollView {
     // Set some defaults
-	self.imageVersion = EFPhotoVersionOriginal;
-	self.lowResolutionImageVersion = EFPhotoVersionNone;
-	self.renderMode = EFPhotoScrollViewRenderModePlain;
+	self.imageVersion = nil;
+	self.lowResolutionImageVersion = nil;
+	self.renderMode = EFImageScrollViewRenderModePlain;
 	self.tileSize = CGSizeMake(256.0, 256.0);
 	self.levelsOfDetail = 3;
 	
@@ -82,8 +82,8 @@
 	recycledPages = nil;
 	[visiblePages release];
 	visiblePages = nil;
-	[indexPathForSelectedPhoto release];
-	indexPathForSelectedPhoto = nil;
+	[indexPathForSelectedImage release];
+	indexPathForSelectedImage = nil;
 	[super dealloc];	
 }
 
@@ -186,7 +186,7 @@
     page.index = index;
     page.frame = [self frameForPageAtIndex:index];
 	page.imageScrollView = self;
-    [page displayImage:[NSIndexPath indexPathForPhoto:index inCollection:0]];
+    [page displayImage:[NSIndexPath indexPathForImage:index inCollection:0]];
 }
 
 
@@ -194,7 +194,7 @@
 #pragma mark ScrollView delegate methods
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    // Calculate index path for newly selected photo
+    // Calculate index path for newly selected image
     CGFloat offset = pagingScrollView.contentOffset.x;
     CGFloat pageWidth = pagingScrollView.bounds.size.width;
 	
@@ -207,40 +207,40 @@
     } 		
 	
 	// Check if the new index path is different than the previous one
-	NSIndexPath *indexPath = [NSIndexPath indexPathForPhoto:pageIndex inCollection:0];	
-	if ([indexPath compare:indexPathForSelectedPhoto] == NSOrderedSame) {
+	NSIndexPath *indexPath = [NSIndexPath indexPathForImage:pageIndex inCollection:0];	
+	if ([indexPath compare:indexPathForSelectedImage] == NSOrderedSame) {
 		[self tilePages];
 		return;
 	}
 	
-	// Notify delegate that photo is going to be deselected
-	if ([self.delegate respondsToSelector:@selector(photoView:willDeselectPhotoAtIndexPath:)]) {
-		// We only currently support the selection of 1 photo, so we don't do anything with the return value
-		[self.delegate photoView:self willDeselectPhotoAtIndexPath:indexPathForSelectedPhoto];
+	// Notify delegate that image is going to be deselected
+	if ([self.delegate respondsToSelector:@selector(imageView:willDeselectImageAtIndexPath:)]) {
+		// We only currently support the selection of 1 image, so we don't do anything with the return value
+		[self.delegate imageView:self willDeselectImageAtIndexPath:indexPathForSelectedImage];
 	}
 
-	indexPathForSelectedPhoto = nil;
+	indexPathForSelectedImage = nil;
 	
-	// Notify delegate that photo is deselected
-	if ([self.delegate respondsToSelector:@selector(photoView:didDeselectPhotoAtIndexPath:)]) {
-		[self.delegate photoView:self didDeselectPhotoAtIndexPath:indexPathForSelectedPhoto];
+	// Notify delegate that image is deselected
+	if ([self.delegate respondsToSelector:@selector(imageView:didDeselectImageAtIndexPath:)]) {
+		[self.delegate imageView:self didDeselectImageAtIndexPath:indexPathForSelectedImage];
 	}
 	
-	// Notify delegate that we are going to select a different photo
-	if ([self.delegate respondsToSelector:@selector(photoView:willSelectPhotoAtIndexPath:)]) {
-		NSIndexPath *otherIndexPath = [self.delegate photoView:self willSelectPhotoAtIndexPath:indexPath];
+	// Notify delegate that we are going to select a different image
+	if ([self.delegate respondsToSelector:@selector(imageView:willSelectImageAtIndexPath:)]) {
+		NSIndexPath *otherIndexPath = [self.delegate imageView:self willSelectImageAtIndexPath:indexPath];
 		if (otherIndexPath != nil && [indexPath compare:otherIndexPath] != NSOrderedSame) {
-			[self selectPhotoAtIndexPath:indexPath animated:YES];
+			[self selectImageAtIndexPath:indexPath animated:YES];
 			return;
 		}
 	}
 	
-	indexPathForSelectedPhoto = [indexPath retain];
+	indexPathForSelectedImage = [indexPath retain];
 	[self tilePages];
 	
-	// Notify delegate that another photo has been selected
-	if ([self.delegate respondsToSelector:@selector(photoView:didSelectPhotoAtIndexPath:)]) {
-		[self.delegate photoView:self didSelectPhotoAtIndexPath:indexPath];
+	// Notify delegate that another image has been selected
+	if ([self.delegate respondsToSelector:@selector(imageView:didSelectImageAtIndexPath:)]) {
+		[self.delegate imageView:self didSelectImageAtIndexPath:indexPath];
 	}
 }
 
@@ -277,13 +277,13 @@
 #pragma mark Image wrangling
 
 - (NSUInteger)imageCount {
-	return self.dataSource == nil ? NSNotFound : [self.dataSource photoView:self numberOfPhotosInCollection:0];
+	return self.dataSource == nil ? NSNotFound : [self.dataSource imageView:self numberOfImagesInCollection:0];
 }
 
 #pragma mark -
-#pragma mark Photo view method overrides
+#pragma mark Image view method overrides
 
-- (void)setDataSource:(id<EFPhotoViewDataSource>)newDataSource {
+- (void)setDataSource:(id<EFImageViewDataSource>)newDataSource {
     [super setDataSource:newDataSource];
     [self reloadData];
 }
@@ -302,33 +302,33 @@
 	pagingScrollView.contentSize = [self contentSizeForPagingScrollView];	
 	
 	
-	// Notify delegate that we are going to select a different photo
-	NSIndexPath *indexPath = [NSIndexPath indexPathForPhoto:0 inCollection:0];
+	// Notify delegate that we are going to select a different image
+	NSIndexPath *indexPath = [NSIndexPath indexPathForImage:0 inCollection:0];
 	
-	if ([self.delegate respondsToSelector:@selector(photoView:willSelectPhotoAtIndexPath:)]) {
-		indexPath = [self.delegate photoView:self willSelectPhotoAtIndexPath:indexPath];
+	if ([self.delegate respondsToSelector:@selector(imageView:willSelectImageAtIndexPath:)]) {
+		indexPath = [self.delegate imageView:self willSelectImageAtIndexPath:indexPath];
 	}
 	
-	[self selectPhotoAtIndexPath:indexPath animated:NO];
+	[self selectImageAtIndexPath:indexPath animated:NO];
 	
-	// Notify delegate that another photo has been selected
-	if ([self.delegate respondsToSelector:@selector(photoView:didSelectPhotoAtIndexPath:)]) {
-		[self.delegate photoView:self didSelectPhotoAtIndexPath:indexPath];
+	// Notify delegate that another image has been selected
+	if ([self.delegate respondsToSelector:@selector(imageView:didSelectImageAtIndexPath:)]) {
+		[self.delegate imageView:self didSelectImageAtIndexPath:indexPath];
 	}	
 }
 
 #pragma mark -
-#pragma mark Photo scroll view specific public methods
+#pragma mark Image scroll view specific public methods
 
-- (NSIndexPath *)indexPathForSelectedPhoto {
-    return [[indexPathForSelectedPhoto copy] autorelease];
+- (NSIndexPath *)indexPathForSelectedImage {
+    return [[indexPathForSelectedImage copy] autorelease];
 }
 
-- (void)selectPhotoAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
-    indexPathForSelectedPhoto = [indexPath copy];
+- (void)selectImageAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
+    indexPathForSelectedImage = [indexPath copy];
 
     CGFloat pageWidth = pagingScrollView.bounds.size.width;	
-	CGFloat newOffset = (indexPathForSelectedPhoto.photo * pageWidth);
+	CGFloat newOffset = (indexPathForSelectedImage.image * pageWidth);
 
 	if (animated) {
 		[UIView beginAnimations:nil context:nil];	

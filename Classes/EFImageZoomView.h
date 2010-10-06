@@ -7,7 +7,7 @@
 #import <UIKit/UIKit.h>
 #import "EFTilingView.h"
 
-@class EFPhotoScrollView;
+@class EFImageScrollView;
 
 @interface EFImageZoomView : UIScrollView <UIScrollViewDelegate> {
 	UIView *contentView;
@@ -15,7 +15,7 @@
 	UIImageView *lowResolutionImageView;
 }
 
-@property(nonatomic, assign) EFPhotoScrollView *imageScrollView;
+@property(nonatomic, assign) EFImageScrollView *imageScrollView;
 @property(assign) NSUInteger index;
 
 - (void)displayImage:(NSIndexPath *)indexPath;

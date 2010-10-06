@@ -11,12 +11,12 @@
 	return [EFFastTiledLayer class];
 }
 
-- (id)initWithPhoto:(id<EFPhoto>)thePhoto version:(EFPhotoVersion)theVersion tileSize:(CGSize)tileSize levelsOfDetail:(NSUInteger)levelsOfDetail {
-	CGSize size = [thePhoto sizeForVersion:theVersion];
+- (id)initWithImage:(id<EFImage>)theImage version:(NSString *)theVersion tileSize:(CGSize)tileSize levelsOfDetail:(NSUInteger)levelsOfDetail {
+	CGSize size = [theImage sizeForVersion:theVersion];
 	
     if ((self = [super initWithFrame:CGRectMake(0, 0, size.width, size.height)])) {
-        photo = [thePhoto retain];
-		version = theVersion;
+        image = [theImage retain];
+		version = [theVersion copy];
 
         CATiledLayer *tiledLayer = (CATiledLayer *)[self layer];
         tiledLayer.levelsOfDetail = levelsOfDetail;
@@ -149,9 +149,9 @@
 
 - (UIImage *)tileForScale:(CGFloat)scale row:(NSUInteger)row column:(NSUInteger)column {
 	CATiledLayer *tiledLayer = (CATiledLayer *)[self layer];	
-    NSString *path = [photo tilePathForVersion:version size:tiledLayer.tileSize scale:scale row:row column:column];
-    UIImage *image = [UIImage imageWithContentsOfFile:path];
-    return image;
+    NSString *path = [image tilePathForVersion:version size:tiledLayer.tileSize scale:scale row:row column:column];
+    UIImage *tile = [UIImage imageWithContentsOfFile:path];
+    return tile;
 }
 
 @end
