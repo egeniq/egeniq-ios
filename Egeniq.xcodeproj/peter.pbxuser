@@ -68,7 +68,7 @@
 		fRef = D0E248C0125B2DE800C78A2D /* EFTilingView.m */;
 		name = "EFTilingView.m: 152";
 		rLen = 0;
-		rLoc = 7398;
+		rLoc = 7879;
 		rType = 0;
 		vrLen = 2381;
 		vrLoc = 0;
@@ -98,7 +98,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 120";
 		rLen = 0;
-		rLoc = 3618;
+		rLoc = 3772;
 		rType = 0;
 		vrLen = 2278;
 		vrLoc = 2472;
@@ -108,12 +108,50 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 120";
 		rLen = 0;
-		rLoc = 3618;
+		rLoc = 3772;
 		rType = 0;
 		vrLen = 2278;
 		vrLoc = 2472;
 	};
-	D017E9E1125CF0CE0077D9FD /* EFImageZoomView.m:114 */ = {
+	D017E9E1125CF0CE0077D9FD /* EFImageZoomView.m:118 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		functionName = "-displayImage:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 118;
+		location = "Min. van Beeld";
+		modificationTime = 308084543.157485;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	D017E9E3125CF0D30077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 120";
+		rLen = 0;
+		rLoc = 3772;
+		rType = 0;
+		vrLen = 2278;
+		vrLoc = 2472;
+	};
+	D017E9E4125CF0D30077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 120";
+		rLen = 0;
+		rLoc = 3772;
+		rType = 0;
+		vrLen = 2278;
+		vrLoc = 2472;
+	};
+	D017E9E5125CF1280077D9FD /* EFImageZoomView.m:103 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -125,47 +163,9 @@
 		functionName = "-displayImage:";
 		hitCount = 1;
 		ignoreCount = 0;
-		lineNumber = 114;
+		lineNumber = 103;
 		location = "Min. van Beeld";
-		modificationTime = 308084379.94508;
-		originalNumberOfMultipleMatches = 1;
-		state = 1;
-	};
-	D017E9E3125CF0D30077D9FD /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
-		name = "EFImageZoomView.m: 120";
-		rLen = 0;
-		rLoc = 3618;
-		rType = 0;
-		vrLen = 2278;
-		vrLoc = 2472;
-	};
-	D017E9E4125CF0D30077D9FD /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
-		name = "EFImageZoomView.m: 120";
-		rLen = 0;
-		rLoc = 3618;
-		rType = 0;
-		vrLen = 2278;
-		vrLoc = 2472;
-	};
-	D017E9E5125CF1280077D9FD /* EFImageZoomView.m:104 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
-		functionName = "-displayImage:";
-		hitCount = 2;
-		ignoreCount = 0;
-		lineNumber = 104;
-		location = "Min. van Beeld";
-		modificationTime = 308084382.956851;
+		modificationTime = 308084555.759672;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -174,7 +174,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 104";
 		rLen = 0;
-		rLoc = 2873;
+		rLoc = 2822;
 		rType = 0;
 		vrLen = 2322;
 		vrLoc = 2472;
@@ -184,7 +184,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 104";
 		rLen = 0;
-		rLoc = 2873;
+		rLoc = 2822;
 		rType = 0;
 		vrLen = 2322;
 		vrLoc = 2472;
@@ -194,7 +194,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 104";
 		rLen = 0;
-		rLoc = 2873;
+		rLoc = 2822;
 		rType = 0;
 		vrLen = 2322;
 		vrLoc = 2472;
@@ -269,7 +269,7 @@
 		vrLen = 1561;
 		vrLoc = 704;
 	};
-	D017EA11125CF3660077D9FD /* EFTilingView.m:153 */ = {
+	D017EA11125CF3660077D9FD /* EFTilingView.m:174 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -281,9 +281,9 @@
 		functionName = "-tileForScale:row:column:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 153;
+		lineNumber = 174;
 		location = "Min. van Beeld";
-		modificationTime = 308084374.284265;
+		modificationTime = 308084543.15781;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -302,7 +302,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 120";
 		rLen = 0;
-		rLoc = 3618;
+		rLoc = 3772;
 		rType = 0;
 		vrLen = 2303;
 		vrLoc = 4866;
@@ -312,7 +312,7 @@
 		fRef = D0E248C0125B2DE800C78A2D /* EFTilingView.m */;
 		name = "EFTilingView.m: 152";
 		rLen = 0;
-		rLoc = 7398;
+		rLoc = 7879;
 		rType = 0;
 		vrLen = 2291;
 		vrLoc = 5216;
@@ -322,7 +322,7 @@
 		fRef = D0E248C0125B2DE800C78A2D /* EFTilingView.m */;
 		name = "EFTilingView.m: 152";
 		rLen = 0;
-		rLoc = 7398;
+		rLoc = 7879;
 		rType = 0;
 		vrLen = 2316;
 		vrLoc = 5191;
@@ -332,7 +332,7 @@
 		fRef = D0E248C0125B2DE800C78A2D /* EFTilingView.m */;
 		name = "EFTilingView.m: 116";
 		rLen = 0;
-		rLoc = 5678;
+		rLoc = 5978;
 		rType = 0;
 		vrLen = 2316;
 		vrLoc = 5191;
@@ -392,7 +392,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 157";
 		rLen = 0;
-		rLoc = 5267;
+		rLoc = 5421;
 		rType = 0;
 		vrLen = 2303;
 		vrLoc = 4866;
@@ -606,25 +606,7 @@
 		vrLen = 1412;
 		vrLoc = 994;
 	};
-	D017EAC3125CFE8E0077D9FD /* EFImageZoomView.m:105 */ = {
-		isa = PBXFileBreakpoint;
-		actions = (
-		);
-		breakpointStyle = 0;
-		continueAfterActions = 0;
-		countType = 0;
-		delayBeforeContinue = 0;
-		fileReference = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
-		functionName = "-displayImage:";
-		hitCount = 1;
-		ignoreCount = 0;
-		lineNumber = 105;
-		location = "Min. van Beeld";
-		modificationTime = 308084385.656434;
-		originalNumberOfMultipleMatches = 1;
-		state = 1;
-	};
-	D017EAC5125CFE8F0077D9FD /* EFImageZoomView.m:106 */ = {
+	D017EAC3125CFE8E0077D9FD /* EFImageZoomView.m:104 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -636,9 +618,27 @@
 		functionName = "-displayImage:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 106;
+		lineNumber = 104;
 		location = "Min. van Beeld";
-		modificationTime = 308084374.284475;
+		modificationTime = 308084543.157895;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	D017EAC5125CFE8F0077D9FD /* EFImageZoomView.m:105 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		functionName = "-displayImage:";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 105;
+		location = "Min. van Beeld";
+		modificationTime = 308084543.157947;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -667,7 +667,7 @@
 		fRef = D0E248BF125B2DE800C78A2D /* EFTilingView.h */;
 		name = "EFTilingView.h: 9";
 		rLen = 0;
-		rLoc = 187;
+		rLoc = 277;
 		rType = 0;
 		vrLen = 274;
 		vrLoc = 0;
@@ -687,7 +687,7 @@
 		fRef = D0E248C0125B2DE800C78A2D /* EFTilingView.m */;
 		name = "EFTilingView.m: 119";
 		rLen = 0;
-		rLoc = 5867;
+		rLoc = 6167;
 		rType = 0;
 		vrLen = 2314;
 		vrLoc = 5194;
@@ -802,7 +802,7 @@
 		vrLen = 846;
 		vrLoc = 0;
 	};
-	D017EAD9125CFEAB0077D9FD /* EFImageZoomView.m:108 */ = {
+	D017EAD9125CFEAB0077D9FD /* EFImageZoomView.m:107 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -814,11 +814,121 @@
 		functionName = "-displayImage:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 108;
+		lineNumber = 107;
 		location = "Min. van Beeld";
-		modificationTime = 308084395.755656;
+		modificationTime = 308084543.158037;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
+	};
+	D017EB28125D0B6D0077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D093CD3411FC62A5000B51D8 /* EFImageScrollView.h */;
+		name = "EFImageScrollView.h: 12";
+		rLen = 0;
+		rLoc = 320;
+		rType = 0;
+		vrLen = 846;
+		vrLoc = 0;
+	};
+	D017EB29125D0B6D0077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0E248BD125B2DE800C78A2D /* EFFastTiledLayer.h */;
+		name = "EFFastTiledLayer.h: 4";
+		rLen = 0;
+		rLoc = 84;
+		rType = 0;
+		vrLen = 84;
+		vrLoc = 0;
+	};
+	D017EB2A125D0B6D0077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0E248BF125B2DE800C78A2D /* EFTilingView.h */;
+		name = "EFTilingView.h: 7";
+		rLen = 0;
+		rLoc = 137;
+		rType = 0;
+		vrLen = 364;
+		vrLoc = 0;
+	};
+	D017EB2B125D0B6D0077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 116";
+		rLen = 0;
+		rLoc = 3381;
+		rType = 0;
+		vrLen = 2292;
+		vrLoc = 5072;
+	};
+	D017EB2C125D0B6D0077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0E248BE125B2DE800C78A2D /* EFFastTiledLayer.m */;
+		name = "EFFastTiledLayer.m: 10";
+		rLen = 0;
+		rLoc = 117;
+		rType = 0;
+		vrLen = 117;
+		vrLoc = 0;
+	};
+	D017EB2D125D0B6D0077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0E248C0125B2DE800C78A2D /* EFTilingView.m */;
+		name = "EFTilingView.m: 19";
+		rLen = 0;
+		rLoc = 519;
+		rType = 0;
+		vrLen = 1748;
+		vrLoc = 0;
+	};
+	D017EB2E125D0B6D0077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0E248C0125B2DE800C78A2D /* EFTilingView.m */;
+		name = "EFTilingView.m: 170";
+		rLen = 0;
+		rLoc = 7756;
+		rType = 0;
+		vrLen = 2054;
+		vrLoc = 5882;
+	};
+	D017EB36125D0BCB0077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0E248C0125B2DE800C78A2D /* EFTilingView.m */;
+		name = "EFTilingView.m: 169";
+		rLen = 0;
+		rLoc = 7756;
+		rType = 0;
+		vrLen = 2005;
+		vrLoc = 5882;
+	};
+	D017EB37125D0BCB0077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 116";
+		rLen = 0;
+		rLoc = 3381;
+		rType = 0;
+		vrLen = 2292;
+		vrLoc = 5072;
+	};
+	D017EB38125D0BCB0077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 100";
+		rLen = 0;
+		rLoc = 2736;
+		rType = 0;
+		vrLen = 1955;
+		vrLoc = 1977;
+	};
+	D017EB3A125D0BE10077D9FD /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
+		name = "EFImageZoomView.m: 100";
+		rLen = 0;
+		rLoc = 2736;
+		rType = 0;
+		vrLen = 1955;
+		vrLoc = 1977;
 	};
 	D023E581123EA0B800389738 /* EFImageTableView.h */ = {
 		uiCtxt = {
@@ -843,12 +953,12 @@
 			D067DCEF11FB130E0047EFAA /* Egeniq */,
 		);
 		breakpoints = (
-			D017E9E1125CF0CE0077D9FD /* EFImageZoomView.m:114 */,
-			D017E9E5125CF1280077D9FD /* EFImageZoomView.m:104 */,
-			D017EA11125CF3660077D9FD /* EFTilingView.m:153 */,
-			D017EAC3125CFE8E0077D9FD /* EFImageZoomView.m:105 */,
-			D017EAC5125CFE8F0077D9FD /* EFImageZoomView.m:106 */,
-			D017EAD9125CFEAB0077D9FD /* EFImageZoomView.m:108 */,
+			D017E9E1125CF0CE0077D9FD /* EFImageZoomView.m:118 */,
+			D017E9E5125CF1280077D9FD /* EFImageZoomView.m:103 */,
+			D017EA11125CF3660077D9FD /* EFTilingView.m:174 */,
+			D017EAC3125CFE8E0077D9FD /* EFImageZoomView.m:104 */,
+			D017EAC5125CFE8F0077D9FD /* EFImageZoomView.m:105 */,
+			D017EAD9125CFEAB0077D9FD /* EFImageZoomView.m:107 */,
 		);
 		codeSenseManager = D067DCE811FB130E0047EFAA /* Code sense */;
 		ignoreBreakpointsInProjectsDict = {
@@ -968,6 +1078,17 @@
 			D017EAD6125CFE950077D9FD /* PBXTextBookmark */ = D017EAD6125CFE950077D9FD /* PBXTextBookmark */;
 			D017EAD7125CFE950077D9FD /* PBXTextBookmark */ = D017EAD7125CFE950077D9FD /* PBXTextBookmark */;
 			D017EAD8125CFE950077D9FD /* PBXTextBookmark */ = D017EAD8125CFE950077D9FD /* PBXTextBookmark */;
+			D017EB28125D0B6D0077D9FD /* PBXTextBookmark */ = D017EB28125D0B6D0077D9FD /* PBXTextBookmark */;
+			D017EB29125D0B6D0077D9FD /* PBXTextBookmark */ = D017EB29125D0B6D0077D9FD /* PBXTextBookmark */;
+			D017EB2A125D0B6D0077D9FD /* PBXTextBookmark */ = D017EB2A125D0B6D0077D9FD /* PBXTextBookmark */;
+			D017EB2B125D0B6D0077D9FD /* PBXTextBookmark */ = D017EB2B125D0B6D0077D9FD /* PBXTextBookmark */;
+			D017EB2C125D0B6D0077D9FD /* PBXTextBookmark */ = D017EB2C125D0B6D0077D9FD /* PBXTextBookmark */;
+			D017EB2D125D0B6D0077D9FD /* PBXTextBookmark */ = D017EB2D125D0B6D0077D9FD /* PBXTextBookmark */;
+			D017EB2E125D0B6D0077D9FD /* PBXTextBookmark */ = D017EB2E125D0B6D0077D9FD /* PBXTextBookmark */;
+			D017EB36125D0BCB0077D9FD /* PBXTextBookmark */ = D017EB36125D0BCB0077D9FD /* PBXTextBookmark */;
+			D017EB37125D0BCB0077D9FD /* PBXTextBookmark */ = D017EB37125D0BCB0077D9FD /* PBXTextBookmark */;
+			D017EB38125D0BCB0077D9FD /* PBXTextBookmark */ = D017EB38125D0BCB0077D9FD /* PBXTextBookmark */;
+			D017EB3A125D0BE10077D9FD /* PBXTextBookmark */ = D017EB3A125D0BE10077D9FD /* PBXTextBookmark */;
 			D0E2472B1259EBA500C78A2D = D0E2472B1259EBA500C78A2D /* PBXTextBookmark */;
 			D0E248C6125B300B00C78A2D = D0E248C6125B300B00C78A2D /* PBXTextBookmark */;
 			D0E248C7125B300B00C78A2D = D0E248C7125B300B00C78A2D /* PBXTextBookmark */;
@@ -1043,9 +1164,9 @@
 	};
 	D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1570, 2821}}";
-			sepNavSelRange = "{170, 0}";
-			sepNavVisRange = "{0, 1363}";
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 2873}}";
+			sepNavSelRange = "{2736, 0}";
+			sepNavVisRange = "{1977, 1955}";
 			sepNavWindowFrame = "{{15, 248}, {1612, 925}}";
 		};
 	};
@@ -1078,16 +1199,16 @@
 	D0E248BF125B2DE800C78A2D /* EFTilingView.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1570, 671}}";
-			sepNavSelRange = "{187, 0}";
-			sepNavVisRange = "{0, 274}";
+			sepNavSelRange = "{137, 0}";
+			sepNavVisRange = "{0, 364}";
 			sepNavWindowFrame = "{{61, 206}, {1612, 925}}";
 		};
 	};
 	D0E248C0125B2DE800C78A2D /* EFTilingView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1570, 1976}}";
-			sepNavSelRange = "{5867, 0}";
-			sepNavVisRange = "{5194, 2314}";
+			sepNavIntBoundsRect = "{{0, 0}, {1570, 2106}}";
+			sepNavSelRange = "{7756, 0}";
+			sepNavVisRange = "{5882, 2005}";
 			sepNavWindowFrame = "{{153, 122}, {1612, 925}}";
 		};
 	};
@@ -1229,8 +1350,8 @@
 		isa = PBXTextBookmark;
 		comments = "Incompatible type for argument 3 of 'initWithPhoto:version:tileSize:levelsOfDetail:'";
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
-		rLen = 1;
-		rLoc = 118;
+		rLen = 0;
+		rLoc = 124;
 		rType = 1;
 	};
 	D0E24B15125BA77800C78A2D /* PBXTextBookmark */ = {
@@ -1278,7 +1399,7 @@
 		fRef = D0E248C0125B2DE800C78A2D /* EFTilingView.m */;
 		name = "EFTilingView.m: 14";
 		rLen = 0;
-		rLoc = 408;
+		rLoc = 690;
 		rType = 0;
 		vrLen = 2313;
 		vrLoc = 0;
@@ -1288,7 +1409,7 @@
 		fRef = D0E248C0125B2DE800C78A2D /* EFTilingView.m */;
 		name = "EFTilingView.m: 19";
 		rLen = 0;
-		rLoc = 613;
+		rLoc = 913;
 		rType = 0;
 		vrLen = 2316;
 		vrLoc = 0;
@@ -1298,7 +1419,7 @@
 		fRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */;
 		name = "EFImageZoomView.m: 119";
 		rLen = 0;
-		rLoc = 3551;
+		rLoc = 3768;
 		rType = 0;
 		vrLen = 2583;
 		vrLoc = 2406;

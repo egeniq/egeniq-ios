@@ -278,7 +278,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>23</integer>
+									<integer>19</integer>
+									<integer>13</integer>
 									<integer>12</integer>
 									<integer>9</integer>
 									<integer>1</integer>
@@ -323,7 +324,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EFImageScrollView.h</string>
+								<string>EFImageZoomView.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -331,24 +332,19 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EFImageScrollView.h</string>
+										<string>EFImageZoomView.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D017EAD8125CFE950077D9FD</string>
+										<string>D017EB3A125D0BE10077D9FD</string>
 										<key>history</key>
 										<array>
 											<string>D0E2472B1259EBA500C78A2D</string>
 											<string>D0E248C6125B300B00C78A2D</string>
 											<string>D0E248C7125B300B00C78A2D</string>
 											<string>D0E248C8125B300B00C78A2D</string>
-											<string>D017EAC9125CFE950077D9FD</string>
-											<string>D017EACA125CFE950077D9FD</string>
-											<string>D017EACB125CFE950077D9FD</string>
 											<string>D017EACC125CFE950077D9FD</string>
-											<string>D017EACD125CFE950077D9FD</string>
 											<string>D017EACE125CFE950077D9FD</string>
-											<string>D017EACF125CFE950077D9FD</string>
 											<string>D017EAD0125CFE950077D9FD</string>
 											<string>D017EAD1125CFE950077D9FD</string>
 											<string>D017EAD2125CFE950077D9FD</string>
@@ -356,7 +352,12 @@
 											<string>D017EAD4125CFE950077D9FD</string>
 											<string>D017EAD5125CFE950077D9FD</string>
 											<string>D017EAD6125CFE950077D9FD</string>
-											<string>D017EAD7125CFE950077D9FD</string>
+											<string>D017EB28125D0B6D0077D9FD</string>
+											<string>D017EB29125D0B6D0077D9FD</string>
+											<string>D017EB2A125D0B6D0077D9FD</string>
+											<string>D017EB2C125D0B6D0077D9FD</string>
+											<string>D017EB36125D0BCB0077D9FD</string>
+											<string>D017EB37125D0BCB0077D9FD</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

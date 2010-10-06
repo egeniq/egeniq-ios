@@ -97,7 +97,6 @@
 
 	// create the content view
 	contentView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, size.width, size.height)];
-	contentView.backgroundColor = [UIColor redColor];
 	[self addSubview:contentView];
 	
     // make a new view for the low resolution image
@@ -111,12 +110,18 @@
 		[contentView addSubview:lowResolutionImageView];
 		[contentView sendSubviewToBack:lowResolutionImageView];
 	}
+
+	// make a new tiled view for the standard image	
+	if (self.imageScrollView.renderMode == EFImageScrollViewRenderModePlain) {
+		imageView = [[EFTilingView alloc] initWithImage:image 
+												version:self.imageScrollView.imageVersion];
+	} else {
+		imageView = [[EFTilingView alloc] initWithImage:image 
+												version:self.imageScrollView.imageVersion
+											   tileSize:self.imageScrollView.tileSize
+										 levelsOfDetail:self.imageScrollView.levelsOfDetail];
+	}
 	
-	// make a new tiled view for the standard image
-    imageView = [[EFTilingView alloc] initWithImage:image 
-											version:self.imageScrollView.imageVersion
-										   tileSize:self.imageScrollView.tileSize
-									 levelsOfDetail:self.imageScrollView.levelsOfDetail];
     [contentView addSubview:imageView];		
 
     self.contentSize = size;
