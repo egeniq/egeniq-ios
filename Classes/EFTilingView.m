@@ -1,6 +1,9 @@
 #import "EFTilingView.h"
 #import "EFFastTiledLayer.h"
 
+@interface EFTilingView ()
+- (UIImage *)tileForScale:(CGFloat)scale row:(NSUInteger)row column:(NSUInteger)column;
+@end 
 
 @implementation EFTilingView
 
@@ -8,16 +11,18 @@
 	return [EFFastTiledLayer class];
 }
 
-- (id)initWithImageName:(NSString *)name size:(CGSize)size
-{
+- (id)initWithPhoto:(id<EFPhoto>)thePhoto version:(EFPhotoVersion)theVersion tileSize:(CGSize)tileSize levelsOfDetail:(NSUInteger)levelsOfDetail {
+	CGSize size = [thePhoto sizeForVersion:theVersion];
+	
     if ((self = [super initWithFrame:CGRectMake(0, 0, size.width, size.height)])) {
-        imageName = [name retain];
+        photo = [thePhoto retain];
+		version = theVersion;
 
         CATiledLayer *tiledLayer = (CATiledLayer *)[self layer];
-        tiledLayer.levelsOfDetail = 2;
-//        tiledLayer.levelsOfDetailBias = 2;		
-		tiledLayer.tileSize = CGSizeMake(512.0, 512.0);
+        tiledLayer.levelsOfDetail = levelsOfDetail;
+		tiledLayer.tileSize = tileSize;
     }
+	
     return self;
 }
 
@@ -68,8 +73,7 @@
 */
 
 // iOS 3.2 compatible code starts from here
--(void)drawRect:(CGRect)r
-{
+-(void)drawRect:(CGRect)rect {
     // UIView uses the existence of -drawRect: to determine if should allow its CALayer
     // to be invalidated, which would then lead to the layer creating a backing store and
     // -drawLayer:inContext: being called.
@@ -77,8 +81,7 @@
     // this logic, while doing our real drawing work inside of -drawLayer:inContext:
 }
 
--(void)drawLayer:(CALayer*)layer inContext:(CGContextRef)context
-{   
+-(void)drawLayer:(CALayer*)layer inContext:(CGContextRef)context {   
     // Do all your drawing here. Do not use UIGraphics to do any drawing, use Core Graphics instead.
 	
     // get the scale from the context by getting the current transform matrix, then asking for
@@ -144,9 +147,9 @@
 }
 // EOF iOS 3.2 compatible code
 
-- (UIImage *)tileForScale:(CGFloat)scale row:(int)row column:(int)column
-{
-    NSString *path = [NSString stringWithFormat:@"%@_%.0f_%d_%d.png", imageName, scale * 1000, column, row];
+- (UIImage *)tileForScale:(CGFloat)scale row:(NSUInteger)row column:(NSUInteger)column {
+	CATiledLayer *tiledLayer = (CATiledLayer *)[self layer];	
+    NSString *path = [photo tilePathForVersion:version size:tiledLayer.tileSize scale:scale row:row column:column];
     UIImage *image = [UIImage imageWithContentsOfFile:path];
     return image;
 }

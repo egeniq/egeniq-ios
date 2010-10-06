@@ -1,10 +1,11 @@
 #import <UIKit/UIKit.h>
+#import "EFPhoto.h"
 
 @interface EFTilingView : UIView {
-    NSString *imageName;
+    id<EFPhoto> photo;
+	EFPhotoVersion version;
 }
 
-- (id)initWithImageName:(NSString *)name size:(CGSize)size;
-- (UIImage *)tileForScale:(CGFloat)scale row:(int)row column:(int)column;
+- (id)initWithPhoto:(id<EFPhoto>)thePhoto version:(EFPhotoVersion)theVersion tileSize:(CGSize)tileSize levelsOfDetail:(NSUInteger)levelsOfDetail;
 
 @end

@@ -5,17 +5,13 @@
  */
 
 #import "EFImageZoomView.h"
+#import "EFPhotoScrollView.h"
 
 @implementation EFImageZoomView
 
-@synthesize index;
+@synthesize imageScrollView, index;
 
-- (void)zoomOut:(UITapGestureRecognizer *)recognizer {
-    self.zoomScale = self.minimumZoomScale;	
-}
-
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         self.showsVerticalScrollIndicator = NO;
         self.showsHorizontalScrollIndicator = NO;
@@ -30,37 +26,42 @@
     return self;
 }
 
-- (void)dealloc
-{
+- (void)dealloc {
 	[contentView release];
-	[backgroundImageView release];
+	contentView = nil;
+	[lowResolutionImageView release];
+	lowResolutionImageView = nil;
     [imageView release];
+	imageView = nil;
     [super dealloc];
+}
+
+- (void)zoomOut:(UITapGestureRecognizer *)recognizer {
+    self.zoomScale = self.minimumZoomScale;	
 }
 
 #pragma mark -
 #pragma mark Override layoutSubviews to center content
 
-- (void)layoutSubviews 
-{
+- (void)layoutSubviews  {
     [super layoutSubviews];
 
-    // center the image as it becomes smaller than the size of the screen
-    
     CGSize boundsSize = self.bounds.size;
     CGRect frameToCenter = contentView.frame;
 
     // center horizontally
-    if (frameToCenter.size.width < boundsSize.width)
+    if (frameToCenter.size.width < boundsSize.width) {
         frameToCenter.origin.x = (boundsSize.width - frameToCenter.size.width) / 2;
-    else
+    } else {
         frameToCenter.origin.x = 0;
+	}
     
     // center vertically
-    if (frameToCenter.size.height < boundsSize.height)
+    if (frameToCenter.size.height < boundsSize.height) {
         frameToCenter.origin.y = (boundsSize.height - frameToCenter.size.height) / 2;
-    else
+	} else {
         frameToCenter.origin.y = 0;
+	}
     
     contentView.frame = frameToCenter;
 }
@@ -76,22 +77,17 @@
 #pragma mark -
 #pragma mark Configure scrollView to display new image (tiled or not)
 
-- (void)displayImage:(NSString *)imagePath backgroundImage:(NSString *)backgroundImagePath size:(CGSize)size
-{
-	//UIImage *image =  [UIImage imageWithContentsOfFile:imagePath];
-	UIImage *backgroundImage = [UIImage imageWithContentsOfFile:backgroundImagePath];
-	
-	// invalidate timer
-	[timer invalidate];
-	[timer release];
-	
+- (void)displayImage:(NSIndexPath *)indexPath {
+	id<EFPhoto> photo = [self.imageScrollView.dataSource photoView:self.imageScrollView photoAtIndexPath:indexPath];
+	CGSize size = [photo sizeForVersion:self.imageScrollView.imageVersion];
+
 	// clear previous views
 	[contentView removeFromSuperview];
 	[contentView release];
 	contentView = nil;
 	
-	[backgroundImageView release];
-	backgroundImageView = nil;
+	[lowResolutionImageView release];
+	lowResolutionImageView = nil;
 	
 	[imageView release];
 	imageView = nil;
@@ -104,22 +100,31 @@
 	contentView.backgroundColor = [UIColor redColor];
 	[self addSubview:contentView];
 	
-    // make a new view for the background image
-	backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
-	backgroundImageView.frame = contentView.frame;
-	[contentView addSubview:backgroundImageView];
-	[contentView sendSubviewToBack:backgroundImageView];
+    // make a new view for the low resolution image
+	if (self.imageScrollView.lowResolutionImageVersion != EFPhotoVersionNone) {
+		NSString *imagePath = [photo pathForVersion:self.imageScrollView.lowResolutionImageVersion];
+		UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+		
+		lowResolutionImageView = [[UIImageView alloc] initWithImage:image];
+		lowResolutionImageView.frame = contentView.frame;		
+		
+		[contentView addSubview:lowResolutionImageView];
+		[contentView sendSubviewToBack:lowResolutionImageView];
+	}
 	
-    imageView = [[EFTilingView alloc] initWithImageName:imagePath size:size];
-    [contentView addSubview:imageView];	
+	// make a new tiled view for the standard image
+    imageView = [[EFTilingView alloc] initWithPhoto:photo 
+											version:self.imageScrollView.imageVersion
+										   tileSize:self.imageScrollView.tileSize
+									 levelsOfDetail:self.imageScrollView.levelsOfDetail];
+    [contentView addSubview:imageView];		
 
     self.contentSize = size;
     [self setMaxMinZoomScalesForCurrentBounds];
     self.zoomScale = self.minimumZoomScale;
 }
 
-- (void)setMaxMinZoomScalesForCurrentBounds
-{
+- (void)setMaxMinZoomScalesForCurrentBounds {
     CGSize boundsSize = self.bounds.size;
     CGSize imageSize = contentView.bounds.size;
     
@@ -146,15 +151,13 @@
 #pragma mark Methods called during rotation to preserve the zoomScale and the visible portion of the image
 
 // returns the center point, in image coordinate space, to try to restore after rotation. 
-- (CGPoint)pointToCenterAfterRotation
-{
+- (CGPoint)pointToCenterAfterRotation {
     CGPoint boundsCenter = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
     return [self convertPoint:boundsCenter toView:contentView];
 }
 
 // returns the zoom scale to attempt to restore after rotation. 
-- (CGFloat)scaleToRestoreAfterRotation
-{
+- (CGFloat)scaleToRestoreAfterRotation {
     CGFloat contentScale = self.zoomScale;
     
     // If we're at the minimum zoom scale, preserve that by returning 0, which will be converted to the minimum
@@ -165,21 +168,18 @@
     return contentScale;
 }
 
-- (CGPoint)maximumContentOffset
-{
+- (CGPoint)maximumContentOffset {
     CGSize contentSize = self.contentSize;
     CGSize boundsSize = self.bounds.size;
     return CGPointMake(contentSize.width - boundsSize.width, contentSize.height - boundsSize.height);
 }
 
-- (CGPoint)minimumContentOffset
-{
+- (CGPoint)minimumContentOffset {
     return CGPointZero;
 }
 
 // Adjusts content offset and scale to try to preserve the old zoomscale and center.
-- (void)restoreCenterPoint:(CGPoint)oldCenter scale:(CGFloat)oldScale
-{    
+- (void)restoreCenterPoint:(CGPoint)oldCenter scale:(CGFloat)oldScale {    
     // Step 1: restore zoom scale, first making sure it is within the allowable range.
     self.zoomScale = MIN(self.maximumZoomScale, MAX(self.minimumZoomScale, oldScale));
     

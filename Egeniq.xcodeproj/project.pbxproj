@@ -19,7 +19,6 @@
 		D011F501120C827700A07E28 /* EFPhotoViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */; };
 		D011F503120C839000A07E28 /* EFPhotoViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */; };
 		D011F505120C85E400A07E28 /* EFPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F504120C85E400A07E28 /* EFPhoto.h */; };
-		D011F507120C865800A07E28 /* EFPhotoVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F506120C865800A07E28 /* EFPhotoVersion.h */; };
 		D023E583123EA0B800389738 /* EFPhotoTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = D023E581123EA0B800389738 /* EFPhotoTableView.h */; };
 		D023E584123EA0B800389738 /* EFPhotoTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D023E582123EA0B800389738 /* EFPhotoTableView.m */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
@@ -48,7 +47,6 @@
 		D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoViewDataSource.h; sourceTree = "<group>"; };
 		D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoViewDelegate.h; sourceTree = "<group>"; };
 		D011F504120C85E400A07E28 /* EFPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhoto.h; sourceTree = "<group>"; };
-		D011F506120C865800A07E28 /* EFPhotoVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoVersion.h; sourceTree = "<group>"; };
 		D023E581123EA0B800389738 /* EFPhotoTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPhotoTableView.h; sourceTree = "<group>"; };
 		D023E582123EA0B800389738 /* EFPhotoTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFPhotoTableView.m; sourceTree = "<group>"; };
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,7 +149,6 @@
 			children = (
 				D0BD8B5A120EDAB10034356B /* Private */,
 				D011F504120C85E400A07E28 /* EFPhoto.h */,
-				D011F506120C865800A07E28 /* EFPhotoVersion.h */,
 				D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */,
 				D011F502120C839000A07E28 /* EFPhotoViewDelegate.h */,
 				D093CD3411FC62A5000B51D8 /* EFPhotoScrollView.h */,
@@ -188,7 +185,6 @@
 				D011F501120C827700A07E28 /* EFPhotoViewDataSource.h in Headers */,
 				D011F503120C839000A07E28 /* EFPhotoViewDelegate.h in Headers */,
 				D011F505120C85E400A07E28 /* EFPhoto.h in Headers */,
-				D011F507120C865800A07E28 /* EFPhotoVersion.h in Headers */,
 				D0BD8B58120EDA7E0034356B /* EFImageZoomView.h in Headers */,
 				D0826FBE122BD17E003EE4E6 /* EFPhotoView.h in Headers */,
 				923CDD7A123A8CC300247AD5 /* EFDownload.h in Headers */,

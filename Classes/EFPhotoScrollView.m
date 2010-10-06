@@ -8,9 +8,7 @@
 
 #import "EFPhotoScrollView.h"
 #import "EFPhoto.h"
-#import "EFPhotoVersion.h"
 #import "EFImageZoomView.h"
-
 
 /**
  * Private methods for the EFPhotoView class.
@@ -29,14 +27,12 @@
 - (EFImageZoomView *)dequeueRecycledPage;
 
 - (NSUInteger)imageCount;
-- (CGSize)imageSizeAtIndex:(NSUInteger)index;
-- (NSString *)imageAtIndex:(NSUInteger)index;
-- (NSString *)backgroundImageAtIndex:(NSUInteger)index;
-
 
 @end
 
 @implementation EFPhotoScrollView
+
+@synthesize imageVersion, lowResolutionImageVersion, renderMode, tileSize, levelsOfDetail;
 
 - (id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];	
@@ -55,6 +51,13 @@
 }
 
 - (void)configureScrollView {
+    // Set some defaults
+	self.imageVersion = EFPhotoVersionOriginal;
+	self.lowResolutionImageVersion = EFPhotoVersionNone;
+	self.renderMode = EFPhotoScrollViewRenderModePlain;
+	self.tileSize = CGSizeMake(256.0, 256.0);
+	self.levelsOfDetail = 3;
+	
 	// Step 1: make the outer paging scroll view
 	CGRect pagingScrollViewFrame = [self frameForPagingScrollView];
 	pagingScrollView = [[UIScrollView alloc] initWithFrame:pagingScrollViewFrame];
@@ -182,7 +185,8 @@
 - (void)configurePage:(EFImageZoomView *)page forIndex:(NSUInteger)index {
     page.index = index;
     page.frame = [self frameForPageAtIndex:index];
-    [page displayImage:[self imageAtIndex:index] backgroundImage:[self backgroundImageAtIndex:index] size:[self imageSizeAtIndex:index]];
+	page.imageScrollView = self;
+    [page displayImage:[NSIndexPath indexPathForPhoto:index inCollection:0]];
 }
 
 
@@ -273,24 +277,7 @@
 #pragma mark Image wrangling
 
 - (NSUInteger)imageCount {
-	return dataSource == nil ? NSNotFound : [dataSource photoView:self numberOfPhotosInCollection:0];
-}
-
-- (CGSize)imageSizeAtIndex:(NSUInteger)index {
-    id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:[NSIndexPath indexPathForPhoto:index inCollection:0]];    
-    return [photo sizeForVersion:EFPhotoVersionOriginal];
-}
-
-- (NSString *)imageAtIndex:(NSUInteger)index {
-    id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:[NSIndexPath indexPathForPhoto:index inCollection:0]];    
-    NSString *path = [photo pathForVersion:EFPhotoVersionOriginal];
-	return path;
-}
-
-- (NSString *)backgroundImageAtIndex:(NSUInteger)index {
-    id<EFPhoto> photo = [self.dataSource photoView:self photoAtIndexPath:[NSIndexPath indexPathForPhoto:index inCollection:0]];    
-    NSString *path = [photo pathForVersion:EFPhotoVersionThumbnail];
-	return path;
+	return self.dataSource == nil ? NSNotFound : [self.dataSource photoView:self numberOfPhotosInCollection:0];
 }
 
 #pragma mark -

@@ -1,12 +1,10 @@
-//
-//  EFPhoto.h
-//  Egeniq
-//
-//  Created by Peter C. Verhage on 06-08-10.
-//  Copyright (c) 2010 __MyCompanyName__. All rights reserved.
-//
-
-#import "EFPhotoVersion.h"
+typedef enum {
+    EFPhotoVersionOriginal,
+    EFPhotoVersionPad,
+    EFPhotoVersionKey,
+    EFPhotoVersionThumbnail,
+	EFPhotoVersionNone
+} EFPhotoVersion;
 
 @protocol EFPhoto <NSObject>
 
@@ -20,19 +18,24 @@
 /**
  * Gets the path of one of the differently sized versions of the photo.
  */
-- (NSString*)pathForVersion:(EFPhotoVersion)version;
+- (NSString *)pathForVersion:(EFPhotoVersion)version;
 
 @optional
 
 /**
+ * Gets the path to a tile for one of the differently sized versions of the photo.
+ */
+- (NSString *)tilePathForVersion:(EFPhotoVersion)version size:(CGSize)size  scale:(CGFloat)scale row:(NSUInteger)row column:(NSUInteger)column;
+
+/**
  * The name of the photo.
  */
-@property (nonatomic, retain) NSString* name;
+@property (nonatomic, retain) NSString *name;
 
 /**
  * The caption of the photo.
  */
-@property (nonatomic, retain) NSString* caption;
+@property (nonatomic, retain) NSString *caption;
 
 
 @end
