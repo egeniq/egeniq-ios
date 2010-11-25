@@ -4,10 +4,10 @@
 #import "EFImageViewDataSource.h"
 #import "EFImageViewDelegate.h"
 
-@interface NSIndexPath (EFImageView) 
+@interface NSIndexPath (EFImageView)
 
-@property(readonly) NSUInteger image;
-@property(readonly) NSUInteger collection;
+@property (readonly) NSUInteger image;
+@property (readonly) NSUInteger collection;
 
 + (NSIndexPath *)indexPathForImage:(NSUInteger)image inCollection:(NSUInteger)collection;
 
@@ -16,10 +16,9 @@
 @interface EFImageView : UIView {
 }
 
-@property(nonatomic, assign) id<EFImageViewDataSource> dataSource;
-@property(nonatomic, assign) id<EFImageViewDelegate> delegate;
+@property (nonatomic, assign) id <EFImageViewDataSource> dataSource;
+@property (nonatomic, assign) id <EFImageViewDelegate> delegate;
 
 - (void)reloadData;
-
 
 @end

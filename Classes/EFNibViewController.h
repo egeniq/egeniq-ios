@@ -10,14 +10,11 @@
 #import <UIKit/UIKit.h>
 
 @interface EFNibViewController : NSObject {
-
-    UIView *view;
-    
+	UIView *view;
 }
 
-- (id) initWithNibName: (NSString *)nibName;
+- (id)initWithNibName:(NSString *)nibName;
 
 @property (nonatomic, retain) UIView *view;
-
 
 @end

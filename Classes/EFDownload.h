@@ -10,25 +10,19 @@
 
 @protocol ShowDirectoryModelDelegate;
 
-
 @interface EFDownload : NSObject {
-
-    NSMutableDictionary *payload;
-
-    id delegate;
-    
-    NSURL *url;
-   
-    NSMutableData *data;
-    
-    NSString *targetPath;
-    
+	NSMutableDictionary *payload;
+	id delegate;
+	NSURL *url;
+	NSURLConnection *connection;
+	NSMutableData *data;
+	NSString *targetPath;
 }
 
-- (id) initWithURL: (NSURL *)anUrl;
-- (void) start;
-- (void) addPayload: (id)object forKey: (NSString *)key;
-- (id) getPayloadForKey: (NSString *)key;
+- (id)initWithURL:(NSURL *)anUrl;
+- (void)start;
+- (void)addPayload:(id)object forKey:(NSString *)key;
+- (id)getPayloadForKey:(NSString *)key;
 
 @property (assign) id delegate;
 @property (nonatomic, retain, readonly) NSMutableData *data;
@@ -39,7 +33,7 @@
 
 @interface NSObject (EFDownloadDelegateMethods)
 
-- (void)downloadDidFinishLoading:(EFDownload*)download;
-- (void)download:(EFDownload*)download didFailWithError:(NSError*)error;
+- (void)downloadDidFinishLoading:(EFDownload *)download;
+- (void)download:(EFDownload *)download didFailWithError:(NSError *)error;
 
 @end

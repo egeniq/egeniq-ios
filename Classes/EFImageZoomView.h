@@ -1,6 +1,6 @@
 /**
- * Image zoom view. 
- * 
+ * Image zoom view.
+ *
  * Based on PhotoScroller example, Copyright (c) 2010 Apple Inc. All Rights Reserved.
  */
 
@@ -11,12 +11,12 @@
 
 @interface EFImageZoomView : UIScrollView <UIScrollViewDelegate> {
 	UIView *contentView;
-    EFTilingView *imageView;
+	EFTilingView *imageView;
 	UIImageView *lowResolutionImageView;
 }
 
-@property(nonatomic, assign) EFImageScrollView *imageScrollView;
-@property(assign) NSUInteger index;
+@property (nonatomic, assign) EFImageScrollView *imageScrollView;
+@property (assign) NSUInteger index;
 
 - (void)displayImage:(NSIndexPath *)indexPath;
 - (void)setMaxMinZoomScalesForCurrentBounds;

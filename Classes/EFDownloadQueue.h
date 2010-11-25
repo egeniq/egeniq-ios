@@ -10,32 +10,30 @@
 #import "EFDownload.h"
 
 typedef enum {
-    EFDownloadPriorityMax=0,
-    EFDownloadPriorityHigh,
-    EFDownloadPriorityNormal,
-    EFDownloadPriorityLow,
-    EFDownloadPriorityMin
+	EFDownloadPriorityMax=0,
+	EFDownloadPriorityHigh,
+	EFDownloadPriorityNormal,
+	EFDownloadPriorityLow,
+	EFDownloadPriorityMin
 } EFDownloadPriority;
 
 @interface EFDownloadQueue : NSObject {
+	NSUInteger downloadConcurrency;
+	NSUInteger downloadsRunning;
 
-    NSUInteger downloadConcurrency;
-    NSUInteger downloadsRunning;
-    
-    NSMutableArray *queues;
-    
-    id delegate;
-    
-    BOOL queueStarted;
-    
+	NSMutableArray *queues;
+
+	id delegate;
+
+	BOOL queueStarted;
 }
 
-- (id)initWithConcurrency: (NSUInteger)concurrency;
-- (NSUInteger) count;
-- (void) start;
-- (void) clear;
-- (void) addDownload: (EFDownload *)download;
-- (void) addDownload: (EFDownload *)download withPriority: (EFDownloadPriority) priority;
+- (id)initWithConcurrency:(NSUInteger)concurrency;
+- (NSUInteger)count;
+- (void)start;
+- (void)clear;
+- (void)addDownload:(EFDownload *)download;
+- (void)addDownload:(EFDownload *)download withPriority:(EFDownloadPriority)priority;
 
 @property (assign) id delegate;
 
@@ -43,9 +41,8 @@ typedef enum {
 
 @interface NSObject (EFDownloadQueueDelegateMethods)
 
-- (void)queue: (EFDownloadQueue *)queue didQueueDownload:(EFDownload*)download;
-- (void)queue: (EFDownloadQueue *)queue didFinishDownload:(EFDownload*)download;
-- (void)queue: (EFDownloadQueue *)queue didFailDownload:(EFDownload*)download withError:(NSError*)error;
-
+- (void)queue:(EFDownloadQueue *)queue didQueueDownload:(EFDownload *)download;
+- (void)queue:(EFDownloadQueue *)queue didFinishDownload:(EFDownload *)download;
+- (void)queue:(EFDownloadQueue *)queue didFailDownload:(EFDownload *)download withError:(NSError *)error;
 
 @end

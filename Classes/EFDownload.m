@@ -8,7 +8,6 @@
 
 #import "EFDownload.h"
 
-
 @implementation EFDownload
 
 @synthesize delegate;
@@ -16,109 +15,93 @@
 @synthesize targetPath;
 @synthesize url;
 
-- (id) initWithURL: (NSURL *)anUrl {
-    
-    self = [super init];
-    
-    url = [anUrl copy];
-    
-    payload = nil;
-    
-    return self;
+- (id)initWithURL:(NSURL *)anUrl {
+	self = [super init];
+
+	url = [anUrl copy];
+
+	payload = nil;
+
+	return self;
 }
 
-- (void) start {
-    
-    [data release];
-    data = [[NSMutableData alloc] init];
-    
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+- (void)start {
+	[data release];
+	data = [[NSMutableData alloc] init];
 
-    [connection release];
-    [request release];
+	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+	connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+	[request release];
 }
 
-- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)newData {
-    
-    [data appendData:newData];
+- (void)cancel {
+	[connection cancel];
+	[connection release];
+	connection = nil;
+	
+	[data release];
+	data = nil;
 }
 
-- (void) connectionDidFinishLoading:(NSURLConnection *)connection {
-    
-    if (targetPath!=nil) {
-        
-        // Save the download to target path.
-        if (![data writeToFile:targetPath atomically:YES]) {
-            NSLog(@"Couldn't write file to %@", targetPath);
-            // todo graceful error handling, notify delegate.
-        }    
-            
-        
-    }
-    
-    
-    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(downloadDidFinishLoading:)]) {
-        [delegate downloadDidFinishLoading:self];
-    }
-    
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)newData {
+	[data appendData:newData];
 }
 
-- (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    
-    if (self.delegate != nil && [self.delegate respondsToSelector:@selector(download:didFailWithError:)]) {
-        [delegate download:self didFailWithError:error];
-    }
-    
+- (void)connectionDidFinishLoading:(NSURLConnection *)theConnection {
+	[connection release];
+	connection = nil;
+	
+	if (targetPath != nil) {
+		// Save the download to target path.
+		if (![data writeToFile:targetPath atomically:YES]) {
+			NSLog(@"Couldn't write file to %@", targetPath);
+			// todo graceful error handling, notify delegate.
+		}
+	}
+
+	if (self.delegate != nil && [self.delegate respondsToSelector:@selector(downloadDidFinishLoading:)]) {
+		[delegate downloadDidFinishLoading:self];
+	}
 }
 
-- (void) addPayload: (id)object forKey: (NSString *)key {
-    
-    if (payload==nil) {
-        
-        payload = [[NSMutableDictionary alloc] initWithCapacity:1];
-        
-    }
-    [payload setObject:object forKey:key];
-    
-    
-}
-- (id) getPayloadForKey: (NSString *)key {
-    
-    if (payload!=nil) {
-        
-        return [payload objectForKey: key];
-        
-    }
-    return nil;
-    
+- (void)connection:(NSURLConnection *)theConnection didFailWithError:(NSError *)error {
+	[connection release];
+	connection = nil;
+	
+	if (self.delegate != nil && [self.delegate respondsToSelector:@selector(download:didFailWithError:)]) {
+		[delegate download:self didFailWithError:error];
+	}
 }
 
-
-
-- (void) dealloc {
-    
-    delegate = nil;
-    
-    if (payload!=nil) {
-        
-        [payload release]; payload=nil;
-        
-    }
-    
-    if (targetPath!=nil) {
-        
-        [targetPath release]; targetPath=nil;
-    }
-    
-    [data release];
-    
-    [url release];
-    
-    [super dealloc];
-    
-    
+- (void)addPayload:(id)object forKey:(NSString *)key {
+	if (payload == nil) {
+		payload = [[NSMutableDictionary alloc] initWithCapacity:1];
+	}
+	[payload setObject:object forKey:key];
 }
 
+- (id)getPayloadForKey:(NSString *)key {
+	if (payload != nil) {
+		return [payload objectForKey:key];
+	}
+	return nil;
+}
+
+- (void)dealloc {
+	delegate = nil;
+
+	[connection release];
+	connection = nil;
+	[payload release];
+	payload = nil;
+	[targetPath release];
+	targetPath = nil;
+	[data release];
+	data = nil;
+	[url release];
+	url = nil;
+
+	[super dealloc];
+}
 
 @end

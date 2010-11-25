@@ -1,4 +1,4 @@
-@protocol EFImage <NSObject>
+@protocol EFImage < NSObject >
 
 @required
 
@@ -28,6 +28,5 @@
  * The caption of the image.
  */
 @property (nonatomic, retain) NSString *caption;
-
 
 @end

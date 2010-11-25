@@ -2,7 +2,7 @@
 
 @implementation EFFastTiledLayer
 
-+(CFTimeInterval)fadeDuration {
++ (CFTimeInterval)fadeDuration {
 	return 0.0;
 }
 

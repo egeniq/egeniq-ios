@@ -20,14 +20,12 @@
 
 @end
 
-
 @implementation EFImageView
 
 @synthesize dataSource;
 @synthesize delegate;
 
 - (void)reloadData {
-    
 }
 
 @end

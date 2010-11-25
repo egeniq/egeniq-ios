@@ -8,21 +8,21 @@
 
 @protocol EFPhoto;
 
-@protocol EFPhotoModel <NSObject>
+@protocol EFPhotoModel < NSObject >
 
 /**
  * An array of objects that conform to the EFPhotoModelDelegate protocol.
  */
-- (NSMutableArray*)delegates;
-    
+- (NSMutableArray *)delegates;
+
 /**
  * The total number of photos in the source, independent of the number that have been loaded.
  */
-@property (nonatomic, readonly) NSUInteger numberOfPhotos; 
+@property (nonatomic, readonly) NSUInteger numberOfPhotos;
 
 /**
  * The photo at the given index.
  */
-- (id<EFPhoto>)photoAtIndex:(NSUInteger)index;
+- (id <EFPhoto>)photoAtIndex:(NSUInteger)index;
 
 @end

@@ -3,10 +3,10 @@
 
 @interface EFImageTableView : EFImageView {
 	UITableView *tableView;
-    NSIndexPath *indexPathForSelectedImage;	
+	NSIndexPath *indexPathForSelectedImage;
 }
 
-@property(nonatomic, copy) NSString *imageVersion;
+@property (nonatomic, copy) NSString *imageVersion;
 
 - (void)selectImageAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated;
 - (NSIndexPath *)indexPathForSelectedImage;

@@ -1,6 +1,6 @@
 @class EFImageView;
 
-@protocol EFImageViewDelegate <NSObject>
+@protocol EFImageViewDelegate < NSObject >
 
 @optional
 

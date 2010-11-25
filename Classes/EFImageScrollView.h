@@ -2,32 +2,28 @@
 #import "EFImageView.h"
 
 typedef enum {
-    EFImageScrollViewRenderModePlain,
-    EFImageScrollViewRenderModeTiled
+	EFImageScrollViewRenderModePlain,
+	EFImageScrollViewRenderModeTiled
 } EFImageScrollViewRenderMode;
 
 @interface EFImageScrollView : EFImageView {
-    UIScrollView *pagingScrollView;    
-    NSMutableSet *recycledPages;
-    NSMutableSet *visiblePages;
-	
-    NSIndexPath *indexPathForSelectedImage;
-	
+	UIScrollView *pagingScrollView;
+	NSMutableSet *recycledPages;
+	NSMutableSet *visiblePages;
+
+	NSIndexPath *indexPathForSelectedImage;
+
 	NSUInteger firstVisiblePageIndex;
-    CGFloat percentScrolledIntoFirstVisiblePage;	
+	CGFloat percentScrolledIntoFirstVisiblePage;
 }
 
-@property(nonatomic, copy) NSString *imageVersion;
-@property(nonatomic, copy) NSString *lowResolutionImageVersion;
-@property(assign) EFImageScrollViewRenderMode renderMode;
-@property(assign) CGSize tileSize;
-@property(assign) NSUInteger levelsOfDetail;
+@property (nonatomic, copy) NSString *imageVersion;
+@property (nonatomic, copy) NSString *lowResolutionImageVersion;
+@property (assign) EFImageScrollViewRenderMode renderMode;
+@property (assign) CGSize tileSize;
+@property (assign) NSUInteger levelsOfDetail;
 
 - (void)selectImageAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated;
 - (NSIndexPath *)indexPathForSelectedImage;
 
 @end
-
-
-
-

@@ -21,6 +21,16 @@
 		D011F505120C85E400A07E28 /* EFImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F504120C85E400A07E28 /* EFImage.h */; };
 		D023E583123EA0B800389738 /* EFImageTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = D023E581123EA0B800389738 /* EFImageTableView.h */; };
 		D023E584123EA0B800389738 /* EFImageTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D023E582123EA0B800389738 /* EFImageTableView.m */; };
+		D03265B9129D427C004143A3 /* EFMultiValueValueCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265AF129D427C004143A3 /* EFMultiValueValueCell.h */; };
+		D03265BA129D427C004143A3 /* EFMultiValueValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B0129D427C004143A3 /* EFMultiValueValueCell.m */; };
+		D03265BB129D427C004143A3 /* EFSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265B1129D427C004143A3 /* EFSpecifierCell.h */; };
+		D03265BC129D427C004143A3 /* EFSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B2129D427C004143A3 /* EFSpecifierCell.m */; };
+		D03265BD129D427C004143A3 /* EFTextFieldSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265B3129D427C004143A3 /* EFTextFieldSpecifierCell.h */; };
+		D03265BE129D427C004143A3 /* EFTextFieldSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B4129D427C004143A3 /* EFTextFieldSpecifierCell.m */; };
+		D03265BF129D427C004143A3 /* EFToggleSwitchSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265B5129D427C004143A3 /* EFToggleSwitchSpecifierCell.h */; };
+		D03265C0129D427C004143A3 /* EFToggleSwitchSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B6129D427C004143A3 /* EFToggleSwitchSpecifierCell.m */; };
+		D03265C1129D427C004143A3 /* EFMultiValueSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265B7129D427C004143A3 /* EFMultiValueSpecifierCell.h */; };
+		D03265C2129D427C004143A3 /* EFMultiValueSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
 		D0826FBE122BD17E003EE4E6 /* EFImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0826FBC122BD17E003EE4E6 /* EFImageView.h */; };
 		D0826FBF122BD17E003EE4E6 /* EFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0826FBD122BD17E003EE4E6 /* EFImageView.m */; };
@@ -49,6 +59,16 @@
 		D011F504120C85E400A07E28 /* EFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImage.h; sourceTree = "<group>"; };
 		D023E581123EA0B800389738 /* EFImageTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageTableView.h; sourceTree = "<group>"; };
 		D023E582123EA0B800389738 /* EFImageTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageTableView.m; sourceTree = "<group>"; };
+		D03265AF129D427C004143A3 /* EFMultiValueValueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFMultiValueValueCell.h; sourceTree = "<group>"; };
+		D03265B0129D427C004143A3 /* EFMultiValueValueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFMultiValueValueCell.m; sourceTree = "<group>"; };
+		D03265B1129D427C004143A3 /* EFSpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFSpecifierCell.h; sourceTree = "<group>"; };
+		D03265B2129D427C004143A3 /* EFSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFSpecifierCell.m; sourceTree = "<group>"; };
+		D03265B3129D427C004143A3 /* EFTextFieldSpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTextFieldSpecifierCell.h; sourceTree = "<group>"; };
+		D03265B4129D427C004143A3 /* EFTextFieldSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTextFieldSpecifierCell.m; sourceTree = "<group>"; };
+		D03265B5129D427C004143A3 /* EFToggleSwitchSpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFToggleSwitchSpecifierCell.h; sourceTree = "<group>"; };
+		D03265B6129D427C004143A3 /* EFToggleSwitchSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFToggleSwitchSpecifierCell.m; sourceTree = "<group>"; };
+		D03265B7129D427C004143A3 /* EFMultiValueSpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFMultiValueSpecifierCell.h; sourceTree = "<group>"; };
+		D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFMultiValueSpecifierCell.m; sourceTree = "<group>"; };
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
@@ -88,6 +108,31 @@
 				923CDD77123A8CC300247AD5 /* EFDownloadQueue.m */,
 			);
 			name = Net;
+			sourceTree = "<group>";
+		};
+		D03265AC129D4245004143A3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D03265AE129D427C004143A3 /* Private */,
+				D03265B1129D427C004143A3 /* EFSpecifierCell.h */,
+				D03265B2129D427C004143A3 /* EFSpecifierCell.m */,
+				D03265B3129D427C004143A3 /* EFTextFieldSpecifierCell.h */,
+				D03265B4129D427C004143A3 /* EFTextFieldSpecifierCell.m */,
+				D03265B5129D427C004143A3 /* EFToggleSwitchSpecifierCell.h */,
+				D03265B6129D427C004143A3 /* EFToggleSwitchSpecifierCell.m */,
+				D03265B7129D427C004143A3 /* EFMultiValueSpecifierCell.h */,
+				D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		D03265AE129D427C004143A3 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				D03265AF129D427C004143A3 /* EFMultiValueValueCell.h */,
+				D03265B0129D427C004143A3 /* EFMultiValueValueCell.m */,
+			);
+			name = Private;
 			sourceTree = "<group>";
 		};
 		D067DCE211FB130E0047EFAA = {
@@ -137,9 +182,10 @@
 		D093CD3211FC627B000B51D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D093CD3311FC6284000B51D8 /* Image */,
+				D03265AC129D4245004143A3 /* Settings */,
 				923CDD78123A8CC300247AD5 /* EFNibViewController.h */,
 				923CDD79123A8CC300247AD5 /* EFNibViewController.m */,
-				D093CD3311FC6284000B51D8 /* Image */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -194,6 +240,11 @@
 				D023E583123EA0B800389738 /* EFImageTableView.h in Headers */,
 				D0E248C1125B2DE800C78A2D /* EFFastTiledLayer.h in Headers */,
 				D0E248C3125B2DE800C78A2D /* EFTilingView.h in Headers */,
+				D03265B9129D427C004143A3 /* EFMultiValueValueCell.h in Headers */,
+				D03265BB129D427C004143A3 /* EFSpecifierCell.h in Headers */,
+				D03265BD129D427C004143A3 /* EFTextFieldSpecifierCell.h in Headers */,
+				D03265BF129D427C004143A3 /* EFToggleSwitchSpecifierCell.h in Headers */,
+				D03265C1129D427C004143A3 /* EFMultiValueSpecifierCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +273,9 @@
 /* Begin PBXProject section */
 		D067DCE411FB130E0047EFAA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Egeniq;
+			};
 			buildConfigurationList = D067DCE711FB130E0047EFAA /* Build configuration list for PBXProject "Egeniq" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -254,6 +308,11 @@
 				D023E584123EA0B800389738 /* EFImageTableView.m in Sources */,
 				D0E248C2125B2DE800C78A2D /* EFFastTiledLayer.m in Sources */,
 				D0E248C4125B2DE800C78A2D /* EFTilingView.m in Sources */,
+				D03265BA129D427C004143A3 /* EFMultiValueValueCell.m in Sources */,
+				D03265BC129D427C004143A3 /* EFSpecifierCell.m in Sources */,
+				D03265BE129D427C004143A3 /* EFTextFieldSpecifierCell.m in Sources */,
+				D03265C0129D427C004143A3 /* EFToggleSwitchSpecifierCell.m in Sources */,
+				D03265C2129D427C004143A3 /* EFMultiValueSpecifierCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,15 +323,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
-				TARGETED_DEVICE_FAMILY = 2;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -280,13 +332,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
-				TARGETED_DEVICE_FAMILY = 2;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};
@@ -296,12 +343,13 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				DSTROOT = /tmp/Egeniq.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Egeniq_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Egeniq;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -311,12 +359,13 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				DSTROOT = /tmp/Egeniq.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Egeniq_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Egeniq;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 			};
 			name = Release;
 		};

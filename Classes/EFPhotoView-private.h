@@ -17,5 +17,4 @@
 
 - (UIImage *)imageAtIndex:(NSUInteger)index;
 
-
 @end
