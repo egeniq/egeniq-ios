@@ -11,7 +11,11 @@
 @implementation EFSpecifierCell
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
-   return [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier];
+	if ((self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier]) != nil) {
+		self.selectionStyle = UITableViewCellSelectionStyleNone;
+	}
+	
+	return self;
 }
 
 - (NSString *)title {

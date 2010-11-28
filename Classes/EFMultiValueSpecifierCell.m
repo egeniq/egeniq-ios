@@ -17,11 +17,7 @@
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
     if ((self = [super initWithReuseIdentifier:reuseIdentifier]) != nil) {
-		self.selectionStyle = UITableViewCellSelectionStyleNone;
 		self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-		
-		UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
-		[self addGestureRecognizer:recognizer];
 		
 		self.values = [NSArray array];
 		self.titles = [NSArray array];		
@@ -43,21 +39,25 @@
 	}
 }
 
-- (void)handleTap:(UITapGestureRecognizer *)recognizer {
-	if (recognizer.state == UIGestureRecognizerStateEnded) {
-		UITableViewController *viewController = [[[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
-		viewController.navigationItem.title = self.textLabel.text;		
-		viewController.tableView.dataSource = self;
-		viewController.tableView.delegate = self;
+- (void)pushSelectionController {
+	UITableViewController *viewController = [[[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
+	viewController.navigationItem.title = self.textLabel.text;		
+	viewController.tableView.dataSource = self;
+	viewController.tableView.delegate = self;
+	
+	[self.navigationController pushViewController:viewController animated:YES];
+	
+	NSUInteger index = [self.values indexOfObject:self.value];		
+	if (index != NSNotFound) {
+		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+		[viewController.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+	}		
+}
 
-		[self.navigationController pushViewController:viewController animated:YES];
-		
-		
-		NSUInteger index = [self.values indexOfObject:self.value];		
-		if (index != NSNotFound) {
-			NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-			[viewController.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
-		}
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
+	[super setSelected:selected animated:animated];
+	if (selected) {
+		[self pushSelectionController];
 	}
 }
 
