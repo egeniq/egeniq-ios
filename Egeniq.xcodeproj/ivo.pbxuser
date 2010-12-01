@@ -71,7 +71,7 @@
 	};
 	923CDD88123A8D1A00247AD5 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */;
+		fRef = D011F500120C827700A07E28 /* EFImageViewDataSource.h */;
 		name = "EFPhotoViewDataSource.h: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -81,7 +81,6 @@
 	};
 	923CDD89123A8D1A00247AD5 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = D011F506120C865800A07E28 /* EFPhotoVersion.h */;
 		name = "EFPhotoVersion.h: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -91,7 +90,7 @@
 	};
 	923CDD8A123A8D1A00247AD5 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = D011F504120C85E400A07E28 /* EFPhoto.h */;
+		fRef = D011F504120C85E400A07E28 /* EFImage.h */;
 		name = "EFPhoto.h: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -132,7 +131,7 @@
 	};
 	923CDDB6123A918900247AD5 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = D0826FBC122BD17E003EE4E6 /* EFPhotoView.h */;
+		fRef = D0826FBC122BD17E003EE4E6 /* EFImageView.h */;
 		name = "EFPhotoView.h: 1";
 		rLen = 24;
 		rLoc = 0;
@@ -182,7 +181,6 @@
 	};
 	923CDF46123CBE0600247AD5 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = D011F506120C865800A07E28 /* EFPhotoVersion.h */;
 		name = "EFPhotoVersion.h: 1";
 		rLen = 0;
 		rLoc = 0;
@@ -240,25 +238,18 @@
 		vrLen = 2905;
 		vrLoc = 1141;
 	};
-	D011F500120C827700A07E28 /* EFPhotoViewDataSource.h */ = {
+	D011F500120C827700A07E28 /* EFImageViewDataSource.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {924, 342}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 367}";
 		};
 	};
-	D011F504120C85E400A07E28 /* EFPhoto.h */ = {
+	D011F504120C85E400A07E28 /* EFImage.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {924, 481}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 487}";
-		};
-	};
-	D011F506120C865800A07E28 /* EFPhotoVersion.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1512, 892}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 285}";
 		};
 	};
 	D067DCE411FB130E0047EFAA /* Project object */ = {
@@ -313,8 +304,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 305972816;
-			PBXWorkspaceStateSaveDate = 305972816;
+			PBXPerProjectTemplateStateSaveDate = 312911412;
+			PBXWorkspaceStateSaveDate = 312911412;
 		};
 		perUserProjectItems = {
 			923CDD86123A8D1A00247AD5 = 923CDD86123A8D1A00247AD5 /* PBXTextBookmark */;
@@ -342,7 +333,7 @@
 	D067DCEF11FB130E0047EFAA /* Egeniq */ = {
 		activeExec = 0;
 	};
-	D0826FBC122BD17E003EE4E6 /* EFPhotoView.h */ = {
+	D0826FBC122BD17E003EE4E6 /* EFImageView.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1512, 901}}";
 			sepNavSelRange = "{0, 24}";

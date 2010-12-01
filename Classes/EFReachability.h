@@ -49,9 +49,10 @@
 #import <SystemConfiguration/SystemConfiguration.h>
 
 typedef enum {
-	EFNetworkStatusNotReachable = 0,
-	EFNetworkStatusReachableViaWiFi,
-	EFNetworkStatusReachableViaWWAN
+    EFNetworkStatusNotReachable = 0,
+    EFNetworkStatusReachableViaWiFi,
+    EFNetworkStatusReachableViaWWAN,
+    EFNetworkStatusReachableInLocalNetwork
 } EFNetworkStatus;
 
 #define kReachabilityChangedNotification @"kNetworkReachabilityChangedNotification"

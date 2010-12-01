@@ -176,9 +176,14 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 - (EFNetworkStatus)localWiFiStatusForFlags:(SCNetworkReachabilityFlags)flags {
 	PrintReachabilityFlags(flags, "localWiFiStatusForFlags");
 
-	BOOL retVal = EFNetworkStatusNotReachable;
+	EFNetworkStatus retVal = EFNetworkStatusNotReachable;
+    
 	if ((flags & kSCNetworkReachabilityFlagsReachable) && (flags & kSCNetworkReachabilityFlagsIsDirect)) {
-		retVal = EFNetworkStatusReachableViaWiFi;
+        if (flags & kSCNetworkReachabilityFlagsIsLocalAddress) {
+            retVal = EFNetworkStatusReachableInLocalNetwork;
+        } else {
+            retVal = EFNetworkStatusReachableViaWiFi;
+        }
 	}
 	return retVal;
 }
