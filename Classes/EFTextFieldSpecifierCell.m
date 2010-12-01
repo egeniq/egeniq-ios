@@ -11,6 +11,8 @@
 
 @implementation EFTextFieldSpecifierCell
 
+@synthesize delegate=delegate_;
+
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
     if ((self = [super initWithReuseIdentifier:reuseIdentifier]) != nil) {
 		self.detailTextLabel.text = @"";
@@ -18,6 +20,8 @@
 		valueField = [[UITextField alloc] init];
 		valueField.delegate = self;
 		valueField.returnKeyType = UIReturnKeyDone;	
+		valueField.enabled = NO;
+		
 		[self.contentView addSubview:valueField];
 		
 		self.value = @"";
@@ -79,15 +83,30 @@
 	valueFrame.origin.y = (self.contentView.frame.size.height - valueField.font.lineHeight) / 2;
 	valueFrame.size.width = self.contentView.frame.size.width - valueFrame.origin.x - 15.0;
 	valueFrame.size.height = valueField.font.lineHeight;
-	
 	valueField.frame = valueFrame;
 }
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-	[super setSelected:NO animated:NO];
+	[super setSelected:selected animated:animated];
 	if (selected) {
+		valueField.enabled = YES;		
 		[valueField becomeFirstResponder];
+	} else {
+		[valueField resignFirstResponder];
+		valueField.enabled = NO;			
+	}
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+	if ([self.delegate respondsToSelector:@selector(textFieldSpecifierCellDidBeginEditing:)]) {
+		[self.delegate textFieldSpecifierCellDidBeginEditing:self];
+	}
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+	if ([self.delegate respondsToSelector:@selector(textFieldSpecifierCellDidEndEditing:)]) {	
+		[self.delegate textFieldSpecifierCellDidEndEditing:self];
 	}
 }
 

@@ -8,10 +8,19 @@
 
 #import "EFSpecifierCell.h"
 
+@class EFTextFieldSpecifierCell;
+
+@protocol EFTextFieldSpecifierDelegate <NSObject>
+@optional
+- (void)textFieldSpecifierCellDidBeginEditing:(EFTextFieldSpecifierCell *)textFieldSpecifierCell;
+- (void)textFieldSpecifierCellDidEndEditing:(EFTextFieldSpecifierCell *)textFieldSpecifierCell;
+@end
+
 @interface EFTextFieldSpecifierCell : EFSpecifierCell <UITextFieldDelegate> {
 	UITextField *valueField;
 }
 
+@property(nonatomic, assign) id<EFTextFieldSpecifierDelegate> delegate;
 @property(nonatomic, assign) UIKeyboardType keyboardType;
 @property(nonatomic, assign) UITextAutocorrectionType autocorrectionType;
 @property(nonatomic, assign) UITextAutocapitalizationType autocapitalizationType;

@@ -34,6 +34,8 @@
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
 		D0826FBE122BD17E003EE4E6 /* EFImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0826FBC122BD17E003EE4E6 /* EFImageView.h */; };
 		D0826FBF122BD17E003EE4E6 /* EFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0826FBD122BD17E003EE4E6 /* EFImageView.m */; };
+		D0937B8D12A50B29000E050E /* EFSliderSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D0937B8B12A50B29000E050E /* EFSliderSpecifierCell.h */; };
+		D0937B8E12A50B29000E050E /* EFSliderSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0937B8C12A50B29000E050E /* EFSliderSpecifierCell.m */; };
 		D093CD3611FC62A5000B51D8 /* EFImageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = D093CD3411FC62A5000B51D8 /* EFImageScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D093CD3711FC62A5000B51D8 /* EFImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D093CD3511FC62A5000B51D8 /* EFImageScrollView.m */; };
 		D0BD8B58120EDA7E0034356B /* EFImageZoomView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */; };
@@ -74,6 +76,8 @@
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
 		D0826FBC122BD17E003EE4E6 /* EFImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageView.h; sourceTree = "<group>"; };
 		D0826FBD122BD17E003EE4E6 /* EFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageView.m; sourceTree = "<group>"; };
+		D0937B8B12A50B29000E050E /* EFSliderSpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFSliderSpecifierCell.h; sourceTree = "<group>"; };
+		D0937B8C12A50B29000E050E /* EFSliderSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFSliderSpecifierCell.m; sourceTree = "<group>"; };
 		D093CD3411FC62A5000B51D8 /* EFImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageScrollView.h; sourceTree = "<group>"; };
 		D093CD3511FC62A5000B51D8 /* EFImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageScrollView.m; sourceTree = "<group>"; };
 		D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageZoomView.h; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				D03265B6129D427C004143A3 /* EFToggleSwitchSpecifierCell.m */,
 				D03265B7129D427C004143A3 /* EFMultiValueSpecifierCell.h */,
 				D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */,
+				D0937B8B12A50B29000E050E /* EFSliderSpecifierCell.h */,
+				D0937B8C12A50B29000E050E /* EFSliderSpecifierCell.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -245,6 +251,7 @@
 				D03265BD129D427C004143A3 /* EFTextFieldSpecifierCell.h in Headers */,
 				D03265BF129D427C004143A3 /* EFToggleSwitchSpecifierCell.h in Headers */,
 				D03265C1129D427C004143A3 /* EFMultiValueSpecifierCell.h in Headers */,
+				D0937B8D12A50B29000E050E /* EFSliderSpecifierCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +320,7 @@
 				D03265BE129D427C004143A3 /* EFTextFieldSpecifierCell.m in Sources */,
 				D03265C0129D427C004143A3 /* EFToggleSwitchSpecifierCell.m in Sources */,
 				D03265C2129D427C004143A3 /* EFMultiValueSpecifierCell.m in Sources */,
+				D0937B8E12A50B29000E050E /* EFSliderSpecifierCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
