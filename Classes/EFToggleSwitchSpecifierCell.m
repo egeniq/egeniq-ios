@@ -45,11 +45,6 @@
 	valueField.frame = valueFrame;
 }
 
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-	[super setSelected:NO animated:NO];
-}
-
 - (void)dealloc {
 	self.trueValue = nil;
 	self.falseValue = nil;
