@@ -7,8 +7,6 @@
 //
 
 #import "EFMultiValueSpecifierCell.h"
-#import "EFMultiValueValueCell.h"
-
 
 @implementation EFMultiValueSpecifierCell
 
@@ -50,7 +48,9 @@
 	NSUInteger index = [self.values indexOfObject:self.value];		
 	if (index != NSNotFound) {
 		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-		[viewController.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+		UITableViewCell *cell = [viewController.tableView cellForRowAtIndexPath:indexPath];
+		cell.accessoryType = UITableViewCellAccessoryCheckmark;
+		[viewController.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
 	}		
 }
 
@@ -72,7 +72,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ValueCell"];
 	if (cell == nil) {
-		cell = [[[EFMultiValueValueCell alloc] initWithReuseIdentifier:@"ValueCell"] autorelease];
+		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"ValueCell"] autorelease];
+		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 	}	
 	
 	cell.textLabel.text = [self.titles objectAtIndex:indexPath.row];
@@ -80,7 +81,19 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	self.value = [self.values objectAtIndex:indexPath.row];
+	NSInteger oldIndex = [self.values indexOfObject:self.value];
+	if (oldIndex != NSNotFound) {
+		NSIndexPath *oldIndexPath = [NSIndexPath indexPathForRow:oldIndex inSection:indexPath.section];
+		UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:oldIndexPath];
+		oldCell.accessoryType = UITableViewCellAccessoryNone;
+	}
+	
+	UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+	cell.accessoryType = UITableViewCellAccessoryCheckmark;
+
+	self.value = [self.values objectAtIndex:indexPath.row];	
+	
+	[tableView selectRowAtIndexPath:nil animated:YES scrollPosition:UITableViewScrollPositionNone];
 }
 
 - (void)dealloc {

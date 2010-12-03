@@ -21,8 +21,6 @@
 		D011F505120C85E400A07E28 /* EFImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F504120C85E400A07E28 /* EFImage.h */; };
 		D023E583123EA0B800389738 /* EFImageTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = D023E581123EA0B800389738 /* EFImageTableView.h */; };
 		D023E584123EA0B800389738 /* EFImageTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D023E582123EA0B800389738 /* EFImageTableView.m */; };
-		D03265B9129D427C004143A3 /* EFMultiValueValueCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265AF129D427C004143A3 /* EFMultiValueValueCell.h */; };
-		D03265BA129D427C004143A3 /* EFMultiValueValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B0129D427C004143A3 /* EFMultiValueValueCell.m */; };
 		D03265BB129D427C004143A3 /* EFSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265B1129D427C004143A3 /* EFSpecifierCell.h */; };
 		D03265BC129D427C004143A3 /* EFSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B2129D427C004143A3 /* EFSpecifierCell.m */; };
 		D03265BD129D427C004143A3 /* EFTextFieldSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265B3129D427C004143A3 /* EFTextFieldSpecifierCell.h */; };
@@ -61,8 +59,6 @@
 		D011F504120C85E400A07E28 /* EFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImage.h; sourceTree = "<group>"; };
 		D023E581123EA0B800389738 /* EFImageTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageTableView.h; sourceTree = "<group>"; };
 		D023E582123EA0B800389738 /* EFImageTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageTableView.m; sourceTree = "<group>"; };
-		D03265AF129D427C004143A3 /* EFMultiValueValueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFMultiValueValueCell.h; sourceTree = "<group>"; };
-		D03265B0129D427C004143A3 /* EFMultiValueValueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFMultiValueValueCell.m; sourceTree = "<group>"; };
 		D03265B1129D427C004143A3 /* EFSpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFSpecifierCell.h; sourceTree = "<group>"; };
 		D03265B2129D427C004143A3 /* EFSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFSpecifierCell.m; sourceTree = "<group>"; };
 		D03265B3129D427C004143A3 /* EFTextFieldSpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTextFieldSpecifierCell.h; sourceTree = "<group>"; };
@@ -117,7 +113,6 @@
 		D03265AC129D4245004143A3 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				D03265AE129D427C004143A3 /* Private */,
 				D03265B1129D427C004143A3 /* EFSpecifierCell.h */,
 				D03265B2129D427C004143A3 /* EFSpecifierCell.m */,
 				D03265B3129D427C004143A3 /* EFTextFieldSpecifierCell.h */,
@@ -130,15 +125,6 @@
 				D0937B8C12A50B29000E050E /* EFSliderSpecifierCell.m */,
 			);
 			name = Settings;
-			sourceTree = "<group>";
-		};
-		D03265AE129D427C004143A3 /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				D03265AF129D427C004143A3 /* EFMultiValueValueCell.h */,
-				D03265B0129D427C004143A3 /* EFMultiValueValueCell.m */,
-			);
-			name = Private;
 			sourceTree = "<group>";
 		};
 		D067DCE211FB130E0047EFAA = {
@@ -246,7 +232,6 @@
 				D023E583123EA0B800389738 /* EFImageTableView.h in Headers */,
 				D0E248C1125B2DE800C78A2D /* EFFastTiledLayer.h in Headers */,
 				D0E248C3125B2DE800C78A2D /* EFTilingView.h in Headers */,
-				D03265B9129D427C004143A3 /* EFMultiValueValueCell.h in Headers */,
 				D03265BB129D427C004143A3 /* EFSpecifierCell.h in Headers */,
 				D03265BD129D427C004143A3 /* EFTextFieldSpecifierCell.h in Headers */,
 				D03265BF129D427C004143A3 /* EFToggleSwitchSpecifierCell.h in Headers */,
@@ -315,7 +300,6 @@
 				D023E584123EA0B800389738 /* EFImageTableView.m in Sources */,
 				D0E248C2125B2DE800C78A2D /* EFFastTiledLayer.m in Sources */,
 				D0E248C4125B2DE800C78A2D /* EFTilingView.m in Sources */,
-				D03265BA129D427C004143A3 /* EFMultiValueValueCell.m in Sources */,
 				D03265BC129D427C004143A3 /* EFSpecifierCell.m in Sources */,
 				D03265BE129D427C004143A3 /* EFTextFieldSpecifierCell.m in Sources */,
 				D03265C0129D427C004143A3 /* EFToggleSwitchSpecifierCell.m in Sources */,
