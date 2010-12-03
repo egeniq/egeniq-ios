@@ -38,9 +38,9 @@
 	};
 	923CDDA6123A8F0A00247AD5 /* EFReachability.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1266, 1118}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{2414, 1613}";
+			sepNavIntBoundsRect = "{{0, 0}, {1266, 1131}}";
+			sepNavSelRange = "{4080, 0}";
+			sepNavVisRange = "{2098, 1606}";
 		};
 	};
 	923CDDA7123A8F0A00247AD5 /* EFReachability.m */ = {
@@ -88,7 +88,7 @@
 		ignoreCount = 0;
 		lineNumber = 118;
 		location = AxisControl;
-		modificationTime = 312905470.551222;
+		modificationTime = 312913276.519108;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -106,7 +106,7 @@
 		ignoreCount = 0;
 		lineNumber = 103;
 		location = AxisControl;
-		modificationTime = 312905470.551268;
+		modificationTime = 312913276.519178;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -124,7 +124,7 @@
 		ignoreCount = 0;
 		lineNumber = 174;
 		location = AxisControl;
-		modificationTime = 312905470.55128;
+		modificationTime = 312913276.519219;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -142,7 +142,7 @@
 		ignoreCount = 0;
 		lineNumber = 104;
 		location = AxisControl;
-		modificationTime = 312905470.551294;
+		modificationTime = 312913276.519235;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -160,7 +160,7 @@
 		ignoreCount = 0;
 		lineNumber = 105;
 		location = AxisControl;
-		modificationTime = 312905470.551307;
+		modificationTime = 312913276.519271;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -188,7 +188,7 @@
 		ignoreCount = 0;
 		lineNumber = 107;
 		location = AxisControl;
-		modificationTime = 312905470.55132;
+		modificationTime = 312913276.519286;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -223,7 +223,7 @@
 	};
 	D03265B3129D427C004143A3 /* EFTextFieldSpecifierCell.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1266, 520}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1266, 512}}";
 			sepNavSelRange = "{249, 11}";
 			sepNavVisRange = "{0, 965}";
 			sepNavWindowFrame = "{{15, 248}, {1612, 925}}";
@@ -265,7 +265,7 @@
 		};
 	};
 	D067DCE411FB130E0047EFAA /* Project object */ = {
-		activeBuildConfigurationName = Distribution;
+		activeBuildConfigurationName = Release;
 		activeSDKPreference = iphoneos4.2;
 		activeTarget = D067DCEF11FB130E0047EFAA /* Egeniq */;
 		addToTargets = (
@@ -327,15 +327,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 312905496;
-			PBXWorkspaceStateSaveDate = 312905496;
+			PBXPerProjectTemplateStateSaveDate = 312907828;
+			PBXWorkspaceStateSaveDate = 312907828;
 		};
 		perUserProjectItems = {
 			D017EAD5125CFE950077D9FD /* PBXTextBookmark */ = D017EAD5125CFE950077D9FD /* PBXTextBookmark */;
 			D069103B12A68FDC0011F88A /* PBXTextBookmark */ = D069103B12A68FDC0011F88A /* PBXTextBookmark */;
 			D069103C12A68FDC0011F88A /* PBXTextBookmark */ = D069103C12A68FDC0011F88A /* PBXTextBookmark */;
-			D069103D12A68FDC0011F88A /* PBXTextBookmark */ = D069103D12A68FDC0011F88A /* PBXTextBookmark */;
-			D069103E12A68FDC0011F88A /* PBXTextBookmark */ = D069103E12A68FDC0011F88A /* PBXTextBookmark */;
+			D069110F12A6AD7B0011F88A /* PBXTextBookmark */ = D069110F12A6AD7B0011F88A /* PBXTextBookmark */;
+			D069111012A6AD7B0011F88A /* PBXTextBookmark */ = D069111012A6AD7B0011F88A /* PBXTextBookmark */;
+			D069111F12A6B6630011F88A /* PBXTextBookmark */ = D069111F12A6B6630011F88A /* PBXTextBookmark */;
 			D0937B8512A50751000E050E /* PBXTextBookmark */ = D0937B8512A50751000E050E /* PBXTextBookmark */;
 			D0937BB912A52A30000E050E /* PBXTextBookmark */ = D0937BB912A52A30000E050E /* PBXTextBookmark */;
 			D0937BBA12A52A30000E050E /* PBXTextBookmark */ = D0937BBA12A52A30000E050E /* PBXTextBookmark */;
@@ -350,7 +351,6 @@
 			D0DEF150128ACC3E00AA37B5 /* PBXTextBookmark */ = D0DEF150128ACC3E00AA37B5 /* PBXTextBookmark */;
 			D0DEF156128ACC3E00AA37B5 /* PBXTextBookmark */ = D0DEF156128ACC3E00AA37B5 /* PBXTextBookmark */;
 			D0DEF166128ACCD400AA37B5 /* PBXTextBookmark */ = D0DEF166128ACCD400AA37B5 /* PBXTextBookmark */;
-			D0DEF169128ACCD400AA37B5 /* PBXTextBookmark */ = D0DEF169128ACCD400AA37B5 /* PBXTextBookmark */;
 			D0DEF16A128ACCD400AA37B5 /* PBXTextBookmark */ = D0DEF16A128ACCD400AA37B5 /* PBXTextBookmark */;
 			D0DEF16B128ACCD400AA37B5 /* PBXTextBookmark */ = D0DEF16B128ACCD400AA37B5 /* PBXTextBookmark */;
 			D0DEF16C128ACCD400AA37B5 /* PBXTextBookmark */ = D0DEF16C128ACCD400AA37B5 /* PBXTextBookmark */;
@@ -396,17 +396,7 @@
 		vrLen = 892;
 		vrLoc = 652;
 	};
-	D069103D12A68FDC0011F88A /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D03265B3129D427C004143A3 /* EFTextFieldSpecifierCell.h */;
-		name = "EFTextFieldSpecifierCell.h: 23";
-		rLen = 32;
-		rLoc = 607;
-		rType = 0;
-		vrLen = 954;
-		vrLoc = 0;
-	};
-	D069103E12A68FDC0011F88A /* PBXTextBookmark */ = {
+	D069110F12A6AD7B0011F88A /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D03265B3129D427C004143A3 /* EFTextFieldSpecifierCell.h */;
 		name = "EFTextFieldSpecifierCell.h: 13";
@@ -415,6 +405,26 @@
 		rType = 0;
 		vrLen = 965;
 		vrLoc = 0;
+	};
+	D069111012A6AD7B0011F88A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDDA6123A8F0A00247AD5 /* EFReachability.h */;
+		name = "EFReachability.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1402;
+		vrLoc = 2414;
+	};
+	D069111F12A6B6630011F88A /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDDA6123A8F0A00247AD5 /* EFReachability.h */;
+		name = "EFReachability.h: 87";
+		rLen = 0;
+		rLoc = 4080;
+		rType = 0;
+		vrLen = 1606;
+		vrLoc = 2098;
 	};
 	D0826FBC122BD17E003EE4E6 /* EFImageView.h */ = {
 		uiCtxt = {
@@ -614,16 +624,6 @@
 		rType = 0;
 		vrLen = 526;
 		vrLoc = 0;
-	};
-	D0DEF169128ACCD400AA37B5 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 923CDDA6123A8F0A00247AD5 /* EFReachability.h */;
-		name = "EFReachability.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1613;
-		vrLoc = 2414;
 	};
 	D0DEF16A128ACCD400AA37B5 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;

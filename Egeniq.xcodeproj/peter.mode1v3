@@ -278,9 +278,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>25</integer>
-									<integer>21</integer>
-									<integer>9</integer>
+									<integer>3</integer>
+									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -323,7 +322,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EFTextFieldSpecifierCell.h</string>
+								<string>EFReachability.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -331,18 +330,17 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EFTextFieldSpecifierCell.h</string>
+										<string>EFReachability.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>D069103E12A68FDC0011F88A</string>
+										<string>D069111F12A6B6630011F88A</string>
 										<key>history</key>
 										<array>
 											<string>D017EAD5125CFE950077D9FD</string>
 											<string>D0DEF150128ACC3E00AA37B5</string>
 											<string>D0DEF156128ACC3E00AA37B5</string>
 											<string>D0DEF166128ACCD400AA37B5</string>
-											<string>D0DEF169128ACCD400AA37B5</string>
 											<string>D0DEF16A128ACCD400AA37B5</string>
 											<string>D0DEF16B128ACCD400AA37B5</string>
 											<string>D0DEF16C128ACCD400AA37B5</string>
@@ -369,7 +367,8 @@
 											<string>D0937BF812A5303B000E050E</string>
 											<string>D069103B12A68FDC0011F88A</string>
 											<string>D069103C12A68FDC0011F88A</string>
-											<string>D069103D12A68FDC0011F88A</string>
+											<string>D069110F12A6AD7B0011F88A</string>
+											<string>D069111012A6AD7B0011F88A</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -381,14 +380,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1327, 552}}</string>
+								<string>{{0, 0}, {1327, 544}}</string>
 								<key>RubberWindowFrame</key>
 								<string>2147 221 1616 922 1920 73 1920 1080 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>552pt</string>
+							<string>544pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -401,14 +400,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 557}, {1327, 324}}</string>
+								<string>{{0, 549}, {1327, 332}}</string>
 								<key>RubberWindowFrame</key>
 								<string>2147 221 1616 922 1920 73 1920 1080 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>324pt</string>
+							<string>332pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -427,9 +426,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>D069103F12A68FDC0011F88A</string>
+				<string>D069111212A6AD7B0011F88A</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>D069104012A68FDC0011F88A</string>
+				<string>D069111312A6AD7B0011F88A</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -568,6 +567,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>D0EBF3F611FB18540024C8BD</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/peter/Dropbox/Egeniq/Development/AxisControl/Egeniq/Egeniq.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -592,7 +592,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EFTextFieldSpecifierCell.m</string>
+								<string></string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -609,8 +609,6 @@
 							<string>503pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -650,7 +648,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>D0EBF3F611FB18540024C8BD</string>
-				<string>D069104112A68FDC0011F88A</string>
+				<string>D069111412A6AD7B0011F88A</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -663,7 +661,7 @@
 			<key>WindowToolGUID</key>
 			<string>D0EBF3F611FB18540024C8BD</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -934,7 +932,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>D0D1E0F012A29D70009A6077</string>
+				<string>D069111512A6AD7B0011F88A</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -944,7 +942,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
