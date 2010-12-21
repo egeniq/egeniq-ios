@@ -14,9 +14,12 @@
 @synthesize data;
 @synthesize targetPath;
 @synthesize url;
+@synthesize timeoutInterval=timeoutInterval_;
 
 - (id)initWithURL:(NSURL *)anUrl {
 	self = [super init];
+	
+	self.timeoutInterval = 30.0;
 
 	url = [anUrl copy];
 
@@ -29,9 +32,8 @@
 	[data release];
 	data = [[NSMutableData alloc] init];
 
-	NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+	NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:self.timeoutInterval];
 	connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-	[request release];
 }
 
 - (void)cancel {

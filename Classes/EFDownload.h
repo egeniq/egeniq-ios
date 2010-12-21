@@ -28,6 +28,7 @@
 @property (nonatomic, retain, readonly) NSMutableData *data;
 @property (nonatomic, retain) NSURL *url;
 @property (nonatomic, retain) NSString *targetPath;
+@property (nonatomic, assign) NSTimeInterval timeoutInterval;
 
 @end
 
