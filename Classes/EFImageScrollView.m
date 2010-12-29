@@ -67,6 +67,8 @@
 	pagingScrollView.showsHorizontalScrollIndicator = NO;
 	pagingScrollView.contentSize = [self contentSizeForPagingScrollView];
 	pagingScrollView.delegate = self;
+	pagingScrollView.bounces = NO;
+	pagingScrollView.alwaysBounceHorizontal = NO;
 	[self addSubview:pagingScrollView];
 
 	// Step 2: prepare to tile content
@@ -89,7 +91,7 @@
 
 - (void)layoutSubviews {
 	if (pagingScrollView.frame.size.width != self.frame.size.width ||
-	    pagingScrollView.frame.size.height != self.frame.size.height) {
+		pagingScrollView.frame.size.height != self.frame.size.height) {
 		// synchronize frame size
 		pagingScrollView.frame = [self frameForPagingScrollView];
 
@@ -194,7 +196,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 	// Calculate index path for newly selected image
 	CGFloat offset = pagingScrollView.contentOffset.x;
-	CGFloat pageWidth = pagingScrollView.bounds.size.width;
+ 	CGFloat pageWidth = pagingScrollView.bounds.size.width;
 
 	// Calculate new page index
 	NSUInteger pageIndex = 0;
@@ -203,7 +205,7 @@
 		CGFloat percentScrolled = (offset - (pageIndex * pageWidth)) / pageWidth;
 		pageIndex = percentScrolled >= 0.5 ? pageIndex + 1 : pageIndex;
 	}
-
+ 
 	// Check if the new index path is different than the previous one
 	NSIndexPath *indexPath = [NSIndexPath indexPathForImage:pageIndex inCollection:0];
 	if ([indexPath compare:indexPathForSelectedImage] == NSOrderedSame) {
@@ -243,8 +245,8 @@
 }
 
 #pragma mark -
-#pragma mark  Frame calculations
-#define PADDING  10
+#pragma mark Frame calculations
+#define PADDING 10
 
 - (CGRect)frameForPagingScrollView {
 	CGRect frame = self.frame;
