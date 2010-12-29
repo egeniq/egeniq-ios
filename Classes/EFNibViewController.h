@@ -15,6 +15,6 @@
 
 - (id)initWithNibName:(NSString *)nibName;
 
-@property (nonatomic, retain) UIView *view;
+@property (nonatomic, retain) IBOutlet UIView *view;
 
 @end

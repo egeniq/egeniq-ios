@@ -231,8 +231,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -280,8 +278,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>4</integer>
-									<integer>2</integer>
+									<integer>22</integer>
+									<integer>9</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -317,12 +315,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EFReachability.m</string>
+								<string>EFNibViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,21 +330,22 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EFReachability.m</string>
+										<string>EFNibViewController.h</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>92C7E2E712CB3C2E000AEAAF</string>
 										<key>history</key>
 										<array>
-											<string>923CDD86123A8D1A00247AD5</string>
 											<string>923CDD87123A8D1A00247AD5</string>
 											<string>923CDD88123A8D1A00247AD5</string>
 											<string>923CDD8A123A8D1A00247AD5</string>
 											<string>923CDDB2123A918900247AD5</string>
-											<string>923CDDB6123A918900247AD5</string>
-											<string>923CDDC7123A92CC00247AD5</string>
 											<string>923CDF46123CBE0600247AD5</string>
 											<string>923CDF47123CBE0600247AD5</string>
 											<string>923CDF48123CBE0600247AD5</string>
 											<string>923CDF49123CBE0600247AD5</string>
-											<string>923CDDC8123A92CC00247AD5</string>
+											<string>92C7E2E612CB3C2E000AEAAF</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -356,14 +357,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1573, 921}}</string>
+								<string>{{0, 0}, {1573, 912}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 59 1920 1119 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>921pt</string>
+							<string>912pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -376,14 +377,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 926}, {1573, 152}}</string>
+								<string>{{0, 917}, {1573, 161}}</string>
 								<key>RubberWindowFrame</key>
 								<string>0 59 1920 1119 0 0 1920 1178 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>152pt</string>
+							<string>161pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -402,9 +403,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>920B399012A6A638001EB133</string>
+				<string>92C7E2E812CB3C2E000AEAAF</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>920B399112A6A638001EB133</string>
+				<string>92C7E2E912CB3C2E000AEAAF</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -543,7 +544,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>923CDD91123A8D1A00247AD5</string>
-		<string>/Users/ivo/Documents/Xcode Projects/Ontwerpzolder/Egeniq/Egeniq.xcodeproj</string>
+		<string>/Users/ivo/Documents/Xcode Projects/kissthefrog/Portfolio/Egeniq/Egeniq.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 59 1920 1119 0 0 1920 1178 </string>
@@ -623,7 +624,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>923CDD91123A8D1A00247AD5</string>
-				<string>920B399212A6A638001EB133</string>
+				<string>92C7E2EA12CB3C2E000AEAAF</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
