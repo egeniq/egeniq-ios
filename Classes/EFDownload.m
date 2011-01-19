@@ -15,6 +15,7 @@
 @synthesize targetPath;
 @synthesize url;
 @synthesize timeoutInterval=timeoutInterval_;
+@synthesize tag=tag_;
 
 - (id)initWithURL:(NSURL *)anUrl {
 	self = [super init];

@@ -2,16 +2,16 @@
 {
 	923CDD74123A8CC300247AD5 /* EFDownload.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1266, 520}}";
-			sepNavSelRange = "{763, 0}";
-			sepNavVisRange = "{3, 971}";
+			sepNavIntBoundsRect = "{{0, 0}, {1266, 546}}";
+			sepNavSelRange = "{452, 0}";
+			sepNavVisRange = "{76, 959}";
 		};
 	};
 	923CDD75123A8CC300247AD5 /* EFDownload.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1266, 1495}}";
-			sepNavSelRange = "{411, 0}";
-			sepNavVisRange = "{142, 753}";
+			sepNavIntBoundsRect = "{{0, 0}, {1266, 1482}}";
+			sepNavSelRange = "{473, 0}";
+			sepNavVisRange = "{345, 787}";
 			sepNavWindowFrame = "{{84, 185}, {1612, 925}}";
 		};
 	};
@@ -45,9 +45,9 @@
 	};
 	923CDDA7123A8F0A00247AD5 /* EFReachability.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1266, 2977}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1266, 3120}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{4609, 1149}";
+			sepNavVisRange = "{4609, 1059}";
 		};
 	};
 	D011F500120C827700A07E28 /* EFImageViewDataSource.h */ = {
@@ -214,39 +214,10 @@
 	};
 	D0225FC912C10D8C00990403 /* NSURLRequest.h */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
 		name = NSURLRequest.h;
 		path = /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSURLRequest.h;
 		sourceTree = "<absolute>";
-	};
-	D0225FCA12C10D8C00990403 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 923CDD74123A8CC300247AD5 /* EFDownload.h */;
-		name = "EFDownload.h: 31";
-		rLen = 0;
-		rLoc = 763;
-		rType = 0;
-		vrLen = 971;
-		vrLoc = 3;
-	};
-	D0225FCB12C10D8C00990403 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 923CDD75123A8CC300247AD5 /* EFDownload.m */;
-		name = "EFDownload.m: 32";
-		rLen = 15;
-		rLoc = 646;
-		rType = 0;
-		vrLen = 751;
-		vrLoc = 142;
-	};
-	D0225FCC12C10D8C00990403 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 923CDD75123A8CC300247AD5 /* EFDownload.m */;
-		name = "EFDownload.m: 22";
-		rLen = 0;
-		rLoc = 411;
-		rType = 0;
-		vrLen = 753;
-		vrLoc = 142;
 	};
 	D023E581123EA0B800389738 /* EFImageTableView.h */ = {
 		uiCtxt = {
@@ -330,8 +301,48 @@
 		vrLen = 1523;
 		vrLoc = 2181;
 	};
+	D055490C12E65B6A00058F5C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDDA7123A8F0A00247AD5 /* EFReachability.m */;
+		name = "EFReachability.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1059;
+		vrLoc = 4609;
+	};
+	D055490D12E65B6A00058F5C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDD75123A8CC300247AD5 /* EFDownload.m */;
+		name = "EFDownload.m: 28";
+		rLen = 0;
+		rLoc = 473;
+		rType = 0;
+		vrLen = 787;
+		vrLoc = 345;
+	};
+	D055490F12E65B6A00058F5C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDD74123A8CC300247AD5 /* EFDownload.h */;
+		name = "EFDownload.h: 23";
+		rLen = 0;
+		rLoc = 436;
+		rType = 0;
+		vrLen = 893;
+		vrLoc = 142;
+	};
+	D055497312E660CE00058F5C /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 923CDD74123A8CC300247AD5 /* EFDownload.h */;
+		name = "EFDownload.h: 24";
+		rLen = 0;
+		rLoc = 452;
+		rType = 0;
+		vrLen = 959;
+		vrLoc = 76;
+	};
 	D067DCE411FB130E0047EFAA /* Project object */ = {
-		activeBuildConfigurationName = Release;
+		activeBuildConfigurationName = Distribution;
 		activeSDKPreference = iphoneos4.2;
 		activeTarget = D067DCEF11FB130E0047EFAA /* Egeniq */;
 		addToTargets = (
@@ -393,20 +404,20 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 314641597;
-			PBXWorkspaceStateSaveDate = 314641597;
+			PBXPerProjectTemplateStateSaveDate = 317087932;
+			PBXWorkspaceStateSaveDate = 317087932;
 		};
 		perUserProjectItems = {
 			D017EAD5125CFE950077D9FD /* PBXTextBookmark */ = D017EAD5125CFE950077D9FD /* PBXTextBookmark */;
 			D0225FC712C10D8C00990403 /* PBXTextBookmark */ = D0225FC712C10D8C00990403 /* PBXTextBookmark */;
 			D0225FC812C10D8C00990403 /* PBXTextBookmark */ = D0225FC812C10D8C00990403 /* PBXTextBookmark */;
-			D0225FCA12C10D8C00990403 /* PBXTextBookmark */ = D0225FCA12C10D8C00990403 /* PBXTextBookmark */;
-			D0225FCB12C10D8C00990403 /* PBXTextBookmark */ = D0225FCB12C10D8C00990403 /* PBXTextBookmark */;
-			D0225FCC12C10D8C00990403 /* PBXTextBookmark */ = D0225FCC12C10D8C00990403 /* PBXTextBookmark */;
 			D04CA03612A8E7EF001C77F0 /* PBXTextBookmark */ = D04CA03612A8E7EF001C77F0 /* PBXTextBookmark */;
+			D055490C12E65B6A00058F5C /* PBXTextBookmark */ = D055490C12E65B6A00058F5C /* PBXTextBookmark */;
+			D055490D12E65B6A00058F5C /* PBXTextBookmark */ = D055490D12E65B6A00058F5C /* PBXTextBookmark */;
+			D055490F12E65B6A00058F5C /* PBXTextBookmark */ = D055490F12E65B6A00058F5C /* PBXTextBookmark */;
+			D055497312E660CE00058F5C /* PBXTextBookmark */ = D055497312E660CE00058F5C /* PBXTextBookmark */;
 			D069103C12A68FDC0011F88A /* PBXTextBookmark */ = D069103C12A68FDC0011F88A /* PBXTextBookmark */;
 			D069110F12A6AD7B0011F88A /* PBXTextBookmark */ = D069110F12A6AD7B0011F88A /* PBXTextBookmark */;
-			D0937B8512A50751000E050E /* PBXTextBookmark */ = D0937B8512A50751000E050E /* PBXTextBookmark */;
 			D0937BB912A52A30000E050E /* PBXTextBookmark */ = D0937BB912A52A30000E050E /* PBXTextBookmark */;
 			D0937BBA12A52A30000E050E /* PBXTextBookmark */ = D0937BBA12A52A30000E050E /* PBXTextBookmark */;
 			D0937BBC12A52A30000E050E /* PBXTextBookmark */ = D0937BBC12A52A30000E050E /* PBXTextBookmark */;
@@ -476,16 +487,6 @@
 			sepNavSelRange = "{235, 0}";
 			sepNavVisRange = "{0, 559}";
 		};
-	};
-	D0937B8512A50751000E050E /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 923CDDA7123A8F0A00247AD5 /* EFReachability.m */;
-		name = "EFReachability.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1149;
-		vrLoc = 4609;
 	};
 	D0937B8B12A50B29000E050E /* EFSliderSpecifierCell.h */ = {
 		uiCtxt = {

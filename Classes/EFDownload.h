@@ -21,10 +21,12 @@
 
 - (id)initWithURL:(NSURL *)anUrl;
 - (void)start;
+- (void)cancel;
 - (void)addPayload:(id)object forKey:(NSString *)key;
 - (id)getPayloadForKey:(NSString *)key;
 
 @property (assign) id delegate;
+@property (nonatomic, assign) NSInteger tag;
 @property (nonatomic, retain, readonly) NSMutableData *data;
 @property (nonatomic, retain) NSURL *url;
 @property (nonatomic, retain) NSString *targetPath;
