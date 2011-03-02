@@ -22,8 +22,8 @@
 
 @implementation EFImageView
 
-@synthesize dataSource;
-@synthesize delegate;
+@synthesize dataSource=dataSource_;
+@synthesize delegate=delegate_;
 
 - (void)reloadData {
 }

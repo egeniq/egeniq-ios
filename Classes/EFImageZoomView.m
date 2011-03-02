@@ -9,7 +9,7 @@
 
 @implementation EFImageZoomView
 
-@synthesize imageScrollView, index;
+@synthesize imageScrollView=imageScrollView_, index=index_;
 
 - (id)initWithFrame:(CGRect)frame {
 	if ((self = [super initWithFrame:frame])) {
@@ -27,12 +27,12 @@
 }
 
 - (void)dealloc {
-	[contentView release];
-	contentView = nil;
-	[lowResolutionImageView release];
-	lowResolutionImageView = nil;
-	[imageView release];
-	imageView = nil;
+	[contentView_ release];
+	contentView_ = nil;
+	[lowResolutionImageView_ release];
+	lowResolutionImageView_ = nil;
+	[imageView_ release];
+	imageView_ = nil;
 	[super dealloc];
 }
 
@@ -47,7 +47,7 @@
 	[super layoutSubviews];
 
 	CGSize boundsSize = self.bounds.size;
-	CGRect frameToCenter = contentView.frame;
+	CGRect frameToCenter = contentView_.frame;
 
 	// center horizontally
 	if (frameToCenter.size.width < boundsSize.width) {
@@ -63,14 +63,14 @@
 		frameToCenter.origin.y = 0;
 	}
 
-	contentView.frame = frameToCenter;
+	contentView_.frame = frameToCenter;
 }
 
 #pragma mark -
 #pragma mark UIScrollView delegate methods
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-	return contentView;
+	return contentView_;
 }
 
 #pragma mark -
@@ -81,47 +81,47 @@
 	CGSize size = [image sizeForVersion:self.imageScrollView.imageVersion];
 
 	// clear previous views
-	[contentView removeFromSuperview];
-	[contentView release];
-	contentView = nil;
+	[contentView_ removeFromSuperview];
+	[contentView_ release];
+	contentView_ = nil;
 
-	[lowResolutionImageView release];
-	lowResolutionImageView = nil;
+	[lowResolutionImageView_ release];
+	lowResolutionImageView_ = nil;
 
-	[imageView release];
-	imageView = nil;
+	[imageView_ release];
+	imageView_ = nil;
 
 	// reset our zoomScale to 1.0 before doing any further calculations
 	self.zoomScale = 1.0;
 
 	// create the content view
-	contentView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, size.width, size.height)];
-	[self addSubview:contentView];
+	contentView_ = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, size.width, size.height)];
+	[self addSubview:contentView_];
 
 	// make a new view for the low resolution image
 	if (self.imageScrollView.lowResolutionImageVersion != nil) {
 		NSString *imagePath = [image pathForVersion:self.imageScrollView.lowResolutionImageVersion];
 		UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
 
-		lowResolutionImageView = [[UIImageView alloc] initWithImage:image];
-		lowResolutionImageView.frame = contentView.frame;
+		lowResolutionImageView_ = [[UIImageView alloc] initWithImage:image];
+		lowResolutionImageView_.frame = contentView_.frame;
 
-		[contentView addSubview:lowResolutionImageView];
-		[contentView sendSubviewToBack:lowResolutionImageView];
+		[contentView_ addSubview:lowResolutionImageView_];
+		[contentView_ sendSubviewToBack:lowResolutionImageView_];
 	}
 
 	// make a new tiled view for the standard image
 	if (self.imageScrollView.renderMode == EFImageScrollViewRenderModePlain) {
-		imageView = [[EFTilingView alloc] initWithImage:image
+		imageView_ = [[EFTilingView alloc] initWithImage:image
 			     version:self.imageScrollView.imageVersion];
 	} else {
-		imageView = [[EFTilingView alloc] initWithImage:image
+		imageView_ = [[EFTilingView alloc] initWithImage:image
 			     version:self.imageScrollView.imageVersion
 			     tileSize:self.imageScrollView.tileSize
 			     levelsOfDetail:self.imageScrollView.levelsOfDetail];
 	}
 
-	[contentView addSubview:imageView];
+	[contentView_ addSubview:imageView_];
 
 	self.contentSize = size;
 	[self setMaxMinZoomScalesForCurrentBounds];
@@ -130,7 +130,7 @@
 
 - (void)setMaxMinZoomScalesForCurrentBounds {
 	CGSize boundsSize = self.bounds.size;
-	CGSize imageSize = contentView.bounds.size;
+	CGSize imageSize = contentView_.bounds.size;
 
 	// calculate min/max zoomscale
 	CGFloat xScale = boundsSize.width / imageSize.width; // the scale needed to perfectly fit the image width-wise
@@ -157,7 +157,7 @@
 // returns the center point, in image coordinate space, to try to restore after rotation.
 - (CGPoint)pointToCenterAfterRotation {
 	CGPoint boundsCenter = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
-	return [self convertPoint:boundsCenter toView:contentView];
+	return [self convertPoint:boundsCenter toView:contentView_];
 }
 
 // returns the zoom scale to attempt to restore after rotation.
@@ -191,7 +191,7 @@
 	// Step 2: restore center point, first making sure it is within the allowable range.
 
 	// 2a: convert our desired center point back to our own coordinate space
-	CGPoint boundsCenter = [self convertPoint:oldCenter fromView:imageView];
+	CGPoint boundsCenter = [self convertPoint:oldCenter fromView:imageView_];
 	// 2b: calculate the content offset that would yield that center point
 	CGPoint offset = CGPointMake(boundsCenter.x - self.bounds.size.width / 2.0,
 				     boundsCenter.y - self.bounds.size.height / 2.0);

@@ -2,12 +2,12 @@
 #import "EFImage.h"
 
 @interface EFTilingView : UIView {
-	id <EFImage> image;
-	NSString *version;
-	BOOL useTiles;
+	id <EFImage> image_;
+	NSString *version_;
+	BOOL useTiles_;
 }
 
-- (id)initWithImage:(id <EFImage>)theImage version:(NSString *)theVersion;
-- (id)initWithImage:(id <EFImage>)theImage version:(NSString *)theVersion tileSize:(CGSize)tileSize levelsOfDetail:(NSUInteger)levelsOfDetail;
+- (id)initWithImage:(id <EFImage>)image version:(NSString *)version;
+- (id)initWithImage:(id <EFImage>)image version:(NSString *)version tileSize:(CGSize)tileSize levelsOfDetail:(NSUInteger)levelsOfDetail;
 
 @end

@@ -8,7 +8,7 @@
 
 @implementation EFImageTableView
 
-@synthesize imageVersion;
+@synthesize imageVersion=imageVersion_;
 
 - (id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];
@@ -28,20 +28,20 @@
 
 - (void)configureTableView {
 	self.imageVersion = nil;
-	tableView = [[UITableView alloc] initWithFrame:[self frame]];
-	tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-	tableView.backgroundColor = [UIColor blackColor];
-	tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-	tableView.delegate = self;
-	tableView.dataSource = self;
-	[self addSubview:tableView];
+	tableView_ = [[UITableView alloc] initWithFrame:[self frame]];
+	tableView_.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+	tableView_.backgroundColor = [UIColor blackColor];
+	tableView_.separatorStyle = UITableViewCellSeparatorStyleNone;
+	tableView_.delegate = self;
+	tableView_.dataSource = self;
+	[self addSubview:tableView_];
 }
 
 - (void)dealloc {
-	[tableView release];
-	tableView = nil;
-	[indexPathForSelectedImage release];
-	indexPathForSelectedImage = nil;
+	[tableView_ release];
+	tableView_ = nil;
+	[indexPathForSelectedImage_ release];
+	indexPathForSelectedImage_ = nil;
 	[super dealloc];
 }
 
@@ -79,7 +79,7 @@
 - (CGFloat)tableView:(UITableView *)theTableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	id <EFImage> image = [self.dataSource imageView:self imageAtIndexPath:indexPath];
 	CGSize size = [image sizeForVersion:self.imageVersion];
-	CGFloat height = round(size.height / (size.width / tableView.bounds.size.width));
+	CGFloat height = round(size.height / (size.width / tableView_.bounds.size.width));
 	return height;
 }
 
@@ -88,10 +88,10 @@
 
 	UIImageView *imageView = nil;
 
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+	UITableViewCell *cell = [tableView_ dequeueReusableCellWithIdentifier:cellIdentifier];
 	if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
-		imageView = [[[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, tableView.bounds.size.width, tableView.bounds.size.width)] autorelease];
+		imageView = [[[UIImageView alloc] initWithFrame:CGRectMake(0.0, 0.0, tableView_.bounds.size.width, tableView_.bounds.size.width)] autorelease];
 		imageView.tag = PHOTOVIEW_TAG;
 		[cell.contentView addSubview:imageView];
 	} else {
@@ -102,7 +102,7 @@
 	NSString *path = [image pathForVersion:self.imageVersion];
 	imageView.image = [UIImage imageWithContentsOfFile:path];
 	CGRect frame = imageView.frame;
-	frame.size.height = [self tableView:tableView heightForRowAtIndexPath:indexPath];
+	frame.size.height = [self tableView:tableView_ heightForRowAtIndexPath:indexPath];
 	imageView.frame = frame;
 	return cell;
 }
@@ -132,19 +132,19 @@
 }
 
 - (void)reloadData {
-	[tableView reloadData];
+	[tableView_ reloadData];
 }
 
 #pragma mark -
 #pragma mark Image table view specific public methods
 
 - (void)selectImageAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
-	indexPathForSelectedImage = [indexPath copy];
-	[tableView selectRowAtIndexPath:indexPath animated:animated scrollPosition:UITableViewScrollPositionMiddle];
+	indexPathForSelectedImage_ = [indexPath copy];
+	[tableView_ selectRowAtIndexPath:indexPath animated:animated scrollPosition:UITableViewScrollPositionMiddle];
 }
 
 - (NSIndexPath *)indexPathForSelectedImage {
-	return [[indexPathForSelectedImage copy] autorelease];
+	return [[indexPathForSelectedImage_ copy] autorelease];
 }
 
 @end

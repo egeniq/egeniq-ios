@@ -11,24 +11,24 @@
 	return [EFFastTiledLayer class];
 }
 
-- (id)initWithImage:(id <EFImage>)theImage version:(NSString *)theVersion {
-	CGSize size = [theImage sizeForVersion:theVersion];
+- (id)initWithImage:(id <EFImage>)image version:(NSString *)version {
+	CGSize size = [image sizeForVersion:version];
 
-	self = [self initWithImage:theImage version:theVersion tileSize:size levelsOfDetail:1];
+	self = [self initWithImage:image version:version tileSize:size levelsOfDetail:1];
 	if (self != nil) {
-		useTiles = NO;
+		useTiles_ = NO;
 	}
 
 	return self;
 }
 
-- (id)initWithImage:(id <EFImage>)theImage version:(NSString *)theVersion tileSize:(CGSize)tileSize levelsOfDetail:(NSUInteger)levelsOfDetail {
-	CGSize size = [theImage sizeForVersion:theVersion];
+- (id)initWithImage:(id <EFImage>)image version:(NSString *)version tileSize:(CGSize)tileSize levelsOfDetail:(NSUInteger)levelsOfDetail {
+	CGSize size = [image sizeForVersion:version];
 
 	if ((self = [super initWithFrame:CGRectMake(0, 0, size.width, size.height)])) {
-		image = [theImage retain];
-		version = [theVersion copy];
-		useTiles = YES;
+		image_ = [image retain];
+		version_ = [version copy];
+		useTiles_ = YES;
 
 		CATiledLayer *tiledLayer = (CATiledLayer *)[self layer];
 		tiledLayer.levelsOfDetail = levelsOfDetail;
@@ -163,10 +163,10 @@
 	CATiledLayer *tiledLayer = (CATiledLayer *)[self layer];
 
 	NSString *path;
-	if (useTiles) {
-		path = [image tilePathForVersion:version size:tiledLayer.tileSize scale:scale row:row column:column];
+	if (useTiles_) {
+		path = [image_ tilePathForVersion:version_ size:tiledLayer.tileSize scale:scale row:row column:column];
 	} else {
-		path = [image pathForVersion:version];
+		path = [image_ pathForVersion:version_];
 	}
 
 	UIImage *tile = [UIImage imageWithContentsOfFile:path];

@@ -10,9 +10,9 @@
 @class EFImageScrollView;
 
 @interface EFImageZoomView : UIScrollView <UIScrollViewDelegate> {
-	UIView *contentView;
-	EFTilingView *imageView;
-	UIImageView *lowResolutionImageView;
+	UIView *contentView_;
+	EFTilingView *imageView_;
+	UIImageView *lowResolutionImageView_;
 }
 
 @property (nonatomic, assign) EFImageScrollView *imageScrollView;

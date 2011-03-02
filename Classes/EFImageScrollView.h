@@ -7,14 +7,16 @@ typedef enum {
 } EFImageScrollViewRenderMode;
 
 @interface EFImageScrollView : EFImageView {
-	UIScrollView *pagingScrollView;
-	NSMutableSet *recycledPages;
-	NSMutableSet *visiblePages;
+	UIScrollView *pagingScrollView_;
+	NSMutableSet *recycledPages_;
+	NSMutableSet *visiblePages_;
 
-	NSIndexPath *indexPathForSelectedImage;
+	NSIndexPath *indexPathForSelectedImage_;
 
-	NSUInteger firstVisiblePageIndex;
-	CGFloat percentScrolledIntoFirstVisiblePage;
+	NSUInteger firstVisiblePageIndex_;
+	CGFloat percentScrolledIntoFirstVisiblePage_;
+    
+    BOOL isAdjustingScrollFrame_;
 }
 
 @property (nonatomic, copy) NSString *imageVersion;

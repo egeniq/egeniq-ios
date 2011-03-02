@@ -32,7 +32,7 @@
 
 @implementation EFImageScrollView
 
-@synthesize imageVersion, lowResolutionImageVersion, renderMode, tileSize, levelsOfDetail;
+@synthesize imageVersion=imageVersion_, lowResolutionImageVersion=lowResolutionImageVersion_, renderMode=renderMode_, tileSize=tileSize_, levelsOfDetail=levelsOfDetail_;
 
 - (id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];
@@ -60,57 +60,61 @@
 
 	// Step 1: make the outer paging scroll view
 	CGRect pagingScrollViewFrame = [self frameForPagingScrollView];
-	pagingScrollView = [[UIScrollView alloc] initWithFrame:pagingScrollViewFrame];
-	pagingScrollView.pagingEnabled = YES;
-	pagingScrollView.backgroundColor = [UIColor blackColor];
-	pagingScrollView.showsVerticalScrollIndicator = NO;
-	pagingScrollView.showsHorizontalScrollIndicator = NO;
-	pagingScrollView.contentSize = [self contentSizeForPagingScrollView];
-	pagingScrollView.delegate = self;
-	pagingScrollView.bounces = NO;
-	pagingScrollView.alwaysBounceHorizontal = NO;
-	[self addSubview:pagingScrollView];
+	pagingScrollView_ = [[UIScrollView alloc] initWithFrame:pagingScrollViewFrame];
+	pagingScrollView_.pagingEnabled = YES;
+	pagingScrollView_.backgroundColor = [UIColor blackColor];
+	pagingScrollView_.showsVerticalScrollIndicator = NO;
+	pagingScrollView_.showsHorizontalScrollIndicator = NO;
+	pagingScrollView_.contentSize = [self contentSizeForPagingScrollView];
+	pagingScrollView_.delegate = self;
+	pagingScrollView_.bounces = NO;
+	pagingScrollView_.alwaysBounceHorizontal = NO;
+	[self addSubview:pagingScrollView_];
 
 	// Step 2: prepare to tile content
-	recycledPages = [[NSMutableSet alloc] init];
-	visiblePages = [[NSMutableSet alloc] init];
+	recycledPages_ = [[NSMutableSet alloc] init];
+	visiblePages_ = [[NSMutableSet alloc] init];
 	[self tilePages];
 }
 
 - (void)dealloc {
-	[pagingScrollView release];
-	pagingScrollView = nil;
-	[recycledPages release];
-	recycledPages = nil;
-	[visiblePages release];
-	visiblePages = nil;
-	[indexPathForSelectedImage release];
-	indexPathForSelectedImage = nil;
+	[pagingScrollView_ release];
+	pagingScrollView_ = nil;
+	[recycledPages_ release];
+	recycledPages_ = nil;
+	[visiblePages_ release];
+	visiblePages_ = nil;
+	[indexPathForSelectedImage_ release];
+	indexPathForSelectedImage_ = nil;
 	[super dealloc];
 }
 
 - (void)layoutSubviews {
-	if (pagingScrollView.frame.size.width != self.frame.size.width ||
-		pagingScrollView.frame.size.height != self.frame.size.height) {
+	if (pagingScrollView_.frame.size.width != self.frame.size.width ||
+		pagingScrollView_.frame.size.height != self.frame.size.height) {
+        isAdjustingScrollFrame_ = YES;
+        
 		// synchronize frame size
-		pagingScrollView.frame = [self frameForPagingScrollView];
+		pagingScrollView_.frame = [self frameForPagingScrollView];
 
 		// recalculate contentSize based on current orientation
-		pagingScrollView.contentSize = [self contentSizeForPagingScrollView];
+		pagingScrollView_.contentSize = [self contentSizeForPagingScrollView];
 
 		// adjust frames and configuration of each visible page
-		for (EFImageZoomView *page in visiblePages) {
+		for (EFImageZoomView *page in visiblePages_) {
 			CGPoint restorePoint = [page pointToCenterAfterRotation];
 			CGFloat restoreScale = [page scaleToRestoreAfterRotation];
 			page.frame = [self frameForPageAtIndex:page.index];
 			[page setMaxMinZoomScalesForCurrentBounds];
 			[page restoreCenterPoint:restorePoint scale:restoreScale];
 		}
-
+        
 		// adjust contentOffset to preserve page location based on values collected prior to location
-		CGFloat pageWidth = pagingScrollView.bounds.size.width;
-		CGFloat newOffset = (firstVisiblePageIndex * pageWidth) + (percentScrolledIntoFirstVisiblePage * pageWidth);
-		pagingScrollView.contentOffset = CGPointMake(newOffset, 0);
+		CGFloat pageWidth = pagingScrollView_.bounds.size.width;
+		CGFloat newOffset = (firstVisiblePageIndex_ * pageWidth) + (percentScrolledIntoFirstVisiblePage_ * pageWidth);
+		pagingScrollView_.contentOffset = CGPointMake(newOffset, 0);
+        
+        isAdjustingScrollFrame_ = NO;            
 	}
 
 	[super layoutSubviews];
@@ -121,33 +125,33 @@
 
 - (void)tilePages {
 	// Calculate the content offset in case the orientation changes
-	CGFloat offset = pagingScrollView.contentOffset.x;
-	CGFloat pageWidth = pagingScrollView.bounds.size.width;
+	CGFloat offset = pagingScrollView_.contentOffset.x;
+	CGFloat pageWidth = pagingScrollView_.bounds.size.width;
 
-	firstVisiblePageIndex = 0;
+	firstVisiblePageIndex_ = 0;
 
 	if (offset >= 0) {
-		firstVisiblePageIndex = floorf(offset / pageWidth);
-		percentScrolledIntoFirstVisiblePage = (offset - (firstVisiblePageIndex * pageWidth)) / pageWidth;
+		firstVisiblePageIndex_ = floorf(offset / pageWidth);
+		percentScrolledIntoFirstVisiblePage_ = (offset - (firstVisiblePageIndex_ * pageWidth)) / pageWidth;
 	} else {
-		percentScrolledIntoFirstVisiblePage = offset / pageWidth;
+		percentScrolledIntoFirstVisiblePage_ = offset / pageWidth;
 	}
 
 	// Calculate which pages are visible
-	CGRect visibleBounds = pagingScrollView.bounds;
+	CGRect visibleBounds = pagingScrollView_.bounds;
 	int firstNeededPageIndex = floorf(CGRectGetMinX(visibleBounds) / CGRectGetWidth(visibleBounds));
 	int lastNeededPageIndex = floorf((CGRectGetMaxX(visibleBounds) - 1) / CGRectGetWidth(visibleBounds));
 	firstNeededPageIndex = MAX(firstNeededPageIndex, 0);
 	lastNeededPageIndex = MIN(lastNeededPageIndex, [self imageCount] - 1);
 
 	// Recycle no-longer-visible pages
-	for (EFImageZoomView *page in visiblePages) {
+	for (EFImageZoomView *page in visiblePages_) {
 		if (page.index < firstNeededPageIndex || page.index > lastNeededPageIndex) {
-			[recycledPages addObject:page];
+			[recycledPages_ addObject:page];
 			[page removeFromSuperview];
 		}
 	}
-	[visiblePages minusSet:recycledPages];
+	[visiblePages_ minusSet:recycledPages_];
 
 	// add missing pages
 	for (int index = firstNeededPageIndex; index <= lastNeededPageIndex; index++) {
@@ -157,24 +161,24 @@
 				page = [[[EFImageZoomView alloc] init] autorelease];
 			}
 			[self configurePage:page forIndex:index];
-			[pagingScrollView addSubview:page];
-			[visiblePages addObject:page];
+			[pagingScrollView_ addSubview:page];
+			[visiblePages_ addObject:page];
 		}
 	}
 }
 
 - (EFImageZoomView *)dequeueRecycledPage {
-	EFImageZoomView *page = [recycledPages anyObject];
+	EFImageZoomView *page = [recycledPages_ anyObject];
 	if (page) {
 		[[page retain] autorelease];
-		[recycledPages removeObject:page];
+		[recycledPages_ removeObject:page];
 	}
 	return page;
 }
 
 - (BOOL)isDisplayingPageForIndex:(NSUInteger)index {
 	BOOL foundPage = NO;
-	for (EFImageZoomView *page in visiblePages) {
+	for (EFImageZoomView *page in visiblePages_) {
 		if (page.index == index) {
 			foundPage = YES;
 			break;
@@ -194,9 +198,13 @@
 #pragma mark ScrollView delegate methods
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (isAdjustingScrollFrame_) {
+        return;
+    }
+    
 	// Calculate index path for newly selected image
-	CGFloat offset = pagingScrollView.contentOffset.x;
- 	CGFloat pageWidth = pagingScrollView.bounds.size.width;
+	CGFloat offset = pagingScrollView_.contentOffset.x;
+ 	CGFloat pageWidth = pagingScrollView_.bounds.size.width;
 
 	// Calculate new page index
 	NSUInteger pageIndex = 0;
@@ -208,7 +216,7 @@
  
 	// Check if the new index path is different than the previous one
 	NSIndexPath *indexPath = [NSIndexPath indexPathForImage:pageIndex inCollection:0];
-	if ([indexPath compare:indexPathForSelectedImage] == NSOrderedSame) {
+	if ([indexPath compare:indexPathForSelectedImage_] == NSOrderedSame) {
 		[self tilePages];
 		return;
 	}
@@ -216,14 +224,14 @@
 	// Notify delegate that image is going to be deselected
 	if ([self.delegate respondsToSelector:@selector(imageView:willDeselectImageAtIndexPath:)]) {
 		// We only currently support the selection of 1 image, so we don't do anything with the return value
-		[self.delegate imageView:self willDeselectImageAtIndexPath:indexPathForSelectedImage];
+		[self.delegate imageView:self willDeselectImageAtIndexPath:indexPathForSelectedImage_];
 	}
 
-	indexPathForSelectedImage = nil;
+	indexPathForSelectedImage_ = nil;
 
 	// Notify delegate that image is deselected
 	if ([self.delegate respondsToSelector:@selector(imageView:didDeselectImageAtIndexPath:)]) {
-		[self.delegate imageView:self didDeselectImageAtIndexPath:indexPathForSelectedImage];
+		[self.delegate imageView:self didDeselectImageAtIndexPath:indexPathForSelectedImage_];
 	}
 
 	// Notify delegate that we are going to select a different image
@@ -235,7 +243,7 @@
 		}
 	}
 
-	indexPathForSelectedImage = [indexPath retain];
+	indexPathForSelectedImage_ = [indexPath retain];
 	[self tilePages];
 
 	// Notify delegate that another image has been selected
@@ -260,7 +268,7 @@
 	// landscape orientation, the frame will still be in portrait because the pagingScrollView is the root view controller's
 	// view, so its frame is in window coordinate space, which is never rotated. Its bounds, however, will be in landscape
 	// because it has a rotation transform applied.
-	CGRect bounds = pagingScrollView.bounds;
+	CGRect bounds = pagingScrollView_.bounds;
 	CGRect pageFrame = bounds;
 	pageFrame.size.width -= (2 * PADDING);
 	pageFrame.origin.x = (bounds.size.width * index) + PADDING;
@@ -269,7 +277,7 @@
 
 - (CGSize)contentSizeForPagingScrollView {
 	// We have to use the paging scroll view's bounds to calculate the contentSize, for the same reason outlined above.
-	CGRect bounds = pagingScrollView.bounds;
+	CGRect bounds = pagingScrollView_.bounds;
 	return CGSizeMake(bounds.size.width * [self imageCount], bounds.size.height);
 }
 
@@ -290,15 +298,15 @@
 
 - (void)reloadData {
 	// Steap 1: clean-up
-	for (EFImageZoomView *page in visiblePages) {
+	for (EFImageZoomView *page in visiblePages_) {
 		[page removeFromSuperview];
 	}
 
-	[recycledPages removeAllObjects];
-	[visiblePages removeAllObjects];
+	[recycledPages_ removeAllObjects];
+	[visiblePages_ removeAllObjects];
 
 	// Step 2: prepare to tile content
-	pagingScrollView.contentSize = [self contentSizeForPagingScrollView];
+	pagingScrollView_.contentSize = [self contentSizeForPagingScrollView];
 
 	// Notify delegate that we are going to select a different image
 	NSIndexPath *indexPath = [NSIndexPath indexPathForImage:0 inCollection:0];
@@ -319,27 +327,27 @@
 #pragma mark Image scroll view specific public methods
 
 - (NSIndexPath *)indexPathForSelectedImage {
-	return [[indexPathForSelectedImage copy] autorelease];
+	return [[indexPathForSelectedImage_ copy] autorelease];
 }
 
 - (void)selectImageAtIndexPath:(NSIndexPath *)indexPath animated:(BOOL)animated {
-	indexPathForSelectedImage = [indexPath copy];
+	indexPathForSelectedImage_ = [indexPath copy];
 
-	CGFloat pageWidth = pagingScrollView.bounds.size.width;
-	CGFloat newOffset = (indexPathForSelectedImage.image * pageWidth);
+	CGFloat pageWidth = pagingScrollView_.bounds.size.width;
+	CGFloat newOffset = (indexPathForSelectedImage_.image * pageWidth);
 
 	if (animated) {
 		[UIView beginAnimations:nil context:nil];
-		pagingScrollView.alpha = 0.0;
+		pagingScrollView_.alpha = 0.0;
 		[UIView commitAnimations];
 	}
 
-	pagingScrollView.contentOffset = CGPointMake(newOffset, 0);
+	pagingScrollView_.contentOffset = CGPointMake(newOffset, 0);
 	[self tilePages];
 
 	if (animated) {
 		[UIView beginAnimations:nil context:nil];
-		pagingScrollView.alpha = 1.0;
+		pagingScrollView_.alpha = 1.0;
 		[UIView commitAnimations];
 	}
 }

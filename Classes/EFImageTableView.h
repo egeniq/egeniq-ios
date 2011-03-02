@@ -2,8 +2,8 @@
 #import "EFImageView.h"
 
 @interface EFImageTableView : EFImageView {
-	UITableView *tableView;
-	NSIndexPath *indexPathForSelectedImage;
+	UITableView *tableView_;
+	NSIndexPath *indexPathForSelectedImage_;
 }
 
 @property (nonatomic, copy) NSString *imageVersion;
