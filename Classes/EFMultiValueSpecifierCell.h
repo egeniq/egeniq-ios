@@ -12,12 +12,11 @@
 	
 }
 
-@property(nonatomic, assign) UINavigationController *navigationController;
-
 @property(nonatomic, retain) NSArray *values;
 @property(nonatomic, retain) NSArray *titles;
 @property(nonatomic, retain) id value;
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
+- (void)pushSelectionOnNavigationController:(UINavigationController *)navigationController;
 
 @end

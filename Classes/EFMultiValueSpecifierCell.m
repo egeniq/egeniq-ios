@@ -10,7 +10,6 @@
 
 @implementation EFMultiValueSpecifierCell
 
-@synthesize navigationController;
 @synthesize values=values_, titles=titles_, value=value_;
 
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
@@ -37,13 +36,13 @@
 	}
 }
 
-- (void)pushSelectionController {
+- (void)pushSelectionOnNavigationController:(UINavigationController *)navigationController {
 	UITableViewController *viewController = [[[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
 	viewController.navigationItem.title = self.textLabel.text;		
 	viewController.tableView.dataSource = self;
 	viewController.tableView.delegate = self;
 	
-	[self.navigationController pushViewController:viewController animated:YES];
+	[navigationController pushViewController:viewController animated:YES];
 	
 	NSUInteger index = [self.values indexOfObject:self.value];		
 	if (index != NSNotFound) {
@@ -52,13 +51,6 @@
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;
 		[viewController.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
 	}		
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-	[super setSelected:selected animated:animated];
-	if (selected) {
-		[self pushSelectionController];
-	}
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
