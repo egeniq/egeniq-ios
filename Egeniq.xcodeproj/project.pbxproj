@@ -42,6 +42,10 @@
 		D0E248C2125B2DE800C78A2D /* EFFastTiledLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E248BE125B2DE800C78A2D /* EFFastTiledLayer.m */; };
 		D0E248C3125B2DE800C78A2D /* EFTilingView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E248BF125B2DE800C78A2D /* EFTilingView.h */; };
 		D0E248C4125B2DE800C78A2D /* EFTilingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E248C0125B2DE800C78A2D /* EFTilingView.m */; };
+		D0E522411320DC9A00426493 /* EFTokenExchangeClient.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E5223F1320DC9A00426493 /* EFTokenExchangeClient.h */; };
+		D0E522421320DC9A00426493 /* EFTokenExchangeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E522401320DC9A00426493 /* EFTokenExchangeClient.m */; };
+		D0E5224F1320DD5300426493 /* NSData+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E5224D1320DD5300426493 /* NSData+Hex.h */; };
+		D0E522501320DD5300426493 /* NSData+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E5224E1320DD5300426493 /* NSData+Hex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,10 @@
 		D0E248BE125B2DE800C78A2D /* EFFastTiledLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFFastTiledLayer.m; sourceTree = "<group>"; };
 		D0E248BF125B2DE800C78A2D /* EFTilingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTilingView.h; sourceTree = "<group>"; };
 		D0E248C0125B2DE800C78A2D /* EFTilingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTilingView.m; sourceTree = "<group>"; };
+		D0E5223F1320DC9A00426493 /* EFTokenExchangeClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTokenExchangeClient.h; sourceTree = "<group>"; };
+		D0E522401320DC9A00426493 /* EFTokenExchangeClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTokenExchangeClient.m; sourceTree = "<group>"; };
+		D0E5224D1320DD5300426493 /* NSData+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Hex.h"; sourceTree = "<group>"; };
+		D0E5224E1320DD5300426493 /* NSData+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Hex.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +114,8 @@
 				923CDD75123A8CC300247AD5 /* EFDownload.m */,
 				923CDD76123A8CC300247AD5 /* EFDownloadQueue.h */,
 				923CDD77123A8CC300247AD5 /* EFDownloadQueue.m */,
+				D0E5223F1320DC9A00426493 /* EFTokenExchangeClient.h */,
+				D0E522401320DC9A00426493 /* EFTokenExchangeClient.m */,
 			);
 			name = Net;
 			sourceTree = "<group>";
@@ -140,6 +150,7 @@
 		D067DCE911FB130E0047EFAA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D0E522431320DD1500426493 /* Shared */,
 				923CDD81123A8CDC00247AD5 /* Net */,
 				D093CD3211FC627B000B51D8 /* UI */,
 			);
@@ -212,6 +223,15 @@
 			name = Private;
 			sourceTree = "<group>";
 		};
+		D0E522431320DD1500426493 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D0E5224D1320DD5300426493 /* NSData+Hex.h */,
+				D0E5224E1320DD5300426493 /* NSData+Hex.m */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -237,6 +257,8 @@
 				D03265BF129D427C004143A3 /* EFToggleSwitchSpecifierCell.h in Headers */,
 				D03265C1129D427C004143A3 /* EFMultiValueSpecifierCell.h in Headers */,
 				D0937B8D12A50B29000E050E /* EFSliderSpecifierCell.h in Headers */,
+				D0E522411320DC9A00426493 /* EFTokenExchangeClient.h in Headers */,
+				D0E5224F1320DD5300426493 /* NSData+Hex.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +327,8 @@
 				D03265C0129D427C004143A3 /* EFToggleSwitchSpecifierCell.m in Sources */,
 				D03265C2129D427C004143A3 /* EFMultiValueSpecifierCell.m in Sources */,
 				D0937B8E12A50B29000E050E /* EFSliderSpecifierCell.m in Sources */,
+				D0E522421320DC9A00426493 /* EFTokenExchangeClient.m in Sources */,
+				D0E522501320DD5300426493 /* NSData+Hex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
