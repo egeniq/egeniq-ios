@@ -46,14 +46,10 @@
 }
 
 - (BOOL)showDetailsOnSelect {
-    return YES;
+    return self.isEditable;
 }
 
 - (UIViewController *)detailsViewController {
-    if (!self.isEditable) {
-        return nil;
-    }
-    
 	UITableViewController *viewController = [[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped];
 	viewController.navigationItem.title = self.textLabel.text;		
 	viewController.tableView.dataSource = self;

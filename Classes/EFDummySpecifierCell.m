@@ -14,11 +14,11 @@
 @synthesize detailsViewControllerBlock=detailsViewControllerBlock_;
 
 - (BOOL)showDetailsOnSelect {
-    return detailsViewControllerBlock_ != nil;
+    return detailsViewControllerBlock_ != nil && self.isEditable;
 }
 
 - (UIViewController *)detailsViewController {
-    if (detailsViewControllerBlock_ != nil && self.isEditable) {
+    if (detailsViewControllerBlock_ != nil) {
         return detailsViewControllerBlock_();
     } else {
         return nil;
