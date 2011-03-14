@@ -14,37 +14,43 @@
     if ((self = [super initWithName:name]) != nil) {
 		self.textLabel.hidden = YES;
 		self.detailTextLabel.hidden = YES;
-		valueField = [[UISlider alloc] init];	
-		[self.contentView addSubview:valueField];
+		valueField_ = [[UISlider alloc] init];	
+        valueField_.enabled = self.editable;
+		[self.contentView addSubview:valueField_];
     }
 	
     return self;
 }
 
+- (void)setEditable:(BOOL)editable {
+    [super setEditable:editable];
+    valueField_.enabled = editable;
+}
+
 - (float)minimumValue {
-	return valueField.minimumValue;
+	return valueField_.minimumValue;
 }
 
 - (void)setMinimumValue:(float)value {
-	valueField.minimumValue = value;
+	valueField_.minimumValue = value;
 	[self setNeedsLayout];
 }
 
 - (float)maximumValue {
-	return valueField.maximumValue;
+	return valueField_.maximumValue;
 }
 
 - (void)setMaximumValue:(float)value {
-	valueField.maximumValue = value;
+	valueField_.maximumValue = value;
 	[self setNeedsLayout];
 }
 
 - (float)floatValue {
-    return valueField.value;
+    return valueField_.value;
 }
 
 - (void)setFloatValue:(float)value {
-    valueField.value = value;
+    valueField_.value = value;
     [self setNeedsLayout];
 }
 
@@ -59,16 +65,16 @@
 - (void)layoutSubviews {
 	[super layoutSubviews];
 	
-	CGRect valueFrame = valueField.frame;
+	CGRect valueFrame = valueField_.frame;
 	valueFrame.size.width = self.contentView.frame.size.width - 20.0;
 	valueFrame.origin.x = 10.0;
 	valueFrame.origin.y = (self.contentView.frame.size.height - valueFrame.size.height) / 2;
-	valueField.frame = valueFrame;
+	valueField_.frame = valueFrame;
 }
 
 - (void)dealloc {
-	[valueField release];
-	valueField = nil;
+	[valueField_ release];
+	valueField_ = nil;
 	
     [super dealloc];
 }

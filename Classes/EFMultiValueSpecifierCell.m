@@ -14,7 +14,7 @@
 
 - (id)initWithName:(NSString *)name {
     if ((self = [super initWithName:name]) != nil) {
-		self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        self.accessoryType = self.editable ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
 		
 		self.values = [NSArray array];
 		self.titles = [NSArray array];		
@@ -22,6 +22,11 @@
     }
 	
     return self;
+}
+
+- (void)setEditable:(BOOL)editable {
+    [super setEditable:editable];
+    self.accessoryType = editable ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
 }
 
 - (id)value {
@@ -45,6 +50,10 @@
 }
 
 - (UIViewController *)detailsViewController {
+    if (!self.isEditable) {
+        return nil;
+    }
+    
 	UITableViewController *viewController = [[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped];
 	viewController.navigationItem.title = self.textLabel.text;		
 	viewController.tableView.dataSource = self;

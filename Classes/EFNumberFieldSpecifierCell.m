@@ -16,13 +16,13 @@
     if ((self = [super initWithName:name]) != nil) {
 		self.detailTextLabel.text = @"";
 		
-		valueField = [[UITextField alloc] init];
-		valueField.delegate = self;
-		valueField.returnKeyType = UIReturnKeyDone;	
-        valueField.keyboardType = UIKeyboardTypeNumberPad;
-		valueField.enabled = NO;
+		valueField_ = [[UITextField alloc] init];
+		valueField_.delegate = self;
+		valueField_.returnKeyType = UIReturnKeyDone;	
+        valueField_.keyboardType = UIKeyboardTypeNumberPad;
+		valueField_.enabled = NO;
 		
-		[self.contentView addSubview:valueField];
+		[self.contentView addSubview:valueField_];
 		
 		self.value = @"";
     }
@@ -31,11 +31,11 @@
 }
 
 - (NSNumber *)numberValue {
-    return [valueField.text length] == 0 ? nil : [NSNumber numberWithInt:[valueField.text intValue]];
+    return [valueField_.text length] == 0 ? nil : [NSNumber numberWithInt:[valueField_.text intValue]];
 }
 
 - (void)setNumberValue:(NSNumber *)numberValue {
-    valueField.text = numberValue == nil ? @"" : [numberValue description];
+    valueField_.text = numberValue == nil ? @"" : [numberValue description];
 	[self setNeedsLayout];	    
 }
 
@@ -50,27 +50,32 @@
 - (void)layoutSubviews {
 	[super layoutSubviews];
 	
-	valueField.font = self.detailTextLabel.font;
-	valueField.textColor = self.detailTextLabel.textColor;
-	valueField.textAlignment = self.detailTextLabel.textAlignment;		
+	valueField_.font = self.detailTextLabel.font;
+	valueField_.textColor = self.detailTextLabel.textColor;
+	valueField_.textAlignment = self.detailTextLabel.textAlignment;		
 	
 	CGRect valueFrame = CGRectZero;
 	valueFrame.origin.x = self.textLabel.frame.size.width + self.textLabel.frame.origin.x + 6.0;
-	valueFrame.origin.y = (self.contentView.frame.size.height - valueField.font.lineHeight) / 2;
+	valueFrame.origin.y = (self.contentView.frame.size.height - valueField_.font.lineHeight) / 2;
 	valueFrame.size.width = self.contentView.frame.size.width - valueFrame.origin.x - 15.0;
-	valueFrame.size.height = valueField.font.lineHeight;
-	valueField.frame = valueFrame;
+	valueFrame.size.height = valueField_.font.lineHeight;
+	valueField_.frame = valueFrame;
 }
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
 	[super setSelected:selected animated:animated];
+    
+    if (!self.isEditable) {
+        return;
+    }
+    
 	if (selected) {
-		valueField.enabled = YES;		
-		[valueField becomeFirstResponder];
+		valueField_.enabled = YES;		
+		[valueField_ becomeFirstResponder];
 	} else {
-		[valueField resignFirstResponder];
-		valueField.enabled = NO;			
+		[valueField_ resignFirstResponder];
+		valueField_.enabled = NO;			
 	}
 }
 
@@ -94,8 +99,8 @@
 - (void)dealloc {
     [super dealloc];
 	
-	[valueField release];
-	valueField = nil;
+	[valueField_ release];
+	valueField_ = nil;
 }
 
 

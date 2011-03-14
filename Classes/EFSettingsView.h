@@ -27,6 +27,7 @@
 @protocol EFSettingsViewDelegate
 
 @optional
+- (UIView *)settingsView:(EFSettingsView *)settingsView viewForFooterInSection:(NSInteger)section;
 - (void)settingsView:(EFSettingsView *)settingsView didSelectField:(EFSpecifierCell *)field;
 
 @end

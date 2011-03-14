@@ -9,7 +9,7 @@
 #import "EFSpecifierCell.h"
 
 @interface EFSliderSpecifierCell : EFSpecifierCell {
-	UISlider *valueField;
+	UISlider *valueField_;
 }
 
 @property(nonatomic, assign) float minimumValue;

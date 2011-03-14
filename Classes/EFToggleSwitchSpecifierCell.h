@@ -9,7 +9,7 @@
 #import "EFSpecifierCell.h"
 
 @interface EFToggleSwitchSpecifierCell : EFSpecifierCell {
-	UISwitch *valueField;
+	UISwitch *valueField_;
 }
 
 @property(nonatomic, copy) id trueValue;

@@ -17,7 +17,7 @@
 @end
 
 @interface EFTextFieldSpecifierCell : EFSpecifierCell <UITextFieldDelegate> {
-	UITextField *valueField;
+	UITextField *valueField_;
 }
 
 @property(nonatomic, copy) NSString *stringValue;

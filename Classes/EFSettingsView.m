@@ -75,6 +75,23 @@
     }
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    if ([self.delegate respondsToSelector:@selector(settingsView:viewForFooterInSection:)]) {       
+        return [self.delegate settingsView:self viewForFooterInSection:section];
+    } else {
+        return nil;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    if ([self.delegate respondsToSelector:@selector(settingsView:viewForFooterInSection:)]) {       
+        UIView *view = [self.delegate settingsView:self viewForFooterInSection:section];
+        return view != nil ? view.bounds.size.height : 0.0;
+    } else {
+        return 0.0;
+    }
+}
+
 - (void)reloadFields {
     [tableView_ reloadData];
 }

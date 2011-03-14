@@ -10,9 +10,12 @@
 
 @implementation EFSpecifierCell
 
+@synthesize editable=editable_;
+
 - (id)initWithName:(NSString *)name {
 	if ((self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:name]) != nil) {
 		self.selectionStyle = UITableViewCellSelectionStyleNone;
+        editable_ = YES;
 	}
 	
 	return self;

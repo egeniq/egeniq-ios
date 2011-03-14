@@ -21,7 +21,7 @@
 //       add support for the UIKeyboardTypeDecimalPad and let the user set a number format
 
 @interface EFNumberFieldSpecifierCell : EFSpecifierCell <UITextFieldDelegate> {
-	UITextField *valueField;
+	UITextField *valueField_;
 }
 
 @property(nonatomic, copy) NSNumber *numberValue;

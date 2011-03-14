@@ -18,7 +18,7 @@
 }
 
 - (UIViewController *)detailsViewController {
-    if (detailsViewControllerBlock_ != nil) {
+    if (detailsViewControllerBlock_ != nil && self.isEditable) {
         return detailsViewControllerBlock_();
     } else {
         return nil;

@@ -17,12 +17,12 @@
     if ((self = [super initWithName:name]) != nil) {
 		self.detailTextLabel.text = @"";
 		
-		valueField = [[UITextField alloc] init];
-		valueField.delegate = self;
-		valueField.returnKeyType = UIReturnKeyDone;	
-		valueField.enabled = NO;
+		valueField_ = [[UITextField alloc] init];
+		valueField_.delegate = self;
+		valueField_.returnKeyType = UIReturnKeyDone;	
+		valueField_.enabled = NO;
 		
-		[self.contentView addSubview:valueField];
+		[self.contentView addSubview:valueField_];
 		
 		self.value = @"";
     }
@@ -31,43 +31,43 @@
 }
 
 - (UIKeyboardType)keyboardType {
-	return valueField.keyboardType;
+	return valueField_.keyboardType;
 }
 
 - (void)setKeyboardType:(UIKeyboardType)keyboardType {
-	valueField.keyboardType = keyboardType;
+	valueField_.keyboardType = keyboardType;
 }
 
 - (UITextAutocorrectionType)autocorrectionType {
-	return valueField.autocorrectionType;
+	return valueField_.autocorrectionType;
 }
 
 - (void)setAutocorrectionType:(UITextAutocorrectionType)autocorrectionType {
-	valueField.autocorrectionType = autocorrectionType;
+	valueField_.autocorrectionType = autocorrectionType;
 }
 
 - (UITextAutocapitalizationType)autocapitalizationType {
-	return valueField.autocapitalizationType;
+	return valueField_.autocapitalizationType;
 }
 
 - (void)setAutocapitalizationType:(UITextAutocapitalizationType)autocapitalizationType {
-	valueField.autocapitalizationType = autocapitalizationType;
+	valueField_.autocapitalizationType = autocapitalizationType;
 }
 
 - (BOOL)secureTextEntry {
-	return valueField.secureTextEntry;
+	return valueField_.secureTextEntry;
 }
 
 - (void)setSecureTextEntry:(BOOL)secureTextEntry {
-	valueField.secureTextEntry = secureTextEntry;
+	valueField_.secureTextEntry = secureTextEntry;
 }
 
 - (NSString *)stringValue {
-    return valueField.text;
+    return valueField_.text;
 }
 
 - (void)setStringValue:(NSString *)stringValue {
-    valueField.text = stringValue;
+    valueField_.text = stringValue;
 	[self setNeedsLayout];	    
 }
 
@@ -82,27 +82,32 @@
 - (void)layoutSubviews {
 	[super layoutSubviews];
 	
-	valueField.font = self.detailTextLabel.font;
-	valueField.textColor = self.detailTextLabel.textColor;
-	valueField.textAlignment = self.detailTextLabel.textAlignment;		
+	valueField_.font = self.detailTextLabel.font;
+	valueField_.textColor = self.detailTextLabel.textColor;
+	valueField_.textAlignment = self.detailTextLabel.textAlignment;		
 	
 	CGRect valueFrame = CGRectZero;
 	valueFrame.origin.x = self.textLabel.frame.size.width + self.textLabel.frame.origin.x + 6.0;
-	valueFrame.origin.y = (self.contentView.frame.size.height - valueField.font.lineHeight) / 2;
+	valueFrame.origin.y = (self.contentView.frame.size.height - valueField_.font.lineHeight) / 2;
 	valueFrame.size.width = self.contentView.frame.size.width - valueFrame.origin.x - 15.0;
-	valueFrame.size.height = valueField.font.lineHeight;
-	valueField.frame = valueFrame;
+	valueFrame.size.height = valueField_.font.lineHeight;
+	valueField_.frame = valueFrame;
 }
 
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
 	[super setSelected:selected animated:animated];
+    
+    if (!self.isEditable) {
+        return;
+    }
+    
 	if (selected) {
-		valueField.enabled = YES;		
-		[valueField becomeFirstResponder];
+		valueField_.enabled = YES;		
+		[valueField_ becomeFirstResponder];
 	} else {
-		[valueField resignFirstResponder];
-		valueField.enabled = NO;			
+		[valueField_ resignFirstResponder];
+		valueField_.enabled = NO;			
 	}
 }
 
@@ -126,8 +131,8 @@
 - (void)dealloc {
     [super dealloc];
 	
-	[valueField release];
-	valueField = nil;
+	[valueField_ release];
+	valueField_ = nil;
 }
 
 @end

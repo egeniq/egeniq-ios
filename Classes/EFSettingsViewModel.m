@@ -11,12 +11,15 @@
 
 @implementation EFSettingsViewModel
 
+@synthesize delegate=delegate_;
+
 - (id)init {
     self = [super init];
     if (self != nil) {
         sections_ = [[NSMutableArray alloc] init];
         sectionTitles_ = [[NSMutableDictionary alloc] init];
         sectionFields_ = [[NSMutableDictionary alloc] init];
+        sectionFooterViews_ = [[NSMutableDictionary alloc] init];
         fields_ = [[NSMutableDictionary alloc] init];        
     }
     
@@ -26,8 +29,17 @@
 - (void)addSection:(NSString *)section withTitle:(NSString *)title {
     [self removeSection:section];
     [sections_ addObject:section];
-    [sectionTitles_ setObject:title forKey:section];
+    [sectionTitles_ setValue:title forKey:section];
     [sectionFields_ setObject:[NSMutableArray array] forKey:section];
+}
+
+- (void)setTitle:(NSString *)title forSection:(NSString *)section {
+    [sectionTitles_ setValue:title forKey:section];    
+}
+
+
+- (void)setFooterView:(UITableView *)view forSection:(NSString *)section {
+    [sectionFooterViews_ setValue:view forKey:section];
 }
 
 - (void)removeSection:(NSString *)section {
@@ -37,6 +49,7 @@
     
     [sections_ removeObject:section];
     [sectionTitles_ removeObjectForKey:section];
+    [sectionFooterViews_ removeObjectForKey:section];
     
     NSMutableArray *fieldNames = [sectionFields_ objectForKey:section];
     for (NSString *fieldName in fieldNames) {
@@ -124,6 +137,25 @@
     NSArray *fieldNames = [sectionFields_ objectForKey:[sections_ objectAtIndex:indexPath.section]];
     NSString *fieldName = [fieldNames objectAtIndex:indexPath.row];
     return [self fieldWithName:fieldName];
+}
+
+- (void)settingsView:(EFSettingsView *)settingsView didSelectField:(EFSpecifierCell *)field {
+    if ([self.delegate respondsToSelector:@selector(settingsViewModel:didSelectField:)]) {
+        [self.delegate settingsViewModel:self didSelectField:field];
+    }
+}
+
+- (UIView *)settingsView:(EFSettingsView *)settingsView viewForFooterInSection:(NSInteger)section {
+    return [sectionFooterViews_ objectForKey:[sections_ objectAtIndex:section]];
+}
+
+- (void)dealloc {
+    [sections_  release];
+    [sectionTitles_ release];
+    [sectionFields_ release];
+    [sectionFooterViews_ release];
+    [fields_ release];
+    [super dealloc];
 }
 
 @end
