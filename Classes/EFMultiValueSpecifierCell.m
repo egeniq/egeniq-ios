@@ -10,10 +10,10 @@
 
 @implementation EFMultiValueSpecifierCell
 
-@synthesize values=values_, titles=titles_, value=value_;
+@synthesize values=values_, titles=titles_;
 
-- (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
-    if ((self = [super initWithReuseIdentifier:reuseIdentifier]) != nil) {
+- (id)initWithName:(NSString *)name {
+    if ((self = [super initWithName:name]) != nil) {
 		self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 		
 		self.values = [NSArray array];
@@ -22,6 +22,10 @@
     }
 	
     return self;
+}
+
+- (id)value {
+    return [value_ copy];
 }
 
 - (void)setValue:(id)value {
@@ -36,21 +40,24 @@
 	}
 }
 
-- (void)pushSelectionOnNavigationController:(UINavigationController *)navigationController {
-	UITableViewController *viewController = [[[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
+- (BOOL)showDetailsOnSelect {
+    return YES;
+}
+
+- (UIViewController *)detailsViewController {
+	UITableViewController *viewController = [[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped];
 	viewController.navigationItem.title = self.textLabel.text;		
 	viewController.tableView.dataSource = self;
 	viewController.tableView.delegate = self;
-	
-	[navigationController pushViewController:viewController animated:YES];
-	
-	NSUInteger index = [self.values indexOfObject:self.value];		
-	if (index != NSNotFound) {
-		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-		UITableViewCell *cell = [viewController.tableView cellForRowAtIndexPath:indexPath];
+    return [viewController autorelease];
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger index = [self.values indexOfObject:self.value];		
+    if (indexPath.row == index && cell.accessoryType != UITableViewCellAccessoryCheckmark) {
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;
-		[viewController.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
-	}		
+		[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

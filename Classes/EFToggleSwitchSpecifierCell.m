@@ -12,8 +12,8 @@
 
 @synthesize trueValue=trueValue_, falseValue=falseValue_;
 
-- (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
-    if ((self = [super initWithReuseIdentifier:reuseIdentifier]) != nil) {
+- (id)initWithName:(NSString *)name {
+    if ((self = [super initWithName:name]) != nil) {
 		self.detailTextLabel.text = @"";
 		
 		valueField = [[UISwitch alloc] init];	

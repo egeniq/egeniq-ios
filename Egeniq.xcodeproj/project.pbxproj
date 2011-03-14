@@ -19,6 +19,10 @@
 		D011F501120C827700A07E28 /* EFImageViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFImageViewDataSource.h */; };
 		D011F503120C839000A07E28 /* EFImageViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFImageViewDelegate.h */; };
 		D011F505120C85E400A07E28 /* EFImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F504120C85E400A07E28 /* EFImage.h */; };
+		D02372D2132911D800B77A44 /* EFSettingsView.h in Headers */ = {isa = PBXBuildFile; fileRef = D02372D0132911D800B77A44 /* EFSettingsView.h */; };
+		D02372D3132911D800B77A44 /* EFSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = D02372D1132911D800B77A44 /* EFSettingsView.m */; };
+		D02372DB132925B500B77A44 /* EFSettingsViewModel.h in Headers */ = {isa = PBXBuildFile; fileRef = D02372D9132925AC00B77A44 /* EFSettingsViewModel.h */; };
+		D02372DC132925B500B77A44 /* EFSettingsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D02372DA132925B200B77A44 /* EFSettingsViewModel.m */; };
 		D023E583123EA0B800389738 /* EFImageTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = D023E581123EA0B800389738 /* EFImageTableView.h */; };
 		D023E584123EA0B800389738 /* EFImageTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D023E582123EA0B800389738 /* EFImageTableView.m */; };
 		D03265BB129D427C004143A3 /* EFSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265B1129D427C004143A3 /* EFSpecifierCell.h */; };
@@ -30,6 +34,8 @@
 		D03265C1129D427C004143A3 /* EFMultiValueSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265B7129D427C004143A3 /* EFMultiValueSpecifierCell.h */; };
 		D03265C2129D427C004143A3 /* EFMultiValueSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
+		D073A90813299739004FA0AA /* EFDummySpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D073A90613299739004FA0AA /* EFDummySpecifierCell.h */; };
+		D073A90913299739004FA0AA /* EFDummySpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D073A90713299739004FA0AA /* EFDummySpecifierCell.m */; };
 		D0826FBE122BD17E003EE4E6 /* EFImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0826FBC122BD17E003EE4E6 /* EFImageView.h */; };
 		D0826FBF122BD17E003EE4E6 /* EFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0826FBD122BD17E003EE4E6 /* EFImageView.m */; };
 		D089C5FE1327D3B8000A54F5 /* EFDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D089C5FC1327D3B8000A54F5 /* EFDataSource.h */; };
@@ -39,6 +45,8 @@
 		D0937B8E12A50B29000E050E /* EFSliderSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0937B8C12A50B29000E050E /* EFSliderSpecifierCell.m */; };
 		D093CD3611FC62A5000B51D8 /* EFImageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = D093CD3411FC62A5000B51D8 /* EFImageScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D093CD3711FC62A5000B51D8 /* EFImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D093CD3511FC62A5000B51D8 /* EFImageScrollView.m */; };
+		D09C2F98132B821D00D3B57F /* EFNumberFieldSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D09C2F96132B821D00D3B57F /* EFNumberFieldSpecifierCell.h */; };
+		D09C2F99132B821D00D3B57F /* EFNumberFieldSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D09C2F97132B821D00D3B57F /* EFNumberFieldSpecifierCell.m */; };
 		D0BD8B58120EDA7E0034356B /* EFImageZoomView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */; };
 		D0BD8B59120EDA7E0034356B /* EFImageZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */; };
 		D0E248C1125B2DE800C78A2D /* EFFastTiledLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = D0E248BD125B2DE800C78A2D /* EFFastTiledLayer.h */; };
@@ -64,6 +72,10 @@
 		D011F500120C827700A07E28 /* EFImageViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageViewDataSource.h; sourceTree = "<group>"; };
 		D011F502120C839000A07E28 /* EFImageViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageViewDelegate.h; sourceTree = "<group>"; };
 		D011F504120C85E400A07E28 /* EFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImage.h; sourceTree = "<group>"; };
+		D02372D0132911D800B77A44 /* EFSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFSettingsView.h; sourceTree = "<group>"; };
+		D02372D1132911D800B77A44 /* EFSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFSettingsView.m; sourceTree = "<group>"; };
+		D02372D9132925AC00B77A44 /* EFSettingsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFSettingsViewModel.h; sourceTree = "<group>"; };
+		D02372DA132925B200B77A44 /* EFSettingsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFSettingsViewModel.m; sourceTree = "<group>"; };
 		D023E581123EA0B800389738 /* EFImageTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageTableView.h; sourceTree = "<group>"; };
 		D023E582123EA0B800389738 /* EFImageTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageTableView.m; sourceTree = "<group>"; };
 		D03265B1129D427C004143A3 /* EFSpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFSpecifierCell.h; sourceTree = "<group>"; };
@@ -77,6 +89,8 @@
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
+		D073A90613299739004FA0AA /* EFDummySpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDummySpecifierCell.h; sourceTree = "<group>"; };
+		D073A90713299739004FA0AA /* EFDummySpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDummySpecifierCell.m; sourceTree = "<group>"; };
 		D0826FBC122BD17E003EE4E6 /* EFImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageView.h; sourceTree = "<group>"; };
 		D0826FBD122BD17E003EE4E6 /* EFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageView.m; sourceTree = "<group>"; };
 		D089C5FC1327D3B8000A54F5 /* EFDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDataSource.h; sourceTree = "<group>"; };
@@ -86,6 +100,8 @@
 		D0937B8C12A50B29000E050E /* EFSliderSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFSliderSpecifierCell.m; sourceTree = "<group>"; };
 		D093CD3411FC62A5000B51D8 /* EFImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageScrollView.h; sourceTree = "<group>"; };
 		D093CD3511FC62A5000B51D8 /* EFImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageScrollView.m; sourceTree = "<group>"; };
+		D09C2F96132B821D00D3B57F /* EFNumberFieldSpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFNumberFieldSpecifierCell.h; sourceTree = "<group>"; };
+		D09C2F97132B821D00D3B57F /* EFNumberFieldSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFNumberFieldSpecifierCell.m; sourceTree = "<group>"; };
 		D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageZoomView.h; sourceTree = "<group>"; };
 		D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageZoomView.m; sourceTree = "<group>"; };
 		D0E248BD125B2DE800C78A2D /* EFFastTiledLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFFastTiledLayer.h; sourceTree = "<group>"; };
@@ -130,16 +146,11 @@
 		D03265AC129D4245004143A3 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				D03265B1129D427C004143A3 /* EFSpecifierCell.h */,
-				D03265B2129D427C004143A3 /* EFSpecifierCell.m */,
-				D03265B3129D427C004143A3 /* EFTextFieldSpecifierCell.h */,
-				D03265B4129D427C004143A3 /* EFTextFieldSpecifierCell.m */,
-				D03265B5129D427C004143A3 /* EFToggleSwitchSpecifierCell.h */,
-				D03265B6129D427C004143A3 /* EFToggleSwitchSpecifierCell.m */,
-				D03265B7129D427C004143A3 /* EFMultiValueSpecifierCell.h */,
-				D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */,
-				D0937B8B12A50B29000E050E /* EFSliderSpecifierCell.h */,
-				D0937B8C12A50B29000E050E /* EFSliderSpecifierCell.m */,
+				D073A90B13299744004FA0AA /* Specifiers */,
+				D02372D0132911D800B77A44 /* EFSettingsView.h */,
+				D02372D1132911D800B77A44 /* EFSettingsView.m */,
+				D02372D9132925AC00B77A44 /* EFSettingsViewModel.h */,
+				D02372DA132925B200B77A44 /* EFSettingsViewModel.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -157,8 +168,8 @@
 		D067DCE911FB130E0047EFAA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D0FA0088132CDC0D00BAF5C2 /* External */,
 				D089C5FA1327D3AB000A54F5 /* Data */,
-				D0E522431320DD1500426493 /* Shared */,
 				923CDD81123A8CDC00247AD5 /* Net */,
 				D093CD3211FC627B000B51D8 /* UI */,
 			);
@@ -189,6 +200,27 @@
 				D067DCF011FB130E0047EFAA /* libEgeniq.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D073A90B13299744004FA0AA /* Specifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D03265B1129D427C004143A3 /* EFSpecifierCell.h */,
+				D03265B2129D427C004143A3 /* EFSpecifierCell.m */,
+				D03265B3129D427C004143A3 /* EFTextFieldSpecifierCell.h */,
+				D03265B4129D427C004143A3 /* EFTextFieldSpecifierCell.m */,
+				D09C2F96132B821D00D3B57F /* EFNumberFieldSpecifierCell.h */,
+				D09C2F97132B821D00D3B57F /* EFNumberFieldSpecifierCell.m */,
+				D03265B5129D427C004143A3 /* EFToggleSwitchSpecifierCell.h */,
+				D03265B6129D427C004143A3 /* EFToggleSwitchSpecifierCell.m */,
+				D03265B7129D427C004143A3 /* EFMultiValueSpecifierCell.h */,
+				D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */,
+				D0937B8B12A50B29000E050E /* EFSliderSpecifierCell.h */,
+				D0937B8C12A50B29000E050E /* EFSliderSpecifierCell.m */,
+				D073A90613299739004FA0AA /* EFDummySpecifierCell.h */,
+				D073A90713299739004FA0AA /* EFDummySpecifierCell.m */,
+			);
+			name = Specifiers;
 			sourceTree = "<group>";
 		};
 		D089C5FA1327D3AB000A54F5 /* Data */ = {
@@ -241,13 +273,13 @@
 			name = Private;
 			sourceTree = "<group>";
 		};
-		D0E522431320DD1500426493 /* Shared */ = {
+		D0FA0088132CDC0D00BAF5C2 /* External */ = {
 			isa = PBXGroup;
 			children = (
 				D0E5224D1320DD5300426493 /* NSData+Hex.h */,
 				D0E5224E1320DD5300426493 /* NSData+Hex.m */,
 			);
-			name = Shared;
+			name = External;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +310,10 @@
 				D0E522411320DC9A00426493 /* EFTokenExchangeClient.h in Headers */,
 				D0E5224F1320DD5300426493 /* NSData+Hex.h in Headers */,
 				D089C5FE1327D3B8000A54F5 /* EFDataSource.h in Headers */,
+				D02372D2132911D800B77A44 /* EFSettingsView.h in Headers */,
+				D02372DB132925B500B77A44 /* EFSettingsViewModel.h in Headers */,
+				D073A90813299739004FA0AA /* EFDummySpecifierCell.h in Headers */,
+				D09C2F98132B821D00D3B57F /* EFNumberFieldSpecifierCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +385,10 @@
 				D0E522421320DC9A00426493 /* EFTokenExchangeClient.m in Sources */,
 				D0E522501320DD5300426493 /* NSData+Hex.m in Sources */,
 				D089C5FF1327D3B8000A54F5 /* EFDataSource.m in Sources */,
+				D02372D3132911D800B77A44 /* EFSettingsView.m in Sources */,
+				D02372DC132925B500B77A44 /* EFSettingsViewModel.m in Sources */,
+				D073A90913299739004FA0AA /* EFDummySpecifierCell.m in Sources */,
+				D09C2F99132B821D00D3B57F /* EFNumberFieldSpecifierCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +425,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Egeniq_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Egeniq;
 				SDKROOT = iphoneos;
 			};
@@ -401,7 +440,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Egeniq_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Egeniq;
 				SDKROOT = iphoneos;
 			};

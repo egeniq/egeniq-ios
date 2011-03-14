@@ -14,6 +14,7 @@
 
 @property(nonatomic, assign) float minimumValue;
 @property(nonatomic, assign) float maximumValue;
-@property(nonatomic, assign) float value;
+
+@property(nonatomic, assign) float floatValue;
 
 @end

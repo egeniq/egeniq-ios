@@ -13,6 +13,7 @@
 @synthesize baseEntityName=baseEntityName_;
 @synthesize managedObjectContext=managedObjectContext_;
 
+#ifdef __BLOCKS__
 - (void)usingManagedObjectContext:(NSManagedObjectContext *)managedObjectContext 
                      executeBlock:(void(^)())executeBlock {
     NSManagedObjectContext *oldContext = self.managedObjectContext;
@@ -20,6 +21,7 @@
     executeBlock();
     self.managedObjectContext = oldContext;
 }
+#endif
 
 - (NSManagedObject *)insertNewObject {
     return [NSEntityDescription insertNewObjectForEntityForName:self.baseEntityName inManagedObjectContext:self.managedObjectContext];    
@@ -110,12 +112,24 @@
     NSFetchRequest *request = [self fetchRequestWithPredicate:predicate sortDescriptors:nil];
 	NSError *error = nil;
 	NSArray *result = [self.managedObjectContext executeFetchRequest:request error:&error];
-	[request release];	
 	
 	if (result != nil && [result count] > 0) {
 		return (NSManagedObject *)[result objectAtIndex:0];
 	} else {
 		return nil;
+	}    
+}
+
+- (NSArray *)findObjectsWithPredicate:(NSPredicate *)predicate 
+                      sortDescriptors:(NSArray *)sortDescriptors{
+    NSFetchRequest *request = [self fetchRequestWithPredicate:predicate sortDescriptors:sortDescriptors];
+	NSError *error = nil;
+	NSArray *result = [self.managedObjectContext executeFetchRequest:request error:&error];
+	
+	if (result != nil && [result count] > 0) {
+		return result;
+	} else {
+		return [NSArray array];
 	}    
 }
 

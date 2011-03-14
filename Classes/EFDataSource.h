@@ -15,8 +15,10 @@
 @property(nonatomic, copy) NSString *baseEntityName;
 @property(nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
+#ifdef __BLOCKS__
 - (void)usingManagedObjectContext:(NSManagedObjectContext *)managedObjectContext 
-                     executeBlock:(void(^)())executeBlock __OSX_AVAILABLE_STARTING(__MAC_10_6, __IPHONE_4_0);
+                     executeBlock:(void(^)())executeBlock;
+#endif
 
 - (NSManagedObject *)insertNewObject;
 - (NSManagedObject *)insertNewObjectWithData:(NSDictionary *)data;
@@ -34,5 +36,8 @@
                                                             cacheName:(NSString *)cacheName;
 
 - (NSManagedObject *)findObjectWithPredicate:(NSPredicate *)predicate;
+
+- (NSArray *)findObjectsWithPredicate:(NSPredicate *)predicate 
+                      sortDescriptors:(NSArray *)sortDescriptors;
 
 @end

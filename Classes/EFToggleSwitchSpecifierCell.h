@@ -14,6 +14,5 @@
 
 @property(nonatomic, copy) id trueValue;
 @property(nonatomic, copy) id falseValue;
-@property(nonatomic, copy) id value;
 
 @end

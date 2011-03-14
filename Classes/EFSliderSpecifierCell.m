@@ -10,8 +10,8 @@
 
 @implementation EFSliderSpecifierCell
 
-- (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
-    if ((self = [super initWithReuseIdentifier:reuseIdentifier]) != nil) {
+- (id)initWithName:(NSString *)name {
+    if ((self = [super initWithName:name]) != nil) {
 		self.textLabel.hidden = YES;
 		self.detailTextLabel.hidden = YES;
 		valueField = [[UISlider alloc] init];	
@@ -39,13 +39,21 @@
 	[self setNeedsLayout];
 }
 
-- (float)value {
-	return valueField.value;
+- (float)floatValue {
+    return valueField.value;
 }
 
-- (void)setValue:(float)value {
-	valueField.value = value;
-	[self setNeedsLayout];
+- (void)setFloatValue:(float)value {
+    valueField.value = value;
+    [self setNeedsLayout];
+}
+
+- (id)value {
+    return [NSNumber numberWithFloat:self.floatValue];
+}
+
+- (void)setValue:(id)value {
+    self.floatValue = [((NSNumber *)value) floatValue];
 }
 
 - (void)layoutSubviews {
