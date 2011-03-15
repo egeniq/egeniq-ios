@@ -12,12 +12,13 @@
 
 @synthesize trueValue=trueValue_, falseValue=falseValue_;
 
-- (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
-    if ((self = [super initWithReuseIdentifier:reuseIdentifier]) != nil) {
+- (id)initWithName:(NSString *)name {
+    if ((self = [super initWithName:name]) != nil) {
 		self.detailTextLabel.text = @"";
 		
-		valueField = [[UISwitch alloc] init];	
-		[self.contentView addSubview:valueField];
+		valueField_ = [[UISwitch alloc] init];	
+        valueField_.enabled = self.isEditable;
+		[self.contentView addSubview:valueField_];
 
 		self.trueValue = [[[NSNumber alloc] initWithBool:YES] autorelease];
 		self.falseValue = [[[NSNumber alloc] initWithBool:NO] autorelease];		
@@ -27,22 +28,27 @@
     return self;
 }
 
+- (void)setEditable:(BOOL)editable {
+    [super setEditable:editable];
+    valueField_.enabled = editable;
+}
+
 - (id)value {
-	return valueField.on ? self.trueValue : self.falseValue;
+	return valueField_.on ? self.trueValue : self.falseValue;
 }
 
 - (void)setValue:(id)value {
-	valueField.on = [value isEqual:self.trueValue];
+	valueField_.on = [value isEqual:self.trueValue];
 	[self setNeedsLayout];
 }
 
 - (void)layoutSubviews {
 	[super layoutSubviews];
 	
-	CGRect valueFrame = valueField.frame;
+	CGRect valueFrame = valueField_.frame;
 	valueFrame.origin.x = self.contentView.frame.size.width - valueFrame.size.width - 10.0;
 	valueFrame.origin.y = (self.contentView.frame.size.height - valueFrame.size.height) / 2;
-	valueField.frame = valueFrame;
+	valueField_.frame = valueFrame;
 }
 
 - (void)dealloc {
@@ -50,8 +56,8 @@
 	self.falseValue = nil;
 	self.value = nil;
 	
-	[valueField release];
-	valueField = nil;
+	[valueField_ release];
+	valueField_ = nil;
 	
     [super dealloc];
 }

@@ -10,12 +10,27 @@
 
 @implementation EFSpecifierCell
 
-- (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
-	if ((self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier]) != nil) {
+@synthesize editable=editable_;
+
+- (id)initWithName:(NSString *)name {
+	if ((self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:name]) != nil) {
 		self.selectionStyle = UITableViewCellSelectionStyleNone;
+        editable_ = YES;
 	}
 	
 	return self;
+}
+
+- (BOOL)showDetailsOnSelect {
+    return NO;
+}
+
+- (UIViewController *)detailsViewController {
+    return nil;
+}
+
+- (NSString *)name {
+    return self.reuseIdentifier;
 }
 
 - (NSString *)title {
@@ -24,6 +39,14 @@
 
 - (void)setTitle:(NSString *)title {
 	self.textLabel.text = title;
+}
+
+- (id)value {
+    return nil;
+}
+
+- (void)setValue:(id)value {
+    
 }
 
 @end

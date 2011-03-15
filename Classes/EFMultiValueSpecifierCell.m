@@ -10,12 +10,11 @@
 
 @implementation EFMultiValueSpecifierCell
 
-@synthesize navigationController;
-@synthesize values=values_, titles=titles_, value=value_;
+@synthesize values=values_, titles=titles_;
 
-- (id)initWithReuseIdentifier:(NSString *)reuseIdentifier {
-    if ((self = [super initWithReuseIdentifier:reuseIdentifier]) != nil) {
-		self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+- (id)initWithName:(NSString *)name {
+    if ((self = [super initWithName:name]) != nil) {
+        self.accessoryType = self.editable ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
 		
 		self.values = [NSArray array];
 		self.titles = [NSArray array];		
@@ -23,6 +22,15 @@
     }
 	
     return self;
+}
+
+- (void)setEditable:(BOOL)editable {
+    [super setEditable:editable];
+    self.accessoryType = editable ? UITableViewCellAccessoryDisclosureIndicator : UITableViewCellAccessoryNone;
+}
+
+- (id)value {
+    return [value_ copy];
 }
 
 - (void)setValue:(id)value {
@@ -37,28 +45,24 @@
 	}
 }
 
-- (void)pushSelectionController {
-	UITableViewController *viewController = [[[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
+- (BOOL)showDetailsOnSelect {
+    return self.isEditable;
+}
+
+- (UIViewController *)detailsViewController {
+	UITableViewController *viewController = [[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped];
 	viewController.navigationItem.title = self.textLabel.text;		
 	viewController.tableView.dataSource = self;
 	viewController.tableView.delegate = self;
-	
-	[self.navigationController pushViewController:viewController animated:YES];
-	
-	NSUInteger index = [self.values indexOfObject:self.value];		
-	if (index != NSNotFound) {
-		NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-		UITableViewCell *cell = [viewController.tableView cellForRowAtIndexPath:indexPath];
-		cell.accessoryType = UITableViewCellAccessoryCheckmark;
-		[viewController.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
-	}		
+    return [viewController autorelease];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-	[super setSelected:selected animated:animated];
-	if (selected) {
-		[self pushSelectionController];
-	}
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger index = [self.values indexOfObject:self.value];		
+    if (indexPath.row == index && cell.accessoryType != UITableViewCellAccessoryCheckmark) {
+		cell.accessoryType = UITableViewCellAccessoryCheckmark;
+		[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

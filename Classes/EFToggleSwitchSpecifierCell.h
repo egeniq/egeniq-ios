@@ -9,11 +9,10 @@
 #import "EFSpecifierCell.h"
 
 @interface EFToggleSwitchSpecifierCell : EFSpecifierCell {
-	UISwitch *valueField;
+	UISwitch *valueField_;
 }
 
 @property(nonatomic, copy) id trueValue;
 @property(nonatomic, copy) id falseValue;
-@property(nonatomic, copy) id value;
 
 @end

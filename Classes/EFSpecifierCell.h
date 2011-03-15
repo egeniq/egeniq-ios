@@ -12,8 +12,13 @@
 
 }
 
+@property(nonatomic, readonly) NSString *name;
 @property(nonatomic, copy) NSString *title;
+@property(nonatomic, copy) id value;
+@property(nonatomic, readonly) BOOL showDetailsOnSelect;
+@property(nonatomic, assign, getter=isEditable) BOOL editable;
 
-- (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
+- (id)initWithName:(NSString *)name;
+- (UIViewController *)detailsViewController;
 
 @end

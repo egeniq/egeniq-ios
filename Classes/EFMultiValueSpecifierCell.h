@@ -9,15 +9,10 @@
 #import "EFSpecifierCell.h"
 
 @interface EFMultiValueSpecifierCell : EFSpecifierCell <UITableViewDelegate, UITableViewDataSource> {
-	
+	NSObject *value_;
 }
-
-@property(nonatomic, assign) UINavigationController *navigationController;
 
 @property(nonatomic, retain) NSArray *values;
 @property(nonatomic, retain) NSArray *titles;
-@property(nonatomic, retain) id value;
-
-- (id)initWithReuseIdentifier:(NSString *)reuseIdentifier;
 
 @end

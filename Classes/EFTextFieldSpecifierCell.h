@@ -17,8 +17,10 @@
 @end
 
 @interface EFTextFieldSpecifierCell : EFSpecifierCell <UITextFieldDelegate> {
-	UITextField *valueField;
+	UITextField *valueField_;
 }
+
+@property(nonatomic, copy) NSString *stringValue;
 
 @property(nonatomic, assign) id<EFTextFieldSpecifierDelegate> delegate;
 @property(nonatomic, assign) UIKeyboardType keyboardType;
@@ -26,6 +28,5 @@
 @property(nonatomic, assign) UITextAutocapitalizationType autocapitalizationType;
 @property(nonatomic, assign) BOOL secureTextEntry;
 
-@property(nonatomic, copy) NSString *value;
 
 @end

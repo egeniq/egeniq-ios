@@ -1,15 +1,14 @@
 //
-//  TextFieldTableViewCell.m
-//  AxisControl
+//  EFNumberFieldSpecifierCell.m
+//  Egeniq
 //
-//  Created by Peter C. Verhage on 05-11-10.
-//  Copyright 2010 Egeniq. All rights reserved.
+//  Created by Peter Verhage on 12-03-11.
+//  Copyright 2011 Egeniq. All rights reserved.
 //
 
-#import "EFTextFieldSpecifierCell.h"
+#import "EFNumberFieldSpecifierCell.h"
 
-
-@implementation EFTextFieldSpecifierCell
+@implementation EFNumberFieldSpecifierCell
 
 @synthesize delegate=delegate_;
 
@@ -20,6 +19,7 @@
 		valueField_ = [[UITextField alloc] init];
 		valueField_.delegate = self;
 		valueField_.returnKeyType = UIReturnKeyDone;	
+        valueField_.keyboardType = UIKeyboardTypeNumberPad;
 		valueField_.enabled = NO;
 		
 		[self.contentView addSubview:valueField_];
@@ -30,53 +30,21 @@
     return self;
 }
 
-- (UIKeyboardType)keyboardType {
-	return valueField_.keyboardType;
+- (NSNumber *)numberValue {
+    return [valueField_.text length] == 0 ? nil : [NSNumber numberWithInt:[valueField_.text intValue]];
 }
 
-- (void)setKeyboardType:(UIKeyboardType)keyboardType {
-	valueField_.keyboardType = keyboardType;
-}
-
-- (UITextAutocorrectionType)autocorrectionType {
-	return valueField_.autocorrectionType;
-}
-
-- (void)setAutocorrectionType:(UITextAutocorrectionType)autocorrectionType {
-	valueField_.autocorrectionType = autocorrectionType;
-}
-
-- (UITextAutocapitalizationType)autocapitalizationType {
-	return valueField_.autocapitalizationType;
-}
-
-- (void)setAutocapitalizationType:(UITextAutocapitalizationType)autocapitalizationType {
-	valueField_.autocapitalizationType = autocapitalizationType;
-}
-
-- (BOOL)secureTextEntry {
-	return valueField_.secureTextEntry;
-}
-
-- (void)setSecureTextEntry:(BOOL)secureTextEntry {
-	valueField_.secureTextEntry = secureTextEntry;
-}
-
-- (NSString *)stringValue {
-    return valueField_.text;
-}
-
-- (void)setStringValue:(NSString *)stringValue {
-    valueField_.text = stringValue;
+- (void)setNumberValue:(NSNumber *)numberValue {
+    valueField_.text = numberValue == nil ? @"" : [numberValue description];
 	[self setNeedsLayout];	    
 }
 
 - (id)value {
-	return self.stringValue;
+	return self.numberValue;
 }
 
 - (void)setValue:(id)value {
-	self.stringValue = (NSString *)value;
+	self.numberValue = (NSNumber *)value;
 }
 
 - (void)layoutSubviews {
@@ -112,14 +80,14 @@
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-	if ([self.delegate respondsToSelector:@selector(textFieldSpecifierCellDidBeginEditing:)]) {
-		[self.delegate textFieldSpecifierCellDidBeginEditing:self];
+	if ([self.delegate respondsToSelector:@selector(numberFieldSpecifierCellDidBeginEditing:)]) {
+		[self.delegate numberFieldSpecifierCellDidBeginEditing:self];
 	}
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-	if ([self.delegate respondsToSelector:@selector(textFieldSpecifierCellDidEndEditing:)]) {	
-		[self.delegate textFieldSpecifierCellDidEndEditing:self];
+	if ([self.delegate respondsToSelector:@selector(numberFieldSpecifierCellDidEndEditing:)]) {	
+		[self.delegate numberFieldSpecifierCellDidEndEditing:self];
 	}
 }
 
@@ -134,5 +102,6 @@
 	[valueField_ release];
 	valueField_ = nil;
 }
+
 
 @end
