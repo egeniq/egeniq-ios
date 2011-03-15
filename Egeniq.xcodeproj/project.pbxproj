@@ -34,7 +34,7 @@
 		D0826FBF122BD17E003EE4E6 /* EFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0826FBD122BD17E003EE4E6 /* EFImageView.m */; };
 		D0937B8D12A50B29000E050E /* EFSliderSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D0937B8B12A50B29000E050E /* EFSliderSpecifierCell.h */; };
 		D0937B8E12A50B29000E050E /* EFSliderSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0937B8C12A50B29000E050E /* EFSliderSpecifierCell.m */; };
-		D093CD3611FC62A5000B51D8 /* EFImageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = D093CD3411FC62A5000B51D8 /* EFImageScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D093CD3611FC62A5000B51D8 /* EFImageScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = D093CD3411FC62A5000B51D8 /* EFImageScrollView.h */; settings = {ATTRIBUTES = (); }; };
 		D093CD3711FC62A5000B51D8 /* EFImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D093CD3511FC62A5000B51D8 /* EFImageScrollView.m */; };
 		D0BD8B58120EDA7E0034356B /* EFImageZoomView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0BD8B56120EDA7E0034356B /* EFImageZoomView.h */; };
 		D0BD8B59120EDA7E0034356B /* EFImageZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BD8B57120EDA7E0034356B /* EFImageZoomView.m */; };
@@ -318,6 +318,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -328,6 +329,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
