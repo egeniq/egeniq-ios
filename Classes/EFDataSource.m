@@ -7,11 +7,21 @@
 //
 
 #import "EFDataSource.h"
+#import "EFDataSource-Protected.h"
 
 @implementation EFDataSource
 
 @synthesize baseEntityName=baseEntityName_;
 @synthesize managedObjectContext=managedObjectContext_;
+
+- (id)initWithBaseEntityName:(NSString *)baseEntityName {
+    self = [super init];
+    if (self != nil) {
+        self.baseEntityName = baseEntityName;
+    }
+    
+    return self;
+}
 
 #ifdef __BLOCKS__
 - (void)usingManagedObjectContext:(NSManagedObjectContext *)managedObjectContext 
@@ -23,37 +33,56 @@
 }
 #endif
 
-- (NSManagedObject *)insertNewObject {
-    return [NSEntityDescription insertNewObjectForEntityForName:self.baseEntityName inManagedObjectContext:self.managedObjectContext];    
+- (NSManagedObject *)insertNewObjectForEntityForName:(NSString *)entityName {
+    return [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:self.managedObjectContext];    
 }
 
+- (NSManagedObject *)insertNewObject {
+    return [self insertNewObjectForEntityForName:self.baseEntityName];
+}
+
+
 - (NSManagedObject *)insertNewObjectWithData:(NSDictionary *)data {
+    return [self insertNewObjectWithData:data 
+                     parentAttributeName:nil 
+                   childrenAttributeName:nil 
+              discriminatorAttributeName:nil];
+}
+
+- (NSManagedObject *)insertNewObjectWithData:(NSDictionary *)data 
+                         parentAttributeName:(NSString *)parentAttributeName
+                       childrenAttributeName:(NSString *)childrenAttributeName
+                  discriminatorAttributeName:(NSString *)discriminatorAttributeName {
 	NSMutableDictionary *mutableData = [NSMutableDictionary dictionaryWithDictionary:data];
 	
-    NSString *type = self.baseEntityName;
-	if ([mutableData objectForKey:@"type"] != nil) {
-		type = [mutableData objectForKey:@"type"];
+    NSString *entityName = self.baseEntityName;
+	if (discriminatorAttributeName != nil && [mutableData objectForKey:discriminatorAttributeName] != nil) {
+		entityName = [mutableData objectForKey:discriminatorAttributeName];
 	}
 	
 	NSArray *children = nil;
-	if ([mutableData objectForKey:@"children"] != nil) {
-		children = [mutableData objectForKey:@"children"];
-		[mutableData removeObjectForKey:@"children"];
+	if (parentAttributeName != nil && childrenAttributeName != nil && [mutableData objectForKey:childrenAttributeName] != nil) {
+		children = [mutableData objectForKey:childrenAttributeName];
+		[mutableData removeObjectForKey:childrenAttributeName];
 	}
 	
-	NSManagedObject *object = [NSEntityDescription insertNewObjectForEntityForName:type inManagedObjectContext:self.managedObjectContext];
+	NSManagedObject *object = [self insertNewObjectForEntityForName:entityName];
 	[object setValuesForKeysWithDictionary:mutableData];	
 	
 	if (children != nil) {
 		for (NSDictionary *childData in children) {
 			NSMutableDictionary *mutableChildData = [NSMutableDictionary dictionaryWithDictionary:childData];
-			[mutableChildData setObject:object forKey:@"parent"];
-			[self insertNewObjectWithData:mutableChildData];
+			[mutableChildData setObject:object forKey:parentAttributeName];
+            [self insertNewObjectWithData:mutableChildData 
+                      parentAttributeName:parentAttributeName 
+                    childrenAttributeName:childrenAttributeName 
+               discriminatorAttributeName:discriminatorAttributeName];            
 		}
 	}
     
-    return object;
+    return object;    
 }
+                            
 
 
 - (NSUInteger)countWithPredicate:(NSPredicate *)predicate {
@@ -131,6 +160,12 @@
 	} else {
 		return [NSArray array];
 	}    
+}
+
+- (void)dealloc {
+    self.managedObjectContext = nil;
+    self.baseEntityName = nil;
+    [super dealloc];
 }
 
 @end
