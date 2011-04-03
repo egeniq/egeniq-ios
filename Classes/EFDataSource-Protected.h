@@ -2,7 +2,7 @@
 //  EFDataSource-Protected.h
 //  Egeniq
 //
-//  Created by Peter Verhage on 29-03-11.
+//  Created by Peter Verhage on 09-03-11.
 //  Copyright 2011 Egeniq. All rights reserved.
 //
 
@@ -29,14 +29,24 @@
 - (NSFetchRequest *)fetchRequestWithPredicate:(NSPredicate *)predicate 
                               sortDescriptors:(NSArray *)sortDescriptors;
 
+- (NSManagedObject *)findObjectWithPredicate:(NSPredicate *)predicate;
+
+- (NSManagedObject *)findObjectWithPredicate:(NSPredicate *)predicate
+                             sortDescriptors:(NSArray *)sortDescriptors;
+
+- (NSArray *)findObjectsWithPredicate:(NSPredicate *)predicate 
+                      sortDescriptors:(NSArray *)sortDescriptors;
+
+- (NSArray *)findObjectsWithPredicate:(NSPredicate *)predicate 
+                      sortDescriptors:(NSArray *)sortDescriptors 
+                                limit:(NSInteger)limit
+                               offset:(NSInteger)offset;
+
+#if TARGET_OS_IPHONE
 - (NSFetchedResultsController *)fetchedResultsControllerWithPredicate:(NSPredicate *)predicate 
                                                       sortDescriptors:(NSArray *)sortDescriptors
                                                    sectionNameKeyPath:(NSString *)sectionNameKeyPath
                                                             cacheName:(NSString *)cacheName;
-
-- (NSManagedObject *)findObjectWithPredicate:(NSPredicate *)predicate;
-
-- (NSArray *)findObjectsWithPredicate:(NSPredicate *)predicate 
-                      sortDescriptors:(NSArray *)sortDescriptors;
+#endif
 
 @end

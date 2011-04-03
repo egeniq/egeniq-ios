@@ -1,6 +1,6 @@
 //
 //  ECCDataSource.m
-//  CameraControl
+//  Egeniq
 //
 //  Created by Peter Verhage on 09-03-11.
 //  Copyright 2011 Egeniq. All rights reserved.
@@ -83,8 +83,6 @@
     return object;    
 }
                             
-
-
 - (NSUInteger)countWithPredicate:(NSPredicate *)predicate {
 	NSFetchRequest *request = [self fetchRequestWithPredicate:predicate sortDescriptors:nil];
 	NSError *error = nil;
@@ -122,7 +120,48 @@
 
     return [fetchRequest autorelease];
 }
+
+- (NSManagedObject *)findObjectWithPredicate:(NSPredicate *)predicate {
+    return [self findObjectWithPredicate:predicate sortDescriptors:nil];
+}
+
+- (NSManagedObject *)findObjectWithPredicate:(NSPredicate *)predicate
+                             sortDescriptors:(NSArray *)sortDescriptors {
+    NSArray *result = [self findObjectsWithPredicate:predicate sortDescriptors:sortDescriptors limit:1 offset:0];
+	if ([result count] > 0) {
+		return [result objectAtIndex:0];
+	} else {
+		return nil;
+	}    
+}
+
+- (NSArray *)findObjectsWithPredicate:(NSPredicate *)predicate 
+                      sortDescriptors:(NSArray *)sortDescriptors {
+    return [self findObjectsWithPredicate:predicate sortDescriptors:sortDescriptors limit:-1 offset:0];
+}
+
+- (NSArray *)findObjectsWithPredicate:(NSPredicate *)predicate 
+                      sortDescriptors:(NSArray *)sortDescriptors 
+                                limit:(NSInteger)limit
+                               offset:(NSInteger)offset {
+    NSFetchRequest *request = [self fetchRequestWithPredicate:predicate sortDescriptors:sortDescriptors];
     
+    if (limit >= 0) {
+        [request setFetchLimit:limit];
+        [request setFetchOffset:offset];
+    }
+    
+	NSError *error = nil;
+	NSArray *result = [self.managedObjectContext executeFetchRequest:request error:&error];
+	
+	if (result != nil && [result count] > 0) {
+		return result;
+	} else {
+		return [NSArray array];
+	}    
+}
+
+#if TARGET_OS_IPHONE
 - (NSFetchedResultsController *)fetchedResultsControllerWithPredicate:(NSPredicate *)predicate 
                                                       sortDescriptors:(NSArray *)sortDescriptors
                                                    sectionNameKeyPath:(NSString *)sectionNameKeyPath
@@ -136,31 +175,7 @@
     
     return [fetchedResultsController autorelease];
 } 
-
-- (NSManagedObject *)findObjectWithPredicate:(NSPredicate *)predicate {
-    NSFetchRequest *request = [self fetchRequestWithPredicate:predicate sortDescriptors:nil];
-	NSError *error = nil;
-	NSArray *result = [self.managedObjectContext executeFetchRequest:request error:&error];
-	
-	if (result != nil && [result count] > 0) {
-		return (NSManagedObject *)[result objectAtIndex:0];
-	} else {
-		return nil;
-	}    
-}
-
-- (NSArray *)findObjectsWithPredicate:(NSPredicate *)predicate 
-                      sortDescriptors:(NSArray *)sortDescriptors{
-    NSFetchRequest *request = [self fetchRequestWithPredicate:predicate sortDescriptors:sortDescriptors];
-	NSError *error = nil;
-	NSArray *result = [self.managedObjectContext executeFetchRequest:request error:&error];
-	
-	if (result != nil && [result count] > 0) {
-		return result;
-	} else {
-		return [NSArray array];
-	}    
-}
+#endif
 
 - (void)dealloc {
     self.managedObjectContext = nil;
