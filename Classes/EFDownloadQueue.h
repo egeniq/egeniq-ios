@@ -17,7 +17,7 @@ typedef enum {
 	EFDownloadPriorityMin
 } EFDownloadPriority;
 
-@interface EFDownloadQueue : NSObject {
+@interface EFDownloadQueue : NSObject <EFDownloadDelegate> {
 	NSUInteger downloadConcurrency;
 	NSUInteger downloadsRunning;
 

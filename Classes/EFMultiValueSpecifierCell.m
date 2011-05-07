@@ -10,7 +10,9 @@
 
 @implementation EFMultiValueSpecifierCell
 
-@synthesize values=values_, titles=titles_;
+@synthesize delegate=delegate_;
+@synthesize values=values_;
+@synthesize titles=titles_;
 
 - (id)initWithName:(NSString *)name {
     if ((self = [super initWithName:name]) != nil) {
@@ -98,6 +100,10 @@
 	self.value = [self.values objectAtIndex:indexPath.row];	
 	
 	[tableView selectRowAtIndexPath:nil animated:YES scrollPosition:UITableViewScrollPositionNone];
+    
+	if ([self.delegate respondsToSelector:@selector(multiValueSpecifierCell:didSelectValueAtIndex:)]) {	
+		[self.delegate multiValueSpecifierCell:self didSelectValueAtIndex:indexPath.row];
+	}      
 }
 
 - (void)dealloc {

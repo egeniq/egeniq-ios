@@ -10,7 +10,9 @@
 
 @implementation EFToggleSwitchSpecifierCell
 
-@synthesize trueValue=trueValue_, falseValue=falseValue_;
+@synthesize delegate=delegate_;
+@synthesize trueValue=trueValue_;
+@synthesize falseValue=falseValue_;
 
 - (id)initWithName:(NSString *)name {
     if ((self = [super initWithName:name]) != nil) {
@@ -18,6 +20,7 @@
 		
 		valueField_ = [[UISwitch alloc] init];	
         valueField_.enabled = self.isEditable;
+        [valueField_ addTarget:self action:@selector(valueChanged) forControlEvents:UIControlEventValueChanged];
 		[self.contentView addSubview:valueField_];
 
 		self.trueValue = [[[NSNumber alloc] initWithBool:YES] autorelease];
@@ -26,6 +29,12 @@
     }
 	
     return self;
+}
+
+- (void)valueChanged {
+	if ([self.delegate respondsToSelector:@selector(toggleSwitchSpecifierCellDidChangeState:)]) {	
+		[self.delegate toggleSwitchSpecifierCellDidChangeState:self];
+	}      
 }
 
 - (void)setEditable:(BOOL)editable {

@@ -35,7 +35,7 @@
 }
 
 - (void)setKeyboardType:(UIKeyboardType)keyboardType {
-	valueField_.keyboardType = keyboardType;
+    valueField_.keyboardType = keyboardType;
 }
 
 - (UITextAutocorrectionType)autocorrectionType {
@@ -43,7 +43,7 @@
 }
 
 - (void)setAutocorrectionType:(UITextAutocorrectionType)autocorrectionType {
-	valueField_.autocorrectionType = autocorrectionType;
+    valueField_.autocorrectionType = autocorrectionType;
 }
 
 - (UITextAutocapitalizationType)autocapitalizationType {
@@ -120,7 +120,7 @@
 - (void)textFieldDidEndEditing:(UITextField *)textField {
 	if ([self.delegate respondsToSelector:@selector(textFieldSpecifierCellDidEndEditing:)]) {	
 		[self.delegate textFieldSpecifierCellDidEndEditing:self];
-	}
+	}   
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

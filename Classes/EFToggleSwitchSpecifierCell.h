@@ -8,10 +8,18 @@
 
 #import "EFSpecifierCell.h"
 
+@class EFToggleSwitchSpecifierCell;
+
+@protocol EFToggleSwitchSpecifierCellDelegate <NSObject>
+@optional
+- (void)toggleSwitchSpecifierCellDidChangeState:(EFToggleSwitchSpecifierCell *)toggleSwitchSpecifierCell;
+@end
+
 @interface EFToggleSwitchSpecifierCell : EFSpecifierCell {
 	UISwitch *valueField_;
 }
 
+@property(nonatomic, assign) id<EFToggleSwitchSpecifierCellDelegate> delegate;
 @property(nonatomic, copy) id trueValue;
 @property(nonatomic, copy) id falseValue;
 

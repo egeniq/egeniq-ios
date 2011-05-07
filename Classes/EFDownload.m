@@ -8,102 +8,139 @@
 
 #import "EFDownload.h"
 
+@interface EFDownload ()
+
+@property (nonatomic, retain) NSMutableDictionary *payload;
+@property (nonatomic, retain) NSURLConnection *connection;
+@property (nonatomic, retain) NSMutableData *incomingData;
+@property (nonatomic, retain) NSData *data;
+@property (nonatomic, retain) NSURLResponse *response;
+
+@end
+
 @implementation EFDownload
 
-@synthesize delegate;
-@synthesize data;
-@synthesize targetPath;
-@synthesize url;
+@synthesize delegate=delegate_;
+@synthesize incomingData=incomingData_;
+@synthesize data=data_;
+@synthesize response=response_;
+@synthesize targetPath=targetPath_;
+@synthesize url=url_;
 @synthesize timeoutInterval=timeoutInterval_;
 @synthesize tag=tag_;
+@synthesize allowSelfSignedSSLCertificate=allowSelfSignedSSLCertificate_;
+@synthesize payload=payload_;
+@synthesize connection=connection_;
 
-- (id)initWithURL:(NSURL *)anUrl {
+- (id)initWithURL:(NSURL *)url {
 	self = [super init];
-	
-	self.timeoutInterval = 30.0;
-
-	url = [anUrl copy];
-
-	payload = nil;
-
+    if (self != nil) {
+        self.url = url;
+        self.timeoutInterval = 30.0;
+        self.payload = [NSMutableDictionary dictionary];
+    }
+    
 	return self;
 }
 
 - (void)start {
-	[data release];
-	data = [[NSMutableData alloc] init];
-
-	NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:self.timeoutInterval];
-	connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+	self.incomingData = nil;
+    self.data = nil;
+    self.response = nil;
+	NSURLRequest *request = [NSURLRequest requestWithURL:self.url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:self.timeoutInterval];
+	self.connection = [[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
 }
 
 - (void)cancel {
-	[connection cancel];
-	[connection release];
-	connection = nil;
-	
-	[data release];
-	data = nil;
+	[self.connection cancel];
+	self.connection = nil;
+	self.incomingData = nil;
+    self.data = nil;
+    self.response = nil;
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)newData {
-	[data appendData:newData];
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+	[self.incomingData appendData:data];
+    
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)theConnection {
-	[connection release];
-	connection = nil;
-	
-	if (targetPath != nil) {
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    self.data = self.incomingData;
+    self.incomingData = [NSMutableData dataWithLength:0];
+    
+	if (self.response != nil && self.delegate != nil && [self.delegate respondsToSelector:@selector(download:didReceiveDownload:response:)]) {
+		[self.delegate download:self didReceiveDownload:self.data response:self.response];
+	} 
+    
+    self.response = response;
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    self.connection = nil;
+    
+    self.data = self.incomingData;
+    self.incomingData = nil;
+
+	if (self.delegate != nil && [self.delegate respondsToSelector:@selector(download:didReceiveDownload:response:)]) {
+		[self.delegate download:self didReceiveDownload:self.data response:self.response];
+	} 
+    
+	if (self.targetPath != nil) {
 		// Save the download to target path.
-		if (![data writeToFile:targetPath atomically:YES]) {
-			NSLog(@"Couldn't write file to %@", targetPath);
-			// todo graceful error handling, notify delegate.
+		if (![self.data writeToFile:self.targetPath atomically:YES]) {
+			NSLog(@"Couldn't write file to %@", self.targetPath); // TODO: graceful error handling, notify delegate.
 		}
 	}
 
 	if (self.delegate != nil && [self.delegate respondsToSelector:@selector(downloadDidFinishLoading:)]) {
-		[delegate downloadDidFinishLoading:self];
+		[self.delegate downloadDidFinishLoading:self];
 	}
 }
 
-- (void)connection:(NSURLConnection *)theConnection didFailWithError:(NSError *)error {
-	[connection release];
-	connection = nil;
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+	self.connection = nil;
+    self.incomingData = nil;
+    self.data = nil;
+    self.response = nil;
 	
 	if (self.delegate != nil && [self.delegate respondsToSelector:@selector(download:didFailWithError:)]) {
-		[delegate download:self didFailWithError:error];
+		[self.delegate download:self didFailWithError:error];
 	}
 }
 
-- (void)addPayload:(id)object forKey:(NSString *)key {
-	if (payload == nil) {
-		payload = [[NSMutableDictionary alloc] initWithCapacity:1];
-	}
-	[payload setObject:object forKey:key];
+- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *) space {
+    if ([[space authenticationMethod] isEqualToString:NSURLAuthenticationMethodServerTrust]) {
+        return self.allowSelfSignedSSLCertificate; // result doesn't matter for properly signed certs
+    } else {
+        return NO;
+    }
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
+    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust] &&
+        self.allowSelfSignedSSLCertificate) {
+        [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
+    }
+}
+
+- (void)addPayload:(id)payload forKey:(NSString *)key {
+	[self.payload setObject:payload forKey:key];
 }
 
 - (id)getPayloadForKey:(NSString *)key {
-	if (payload != nil) {
-		return [payload objectForKey:key];
-	}
-	return nil;
+    return [self.payload objectForKey:key];
 }
 
 - (void)dealloc {
-	delegate = nil;
-
-	[connection release];
-	connection = nil;
-	[payload release];
-	payload = nil;
-	[targetPath release];
-	targetPath = nil;
-	[data release];
-	data = nil;
-	[url release];
-	url = nil;
-
+    self.delegate = nil;
+    [self.connection cancel];
+    self.connection = nil;
+    self.incomingData = nil;
+    self.data = nil;
+    self.response = nil;
+    self.payload = nil;
+    self.targetPath = nil;
+    self.url = nil;
 	[super dealloc];
 }
 
