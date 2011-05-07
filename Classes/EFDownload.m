@@ -10,27 +10,36 @@
 
 @interface EFDownload ()
 
+@property (nonatomic, retain) NSData *data;
+@property (nonatomic, retain) NSURLResponse *response;
+
+@property (nonatomic, copy) EFDownloadResponseBlock responseHandler;
+@property (nonatomic, copy) EFDownloadCompletionBlock completionHandler;
+
 @property (nonatomic, retain) NSMutableDictionary *payload;
 @property (nonatomic, retain) NSURLConnection *connection;
 @property (nonatomic, retain) NSMutableData *incomingData;
-@property (nonatomic, retain) NSData *data;
-@property (nonatomic, retain) NSURLResponse *response;
 
 @end
 
 @implementation EFDownload
 
+@synthesize tag=tag_;
 @synthesize delegate=delegate_;
-@synthesize incomingData=incomingData_;
+@synthesize url=url_;
+@synthesize targetPath=targetPath_;
+@synthesize timeoutInterval=timeoutInterval_;
+@synthesize allowSelfSignedSSLCertificate=allowSelfSignedSSLCertificate_;
+
 @synthesize data=data_;
 @synthesize response=response_;
-@synthesize targetPath=targetPath_;
-@synthesize url=url_;
-@synthesize timeoutInterval=timeoutInterval_;
-@synthesize tag=tag_;
-@synthesize allowSelfSignedSSLCertificate=allowSelfSignedSSLCertificate_;
+
+@synthesize responseHandler=responseHandler_;
+@synthesize completionHandler=completionHandler_;
+
 @synthesize payload=payload_;
 @synthesize connection=connection_;
+@synthesize incomingData=incomingData_;
 
 - (id)initWithURL:(NSURL *)url {
 	self = [super init];
@@ -51,12 +60,25 @@
 	self.connection = [[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
 }
 
+- (void)startWithCompletionHandler:(EFDownloadCompletionBlock)completionHandler {
+    self.completionHandler = completionHandler;
+    [self start];    
+}
+
+- (void)startWithResponseHandler:(EFDownloadResponseBlock)responseHandler completionHandler:(EFDownloadCompletionBlock)completionHandler {
+    self.responseHandler = responseHandler;
+    self.completionHandler = completionHandler;
+    [self start];
+}
+
 - (void)cancel {
 	[self.connection cancel];
 	self.connection = nil;
 	self.incomingData = nil;
     self.data = nil;
     self.response = nil;
+    self.responseHandler = nil;
+    self.completionHandler = nil;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
@@ -68,22 +90,29 @@
     self.data = self.incomingData;
     self.incomingData = [NSMutableData dataWithLength:0];
     
-	if (self.response != nil && self.delegate != nil && [self.delegate respondsToSelector:@selector(download:didReceiveDownload:response:)]) {
-		[self.delegate download:self didReceiveDownload:self.data response:self.response];
+	if (self.response != nil && [self.delegate respondsToSelector:@selector(download:didReceiveResponse:data:)]) {
+		[self.delegate download:self didReceiveResponse:self.response data:self.data];
 	} 
+    
+    if (self.response != nil && self.responseHandler != nil) {
+        self.responseHandler(self.response, self.data);
+    }
     
     self.response = response;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    self.connection = nil;
-    
     self.data = self.incomingData;
+    self.connection = nil;
     self.incomingData = nil;
 
-	if (self.delegate != nil && [self.delegate respondsToSelector:@selector(download:didReceiveDownload:response:)]) {
-		[self.delegate download:self didReceiveDownload:self.data response:self.response];
+	if ([self.delegate respondsToSelector:@selector(download:didReceiveResponse:data:)]) {
+		[self.delegate download:self didReceiveResponse:self.response data:self.data];
 	} 
+
+    if (self.responseHandler != nil) {
+        self.responseHandler(self.response, self.data);
+    }    
     
 	if (self.targetPath != nil) {
 		// Save the download to target path.
@@ -92,9 +121,16 @@
 		}
 	}
 
-	if (self.delegate != nil && [self.delegate respondsToSelector:@selector(downloadDidFinishLoading:)]) {
+	if ([self.delegate respondsToSelector:@selector(downloadDidFinishLoading:)]) {
 		[self.delegate downloadDidFinishLoading:self];
 	}
+    
+    if (self.completionHandler != nil) {
+        self.completionHandler(self.response, self.data, nil);
+    }
+    
+    self.responseHandler = nil;
+    self.completionHandler = nil;
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -103,9 +139,16 @@
     self.data = nil;
     self.response = nil;
 	
-	if (self.delegate != nil && [self.delegate respondsToSelector:@selector(download:didFailWithError:)]) {
+	if ([self.delegate respondsToSelector:@selector(download:didFailWithError:)]) {
 		[self.delegate download:self didFailWithError:error];
 	}
+    
+    if (self.completionHandler != nil) {
+        self.completionHandler(nil, nil, error);
+    }
+    
+    self.responseHandler = nil;
+    self.completionHandler = nil;
 }
 
 - (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *) space {
@@ -133,6 +176,8 @@
 
 - (void)dealloc {
     self.delegate = nil;
+    self.responseHandler = nil;
+    self.completionHandler = nil;
     [self.connection cancel];
     self.connection = nil;
     self.incomingData = nil;

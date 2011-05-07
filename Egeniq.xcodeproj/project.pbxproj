@@ -33,8 +33,6 @@
 		D03265C0129D427C004143A3 /* EFToggleSwitchSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B6129D427C004143A3 /* EFToggleSwitchSpecifierCell.m */; };
 		D03265C1129D427C004143A3 /* EFMultiValueSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265B7129D427C004143A3 /* EFMultiValueSpecifierCell.h */; };
 		D03265C2129D427C004143A3 /* EFMultiValueSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */; };
-		D036D658136D8B6800530E0D /* EFDownloadBlockDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D036D656136D8B6800530E0D /* EFDownloadBlockDelegate.h */; };
-		D036D659136D8B6800530E0D /* EFDownloadBlockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D036D657136D8B6800530E0D /* EFDownloadBlockDelegate.m */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
 		D073A90813299739004FA0AA /* EFDummySpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D073A90613299739004FA0AA /* EFDummySpecifierCell.h */; };
 		D073A90913299739004FA0AA /* EFDummySpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D073A90713299739004FA0AA /* EFDummySpecifierCell.m */; };
@@ -89,8 +87,6 @@
 		D03265B6129D427C004143A3 /* EFToggleSwitchSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFToggleSwitchSpecifierCell.m; sourceTree = "<group>"; };
 		D03265B7129D427C004143A3 /* EFMultiValueSpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFMultiValueSpecifierCell.h; sourceTree = "<group>"; };
 		D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFMultiValueSpecifierCell.m; sourceTree = "<group>"; };
-		D036D656136D8B6800530E0D /* EFDownloadBlockDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDownloadBlockDelegate.h; sourceTree = "<group>"; };
-		D036D657136D8B6800530E0D /* EFDownloadBlockDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDownloadBlockDelegate.m; sourceTree = "<group>"; };
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
@@ -141,8 +137,6 @@
 				923CDDA7123A8F0A00247AD5 /* EFReachability.m */,
 				923CDD74123A8CC300247AD5 /* EFDownload.h */,
 				923CDD75123A8CC300247AD5 /* EFDownload.m */,
-				D036D656136D8B6800530E0D /* EFDownloadBlockDelegate.h */,
-				D036D657136D8B6800530E0D /* EFDownloadBlockDelegate.m */,
 				923CDD76123A8CC300247AD5 /* EFDownloadQueue.h */,
 				923CDD77123A8CC300247AD5 /* EFDownloadQueue.m */,
 				D0E5223F1320DC9A00426493 /* EFTokenExchangeClient.h */,
@@ -324,7 +318,6 @@
 				D073A90813299739004FA0AA /* EFDummySpecifierCell.h in Headers */,
 				D09C2F98132B821D00D3B57F /* EFNumberFieldSpecifierCell.h in Headers */,
 				D09051AE1341CE590054CBE8 /* EFDataSource-Protected.h in Headers */,
-				D036D658136D8B6800530E0D /* EFDownloadBlockDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +393,6 @@
 				D02372DC132925B500B77A44 /* EFSettingsViewModel.m in Sources */,
 				D073A90913299739004FA0AA /* EFDummySpecifierCell.m in Sources */,
 				D09C2F99132B821D00D3B57F /* EFNumberFieldSpecifierCell.m in Sources */,
-				D036D659136D8B6800530E0D /* EFDownloadBlockDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,9 +10,12 @@
 
 @class EFDownload;
 
+typedef void (^EFDownloadResponseBlock)(NSURLResponse *response, NSData *data);
+typedef void (^EFDownloadCompletionBlock)(NSURLResponse *response, NSData *data, NSError *error);
+
 @protocol EFDownloadDelegate <NSObject>
 @optional
-- (void)download:(EFDownload *)download didReceiveDownload:(NSData *)data response:(NSURLResponse *)response;
+- (void)download:(EFDownload *)download didReceiveResponse:(NSURLResponse *)response data:(NSData *)data;
 - (void)downloadDidFinishLoading:(EFDownload *)download;
 - (void)download:(EFDownload *)download didFailWithError:(NSError *)error;
 @end
@@ -20,12 +23,6 @@
 @interface EFDownload : NSObject {
 
 }
-
-- (id)initWithURL:(NSURL *)anUrl;
-- (void)start;
-- (void)cancel;
-- (void)addPayload:(id)object forKey:(NSString *)key;
-- (id)getPayloadForKey:(NSString *)key;
 
 @property (nonatomic, assign) id<EFDownloadDelegate> delegate;
 @property (nonatomic, assign) NSInteger tag;
@@ -36,5 +33,15 @@
 
 @property (nonatomic, retain, readonly) NSURLResponse *response;
 @property (nonatomic, retain, readonly) NSData *data;
+
+- (id)initWithURL:(NSURL *)url;
+
+- (void)start;
+- (void)startWithCompletionHandler:(EFDownloadCompletionBlock)completionHandler;
+- (void)startWithResponseHandler:(EFDownloadResponseBlock)responseHandler completionHandler:(EFDownloadCompletionBlock)completionHandler;
+- (void)cancel;
+
+- (void)addPayload:(id)object forKey:(NSString *)key;
+- (id)getPayloadForKey:(NSString *)key;
 
 @end
