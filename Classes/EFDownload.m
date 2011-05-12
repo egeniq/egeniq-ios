@@ -103,6 +103,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     self.data = self.incomingData;
+    [self.connection cancel];
     self.connection = nil;
     self.incomingData = nil;
 
@@ -134,7 +135,8 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-	self.connection = nil;
+    [self.connection cancel];    
+    self.connection = nil;
     self.incomingData = nil;
     self.data = nil;
     self.response = nil;
