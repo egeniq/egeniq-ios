@@ -34,6 +34,8 @@
 		D03265C1129D427C004143A3 /* EFMultiValueSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265B7129D427C004143A3 /* EFMultiValueSpecifierCell.h */; };
 		D03265C2129D427C004143A3 /* EFMultiValueSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
+		D06F7B05138537A1003B5A31 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B04138537A1003B5A31 /* QuartzCore.framework */; };
+		D06F7B08138537B1003B5A31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B07138537B1003B5A31 /* UIKit.framework */; };
 		D073A90813299739004FA0AA /* EFDummySpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D073A90613299739004FA0AA /* EFDummySpecifierCell.h */; };
 		D073A90913299739004FA0AA /* EFDummySpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D073A90713299739004FA0AA /* EFDummySpecifierCell.m */; };
 		D0826FBE122BD17E003EE4E6 /* EFImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0826FBC122BD17E003EE4E6 /* EFImageView.h */; };
@@ -90,6 +92,8 @@
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
+		D06F7B04138537A1003B5A31 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D06F7B07138537B1003B5A31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D073A90613299739004FA0AA /* EFDummySpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDummySpecifierCell.h; sourceTree = "<group>"; };
 		D073A90713299739004FA0AA /* EFDummySpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDummySpecifierCell.m; sourceTree = "<group>"; };
 		D0826FBC122BD17E003EE4E6 /* EFImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageView.h; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06F7B08138537B1003B5A31 /* UIKit.framework in Frameworks */,
+				D06F7B05138537A1003B5A31 /* QuartzCore.framework in Frameworks */,
 				D089C6011327D629000A54F5 /* CoreData.framework in Frameworks */,
 				D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */,
 				923CDE2B123A963900247AD5 /* SystemConfiguration.framework in Frameworks */,
@@ -189,6 +195,8 @@
 		D067DCEB11FB130E0047EFAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D06F7B07138537B1003B5A31 /* UIKit.framework */,
+				D06F7B04138537A1003B5A31 /* QuartzCore.framework */,
 				D089C6001327D629000A54F5 /* CoreData.framework */,
 				923CDE2A123A963800247AD5 /* SystemConfiguration.framework */,
 				D067DCF211FB130E0047EFAA /* Foundation.framework */,

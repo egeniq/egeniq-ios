@@ -26,7 +26,7 @@
     NSMutableDictionary *fields_;    
 }
 
-@property(nonatomic, assign) NSObject<EFSettingsViewModelDelegate> *delegate;
+@property(nonatomic, assign) IBOutlet NSObject<EFSettingsViewModelDelegate> *delegate;
 
 - (void)addSection:(NSString *)section withTitle:(NSString *)title;
 - (void)setTitle:(NSString *)title forSection:(NSString *)section;

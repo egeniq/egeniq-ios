@@ -36,8 +36,8 @@
     UITableView *tableView_;
 }
 
-@property(nonatomic, assign) NSObject<EFSettingsViewDelegate> *delegate;
-@property(nonatomic, assign) NSObject<EFSettingsViewDataSource> *dataSource;
+@property(nonatomic, assign) IBOutlet NSObject<EFSettingsViewDelegate> *delegate;
+@property(nonatomic, assign) IBOutlet NSObject<EFSettingsViewDataSource> *dataSource;
 
 - (void)reloadFields;
 

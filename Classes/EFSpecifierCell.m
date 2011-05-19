@@ -41,6 +41,10 @@
 	self.textLabel.text = title;
 }
 
+- (UILabel *)titleLabel {
+    return self.textLabel;
+}
+
 - (id)value {
     return nil;
 }
