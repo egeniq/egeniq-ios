@@ -14,10 +14,11 @@
 
 @property(nonatomic, readonly) NSString *name;
 @property(nonatomic, copy) NSString *title;
-@property(nonatomic, readonly) UILabel *titleLabel;
+@property(nonatomic, retain) UIFont *titleFont;
 @property(nonatomic, copy) id value;
 @property(nonatomic, readonly) BOOL showDetailsOnSelect;
 @property(nonatomic, assign, getter=isEditable) BOOL editable;
+@property(nonatomic, assign) CGFloat height;
 
 - (id)initWithName:(NSString *)name;
 - (UIViewController *)detailsViewController;

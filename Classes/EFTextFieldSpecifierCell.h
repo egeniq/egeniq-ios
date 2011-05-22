@@ -20,13 +20,13 @@
 	UITextField *valueField_;
 }
 
-@property(nonatomic, copy) NSString *stringValue;
+@property (nonatomic, copy) NSString *stringValue;
 
-@property(nonatomic, assign) id<EFTextFieldSpecifierDelegate> delegate;
-@property(nonatomic, assign) UIKeyboardType keyboardType;
-@property(nonatomic, assign) UITextAutocorrectionType autocorrectionType;
-@property(nonatomic, assign) UITextAutocapitalizationType autocapitalizationType;
-@property(nonatomic, assign) BOOL secureTextEntry;
-
+@property (nonatomic, assign) id<EFTextFieldSpecifierDelegate> delegate;
+@property (nonatomic, assign) UIKeyboardType keyboardType;
+@property (nonatomic, assign) UITextAutocorrectionType autocorrectionType;
+@property (nonatomic, assign) UITextAutocapitalizationType autocapitalizationType;
+@property (nonatomic, assign) BOOL secureTextEntry;
+@property (nonatomic, retain) UIFont *valueFont;
 
 @end

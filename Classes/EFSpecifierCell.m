@@ -11,11 +11,13 @@
 @implementation EFSpecifierCell
 
 @synthesize editable=editable_;
+@synthesize height=height_;
 
 - (id)initWithName:(NSString *)name {
 	if ((self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:name]) != nil) {
 		self.selectionStyle = UITableViewCellSelectionStyleNone;
-        editable_ = YES;
+        self.editable = YES;
+        self.height = 44.0;
 	}
 	
 	return self;
@@ -41,8 +43,12 @@
 	self.textLabel.text = title;
 }
 
-- (UILabel *)titleLabel {
-    return self.textLabel;
+- (UIFont *)titleFont {
+    return self.textLabel.font;
+}
+
+- (void)setTitleFont:(UIFont *)font {
+    self.textLabel.font = font;
 }
 
 - (id)value {

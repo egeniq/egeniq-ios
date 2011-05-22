@@ -61,11 +61,32 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.dataSource settingsView:self numberOfFieldsInSection:section];    
+    NSInteger result = 0;
+    
+    for (NSInteger i = 0; i < [self.dataSource settingsView:self numberOfFieldsInSection:section]; i++) {
+        EFSpecifierCell *field = [self.dataSource settingsView:self fieldAtIndexPath:[NSIndexPath indexPathForRow:i inSection:section]];
+        result += field.hidden ? 0 : 1;
+    }
+    
+    return result;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self.dataSource settingsView:self fieldAtIndexPath:indexPath];      
+    NSInteger row = -1;
+    for (NSInteger i = 0; i < [self.dataSource settingsView:self numberOfFieldsInSection:indexPath.section]; i++) {
+        EFSpecifierCell *field = [self.dataSource settingsView:self fieldAtIndexPath:[NSIndexPath indexPathForRow:i inSection:indexPath.section]];
+        row += field.hidden ? 0 : 1;
+        if (row == indexPath.row) {
+            return field;
+        }
+    }
+    
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    EFSpecifierCell *field = (EFSpecifierCell *)[self tableView:tableView cellForRowAtIndexPath:indexPath];
+    return field.height;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

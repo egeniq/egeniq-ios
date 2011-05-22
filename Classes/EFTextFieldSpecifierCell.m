@@ -8,7 +8,6 @@
 
 #import "EFTextFieldSpecifierCell.h"
 
-
 @implementation EFTextFieldSpecifierCell
 
 @synthesize delegate=delegate_;
@@ -60,6 +59,14 @@
 
 - (void)setSecureTextEntry:(BOOL)secureTextEntry {
 	valueField_.secureTextEntry = secureTextEntry;
+}
+
+- (UIFont *)valueFont {
+    return self.detailTextLabel.font;
+}
+
+- (void)setValueFont:(UIFont *)valueFont {
+    self.detailTextLabel.font = valueFont;
 }
 
 - (NSString *)stringValue {
