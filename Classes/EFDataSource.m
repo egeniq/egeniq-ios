@@ -97,7 +97,6 @@
     
     NSError *error = nil;
     NSArray *objects = [managedObjectContext_ executeFetchRequest:request error:&error]; 
-    [request release];
     
     for (NSManagedObject *object in objects) {
         [self.managedObjectContext deleteObject:object];
