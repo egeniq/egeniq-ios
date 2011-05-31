@@ -25,7 +25,7 @@ static EFTokenExchangeClient *sharedInstance = nil;
 	
 	NSString *body;
 	if (escapedNotificationToken == nil) {
-	    body = [NSString stringWithFormat:@"deviceToken=%@", escapedDeviceToken];	
+	    body = [NSString stringWithFormat:@"deviceToken=%@&deviceFamily=ios", escapedDeviceToken];	
 	} else {
 	    body = [NSString stringWithFormat:@"deviceToken=%@&notificationToken=%@", escapedDeviceToken, escapedNotificationToken];
 	}
