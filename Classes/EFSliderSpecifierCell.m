@@ -72,6 +72,26 @@
 	valueField_.frame = valueFrame;
 }
 
+- (BOOL)isFirstResponder {
+    return [valueField_ isFirstResponder];
+}
+
+- (BOOL)canBecomeFirstResponder {
+    return [valueField_ canBecomeFirstResponder];
+}
+
+- (BOOL)becomeFirstResponder {
+    return [valueField_ becomeFirstResponder];
+}
+
+- (BOOL)canResignFirstResponder {
+    return [valueField_ canResignFirstResponder];
+}
+
+- (BOOL)resignFirstResponder {
+    return [valueField_ resignFirstResponder];
+}
+
 - (void)dealloc {
 	[valueField_ release];
 	valueField_ = nil;
