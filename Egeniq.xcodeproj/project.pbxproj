@@ -461,6 +461,33 @@
 			};
 			name = Release;
 		};
+		D0BA358613A1413200DE1B85 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Distribution;
+		};
+		D0BA358713A1413200DE1B85 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/Egeniq.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Egeniq_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = Egeniq;
+				SDKROOT = iphoneos;
+			};
+			name = Distribution;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -469,6 +496,7 @@
 			buildConfigurations = (
 				D067DCF511FB130E0047EFAA /* Debug */,
 				D067DCF611FB130E0047EFAA /* Release */,
+				D0BA358613A1413200DE1B85 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -478,6 +506,7 @@
 			buildConfigurations = (
 				D067DCF811FB130E0047EFAA /* Debug */,
 				D067DCF911FB130E0047EFAA /* Release */,
+				D0BA358713A1413200DE1B85 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
