@@ -8,11 +8,11 @@
 
 #import "UIAlertView+EFBlock.h"
 
-static DismissBlock onDismiss_;
+static UIAlertViewDismissBlock onDismiss_;
 
 @implementation UIAlertView (EFBlock)
 
-- (void)showWithOnDismiss:(DismissBlock)onDismiss {
+- (void)showWithOnDismiss:(UIAlertViewDismissBlock)onDismiss {
     onDismiss_ = [onDismiss copy];
     self.delegate = self;
     [self show];

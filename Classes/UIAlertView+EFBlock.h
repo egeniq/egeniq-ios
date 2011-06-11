@@ -13,8 +13,8 @@
 
 @interface UIAlertView (EFBlock) <UIAlertViewDelegate> 
 
-typedef void (^DismissBlock)(int buttonIndex);
+typedef void (^UIAlertViewDismissBlock)(int buttonIndex);
 
-- (void)showWithOnDismiss:(DismissBlock)onDismiss;
+- (void)showWithOnDismiss:(UIAlertViewDismissBlock)onDismiss;
 
 @end
