@@ -34,6 +34,8 @@
 		D03265C1129D427C004143A3 /* EFMultiValueSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265B7129D427C004143A3 /* EFMultiValueSpecifierCell.h */; };
 		D03265C2129D427C004143A3 /* EFMultiValueSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
+		D06A5BE213A3B4BF00BEEDEF /* UIAlertView+EFBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = D06A5BE013A3B4BF00BEEDEF /* UIAlertView+EFBlock.h */; };
+		D06A5BE313A3B4BF00BEEDEF /* UIAlertView+EFBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A5BE113A3B4BF00BEEDEF /* UIAlertView+EFBlock.m */; };
 		D06F7B05138537A1003B5A31 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B04138537A1003B5A31 /* QuartzCore.framework */; };
 		D06F7B08138537B1003B5A31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B07138537B1003B5A31 /* UIKit.framework */; };
 		D073A90813299739004FA0AA /* EFDummySpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D073A90613299739004FA0AA /* EFDummySpecifierCell.h */; };
@@ -92,6 +94,8 @@
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
+		D06A5BE013A3B4BF00BEEDEF /* UIAlertView+EFBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+EFBlock.h"; sourceTree = "<group>"; };
+		D06A5BE113A3B4BF00BEEDEF /* UIAlertView+EFBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+EFBlock.m"; sourceTree = "<group>"; };
 		D06F7B04138537A1003B5A31 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D06F7B07138537B1003B5A31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D073A90613299739004FA0AA /* EFDummySpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDummySpecifierCell.h; sourceTree = "<group>"; };
@@ -212,6 +216,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		D06A5BDD13A3B48600BEEDEF /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				D06A5BE013A3B4BF00BEEDEF /* UIAlertView+EFBlock.h */,
+				D06A5BE113A3B4BF00BEEDEF /* UIAlertView+EFBlock.m */,
+			);
+			name = Alert;
+			sourceTree = "<group>";
+		};
 		D073A90B13299744004FA0AA /* Specifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +259,7 @@
 		D093CD3211FC627B000B51D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D06A5BDD13A3B48600BEEDEF /* Alert */,
 				D093CD3311FC6284000B51D8 /* Image */,
 				D03265AC129D4245004143A3 /* Settings */,
 				923CDD78123A8CC300247AD5 /* EFNibViewController.h */,
@@ -326,6 +340,7 @@
 				D073A90813299739004FA0AA /* EFDummySpecifierCell.h in Headers */,
 				D09C2F98132B821D00D3B57F /* EFNumberFieldSpecifierCell.h in Headers */,
 				D09051AE1341CE590054CBE8 /* EFDataSource-Protected.h in Headers */,
+				D06A5BE213A3B4BF00BEEDEF /* UIAlertView+EFBlock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +416,7 @@
 				D02372DC132925B500B77A44 /* EFSettingsViewModel.m in Sources */,
 				D073A90913299739004FA0AA /* EFDummySpecifierCell.m in Sources */,
 				D09C2F99132B821D00D3B57F /* EFNumberFieldSpecifierCell.m in Sources */,
+				D06A5BE313A3B4BF00BEEDEF /* UIAlertView+EFBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
