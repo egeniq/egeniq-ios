@@ -20,6 +20,8 @@
 @property (nonatomic, retain) NSURLConnection *connection;
 @property (nonatomic, retain) NSMutableData *incomingData;
 
+@property (nonatomic, retain) NSMutableDictionary *headers;
+
 @end
 
 @implementation EFDownload
@@ -41,12 +43,15 @@
 @synthesize connection=connection_;
 @synthesize incomingData=incomingData_;
 
+@synthesize headers=headers_;
+
 - (id)initWithURL:(NSURL *)url {
 	self = [super init];
     if (self != nil) {
         self.url = url;
         self.timeoutInterval = 30.0;
         self.payload = [NSMutableDictionary dictionary];
+        self.headers = [NSMutableDictionary dictionary];
     }
     
 	return self;
@@ -56,7 +61,12 @@
 	self.incomingData = nil;
     self.data = nil;
     self.response = nil;
-	NSURLRequest *request = [NSURLRequest requestWithURL:self.url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:self.timeoutInterval];
+    
+	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:self.timeoutInterval];
+    for (NSString *field in [self.headers keyEnumerator]) {
+        [request setValue:[self.headers valueForKey:field] forHTTPHeaderField:field];
+    }
+    
 	self.connection = [[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
 }
 
@@ -176,6 +186,10 @@
     return [self.payload objectForKey:key];
 }
 
+- (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field {
+    [self.headers setValue:value forKey:field];
+}
+
 - (void)dealloc {
     self.delegate = nil;
     self.responseHandler = nil;
@@ -188,6 +202,7 @@
     self.payload = nil;
     self.targetPath = nil;
     self.url = nil;
+    self.headers = nil;
 	[super dealloc];
 }
 

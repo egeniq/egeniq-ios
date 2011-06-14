@@ -44,4 +44,6 @@ typedef void (^EFDownloadCompletionBlock)(NSURLResponse *response, NSData *data,
 - (void)addPayload:(id)object forKey:(NSString *)key;
 - (id)getPayloadForKey:(NSString *)key;
 
+- (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field;
+
 @end
