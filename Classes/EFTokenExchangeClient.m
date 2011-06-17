@@ -32,7 +32,7 @@ static EFTokenExchangeClient *sharedInstance = nil;
 	
 	NSString *url = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"EFTECDeviceTokenExchangeURL"];
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
-	[request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
+	[request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
 	[request setTimeoutInterval:15.0];
 	[request setHTTPMethod:@"POST"];
 	[request setHTTPBody:[body dataUsingEncoding:NSUTF8StringEncoding]];
