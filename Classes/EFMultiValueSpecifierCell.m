@@ -80,7 +80,11 @@
 	if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"ValueCell"] autorelease];
 		cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-	}	
+	} else {
+        if (self.value != [self.values objectAtIndex:indexPath.row] && cell.accessoryType == UITableViewCellAccessoryCheckmark) {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+    }
 	
 	cell.textLabel.text = [self.titles objectAtIndex:indexPath.row];
 	return cell;
