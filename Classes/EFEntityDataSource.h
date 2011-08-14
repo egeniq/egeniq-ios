@@ -1,20 +1,26 @@
 //
-//  EFDataSource-Protected.h
+//  ECCDataSource.h
 //  Egeniq
 //
 //  Created by Peter Verhage on 09-03-11.
 //  Copyright 2011 Egeniq. All rights reserved.
 //
 
-#import "EFDataSource.h"
+#import <CoreData/CoreData.h>
 
-@interface EFDataSource () 
+@interface EFEntityDataSource : NSObject {
+    
+}
 
 @property (nonatomic, copy) NSString *baseEntityName;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
-- (id)initWithBaseEntityName:(NSString *)baseEntityName;
++ (id)entityDataSourceWithBaseEntityName:(NSString *)baseEntityName    
+                    managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
-- (NSManagedObject *)insertNewObjectForEntityForName:(NSString *)entityName;
+- (id)initWithBaseEntityName:(NSString *)baseEntityName
+        managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+
 - (NSManagedObject *)insertNewObject;
 - (NSManagedObject *)insertNewObjectWithData:(NSDictionary *)data;
 - (NSManagedObject *)insertNewObjectWithData:(NSDictionary *)data 
@@ -47,6 +53,13 @@
                                                       sortDescriptors:(NSArray *)sortDescriptors
                                                    sectionNameKeyPath:(NSString *)sectionNameKeyPath
                                                             cacheName:(NSString *)cacheName;
+#endif
+
+
+
+#ifdef __BLOCKS__
+- (void)usingManagedObjectContext:(NSManagedObjectContext *)managedObjectContext 
+                     executeBlock:(void(^)())executeBlock;
 #endif
 
 @end

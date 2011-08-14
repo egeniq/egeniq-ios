@@ -42,6 +42,10 @@
 #pragma mark -
 #pragma mark Initialization
 
++ (id)request {
+    return [[[self alloc] init] autorelease];
+}
+
 + (id)requestWithURL:(NSURL *)URL {
     return [[[self alloc] initWithURL:URL] autorelease];
 }
@@ -52,6 +56,10 @@
     return [[[self alloc] initWithURL:URL 
                     preProcessHandler:preProcessHandler 
                         resultHandler:resultHandler] autorelease];
+}
+
+- (id)init {
+    return [self initWithURL:nil preProcessHandler:nil resultHandler:nil];
 }
 
 - (id)initWithURL:(NSURL *)URL {

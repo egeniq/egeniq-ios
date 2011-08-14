@@ -10,199 +10,112 @@
 
 @interface EFDownload ()
 
-@property (nonatomic, retain) NSData *data;
-@property (nonatomic, retain) NSURLResponse *response;
-
-@property (nonatomic, copy) EFDownloadResponseBlock responseHandler;
 @property (nonatomic, copy) EFDownloadCompletionBlock completionHandler;
-
-@property (nonatomic, retain) NSMutableDictionary *payload;
-@property (nonatomic, retain) NSURLConnection *connection;
-@property (nonatomic, retain) NSMutableData *incomingData;
-
-@property (nonatomic, retain) NSMutableDictionary *headers;
 
 @end
 
 @implementation EFDownload
 
-@synthesize tag=tag_;
-@synthesize delegate=delegate_;
-@synthesize url=url_;
-@synthesize targetPath=targetPath_;
-@synthesize timeoutInterval=timeoutInterval_;
-@synthesize allowSelfSignedSSLCertificate=allowSelfSignedSSLCertificate_;
+@synthesize request=request_;
+@synthesize targetURL=targetURL_;
+@synthesize preProcessHandler=preProcessHandler_;
+@synthesize resultHandler=resultHandler_;
 
-@synthesize data=data_;
-@synthesize response=response_;
-
-@synthesize responseHandler=responseHandler_;
 @synthesize completionHandler=completionHandler_;
 
-@synthesize payload=payload_;
-@synthesize connection=connection_;
-@synthesize incomingData=incomingData_;
+#pragma mark -
+#pragma mark Initialization
 
-@synthesize headers=headers_;
++ (id)download {
+    return [[[self alloc] init] autorelease];
+}
 
-- (id)initWithURL:(NSURL *)url {
-	self = [super init];
++ (id)downloadWithRequest:(EFRequest *)request 
+                targetURL:(NSURL *)targetURL {
+    return [[[self alloc] initWithRequest:request 
+                                targetURL:targetURL] autorelease];
+}
+
++ (id)downloadWithRequest:(EFRequest *)request 
+                targetURL:(NSURL *)targetURL
+        preProcessHandler:(EFDownloadPreProcessBlock)preProcessHandler
+            resultHandler:(EFDownloadResultBlock)resultHandler {
+    return [[[self alloc] initWithRequest:request 
+                                targetURL:targetURL 
+                        preProcessHandler:preProcessHandler 
+                            resultHandler:resultHandler] autorelease];
+}
+
+- (id)init {
+    return [self initWithRequest:nil targetURL:nil preProcessHandler:nil resultHandler:nil];
+}
+
+- (id)initWithRequest:(EFRequest *)request 
+            targetURL:(NSURL *)targetURL {
+    return [self initWithRequest:request targetURL:targetURL preProcessHandler:nil resultHandler:nil];    
+}
+
+- (id)initWithRequest:(EFRequest *)request 
+            targetURL:(NSURL *)targetURL
+    preProcessHandler:(EFDownloadPreProcessBlock)preProcessHandler
+        resultHandler:(EFDownloadResultBlock)resultHandler {
+    self = [super init];
     if (self != nil) {
-        self.url = url;
-        self.timeoutInterval = 30.0;
-        self.payload = [NSMutableDictionary dictionary];
-        self.headers = [NSMutableDictionary dictionary];
+        self.request = request;
+        self.targetURL = targetURL;
+        self.preProcessHandler = preProcessHandler;
+        self.resultHandler = resultHandler;
     }
     
-	return self;
+    return self;
+}
+
+#pragma mark -
+#pragma mark Actions
+
+- (void)startWithCompletionHandler:(EFDownloadCompletionBlock)completionHandler {
+    if (self.preProcessHandler != nil) {
+        self.request.preProcessHandler = ^NSData * (NSURLResponse *response, NSData *data, NSError **error) {
+            return self.preProcessHandler(response, data, error);
+        };
+    }
+    
+    self.request.resultHandler = ^(NSURLResponse *response, NSData *data, NSError *error) {
+        if (error == nil) {
+            [data writeToURL:self.targetURL options:NSDataWritingAtomic error:&error];
+        }
+        
+        if (self.resultHandler != nil && error == nil) {
+            self.resultHandler(response, self.targetURL, nil);
+        } else if (self.resultHandler != nil && error != nil) {
+            self.resultHandler(nil, nil, error);
+        }
+    };
+    
+    [self.request startWithCompletionHandler:completionHandler];
 }
 
 - (void)start {
-	self.incomingData = nil;
-    self.data = nil;
-    self.response = nil;
-    
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:self.timeoutInterval];
-    for (NSString *field in [self.headers keyEnumerator]) {
-        [request setValue:[self.headers valueForKey:field] forHTTPHeaderField:field];
-    }
-    
-	self.connection = [[[NSURLConnection alloc] initWithRequest:request delegate:self] autorelease];
-}
-
-- (void)startWithCompletionHandler:(EFDownloadCompletionBlock)completionHandler {
-    self.completionHandler = completionHandler;
-    [self start];    
-}
-
-- (void)startWithResponseHandler:(EFDownloadResponseBlock)responseHandler completionHandler:(EFDownloadCompletionBlock)completionHandler {
-    self.responseHandler = responseHandler;
-    self.completionHandler = completionHandler;
-    [self start];
+    [self startWithCompletionHandler:nil];
 }
 
 - (void)cancel {
-	[self.connection cancel];
-	self.connection = nil;
-	self.incomingData = nil;
-    self.data = nil;
-    self.response = nil;
-    self.responseHandler = nil;
-    self.completionHandler = nil;
+    [self.request cancel];
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-	[self.incomingData appendData:data];
-    
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    self.data = self.incomingData;
-    self.incomingData = [NSMutableData dataWithLength:0];
-    
-	if (self.response != nil && [self.delegate respondsToSelector:@selector(download:didReceiveResponse:data:)]) {
-		[self.delegate download:self didReceiveResponse:self.response data:self.data];
-	} 
-    
-    if (self.response != nil && self.responseHandler != nil) {
-        self.responseHandler(self.response, self.data);
-    }
-    
-    self.response = response;
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    self.data = self.incomingData;
-    [self.connection cancel];
-    self.connection = nil;
-    self.incomingData = nil;
-
-	if ([self.delegate respondsToSelector:@selector(download:didReceiveResponse:data:)]) {
-		[self.delegate download:self didReceiveResponse:self.response data:self.data];
-	} 
-
-    if (self.responseHandler != nil) {
-        self.responseHandler(self.response, self.data);
-    }    
-    
-	if (self.targetPath != nil) {
-		// Save the download to target path.
-		if (![self.data writeToFile:self.targetPath atomically:YES]) {
-			NSLog(@"Couldn't write file to %@", self.targetPath); // TODO: graceful error handling, notify delegate.
-		}
-	}
-
-	if ([self.delegate respondsToSelector:@selector(downloadDidFinishLoading:)]) {
-		[self.delegate downloadDidFinishLoading:self];
-	}
-    
-    if (self.completionHandler != nil) {
-        self.completionHandler(self.response, self.data, nil);
-    }
-    
-    self.responseHandler = nil;
-    self.completionHandler = nil;
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    [self.connection cancel];    
-    self.connection = nil;
-    self.incomingData = nil;
-    self.data = nil;
-    self.response = nil;
-	
-	if ([self.delegate respondsToSelector:@selector(download:didFailWithError:)]) {
-		[self.delegate download:self didFailWithError:error];
-	}
-    
-    if (self.completionHandler != nil) {
-        self.completionHandler(nil, nil, error);
-    }
-    
-    self.responseHandler = nil;
-    self.completionHandler = nil;
-}
-
-- (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *) space {
-    if ([[space authenticationMethod] isEqualToString:NSURLAuthenticationMethodServerTrust]) {
-        return self.allowSelfSignedSSLCertificate; // result doesn't matter for properly signed certs
-    } else {
-        return NO;
-    }
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust] &&
-        self.allowSelfSignedSSLCertificate) {
-        [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
-    }
-}
-
-- (void)addPayload:(id)payload forKey:(NSString *)key {
-	[self.payload setObject:payload forKey:key];
-}
-
-- (id)getPayloadForKey:(NSString *)key {
-    return [self.payload objectForKey:key];
-}
-
-- (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field {
-    [self.headers setValue:value forKey:field];
-}
+#pragma mark -
+#pragma mark Clean-up
 
 - (void)dealloc {
-    self.delegate = nil;
-    self.responseHandler = nil;
     self.completionHandler = nil;
-    [self.connection cancel];
-    self.connection = nil;
-    self.incomingData = nil;
-    self.data = nil;
-    self.response = nil;
-    self.payload = nil;
-    self.targetPath = nil;
-    self.url = nil;
-    self.headers = nil;
+    self.resultHandler = nil;
+    self.preProcessHandler = nil;
+    
+    [self.request cancel];
+    self.request = nil;
+    
+    self.targetURL = nil;
+
 	[super dealloc];
 }
 

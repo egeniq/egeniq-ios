@@ -6,18 +6,25 @@
 //  Copyright 2011 Egeniq. All rights reserved.
 //
 
-#import "EFDataSource.h"
-#import "EFDataSource-Protected.h"
+#import "EFEntityDataSource.h"
 
-@implementation EFDataSource
+@implementation EFEntityDataSource
 
 @synthesize baseEntityName=baseEntityName_;
 @synthesize managedObjectContext=managedObjectContext_;
 
-- (id)initWithBaseEntityName:(NSString *)baseEntityName {
++ (id)entityDataSourceWithBaseEntityName:(NSString *)baseEntityName    
+                    managedObjectContext:(NSManagedObjectContext *)managedObjectContext {
+    return [[[self alloc] initWithBaseEntityName:baseEntityName
+                            managedObjectContext:managedObjectContext] autorelease];
+}
+
+- (id)initWithBaseEntityName:(NSString *)baseEntityName 
+        managedObjectContext:(NSManagedObjectContext *)managedObjectContext {
     self = [super init];
     if (self != nil) {
         self.baseEntityName = baseEntityName;
+        self.managedObjectContext = managedObjectContext;
     }
     
     return self;
