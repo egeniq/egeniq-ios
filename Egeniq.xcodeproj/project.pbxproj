@@ -11,9 +11,6 @@
 		922C195513F7250E00C46B8A /* EFDateFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 922C195113F7250E00C46B8A /* EFDateFactory.m */; };
 		922C195613F7250E00C46B8A /* EFDay.h in Headers */ = {isa = PBXBuildFile; fileRef = 922C195213F7250E00C46B8A /* EFDay.h */; };
 		922C195713F7250E00C46B8A /* EFDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 922C195313F7250E00C46B8A /* EFDay.m */; };
-		922C195B13F7B10800C46B8A /* EFAsynchronousDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 922C195913F7B10700C46B8A /* EFAsynchronousDataSource.h */; };
-		922C195C13F7B10900C46B8A /* EFAsynchronousDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 922C195A13F7B10800C46B8A /* EFAsynchronousDataSource.m */; };
-		922C195E13F7B1A300C46B8A /* EFAsynchronousDataSource-Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 922C195D13F7B1A200C46B8A /* EFAsynchronousDataSource-Protected.h */; };
 		923CDD7A123A8CC300247AD5 /* EFDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 923CDD74123A8CC300247AD5 /* EFDownload.h */; };
 		923CDD7B123A8CC300247AD5 /* EFDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDD75123A8CC300247AD5 /* EFDownload.m */; };
 		923CDD7C123A8CC300247AD5 /* EFDownloadQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 923CDD76123A8CC300247AD5 /* EFDownloadQueue.h */; };
@@ -76,9 +73,6 @@
 		922C195113F7250E00C46B8A /* EFDateFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDateFactory.m; sourceTree = "<group>"; };
 		922C195213F7250E00C46B8A /* EFDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDay.h; sourceTree = "<group>"; };
 		922C195313F7250E00C46B8A /* EFDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDay.m; sourceTree = "<group>"; };
-		922C195913F7B10700C46B8A /* EFAsynchronousDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFAsynchronousDataSource.h; sourceTree = "<group>"; };
-		922C195A13F7B10800C46B8A /* EFAsynchronousDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFAsynchronousDataSource.m; sourceTree = "<group>"; };
-		922C195D13F7B1A200C46B8A /* EFAsynchronousDataSource-Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EFAsynchronousDataSource-Protected.h"; sourceTree = "<group>"; };
 		923CDD74123A8CC300247AD5 /* EFDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDownload.h; sourceTree = "<group>"; };
 		923CDD75123A8CC300247AD5 /* EFDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDownload.m; sourceTree = "<group>"; };
 		923CDD76123A8CC300247AD5 /* EFDownloadQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDownloadQueue.h; sourceTree = "<group>"; };
@@ -270,9 +264,6 @@
 				D089C5FC1327D3B8000A54F5 /* EFDataSource.h */,
 				D09051AD1341CE590054CBE8 /* EFDataSource-Protected.h */,
 				D089C5FD1327D3B8000A54F5 /* EFDataSource.m */,
-				922C195913F7B10700C46B8A /* EFAsynchronousDataSource.h */,
-				922C195D13F7B1A200C46B8A /* EFAsynchronousDataSource-Protected.h */,
-				922C195A13F7B10800C46B8A /* EFAsynchronousDataSource.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -364,8 +355,6 @@
 				D06A5BE213A3B4BF00BEEDEF /* UIAlertView+EFBlock.h in Headers */,
 				922C195413F7250E00C46B8A /* EFDateFactory.h in Headers */,
 				922C195613F7250E00C46B8A /* EFDay.h in Headers */,
-				922C195B13F7B10800C46B8A /* EFAsynchronousDataSource.h in Headers */,
-				922C195E13F7B1A300C46B8A /* EFAsynchronousDataSource-Protected.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +434,6 @@
 				D06A5BE313A3B4BF00BEEDEF /* UIAlertView+EFBlock.m in Sources */,
 				922C195513F7250E00C46B8A /* EFDateFactory.m in Sources */,
 				922C195713F7250E00C46B8A /* EFDay.m in Sources */,
-				922C195C13F7B10900C46B8A /* EFAsynchronousDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
