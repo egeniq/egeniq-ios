@@ -14,8 +14,7 @@
 @synthesize month=month_;
 @synthesize year=year_;
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self) {
         // Initialization code here.
@@ -24,8 +23,7 @@
     return self;
 }
 
-+ (id) day
-{    
++ (id)day {    
     NSCalendar *cal = [NSCalendar currentCalendar];
     [cal setTimeZone:[NSTimeZone defaultTimeZone]];
     
@@ -34,8 +32,7 @@
     return [EFDay dayWithDay:components.day month:components.month year:components.year];
 }
 
-+ (id) dayWithDay: (NSInteger) day month: (NSInteger) month year: (NSInteger) year
-{
++ (id)dayWithDay:(NSInteger)day month:(NSInteger)month year:(NSInteger)year {
     EFDay *aDay = [[[EFDay alloc] init] autorelease];
     aDay.day = day;
     aDay.month = month;
@@ -45,13 +42,15 @@
     
 }
 
-- (NSString *) stringRepresentation 
-{
+- (NSString *)stringValue {
     return [NSString stringWithFormat:@"%4d-%2d-%2d", self.year, self.month, self.day];
 }
 
-- (void) dealloc
-{    
+- (NSString *)description {
+    return [self stringValue];
+}
+
+- (void)dealloc {    
     [super dealloc];
 }
 
