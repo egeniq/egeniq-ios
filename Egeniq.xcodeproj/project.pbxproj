@@ -37,6 +37,8 @@
 		D03265C0129D427C004143A3 /* EFToggleSwitchSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B6129D427C004143A3 /* EFToggleSwitchSpecifierCell.m */; };
 		D03265C1129D427C004143A3 /* EFMultiValueSpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D03265B7129D427C004143A3 /* EFMultiValueSpecifierCell.h */; };
 		D03265C2129D427C004143A3 /* EFMultiValueSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */; };
+		D039302713F83BDD004B93FA /* EFRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D039302513F83BDD004B93FA /* EFRequest.h */; };
+		D039302813F83BDD004B93FA /* EFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D039302613F83BDD004B93FA /* EFRequest.m */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
 		D06A5BE213A3B4BF00BEEDEF /* UIAlertView+EFBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = D06A5BE013A3B4BF00BEEDEF /* UIAlertView+EFBlock.h */; };
 		D06A5BE313A3B4BF00BEEDEF /* UIAlertView+EFBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A5BE113A3B4BF00BEEDEF /* UIAlertView+EFBlock.m */; };
@@ -99,6 +101,8 @@
 		D03265B6129D427C004143A3 /* EFToggleSwitchSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFToggleSwitchSpecifierCell.m; sourceTree = "<group>"; };
 		D03265B7129D427C004143A3 /* EFMultiValueSpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFMultiValueSpecifierCell.h; sourceTree = "<group>"; };
 		D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFMultiValueSpecifierCell.m; sourceTree = "<group>"; };
+		D039302513F83BDD004B93FA /* EFRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFRequest.h; sourceTree = "<group>"; };
+		D039302613F83BDD004B93FA /* EFRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFRequest.m; sourceTree = "<group>"; };
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				923CDD77123A8CC300247AD5 /* EFDownloadQueue.m */,
 				D0E5223F1320DC9A00426493 /* EFTokenExchangeClient.h */,
 				D0E522401320DC9A00426493 /* EFTokenExchangeClient.m */,
+				D039302513F83BDD004B93FA /* EFRequest.h */,
+				D039302613F83BDD004B93FA /* EFRequest.m */,
 			);
 			name = Net;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				D06A5BE213A3B4BF00BEEDEF /* UIAlertView+EFBlock.h in Headers */,
 				922C195413F7250E00C46B8A /* EFDateFactory.h in Headers */,
 				922C195613F7250E00C46B8A /* EFDay.h in Headers */,
+				D039302713F83BDD004B93FA /* EFRequest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +441,7 @@
 				D06A5BE313A3B4BF00BEEDEF /* UIAlertView+EFBlock.m in Sources */,
 				922C195513F7250E00C46B8A /* EFDateFactory.m in Sources */,
 				922C195713F7250E00C46B8A /* EFDay.m in Sources */,
+				D039302813F83BDD004B93FA /* EFRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
