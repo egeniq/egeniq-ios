@@ -7,43 +7,40 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EFRequest.h"
+#import "EFQueue.h"
 
-@class EFDownload;
+typedef NSData * (^EFDownloadPreProcessBlock)(NSURLResponse *response, NSData *data, NSError **error);
+typedef void (^EFDownloadResultBlock)(NSURLResponse *response, NSURL *targetURL, NSError *error);
+typedef void (^EFDownloadCompletionBlock)();
 
-typedef void (^EFDownloadResponseBlock)(NSURLResponse *response, NSData *data);
-typedef void (^EFDownloadCompletionBlock)(NSURLResponse *response, NSData *data, NSError *error);
-
-@protocol EFDownloadDelegate <NSObject>
-@optional
-- (void)download:(EFDownload *)download didReceiveResponse:(NSURLResponse *)response data:(NSData *)data;
-- (void)downloadDidFinishLoading:(EFDownload *)download;
-- (void)download:(EFDownload *)download didFailWithError:(NSError *)error;
-@end
-
-@interface EFDownload : NSObject {
+@interface EFDownload : NSObject <EFQueueable> {
 
 }
 
-@property (nonatomic, assign) id<EFDownloadDelegate> delegate;
-@property (nonatomic, assign) NSInteger tag;
-@property (nonatomic, retain) NSURL *url;
-@property (nonatomic, retain) NSString *targetPath;
-@property (nonatomic, assign) NSTimeInterval timeoutInterval;
-@property (nonatomic, assign) BOOL allowSelfSignedSSLCertificate;
+@property (nonatomic, retain) EFRequest *request;
+@property (nonatomic, retain) NSURL *targetURL;
+@property (nonatomic, copy) EFDownloadPreProcessBlock preProcessHandler;
+@property (nonatomic, copy) EFDownloadResultBlock resultHandler;
 
-@property (nonatomic, retain, readonly) NSURLResponse *response;
-@property (nonatomic, retain, readonly) NSData *data;
++ (id)download;
++ (id)downloadWithRequest:(EFRequest *)request 
+                targetURL:(NSURL *)targetURL;
++ (id)downloadWithRequest:(EFRequest *)request 
+                targetURL:(NSURL *)targetURL
+        preProcessHandler:(EFDownloadPreProcessBlock)preProcessHandler
+            resultHandler:(EFDownloadResultBlock)resultHandler;
 
-- (id)initWithURL:(NSURL *)url;
+- (id)init;
+- (id)initWithRequest:(EFRequest *)request 
+            targetURL:(NSURL *)targetURL;
+- (id)initWithRequest:(EFRequest *)request 
+            targetURL:(NSURL *)targetURL
+    preProcessHandler:(EFDownloadPreProcessBlock)preProcessHandler
+        resultHandler:(EFDownloadResultBlock)resultHandler;
 
-- (void)start;
 - (void)startWithCompletionHandler:(EFDownloadCompletionBlock)completionHandler;
-- (void)startWithResponseHandler:(EFDownloadResponseBlock)responseHandler completionHandler:(EFDownloadCompletionBlock)completionHandler;
+- (void)start;
 - (void)cancel;
-
-- (void)addPayload:(id)object forKey:(NSString *)key;
-- (id)getPayloadForKey:(NSString *)key;
-
-- (void)setValue:(NSString *)value forHTTPHeaderField:(NSString *)field;
 
 @end
