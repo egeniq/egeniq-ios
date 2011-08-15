@@ -13,7 +13,7 @@
 @synthesize entityName=entityName_;
 @synthesize managedObjectContext=managedObjectContext_;
 
-+ (id)entityDataSourceWithEntityName:(NSString *)entityName    
++ (id)entityGatewayWithEntityName:(NSString *)entityName    
                 managedObjectContext:(NSManagedObjectContext *)managedObjectContext {
     return [[[self alloc] initWithEntityName:entityName
                         managedObjectContext:managedObjectContext] autorelease];
