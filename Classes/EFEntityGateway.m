@@ -1,23 +1,30 @@
 //
-//  ECCDataSource.m
+//  EFEntityGateway.m
 //  Egeniq
 //
 //  Created by Peter Verhage on 09-03-11.
 //  Copyright 2011 Egeniq. All rights reserved.
 //
 
-#import "EFDataSource.h"
-#import "EFDataSource-Protected.h"
+#import "EFEntityGateway.h"
 
-@implementation EFDataSource
+@implementation EFEntityGateway
 
-@synthesize baseEntityName=baseEntityName_;
+@synthesize entityName=entityName_;
 @synthesize managedObjectContext=managedObjectContext_;
 
-- (id)initWithBaseEntityName:(NSString *)baseEntityName {
++ (id)entityDataSourceWithEntityName:(NSString *)entityName    
+                managedObjectContext:(NSManagedObjectContext *)managedObjectContext {
+    return [[[self alloc] initWithEntityName:entityName
+                        managedObjectContext:managedObjectContext] autorelease];
+}
+
+- (id)initWithEntityName:(NSString *)entityName 
+        managedObjectContext:(NSManagedObjectContext *)managedObjectContext {
     self = [super init];
     if (self != nil) {
-        self.baseEntityName = baseEntityName;
+        self.entityName = entityName;
+        self.managedObjectContext = managedObjectContext;
     }
     
     return self;
@@ -38,7 +45,7 @@
 }
 
 - (NSManagedObject *)insertNewObject {
-    return [self insertNewObjectForEntityForName:self.baseEntityName];
+    return [self insertNewObjectForEntityForName:self.entityName];
 }
 
 
@@ -55,7 +62,7 @@
                   discriminatorAttributeName:(NSString *)discriminatorAttributeName {
 	NSMutableDictionary *mutableData = [NSMutableDictionary dictionaryWithDictionary:data];
 	
-    NSString *entityName = self.baseEntityName;
+    NSString *entityName = self.entityName;
 	if (discriminatorAttributeName != nil && [mutableData objectForKey:discriminatorAttributeName] != nil) {
 		entityName = [mutableData objectForKey:discriminatorAttributeName];
 	}
@@ -106,7 +113,7 @@
 - (NSFetchRequest *)fetchRequestWithPredicate:(NSPredicate *)predicate 
                               sortDescriptors:(NSArray *)sortDescriptors {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:self.baseEntityName inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:self.entityName inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     [fetchRequest setFetchBatchSize:20];
     if (predicate != nil) {
@@ -178,7 +185,7 @@
 
 - (void)dealloc {
     self.managedObjectContext = nil;
-    self.baseEntityName = nil;
+    self.entityName = nil;
     [super dealloc];
 }
 

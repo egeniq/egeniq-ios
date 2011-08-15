@@ -1,20 +1,26 @@
 //
-//  EFDataSource-Protected.h
+//  EFEntityGateway.h
 //  Egeniq
 //
 //  Created by Peter Verhage on 09-03-11.
 //  Copyright 2011 Egeniq. All rights reserved.
 //
 
-#import "EFDataSource.h"
+#import <CoreData/CoreData.h>
 
-@interface EFDataSource () 
+@interface EFEntityGateway : NSObject {
+    
+}
 
-@property (nonatomic, copy) NSString *baseEntityName;
+@property (nonatomic, copy) NSString *entityName;
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
-- (id)initWithBaseEntityName:(NSString *)baseEntityName;
++ (id)entityDataSourceWithEntityName:(NSString *)entityName    
+                managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
-- (NSManagedObject *)insertNewObjectForEntityForName:(NSString *)entityName;
+- (id)initWithEntityName:(NSString *)entityName
+    managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+
 - (NSManagedObject *)insertNewObject;
 - (NSManagedObject *)insertNewObjectWithData:(NSDictionary *)data;
 - (NSManagedObject *)insertNewObjectWithData:(NSDictionary *)data 
@@ -48,5 +54,9 @@
                                                    sectionNameKeyPath:(NSString *)sectionNameKeyPath
                                                             cacheName:(NSString *)cacheName;
 #endif
+
+
+- (void)usingManagedObjectContext:(NSManagedObjectContext *)managedObjectContext 
+                     executeBlock:(void(^)())executeBlock;
 
 @end
