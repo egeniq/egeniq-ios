@@ -59,7 +59,7 @@
         self.activeCount--;
         
         if ([self.delegate respondsToSelector:@selector(queue:didFinishQueueable:)]) {
-            [self.delegate queue:self didStartQueueable:queueable];
+            [self.delegate queue:self didFinishQueueable:queueable];
         }
         
         [queueable release];                    

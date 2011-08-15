@@ -1,5 +1,5 @@
 //
-//  ECCDataSource.h
+//  EFEntityGateway.h
 //  Egeniq
 //
 //  Created by Peter Verhage on 09-03-11.
@@ -8,18 +8,18 @@
 
 #import <CoreData/CoreData.h>
 
-@interface EFEntityDataSource : NSObject {
+@interface EFEntityGateway : NSObject {
     
 }
 
-@property (nonatomic, copy) NSString *baseEntityName;
+@property (nonatomic, copy) NSString *entityName;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
-+ (id)entityDataSourceWithBaseEntityName:(NSString *)baseEntityName    
-                    managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
++ (id)entityDataSourceWithEntityName:(NSString *)entityName    
+                managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
-- (id)initWithBaseEntityName:(NSString *)baseEntityName
-        managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+- (id)initWithEntityName:(NSString *)entityName
+    managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 - (NSManagedObject *)insertNewObject;
 - (NSManagedObject *)insertNewObjectWithData:(NSDictionary *)data;
@@ -56,10 +56,7 @@
 #endif
 
 
-
-#ifdef __BLOCKS__
 - (void)usingManagedObjectContext:(NSManagedObjectContext *)managedObjectContext 
                      executeBlock:(void(^)())executeBlock;
-#endif
 
 @end

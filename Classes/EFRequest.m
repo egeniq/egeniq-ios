@@ -1,9 +1,9 @@
 //
-//  Downloader.m
-//  iPortfolio
+//  EFRequest.m
+//  Egeniq
 //
-//  Created by Ivo Jansch on 7/31/10.
-//  Copyright (c) 2010 __MyCompanyName__. All rights reserved.
+//  Created by Peter Verhage on 14-08-11.
+//  Copyright 2011 Egeniq. All rights reserved.
 //
 
 #import "EFRequest.h"
@@ -268,16 +268,16 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
     self.resultHandler = nil;
     self.preProcessHandler = nil;
     
-	[self.connection cancel];
-	self.connection = nil;
+    [self.connection cancel];
+    self.connection = nil;
     
-	self.incomingData = nil;
+    self.incomingData = nil;
     self.incomingResponse = nil;
     
     self.request = nil;
     self.URL = nil;
 
-	[super dealloc];
+    [super dealloc];
 }
 
 @end

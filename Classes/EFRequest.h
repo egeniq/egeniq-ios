@@ -18,7 +18,29 @@ typedef void (^EFRequestCompletionBlock)();
 }
 
 @property (nonatomic, retain) NSURL *URL;
+
+/**
+ * The pre-process handler can be implemented to process/convert data
+ * in a background thread and make its result available for the result
+ * handler. If no pre-process handler has been set, the result handler
+ * will simply receive the raw response data. With a pre-process handler
+ * set the result handler will receive the pre-processed value. If
+ * during the pre-processing an error occurs the pre-process handler
+ * should set the error out parameter accordingly and should return nil.
+ *
+ * The pre-process handler is executed on a background thread.
+ */
 @property (nonatomic, copy) EFRequestPreProcessBlock preProcessHandler;
+
+/**
+ * The result handler will get access to the (possibly) pre-processed
+ * response result data. It can take action accordingly. The result
+ * handler will be called multiple times for multi-part request. The
+ * handler can check the status of the requests isFinished property to
+ * check if subsequent responses might follow. 
+ *
+ * The result handler is executed on the main thread.
+ */
 @property (nonatomic, copy) EFRequestResultBlock resultHandler;
 
 @property (nonatomic, assign) NSTimeInterval timeoutInterval;
