@@ -11,14 +11,14 @@
 @interface EFServiceContainer : NSObject
 
 /**
- Retrieve a service with a particular key.
- Returns nil if no service has been registered for this key.
+ * Retrieve a service with a particular key.
+ * Returns nil if no service has been registered for this key.
  */
-- (id) serviceForKey:(NSUInteger)serviceKey;
+- (id)serviceForKey:(NSUInteger)serviceKey;
 
 /**
- Register a service with a particular key.
+ * Register a service with a particular key.
  */
-- (void) setService:(id)service forKey:(NSUInteger)serviceKey;
+- (void)setService:(id)service forKey:(NSUInteger)serviceKey;
 
 @end

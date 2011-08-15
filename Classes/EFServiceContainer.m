@@ -19,24 +19,22 @@
 
 @synthesize services=services_;
 
-- (id) serviceForKey:(NSUInteger)serviceKey {
-    return [self.services objectForKey:[NSNumber numberWithInt:serviceKey]];
-}
-
-- (void) setService:(id)service forKey:(NSUInteger)serviceKey {
-    [self.services setObject:service forKey:[NSNumber numberWithInt:serviceKey]];
-}
-
 - (id)init {
     self = [super init];
     if (self) {
         // Initialization code here
-        NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithCapacity:10];
-        self.services = dictionary;
-        [dictionary release];
+        self.services = [NSMutableDictionary dictionaryWithCapacity:10];
     }
     
     return self;
+}
+
+- (id)serviceForKey:(NSUInteger)serviceKey {
+    return [self.services objectForKey:[NSNumber numberWithInt:serviceKey]];
+}
+
+- (void)setService:(id)service forKey:(NSUInteger)serviceKey {
+    [self.services setObject:service forKey:[NSNumber numberWithInt:serviceKey]];
 }
 
 - (void)dealloc {
