@@ -15,8 +15,8 @@
 @property (nonatomic, copy) NSString *entityName;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
-+ (id)entityDataSourceWithEntityName:(NSString *)entityName    
-                managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
++ (id)entityGatewayWithEntityName:(NSString *)entityName    
+             managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 - (id)initWithEntityName:(NSString *)entityName
     managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
