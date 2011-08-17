@@ -8,10 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "EFQueue.h"
+#import "EFError.h"
 
 typedef id (^EFRequestPreProcessBlock)(NSURLResponse *response, NSData *data, NSError **error);
 typedef void (^EFRequestResultBlock)(NSURLResponse *response, id result, NSError *error);
 typedef void (^EFRequestCompletionBlock)();
+
+// Errorcode definition. Note that EFRequest does not set these error codes, but
+// result and completion blocks can use them to communicate certain error conditions
+// in standard ways.
+typedef enum {
+    EFRequestUnknownError = EFRequestErrorMinimum,
+    EFRequestUnreachabelError
+} EFRequestErrorCodes;
 
 @interface EFRequest : NSObject <EFQueueable> {
     
