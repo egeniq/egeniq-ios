@@ -30,6 +30,7 @@
 
 - (NSUInteger)countWithPredicate:(NSPredicate *)predicate;
 
+- (void)deleteObject:(NSManagedObject *)object;
 - (void)deleteObjectsWithPredicate:(NSPredicate *)predicate;
 
 - (NSFetchRequest *)fetchRequestWithPredicate:(NSPredicate *)predicate 
