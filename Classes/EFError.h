@@ -30,4 +30,4 @@ typedef enum {
     
     EFErrorMaximum = INT_MAX
     
-} EFErrorCode;
+} EFError;

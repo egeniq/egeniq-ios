@@ -20,7 +20,7 @@ typedef void (^EFRequestCompletionBlock)();
 typedef enum {
     EFRequestUnknownError = EFRequestErrorMinimum,
     EFRequestUnreachableError
-} EFRequestErrorCodes;
+} EFRequestError;
 
 @interface EFRequest : NSObject <EFQueueable> {
     
