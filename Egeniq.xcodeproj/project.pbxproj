@@ -20,6 +20,7 @@
 		923CDDA8123A8F0A00247AD5 /* EFReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 923CDDA6123A8F0A00247AD5 /* EFReachability.h */; };
 		923CDDA9123A8F0A00247AD5 /* EFReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDDA7123A8F0A00247AD5 /* EFReachability.m */; };
 		923CDE2B123A963900247AD5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CDE2A123A963800247AD5 /* SystemConfiguration.framework */; };
+		92A300B113FBCAAD001BC6FA /* EFError.h in Headers */ = {isa = PBXBuildFile; fileRef = 92A300B013FBCAAD001BC6FA /* EFError.h */; };
 		92BFFA9713F952E2002D37A4 /* EFServiceContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 92BFFA9513F952E2002D37A4 /* EFServiceContainer.h */; };
 		92BFFA9813F952E2002D37A4 /* EFServiceContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BFFA9613F952E2002D37A4 /* EFServiceContainer.m */; };
 		D011F501120C827700A07E28 /* EFImageViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFImageViewDataSource.h */; };
@@ -85,6 +86,7 @@
 		923CDDA6123A8F0A00247AD5 /* EFReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFReachability.h; sourceTree = "<group>"; };
 		923CDDA7123A8F0A00247AD5 /* EFReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFReachability.m; sourceTree = "<group>"; };
 		923CDE2A123A963800247AD5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		92A300B013FBCAAD001BC6FA /* EFError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFError.h; sourceTree = "<group>"; };
 		92BFFA9513F952E2002D37A4 /* EFServiceContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFServiceContainer.h; sourceTree = "<group>"; };
 		92BFFA9613F952E2002D37A4 /* EFServiceContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFServiceContainer.m; sourceTree = "<group>"; };
 		D011F500120C827700A07E28 /* EFImageViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageViewDataSource.h; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		D011201013F8681A009B33E1 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				92A300B013FBCAAD001BC6FA /* EFError.h */,
 				923CDD76123A8CC300247AD5 /* EFQueue.h */,
 				923CDD77123A8CC300247AD5 /* EFQueue.m */,
 			);
@@ -381,6 +384,7 @@
 				922C195613F7250E00C46B8A /* EFDay.h in Headers */,
 				D039302713F83BDD004B93FA /* EFRequest.h in Headers */,
 				92BFFA9713F952E2002D37A4 /* EFServiceContainer.h in Headers */,
+				92A300B113FBCAAD001BC6FA /* EFError.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

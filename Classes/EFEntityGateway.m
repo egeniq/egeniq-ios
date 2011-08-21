@@ -98,6 +98,10 @@
 	return count == NSNotFound ? 0 : count;    
 }
 
+- (void)deleteObject:(NSManagedObject *)object {
+    [self.managedObjectContext deleteObject:object];
+}
+
 - (void)deleteObjectsWithPredicate:(NSPredicate *)predicate {
 	NSFetchRequest *request = [self fetchRequestWithPredicate:predicate sortDescriptors:nil];
     [request setIncludesPropertyValues:NO];
@@ -106,7 +110,7 @@
     NSArray *objects = [managedObjectContext_ executeFetchRequest:request error:&error]; 
     
     for (NSManagedObject *object in objects) {
-        [self.managedObjectContext deleteObject:object];
+        [self deleteObject:object];
     }    
 }
 
