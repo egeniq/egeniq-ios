@@ -23,6 +23,14 @@
     return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    EFDay *copy = [[EFDay alloc] init];
+    copy.day = self.day;
+    copy.month = self.month;
+    copy.year = self.year;
+    return copy;
+}
+
 + (id)day {    
     NSCalendar *cal = [NSCalendar currentCalendar];
     [cal setTimeZone:[NSTimeZone defaultTimeZone]];
