@@ -24,9 +24,15 @@ typedef enum {
     
     EFErrorMinimum=0,
     
+    // Generic errors
+    EFUnknownError=0,
+    EFInvalidParametersError=1,
+     
     EFRequestErrorMinimum=100,
-    EFRequestErrorMaximum=200,
+    EFRequestErrorMaximum=199,
     
+    EFKeyChainErrorMinimum=200,
+    EFKeyChainErrorMaximum=299,
     
     EFErrorMaximum = INT_MAX
     
