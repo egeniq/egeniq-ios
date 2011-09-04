@@ -52,6 +52,9 @@ typedef enum {
  */
 @property (nonatomic, copy) EFRequestResultBlock resultHandler;
 
+@property (nonatomic, retain) NSMutableURLRequest *request;
+
+
 @property (nonatomic, assign) NSTimeInterval timeoutInterval;
 @property (nonatomic, assign) BOOL allowSelfSignedSSLCertificate;
  

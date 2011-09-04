@@ -29,7 +29,7 @@
                                                         
 - (NSString *)passwordForUserId:(NSString *)userId 
                     serviceName:(NSString *)serviceName 
-                          error:(NSError **) error {
+                          error:(NSError **)error {
     
     if (!userId || !serviceName) {
         *error = [NSError errorWithDomain:EFErrorDomain code:EFInvalidParametersError userInfo: nil];

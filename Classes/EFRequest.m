@@ -12,8 +12,6 @@
 
 @property (nonatomic, assign, getter=isLoading) BOOL isLoading;
 
-@property (nonatomic, retain) NSMutableURLRequest *request;
-
 @property (nonatomic, copy) EFRequestCompletionBlock completionHandler;
 @property (nonatomic, retain) NSURLConnection *connection;
 @property (nonatomic, retain) NSURLResponse *incomingResponse;
