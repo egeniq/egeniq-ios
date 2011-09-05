@@ -22,5 +22,6 @@
 
 - (id)initWithName:(NSString *)name;
 - (UIViewController *)detailsViewController;
+- (BOOL)shouldLoadValue;
 
 @end
