@@ -52,7 +52,12 @@ typedef enum {
  */
 @property (nonatomic, copy) EFRequestResultBlock resultHandler;
 
-@property (nonatomic, retain) NSMutableURLRequest *request;
+/**
+ * The request object. It should generally not be necessary to work
+ * with this property directly, but in some scenario's you will want
+ * to add custom headers or otherwise manipulate the request. 
+ */
+@property (nonatomic, retain, readonly) NSMutableURLRequest *request;
 
 
 @property (nonatomic, assign) NSTimeInterval timeoutInterval;

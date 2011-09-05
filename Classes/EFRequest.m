@@ -14,6 +14,7 @@
 
 @property (nonatomic, copy) EFRequestCompletionBlock completionHandler;
 @property (nonatomic, retain) NSURLConnection *connection;
+@property (nonatomic, retain, readwrite) NSMutableURLRequest *request;
 @property (nonatomic, retain) NSURLResponse *incomingResponse;
 @property (nonatomic, retain) NSMutableData *incomingData;
 
