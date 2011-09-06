@@ -7,7 +7,6 @@
 //
 
 #import "EFSettingsViewModel.h"
-#import "EFDummySpecifierCell.h"
 
 @implementation EFSettingsViewModel
 
@@ -100,7 +99,7 @@
 - (void)loadValues:(NSDictionary *)values {
     for (NSString *fieldName in [fields_ keyEnumerator]) {
         EFSpecifierCell *field = [self fieldWithName:fieldName];
-        if (![field isKindOfClass:[EFDummySpecifierCell class]] && [[values allKeys] containsObject:fieldName]) {
+        if ([field shouldLoadValue] && [[values allKeys] containsObject:fieldName]) {
             id value = [values valueForKey:fieldName];
             field.value = value != [NSNull null] ? value : nil;
         }
@@ -111,7 +110,7 @@
     NSMutableDictionary *values = [NSMutableDictionary dictionaryWithCapacity:[fields_ count]];
     for (NSString *fieldName in [fields_ keyEnumerator]) {
         EFSpecifierCell *field = [self fieldWithName:fieldName];
-        if (![field isKindOfClass:[EFDummySpecifierCell class]]) {
+        if ([field shouldLoadValue]) {
             id value = field.value == nil ? [NSNull null] : field.value;
             [values setValue:value forKey:fieldName];
         }
