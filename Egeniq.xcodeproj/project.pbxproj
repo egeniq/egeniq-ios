@@ -23,6 +23,9 @@
 		923CDDA8123A8F0A00247AD5 /* EFReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 923CDDA6123A8F0A00247AD5 /* EFReachability.h */; };
 		923CDDA9123A8F0A00247AD5 /* EFReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDDA7123A8F0A00247AD5 /* EFReachability.m */; };
 		923CDE2B123A963900247AD5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CDE2A123A963800247AD5 /* SystemConfiguration.framework */; };
+		925AA54D141284D200F63093 /* EFError.m in Sources */ = {isa = PBXBuildFile; fileRef = 925AA54C141284D200F63093 /* EFError.m */; };
+		925FBFA11415714B00C45B3B /* UIViewController+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 925FBF9F1415714B00C45B3B /* UIViewController+Utils.h */; };
+		925FBFA21415714B00C45B3B /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 925FBFA01415714B00C45B3B /* UIViewController+Utils.m */; };
 		92A300B113FBCAAD001BC6FA /* EFError.h in Headers */ = {isa = PBXBuildFile; fileRef = 92A300B013FBCAAD001BC6FA /* EFError.h */; };
 		92BFFA9713F952E2002D37A4 /* EFServiceContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 92BFFA9513F952E2002D37A4 /* EFServiceContainer.h */; };
 		92BFFA9813F952E2002D37A4 /* EFServiceContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BFFA9613F952E2002D37A4 /* EFServiceContainer.m */; };
@@ -100,6 +103,9 @@
 		923CDDA6123A8F0A00247AD5 /* EFReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFReachability.h; sourceTree = "<group>"; };
 		923CDDA7123A8F0A00247AD5 /* EFReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFReachability.m; sourceTree = "<group>"; };
 		923CDE2A123A963800247AD5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		925AA54C141284D200F63093 /* EFError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFError.m; sourceTree = "<group>"; };
+		925FBF9F1415714B00C45B3B /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
+		925FBFA01415714B00C45B3B /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
 		92A300B013FBCAAD001BC6FA /* EFError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFError.h; sourceTree = "<group>"; };
 		92BFFA9513F952E2002D37A4 /* EFServiceContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFServiceContainer.h; sourceTree = "<group>"; };
 		92BFFA9613F952E2002D37A4 /* EFServiceContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFServiceContainer.m; sourceTree = "<group>"; };
@@ -240,6 +246,7 @@
 				92A300B013FBCAAD001BC6FA /* EFError.h */,
 				923CDD76123A8CC300247AD5 /* EFQueue.h */,
 				923CDD77123A8CC300247AD5 /* EFQueue.m */,
+				925AA54C141284D200F63093 /* EFError.m */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -362,6 +369,8 @@
 				D03265AC129D4245004143A3 /* Settings */,
 				923CDD78123A8CC300247AD5 /* EFNibViewController.h */,
 				923CDD79123A8CC300247AD5 /* EFNibViewController.m */,
+				925FBF9F1415714B00C45B3B /* UIViewController+Utils.h */,
+				925FBFA01415714B00C45B3B /* UIViewController+Utils.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -448,6 +457,7 @@
 				C75D582D140510C1007E7B17 /* UIImageView+URL.h in Headers */,
 				C786497E14205FC300DB0DB7 /* EFRichTextView.h in Headers */,
 				C786498014205FC300DB0DB7 /* NSMutableAttributedString+Convenience.h in Headers */,
+				925FBFA11415714B00C45B3B /* UIViewController+Utils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,10 +540,12 @@
 				D039302813F83BDD004B93FA /* EFRequest.m in Sources */,
 				92BFFA9813F952E2002D37A4 /* EFServiceContainer.m in Sources */,
 				92256E4D140255930070F2F8 /* EFKeyChain.m in Sources */,
+				925AA54D141284D200F63093 /* EFError.m in Sources */,
 				C75D582C140510C1007E7B17 /* EFImageCache.m in Sources */,
 				C75D582E140510C1007E7B17 /* UIImageView+URL.m in Sources */,
 				C786497F14205FC300DB0DB7 /* EFRichTextView.m in Sources */,
 				C786498114205FC300DB0DB7 /* NSMutableAttributedString+Convenience.m in Sources */,
+				925FBFA21415714B00C45B3B /* UIViewController+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

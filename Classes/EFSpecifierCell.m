@@ -51,6 +51,10 @@
     self.textLabel.font = font;
 }
 
+- (BOOL)shouldLoadValue {
+    return YES;
+}
+
 - (id)value {
     return nil;
 }
