@@ -33,6 +33,10 @@
 		C75D582C140510C1007E7B17 /* EFImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C75D5828140510C1007E7B17 /* EFImageCache.m */; };
 		C75D582D140510C1007E7B17 /* UIImageView+URL.h in Headers */ = {isa = PBXBuildFile; fileRef = C75D5829140510C1007E7B17 /* UIImageView+URL.h */; };
 		C75D582E140510C1007E7B17 /* UIImageView+URL.m in Sources */ = {isa = PBXBuildFile; fileRef = C75D582A140510C1007E7B17 /* UIImageView+URL.m */; };
+		C786497E14205FC300DB0DB7 /* EFRichTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = C786497A14205FC300DB0DB7 /* EFRichTextView.h */; };
+		C786497F14205FC300DB0DB7 /* EFRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C786497B14205FC300DB0DB7 /* EFRichTextView.m */; };
+		C786498014205FC300DB0DB7 /* NSMutableAttributedString+Convenience.h in Headers */ = {isa = PBXBuildFile; fileRef = C786497C14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.h */; };
+		C786498114205FC300DB0DB7 /* NSMutableAttributedString+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = C786497D14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.m */; };
 		D011F501120C827700A07E28 /* EFImageViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFImageViewDataSource.h */; };
 		D011F503120C839000A07E28 /* EFImageViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFImageViewDelegate.h */; };
 		D011F505120C85E400A07E28 /* EFImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F504120C85E400A07E28 /* EFImage.h */; };
@@ -109,6 +113,10 @@
 		C75D5828140510C1007E7B17 /* EFImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageCache.m; sourceTree = "<group>"; };
 		C75D5829140510C1007E7B17 /* UIImageView+URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+URL.h"; sourceTree = "<group>"; };
 		C75D582A140510C1007E7B17 /* UIImageView+URL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+URL.m"; sourceTree = "<group>"; };
+		C786497A14205FC300DB0DB7 /* EFRichTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFRichTextView.h; sourceTree = "<group>"; };
+		C786497B14205FC300DB0DB7 /* EFRichTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFRichTextView.m; sourceTree = "<group>"; };
+		C786497C14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Convenience.h"; sourceTree = "<group>"; };
+		C786497D14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Convenience.m"; sourceTree = "<group>"; };
 		D011F500120C827700A07E28 /* EFImageViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageViewDataSource.h; sourceTree = "<group>"; };
 		D011F502120C839000A07E28 /* EFImageViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageViewDelegate.h; sourceTree = "<group>"; };
 		D011F504120C85E400A07E28 /* EFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImage.h; sourceTree = "<group>"; };
@@ -221,6 +229,17 @@
 			name = "Image Cache";
 			sourceTree = "<group>";
 		};
+		C786497814205FB600DB0DB7 /* Rich Text */ = {
+			isa = PBXGroup;
+			children = (
+				C786497A14205FC300DB0DB7 /* EFRichTextView.h */,
+				C786497B14205FC300DB0DB7 /* EFRichTextView.m */,
+				C786497C14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.h */,
+				C786497D14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.m */,
+			);
+			name = "Rich Text";
+			sourceTree = "<group>";
+		};
 		D011201013F8681A009B33E1 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +276,7 @@
 		D067DCE911FB130E0047EFAA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C786497814205FB600DB0DB7 /* Rich Text */,
 				C75D5830140510C6007E7B17 /* Image Cache */,
 				92256E481402556F0070F2F8 /* Security */,
 				92BFFA9313F952B8002D37A4 /* DI */,
@@ -435,6 +455,8 @@
 				92256E4C140255930070F2F8 /* EFKeyChain.h in Headers */,
 				C75D582B140510C1007E7B17 /* EFImageCache.h in Headers */,
 				C75D582D140510C1007E7B17 /* UIImageView+URL.h in Headers */,
+				C786497E14205FC300DB0DB7 /* EFRichTextView.h in Headers */,
+				C786498014205FC300DB0DB7 /* NSMutableAttributedString+Convenience.h in Headers */,
 				925FBFA11415714B00C45B3B /* UIViewController+Utils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +543,8 @@
 				925AA54D141284D200F63093 /* EFError.m in Sources */,
 				C75D582C140510C1007E7B17 /* EFImageCache.m in Sources */,
 				C75D582E140510C1007E7B17 /* UIImageView+URL.m in Sources */,
+				C786497F14205FC300DB0DB7 /* EFRichTextView.m in Sources */,
+				C786498114205FC300DB0DB7 /* NSMutableAttributedString+Convenience.m in Sources */,
 				925FBFA21415714B00C45B3B /* UIViewController+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
