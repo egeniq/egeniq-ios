@@ -141,6 +141,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        self.textView.backgroundColor = [UIColor whiteColor];
         [self awakeFromNib];
     }
     return self;
@@ -149,7 +150,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.textView = [[[EFRichTextInternalView alloc] initWithFrame:self.bounds] autorelease];
-    self.textView.backgroundColor = [UIColor whiteColor];
+    self.textView.backgroundColor = self.backgroundColor;
     [self addSubview:self.textView];
 }
 
