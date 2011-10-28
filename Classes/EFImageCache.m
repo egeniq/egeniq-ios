@@ -32,7 +32,6 @@
 
 @interface EFImageCache ()
 
-@property (retain) NSURLCache *imageURLCache;
 @property (retain) NSMutableDictionary *imagesLoading;
 @property (retain) NSMutableDictionary *downloadPerImageView;
 
@@ -43,6 +42,7 @@
 @synthesize imageURLCache = imageURLCache_;
 @synthesize imagesLoading = imagesLoading_;
 @synthesize downloadPerImageView = downloadPerImageView_;
+@synthesize shouldCheckForLocalImages=shouldCheckForLocalImages_;
 
 + (id)defaultCache  {
     static dispatch_once_t pred;
@@ -58,7 +58,7 @@
         // Create cache with 1 MB memory and 10 MB disk capacity
         // Using SDURLCache subclass which enables caching to disk
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
-        NSString *diskCachePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"KVImageCache"];
+        NSString *diskCachePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"EFImageCache"];
         
         NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:1 * 1024 * 1024 diskCapacity:10 * 1024 * 1024 diskPath:diskCachePath];
         self.imageURLCache = cache;
@@ -66,6 +66,7 @@
         
         self.imagesLoading = [NSMutableDictionary dictionary];
         self.downloadPerImageView = [NSMutableDictionary dictionary];
+        self.shouldCheckForLocalImages = NO;
     }
     return self;
 }
@@ -91,10 +92,13 @@
         return nil;
     }
 
-    UIImage *localImage = [UIImage imageNamed:[imageURL absoluteString]];
-    if (localImage) {
-        handler(localImage);
-        return nil;
+    // Check if a local image is referenced
+    if (self.shouldCheckForLocalImages) {
+        UIImage *localImage = [UIImage imageNamed:[imageURL absoluteString]];
+        if (localImage) {
+            handler(localImage);
+            return nil;
+        }
     }
 
     NSURLRequest *cacheRequest = [NSURLRequest requestWithURL:cacheURL];
