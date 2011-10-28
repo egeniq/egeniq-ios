@@ -39,6 +39,12 @@
 
 + (id)defaultCache;
 
+// Allows referring to images included in the app's bundle (passing the absolute URL to the -[UIImage imageNamed:] method). Note however that enabling this takes a performance hit. Defaults to NO.
+@property (assign) BOOL shouldCheckForLocalImages;
+
+// The cache that holds the actual data.
+@property (retain) NSURLCache *imageURLCache;
+
 // Checks if the URL points to a local image, otherwise asynchronously downloads the image if needed
 // Call -cancel on the returned KVDownload instance if you need to cancel the download
 - (id)loadImageAtURL:(NSURL *)imageURL withHandler:(void(^)(UIImage *image))handler;
