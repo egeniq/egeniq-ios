@@ -60,8 +60,6 @@
 		D039302713F83BDD004B93FA /* EFRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D039302513F83BDD004B93FA /* EFRequest.h */; };
 		D039302813F83BDD004B93FA /* EFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D039302613F83BDD004B93FA /* EFRequest.m */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
-		D06A5BE213A3B4BF00BEEDEF /* UIAlertView+EFBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = D06A5BE013A3B4BF00BEEDEF /* UIAlertView+EFBlock.h */; };
-		D06A5BE313A3B4BF00BEEDEF /* UIAlertView+EFBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = D06A5BE113A3B4BF00BEEDEF /* UIAlertView+EFBlock.m */; };
 		D06F7B05138537A1003B5A31 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B04138537A1003B5A31 /* QuartzCore.framework */; };
 		D06F7B08138537B1003B5A31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B07138537B1003B5A31 /* UIKit.framework */; };
 		D073A90813299739004FA0AA /* EFDummySpecifierCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D073A90613299739004FA0AA /* EFDummySpecifierCell.h */; };
@@ -146,8 +144,6 @@
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
-		D06A5BE013A3B4BF00BEEDEF /* UIAlertView+EFBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+EFBlock.h"; sourceTree = "<group>"; };
-		D06A5BE113A3B4BF00BEEDEF /* UIAlertView+EFBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+EFBlock.m"; sourceTree = "<group>"; };
 		D06F7B04138537A1003B5A31 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D06F7B07138537B1003B5A31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D073A90613299739004FA0AA /* EFDummySpecifierCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDummySpecifierCell.h; sourceTree = "<group>"; };
@@ -333,8 +329,6 @@
 			children = (
 				9F25DD16145730C1000E7B48 /* EFAlertView.h */,
 				9F25DD17145730C1000E7B48 /* EFAlertView.m */,
-				D06A5BE013A3B4BF00BEEDEF /* UIAlertView+EFBlock.h */,
-				D06A5BE113A3B4BF00BEEDEF /* UIAlertView+EFBlock.m */,
 			);
 			name = Alert;
 			sourceTree = "<group>";
@@ -458,7 +452,6 @@
 				D02372DB132925B500B77A44 /* EFSettingsViewModel.h in Headers */,
 				D073A90813299739004FA0AA /* EFDummySpecifierCell.h in Headers */,
 				D09C2F98132B821D00D3B57F /* EFNumberFieldSpecifierCell.h in Headers */,
-				D06A5BE213A3B4BF00BEEDEF /* UIAlertView+EFBlock.h in Headers */,
 				922C195413F7250E00C46B8A /* EFDateFactory.h in Headers */,
 				922C195613F7250E00C46B8A /* EFDay.h in Headers */,
 				D039302713F83BDD004B93FA /* EFRequest.h in Headers */,
@@ -547,7 +540,6 @@
 				D02372DC132925B500B77A44 /* EFSettingsViewModel.m in Sources */,
 				D073A90913299739004FA0AA /* EFDummySpecifierCell.m in Sources */,
 				D09C2F99132B821D00D3B57F /* EFNumberFieldSpecifierCell.m in Sources */,
-				D06A5BE313A3B4BF00BEEDEF /* UIAlertView+EFBlock.m in Sources */,
 				922C195513F7250E00C46B8A /* EFDateFactory.m in Sources */,
 				922C195713F7250E00C46B8A /* EFDay.m in Sources */,
 				D039302813F83BDD004B93FA /* EFRequest.m in Sources */,
