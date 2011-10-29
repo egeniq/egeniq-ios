@@ -32,10 +32,10 @@
 }
 
 + (id)day {    
-    return [EFDay dayFromDate:[NSDate date]];
+    return [EFDay dayWithDate:[NSDate date]];
 }
 
-+ (id)dayFromDate:(NSDate *)date {
++ (id)dayWithDate:(NSDate *)date {
     NSCalendar *cal = [NSCalendar currentCalendar];
     [cal setTimeZone:[NSTimeZone defaultTimeZone]];
     

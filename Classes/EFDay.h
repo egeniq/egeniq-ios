@@ -18,7 +18,7 @@
 // Create an EFDay matching today's date (according to the default timezone)
 + (id)day;
 + (id)dayWithDay:(NSInteger)day month:(NSInteger)month year:(NSInteger)year;
-+ (id)dayFromDate:(NSDate *)date;
++ (id)dayWithDate:(NSDate *)date;
 
 // Return a yyyy-mm-dd string
 - (NSString *)stringValue;
