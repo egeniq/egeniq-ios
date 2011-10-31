@@ -32,12 +32,16 @@
 }
 
 + (id)day {    
+    return [EFDay dayWithDate:[NSDate date]];
+}
+
++ (id)dayWithDate:(NSDate *)date {
     NSCalendar *cal = [NSCalendar currentCalendar];
     [cal setTimeZone:[NSTimeZone defaultTimeZone]];
     
-    NSDateComponents *components = [cal components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:[NSDate date]];
+    NSDateComponents *components = [cal components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:date];
     
-    return [EFDay dayWithDay:components.day month:components.month year:components.year];
+    return [EFDay dayWithDay:components.day month:components.month year:components.year];  
 }
 
 + (id)dayWithDay:(NSInteger)day month:(NSInteger)month year:(NSInteger)year {
