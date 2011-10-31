@@ -59,6 +59,8 @@
 		D03265C2129D427C004143A3 /* EFMultiValueSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */; };
 		D039302713F83BDD004B93FA /* EFRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D039302513F83BDD004B93FA /* EFRequest.h */; };
 		D039302813F83BDD004B93FA /* EFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D039302613F83BDD004B93FA /* EFRequest.m */; };
+		D048EA94145F23E90023ED53 /* UILabel+VerticalAlignment.h in Headers */ = {isa = PBXBuildFile; fileRef = D048EA92145F23E90023ED53 /* UILabel+VerticalAlignment.h */; };
+		D048EA95145F23E90023ED53 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = D048EA93145F23E90023ED53 /* UILabel+VerticalAlignment.m */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
 		D06F7B05138537A1003B5A31 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B04138537A1003B5A31 /* QuartzCore.framework */; };
 		D06F7B08138537B1003B5A31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B07138537B1003B5A31 /* UIKit.framework */; };
@@ -141,6 +143,8 @@
 		D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFMultiValueSpecifierCell.m; sourceTree = "<group>"; };
 		D039302513F83BDD004B93FA /* EFRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFRequest.h; sourceTree = "<group>"; };
 		D039302613F83BDD004B93FA /* EFRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFRequest.m; sourceTree = "<group>"; };
+		D048EA92145F23E90023ED53 /* UILabel+VerticalAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlignment.h"; sourceTree = "<group>"; };
+		D048EA93145F23E90023ED53 /* UILabel+VerticalAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlignment.m"; sourceTree = "<group>"; };
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
@@ -227,8 +231,6 @@
 			children = (
 				C75D5827140510C1007E7B17 /* EFImageCache.h */,
 				C75D5828140510C1007E7B17 /* EFImageCache.m */,
-				C75D5829140510C1007E7B17 /* UIImageView+URL.h */,
-				C75D582A140510C1007E7B17 /* UIImageView+URL.m */,
 			);
 			name = "Image Cache";
 			sourceTree = "<group>";
@@ -377,6 +379,10 @@
 				923CDD79123A8CC300247AD5 /* EFNibViewController.m */,
 				925FBF9F1415714B00C45B3B /* UIViewController+Utils.h */,
 				925FBFA01415714B00C45B3B /* UIViewController+Utils.m */,
+				D048EA92145F23E90023ED53 /* UILabel+VerticalAlignment.h */,
+				D048EA93145F23E90023ED53 /* UILabel+VerticalAlignment.m */,
+				C75D5829140510C1007E7B17 /* UIImageView+URL.h */,
+				C75D582A140510C1007E7B17 /* UIImageView+URL.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -464,6 +470,7 @@
 				C786498014205FC300DB0DB7 /* NSMutableAttributedString+Convenience.h in Headers */,
 				925FBFA11415714B00C45B3B /* UIViewController+Utils.h in Headers */,
 				9F25DD18145730C1000E7B48 /* EFAlertView.h in Headers */,
+				D048EA94145F23E90023ED53 /* UILabel+VerticalAlignment.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +559,7 @@
 				C786498114205FC300DB0DB7 /* NSMutableAttributedString+Convenience.m in Sources */,
 				925FBFA21415714B00C45B3B /* UIViewController+Utils.m in Sources */,
 				9F25DD19145730C1000E7B48 /* EFAlertView.m in Sources */,
+				D048EA95145F23E90023ED53 /* UILabel+VerticalAlignment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
