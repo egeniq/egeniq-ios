@@ -31,6 +31,8 @@
 		92BFFA9813F952E2002D37A4 /* EFServiceContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BFFA9613F952E2002D37A4 /* EFServiceContainer.m */; };
 		9F25DD18145730C1000E7B48 /* EFAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F25DD16145730C1000E7B48 /* EFAlertView.h */; };
 		9F25DD19145730C1000E7B48 /* EFAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F25DD17145730C1000E7B48 /* EFAlertView.m */; };
+		9FC1ADA8145F0C28005786F5 /* UILabel+VerticalAlignment.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FC1ADA6145F0C28005786F5 /* UILabel+VerticalAlignment.h */; };
+		9FC1ADA9145F0C28005786F5 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC1ADA7145F0C28005786F5 /* UILabel+VerticalAlignment.m */; };
 		C75D582B140510C1007E7B17 /* EFImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = C75D5827140510C1007E7B17 /* EFImageCache.h */; };
 		C75D582C140510C1007E7B17 /* EFImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C75D5828140510C1007E7B17 /* EFImageCache.m */; };
 		C75D582D140510C1007E7B17 /* UIImageView+URL.h in Headers */ = {isa = PBXBuildFile; fileRef = C75D5829140510C1007E7B17 /* UIImageView+URL.h */; };
@@ -112,6 +114,8 @@
 		92BFFA9613F952E2002D37A4 /* EFServiceContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFServiceContainer.m; sourceTree = "<group>"; };
 		9F25DD16145730C1000E7B48 /* EFAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFAlertView.h; sourceTree = "<group>"; };
 		9F25DD17145730C1000E7B48 /* EFAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFAlertView.m; sourceTree = "<group>"; };
+		9FC1ADA6145F0C28005786F5 /* UILabel+VerticalAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlignment.h"; sourceTree = "<group>"; };
+		9FC1ADA7145F0C28005786F5 /* UILabel+VerticalAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlignment.m"; sourceTree = "<group>"; };
 		C75D5827140510C1007E7B17 /* EFImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageCache.h; sourceTree = "<group>"; };
 		C75D5828140510C1007E7B17 /* EFImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageCache.m; sourceTree = "<group>"; };
 		C75D5829140510C1007E7B17 /* UIImageView+URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+URL.h"; sourceTree = "<group>"; };
@@ -220,6 +224,15 @@
 				92BFFA9613F952E2002D37A4 /* EFServiceContainer.m */,
 			);
 			name = DI;
+			sourceTree = "<group>";
+		};
+		9FC1ADA4145F0C0A005786F5 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				9FC1ADA6145F0C28005786F5 /* UILabel+VerticalAlignment.h */,
+				9FC1ADA7145F0C28005786F5 /* UILabel+VerticalAlignment.m */,
+			);
+			name = Label;
 			sourceTree = "<group>";
 		};
 		C75D5830140510C6007E7B17 /* Image Cache */ = {
@@ -372,6 +385,7 @@
 			children = (
 				D06A5BDD13A3B48600BEEDEF /* Alert */,
 				D093CD3311FC6284000B51D8 /* Image */,
+				9FC1ADA4145F0C0A005786F5 /* Label */,
 				D03265AC129D4245004143A3 /* Settings */,
 				923CDD78123A8CC300247AD5 /* EFNibViewController.h */,
 				923CDD79123A8CC300247AD5 /* EFNibViewController.m */,
@@ -464,6 +478,7 @@
 				C786498014205FC300DB0DB7 /* NSMutableAttributedString+Convenience.h in Headers */,
 				925FBFA11415714B00C45B3B /* UIViewController+Utils.h in Headers */,
 				9F25DD18145730C1000E7B48 /* EFAlertView.h in Headers */,
+				9FC1ADA8145F0C28005786F5 /* UILabel+VerticalAlignment.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +567,7 @@
 				C786498114205FC300DB0DB7 /* NSMutableAttributedString+Convenience.m in Sources */,
 				925FBFA21415714B00C45B3B /* UIViewController+Utils.m in Sources */,
 				9F25DD19145730C1000E7B48 /* EFAlertView.m in Sources */,
+				9FC1ADA9145F0C28005786F5 /* UILabel+VerticalAlignment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
