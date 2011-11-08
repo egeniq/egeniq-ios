@@ -34,6 +34,9 @@
 @implementation UIImageView (URL)
 
 - (void)showActivityIndicatorWithStyle:(UIActivityIndicatorViewStyle)indicatorStyle {
+    // Ensure we don't get multiple spinners
+    [[self viewWithTag:kActivityIndicatorTag] removeFromSuperview];
+    
     UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:indicatorStyle];
 
     activityIndicator.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
@@ -65,6 +68,9 @@
 
 - (void)setImageAtURL:(NSURL *)imageURL cacheURL:(NSURL *)cacheURL showActivityIndicator:(BOOL)showActivityIndicator activityIndicatorStyle:(UIActivityIndicatorViewStyle)indicatorStyle loadingImage:(UIImage *)loadingImage notAvailableImage:(UIImage *)notAvailableImage {
     NSAssert([NSThread isMainThread], @"This method should be called from the main thread.");
+    // Cancel any previous downloads
+    [[EFImageCache defaultCache] cancelDownloadForImageView:self];    
+    [self hideActivityIndicator];
 
     self.image = loadingImage;
 
@@ -73,9 +79,6 @@
         return;
     }
     
-    // Cancel any previous downloads
-    [[EFImageCache defaultCache] cancelDownloadForImageView:self];
-
     if (showActivityIndicator) {
         [self showActivityIndicatorWithStyle:indicatorStyle];
     }

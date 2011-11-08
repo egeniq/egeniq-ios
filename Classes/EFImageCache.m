@@ -109,19 +109,21 @@
         handler(image);
         return nil;
     } else {
-        NSMutableArray *pendingHandlers = [self.imagesLoading objectForKey:cacheURL];
+        NSMutableDictionary *pendingHandlers = [self.imagesLoading objectForKey:cacheURL];
+        // UIImageView doesn't comply to NSCopying protocol, its pointer shouldn't change and is unique
+        NSString *key = [NSString stringWithFormat:@"%p", imageView];
         if (pendingHandlers) {
-            [pendingHandlers addObject:[[handler copy] autorelease]];
+            [pendingHandlers setObject:[[handler copy] autorelease] forKey:key];
             return nil;
         } else {
-            pendingHandlers = [NSMutableArray arrayWithObject:[[handler copy] autorelease]];
+            pendingHandlers = [NSMutableDictionary dictionaryWithObject:[[handler copy] autorelease] forKey:key];
             [self.imagesLoading setObject:pendingHandlers forKey:cacheURL];
             
             EFRequest *imageDownload = [EFRequest requestWithURL:imageURL preProcessHandler:nil resultHandler:^(NSURLResponse * receivedResponse, NSData * data, NSError * error) {
                 if (!data || [data length] == 0) {
                     // If no data, return nil image
-                    NSMutableArray *pendingHandlers = [self.imagesLoading objectForKey:cacheURL];
-                    for (void (^handler)(UIImage * image) in pendingHandlers) {
+                    NSMutableDictionary *pendingHandlers = [self.imagesLoading objectForKey:cacheURL];
+                    for (void (^handler)(UIImage * image) in [pendingHandlers allValues]) {
                         handler (nil);
                     }
                     [self.imagesLoading removeObjectForKey:cacheURL];
@@ -134,22 +136,18 @@
                     // Return image
                     UIImage *image = [UIImage imageWithData:data];
                     
-                    NSMutableArray *pendingHandlers = [self.imagesLoading objectForKey:cacheURL];
-                    for (void (^handler)(UIImage * image) in pendingHandlers) {
+                    NSMutableDictionary *pendingHandlers = [self.imagesLoading objectForKey:cacheURL];
+                    for (void (^handler)(UIImage * image) in [pendingHandlers allValues]) {
                         handler (image);
                     }
                     [self.imagesLoading removeObjectForKey:cacheURL];
                 }
                 
-                // UIImageView doesn't comply to NSCopying protocol, its pointer shouldn't change and is unique
-                NSString *key = [NSString stringWithFormat:@"%p", imageView];
                 [self.downloadPerImageView removeObjectForKey:key];
              }];
             [imageDownload start];
             
-            // UIImageView doesn't comply to NSCopying protocol
-            NSString *key = [NSString stringWithFormat:@"%p", imageView];
-            [self.downloadPerImageView setObject:imageDownload forKey:key];
+            [self.downloadPerImageView setObject:[NSDictionary dictionaryWithObjectsAndKeys:imageDownload, @"download", cacheURL, @"cacheURL", nil] forKey:key];
             return imageDownload;
         }
     }
@@ -157,16 +155,35 @@
 
 - (void)cancelDownloadForImageView:(UIImageView *)imageView {
     NSString *key = [NSString stringWithFormat:@"%p", imageView];
-    EFRequest *download = [self.downloadPerImageView objectForKey:key];
-    [download cancel];
-    [self.downloadPerImageView removeObjectForKey:key];
+    NSDictionary *downloadDict = [self.downloadPerImageView objectForKey:key];
+    if (downloadDict) {
+        NSURL *cacheURL = [downloadDict objectForKey:@"cacheURL"];
+        
+        // Check if there are other pendingHandlers for this URL
+        NSMutableDictionary *pendingHandlers = [self.imagesLoading objectForKey:cacheURL];
+        
+        // Remove handler for this imageView
+        [pendingHandlers removeObjectForKey:key];
+        
+        // Cancel download only if no more pending handlers remain
+        if ([pendingHandlers count] == 0) {
+            EFRequest *download = [downloadDict objectForKey:@"download"];
+            [download cancel];
+            [self.imagesLoading removeObjectForKey:cacheURL];
+        }
+
+        [self.downloadPerImageView removeObjectForKey:key];
+    }
 }
 
 - (UIImage *)cachedImageAtURL:(NSURL *)cacheURL {
-    UIImage *localImage = [UIImage imageNamed:[cacheURL absoluteString]];
+    // Check if a local image is referenced
+    if (self.shouldCheckForLocalImages) {
+        UIImage *localImage = [UIImage imageNamed:[cacheURL absoluteString]];
 
-    if (localImage) {
-        return localImage;
+        if (localImage) {
+            return localImage;
+        }
     }
 
     NSURLRequest *request = [NSURLRequest requestWithURL:cacheURL];
