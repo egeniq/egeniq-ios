@@ -62,11 +62,19 @@
     [self setImageAtURL:imageURL showActivityIndicator:YES activityIndicatorStyle:UIActivityIndicatorViewStyleGray loadingImage:nil notAvailableImage:nil];
 }
 
+- (void)setImageAtURL:(NSURL *)imageURL cache:(BOOL)cache completionHandler:(void(^)(UIImage *image))completionHandler {
+    [self setImageAtURL:imageURL cacheURL:cache ? imageURL : nil showActivityIndicator:YES activityIndicatorStyle:UIActivityIndicatorViewStyleGray loadingImage:nil notAvailableImage:nil completionHandler:completionHandler];
+}
+
 - (void)setImageAtURL:(NSURL *)imageURL showActivityIndicator:(BOOL)showActivityIndicator activityIndicatorStyle:(UIActivityIndicatorViewStyle)indicatorStyle loadingImage:(UIImage *)loadingImage notAvailableImage:(UIImage *)notAvailableImage {
     [self setImageAtURL:imageURL cacheURL:imageURL showActivityIndicator:showActivityIndicator activityIndicatorStyle:indicatorStyle loadingImage:loadingImage notAvailableImage:notAvailableImage];
 }
 
 - (void)setImageAtURL:(NSURL *)imageURL cacheURL:(NSURL *)cacheURL showActivityIndicator:(BOOL)showActivityIndicator activityIndicatorStyle:(UIActivityIndicatorViewStyle)indicatorStyle loadingImage:(UIImage *)loadingImage notAvailableImage:(UIImage *)notAvailableImage {
+    [self setImageAtURL:imageURL cacheURL:cacheURL showActivityIndicator:showActivityIndicator activityIndicatorStyle:indicatorStyle loadingImage:loadingImage notAvailableImage:notAvailableImage completionHandler:NULL];
+}
+
+- (void)setImageAtURL:(NSURL *)imageURL cacheURL:(NSURL *)cacheURL showActivityIndicator:(BOOL)showActivityIndicator activityIndicatorStyle:(UIActivityIndicatorViewStyle)indicatorStyle loadingImage:(UIImage *)loadingImage notAvailableImage:(UIImage *)notAvailableImage completionHandler:(void(^)(UIImage *image))completionHandler {
     NSAssert([NSThread isMainThread], @"This method should be called from the main thread.");
     // Cancel any previous downloads
     [[EFImageCache defaultCache] cancelDownloadForImageView:self];    
@@ -91,6 +99,10 @@
         }
         if (showActivityIndicator) {
             [self performSelectorOnMainThread:@selector(hideActivityIndicator) withObject:nil waitUntilDone:NO];
+        }
+        
+        if (completionHandler) {
+            completionHandler(image);
         }
      }];
 }

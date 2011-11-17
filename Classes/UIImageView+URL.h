@@ -35,6 +35,12 @@
 // Call -cancelImageDownload if you need to cancel the download.
 - (void)setImageAtURL:(NSURL *)imageURL;
 
+// Asynchronously downloads the image at the URL if needed, whilst showing a gray activity indicator.
+// No image is shown during the download, and none is shown if no valid image could be loaded.
+// Call -cancelImageDownload if you need to cancel the download.
+// If cache is NO, image will be downloaded from server, not loaded from cache.
+- (void)setImageAtURL:(NSURL *)imageURL cache:(BOOL)cache completionHandler:(void(^)(UIImage *image))completionHandler;
+
 // Asynchronously downloads the image at the URL if needed.
 // Call -cancelImageDownload if you need to cancel the download.
 - (void)setImageAtURL:(NSURL *)imageURL showActivityIndicator:(BOOL)showActivityIndicator activityIndicatorStyle:(UIActivityIndicatorViewStyle)indicatorStyle loadingImage:(UIImage *)loadingImage notAvailableImage:(UIImage *)notAvailableImage;
@@ -42,6 +48,10 @@
 // The image is loaded from imageURL, but will be cached under cacheURL. This allows coallescing
 // for example in cases where the imageURL contains changing parameters which don't affect the image to load.
 - (void)setImageAtURL:(NSURL *)imageURL cacheURL:(NSURL *)cacheURL showActivityIndicator:(BOOL)showActivityIndicator activityIndicatorStyle:(UIActivityIndicatorViewStyle)indicatorStyle loadingImage:(UIImage *)loadingImage notAvailableImage:(UIImage *)notAvailableImage;
+
+// The image is loaded from imageURL, but will be cached under cacheURL. This allows coallescing
+// for example in cases where the imageURL contains changing parameters which don't affect the image to load.
+- (void)setImageAtURL:(NSURL *)imageURL cacheURL:(NSURL *)cacheURL showActivityIndicator:(BOOL)showActivityIndicator activityIndicatorStyle:(UIActivityIndicatorViewStyle)indicatorStyle loadingImage:(UIImage *)loadingImage notAvailableImage:(UIImage *)notAvailableImage completionHandler:(void(^)(UIImage *image))completionHandler;
 
 // Cancel any ongoing asynchronous download for the image view. Also hides the activity indicator.
 - (void)cancelImageDownload;
