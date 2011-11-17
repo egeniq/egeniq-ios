@@ -44,7 +44,7 @@
 @synthesize downloadPerImageView = downloadPerImageView_;
 @synthesize shouldCheckForLocalImages=shouldCheckForLocalImages_;
 
-+ (id)defaultCache  {
++ (EFImageCache *)defaultCache  {
     static dispatch_once_t pred;
     static EFImageCache *defaultCache = nil;
     
@@ -101,9 +101,20 @@
         }
     }
 
-    NSURLRequest *cacheRequest = [NSURLRequest requestWithURL:cacheURL];
-    NSCachedURLResponse *earlierCachedResponse = [self.imageURLCache cachedResponseForRequest:cacheRequest];
-
+    NSURLRequest *cacheRequest = nil;
+    NSCachedURLResponse *earlierCachedResponse = nil;
+    BOOL shouldCacheImage = YES;
+    if (cacheURL) {
+        shouldCacheImage = YES;
+        cacheRequest = [NSURLRequest requestWithURL:cacheURL];
+        earlierCachedResponse = [self.imageURLCache cachedResponseForRequest:cacheRequest];
+    } else {
+        shouldCacheImage = NO;
+        // Prefix URL with nocache- so the key would become nocache-http://server/image.png 
+        // to enable a subsequent request for the same URL that wants to be cached to actually get cached (separate downloads of same image)
+        cacheURL = [NSURL URLWithString:[NSString stringWithFormat:@"nocache-%@", imageURL.absoluteString]];
+    }
+  
     if (earlierCachedResponse) {
         UIImage *image = [UIImage imageWithData:[earlierCachedResponse data]];
         handler(image);
@@ -128,13 +139,15 @@
                     }
                     [self.imagesLoading removeObjectForKey:cacheURL];
                 } else {
-                    // Store data in cache
-                    NSCachedURLResponse *cachedResponse = [[NSCachedURLResponse alloc] initWithResponse:receivedResponse data:data];
-                    [self.imageURLCache storeCachedResponse:cachedResponse forRequest:cacheRequest];
-                    [cachedResponse release];
-                    
                     // Return image
                     UIImage *image = [UIImage imageWithData:data];
+                  
+                    if (image && shouldCacheImage) {
+                        // Store data in cache
+                        NSCachedURLResponse *cachedResponse = [[NSCachedURLResponse alloc] initWithResponse:receivedResponse data:data];
+                        [self.imageURLCache storeCachedResponse:cachedResponse forRequest:cacheRequest];
+                        [cachedResponse release];
+                    }
                     
                     NSMutableDictionary *pendingHandlers = [self.imagesLoading objectForKey:cacheURL];
                     for (void (^handler)(UIImage * image) in [pendingHandlers allValues]) {
