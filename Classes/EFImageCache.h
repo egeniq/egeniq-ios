@@ -33,11 +33,9 @@
 // The check for local image allows the URL to be either "localimage.png" or "http://www.example.com/remoteimage.png".
 // This way it is possible to point to a file already included in the app's bundle.
 
-@interface EFImageCache : NSObject {
-    NSURLCache *imageURLCache;
-}
+@interface EFImageCache : NSObject
 
-+ (id)defaultCache;
++ (EFImageCache *)defaultCache;
 
 // Allows referring to images included in the app's bundle (passing the absolute URL to the -[UIImage imageNamed:] method). Note however that enabling this takes a performance hit. Defaults to NO.
 @property (assign) BOOL shouldCheckForLocalImages;
@@ -51,6 +49,7 @@
 
 // The image is loaded from imageURL, but will be cached under cacheURL. This allows coallescing
 // for example in cases where the imageURL contains changing parameters which don't affect the image to load.
+// Pass nil to the cacheURL to not cache the image, only download it.
 - (id)loadImageAtURL:(NSURL *)imageURL cacheURL:(NSURL *)cacheURL withHandler:(void(^)(UIImage *image))handler;
 
 - (id)loadImageAtURL:(NSURL *)imageURL cacheURL:(NSURL *)cacheURL imageView:(UIImageView *)imageView withHandler:(void (^)(UIImage * image))handler;
