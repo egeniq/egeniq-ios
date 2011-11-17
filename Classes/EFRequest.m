@@ -92,6 +92,14 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
     self.request.HTTPMethod = method;
 }
 
+- (NSURLRequestCachePolicy)cachePolicy {
+    return self.request.cachePolicy;
+}
+
+- (void)setCachePolicy:(NSURLRequestCachePolicy)cachePolicy {
+    [self.request setCachePolicy:cachePolicy];
+}
+
 - (NSDictionary *)allHTTPHeaderFields {
     return self.request.allHTTPHeaderFields;
 }
