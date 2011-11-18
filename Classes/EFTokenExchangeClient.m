@@ -20,6 +20,11 @@ static EFTokenExchangeClient *sharedInstance = nil;
 }
 
 - (void)exchangeDeviceToken:(NSData *)deviceToken {
+    NSURL *URL = [NSURL URLWithString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"EFTECDeviceTokenExchangeURL"]];
+    [self exchangeDeviceToken:deviceToken URL:URL];
+}
+
+- (void)exchangeDeviceToken:(NSData *)deviceToken URL:(NSURL *)URL {
 	NSString *escapedDeviceToken = [deviceToken hexStringValue];
 	NSString *escapedNotificationToken = [self.notificationToken stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	
@@ -30,8 +35,7 @@ static EFTokenExchangeClient *sharedInstance = nil;
 	    body = [NSString stringWithFormat:@"deviceToken=%@&notificationToken=%@", escapedDeviceToken, escapedNotificationToken];
 	}
 	
-	NSString *url = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"EFTECDeviceTokenExchangeURL"];
-	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:URL];
 	[request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
 	[request setTimeoutInterval:15.0];
 	[request setHTTPMethod:@"POST"];
