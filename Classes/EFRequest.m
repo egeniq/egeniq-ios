@@ -75,6 +75,7 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
         self.resultHandler = resultHandler;
         
         self.request = [NSMutableURLRequest requestWithURL:URL];
+        self.request.cachePolicy = NSURLRequestUseProtocolCachePolicy;        
         self.timeoutInterval = 30.0;
     }
     
@@ -160,7 +161,6 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 	self.incomingData = nil;
     self.incomingResponse = nil;
     
-    self.request.cachePolicy = NSURLRequestUseProtocolCachePolicy;
     self.request.timeoutInterval = self.timeoutInterval;
     self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
 }
