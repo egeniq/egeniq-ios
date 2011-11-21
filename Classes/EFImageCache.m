@@ -77,6 +77,22 @@
     [super dealloc];
 }
 
+- (NSUInteger)memoryCapacity {
+    return [self.imageURLCache memoryCapacity];
+}
+
+- (void)setMemoryCapacity:(NSUInteger)memoryCapacity {
+    [self.imageURLCache setMemoryCapacity:memoryCapacity];
+}
+
+- (NSUInteger)diskCapacity {
+    return [self.imageURLCache diskCapacity];
+}
+
+- (void)setDiskCapacity:(NSUInteger)diskCapacity {
+    [self.imageURLCache setDiskCapacity:diskCapacity];
+}
+
 #pragma mark - Main
 - (id)loadImageAtURL:(NSURL *)imageURL withHandler:(void (^)(UIImage * image))handler {
     return [self loadImageAtURL:imageURL cacheURL:imageURL withHandler:handler];
@@ -85,13 +101,13 @@
 - (id)loadImageAtURL:(NSURL *)imageURL cacheURL:(NSURL *)cacheURL withHandler:(void (^)(UIImage * image))handler {
     return [self loadImageAtURL:imageURL cacheURL:cacheURL imageView:nil withHandler:handler];
 }
-            
+
 - (id)loadImageAtURL:(NSURL *)imageURL cacheURL:(NSURL *)cacheURL imageView:(UIImageView *)imageView withHandler:(void (^)(UIImage * image))handler {
     if (!imageURL) {
         handler(nil);
         return nil;
     }
-
+    
     // Check if a local image is referenced
     if (self.shouldCheckForLocalImages) {
         UIImage *localImage = [UIImage imageNamed:[imageURL absoluteString]];
@@ -100,7 +116,7 @@
             return nil;
         }
     }
-
+    
     NSURLRequest *cacheRequest = nil;
     NSCachedURLResponse *earlierCachedResponse = nil;
     BOOL shouldCacheImage = YES;
@@ -114,7 +130,7 @@
         // to enable a subsequent request for the same URL that wants to be cached to actually get cached (separate downloads of same image)
         cacheURL = [NSURL URLWithString:[NSString stringWithFormat:@"nocache-%@", imageURL.absoluteString]];
     }
-  
+    
     if (earlierCachedResponse) {
         UIImage *image = [UIImage imageWithData:[earlierCachedResponse data]];
         handler(image);
@@ -141,7 +157,7 @@
                 } else {
                     // Return image
                     UIImage *image = [UIImage imageWithData:data];
-                  
+                    
                     if (image && shouldCacheImage) {
                         // Store data in cache
                         NSCachedURLResponse *cachedResponse = [[NSCachedURLResponse alloc] initWithResponse:receivedResponse data:data];
@@ -157,7 +173,7 @@
                 }
                 
                 [self.downloadPerImageView removeObjectForKey:key];
-             }];
+            }];
             [imageDownload start];
             
             [self.downloadPerImageView setObject:[NSDictionary dictionaryWithObjectsAndKeys:imageDownload, @"download", cacheURL, @"cacheURL", nil] forKey:key];
@@ -184,7 +200,7 @@
             [download cancel];
             [self.imagesLoading removeObjectForKey:cacheURL];
         }
-
+        
         [self.downloadPerImageView removeObjectForKey:key];
     }
 }
@@ -193,12 +209,12 @@
     // Check if a local image is referenced
     if (self.shouldCheckForLocalImages) {
         UIImage *localImage = [UIImage imageNamed:[cacheURL absoluteString]];
-
+        
         if (localImage) {
             return localImage;
         }
     }
-
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:cacheURL];
     NSCachedURLResponse *earlierCachedResponse = [self.imageURLCache cachedResponseForRequest:request];
     return [UIImage imageWithData:[earlierCachedResponse data]];
