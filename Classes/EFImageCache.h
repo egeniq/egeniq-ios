@@ -40,6 +40,10 @@
 // Allows referring to images included in the app's bundle (passing the absolute URL to the -[UIImage imageNamed:] method). Note however that enabling this takes a performance hit. Defaults to NO.
 @property (assign) BOOL shouldCheckForLocalImages;
 
+// Capacity
+@property (nonatomic) NSUInteger memoryCapacity;
+@property (nonatomic) NSUInteger diskCapacity;
+
 // The cache that holds the actual data.
 @property (retain) NSURLCache *imageURLCache;
 
@@ -60,5 +64,6 @@
 
 // Flush the cache
 - (void)flush;
+
 
 @end
