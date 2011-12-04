@@ -584,6 +584,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fvisibility=default";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -599,6 +600,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fvisibility=default";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -640,6 +642,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-fvisibility=default";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
