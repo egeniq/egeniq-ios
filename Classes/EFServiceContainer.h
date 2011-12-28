@@ -1,5 +1,5 @@
 //
-//  EFDIContainer.h
+//  EFServiceContainer.h
 //  Egeniq
 //
 //  Created by Ivo Jansch on 8/15/11.
@@ -8,17 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ * Base class for service container implementations. See EFServiceContainer-Protected.h for subclass usage.
+ */
 @interface EFServiceContainer : NSObject
-
-/**
- * Retrieve a service with a particular key.
- * Returns nil if no service has been registered for this key.
- */
-- (id)serviceForKey:(NSUInteger)serviceKey;
-
-/**
- * Register a service with a particular key.
- */
-- (void)setService:(id)service forKey:(NSUInteger)serviceKey;
 
 @end
