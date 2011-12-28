@@ -6,8 +6,7 @@
 //  Copyright 2011 Egeniq. All rights reserved.
 //
 
-#import "EFServiceContainer.h"
-
+#import "EFServiceContainer-Protected.h"
 
 @interface EFServiceContainer() 
 

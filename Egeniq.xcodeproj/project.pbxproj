@@ -33,6 +33,7 @@
 		9F25DD19145730C1000E7B48 /* EFAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F25DD17145730C1000E7B48 /* EFAlertView.m */; };
 		9FC1ADA8145F0C28005786F5 /* UILabel+VerticalAlignment.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FC1ADA6145F0C28005786F5 /* UILabel+VerticalAlignment.h */; };
 		9FC1ADA9145F0C28005786F5 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC1ADA7145F0C28005786F5 /* UILabel+VerticalAlignment.m */; };
+		9FFA358814AB36A900507AEB /* EFServiceContainer-Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFA358714AB36A900507AEB /* EFServiceContainer-Protected.h */; };
 		C75D582B140510C1007E7B17 /* EFImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = C75D5827140510C1007E7B17 /* EFImageCache.h */; };
 		C75D582C140510C1007E7B17 /* EFImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C75D5828140510C1007E7B17 /* EFImageCache.m */; };
 		C75D582D140510C1007E7B17 /* UIImageView+URL.h in Headers */ = {isa = PBXBuildFile; fileRef = C75D5829140510C1007E7B17 /* UIImageView+URL.h */; };
@@ -116,6 +117,7 @@
 		9F25DD17145730C1000E7B48 /* EFAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFAlertView.m; sourceTree = "<group>"; };
 		9FC1ADA6145F0C28005786F5 /* UILabel+VerticalAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlignment.h"; sourceTree = "<group>"; };
 		9FC1ADA7145F0C28005786F5 /* UILabel+VerticalAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlignment.m"; sourceTree = "<group>"; };
+		9FFA358714AB36A900507AEB /* EFServiceContainer-Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EFServiceContainer-Protected.h"; sourceTree = "<group>"; };
 		C75D5827140510C1007E7B17 /* EFImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageCache.h; sourceTree = "<group>"; };
 		C75D5828140510C1007E7B17 /* EFImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageCache.m; sourceTree = "<group>"; };
 		C75D5829140510C1007E7B17 /* UIImageView+URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+URL.h"; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				92BFFA9513F952E2002D37A4 /* EFServiceContainer.h */,
+				9FFA358714AB36A900507AEB /* EFServiceContainer-Protected.h */,
 				92BFFA9613F952E2002D37A4 /* EFServiceContainer.m */,
 			);
 			name = DI;
@@ -479,6 +482,7 @@
 				925FBFA11415714B00C45B3B /* UIViewController+Utils.h in Headers */,
 				9F25DD18145730C1000E7B48 /* EFAlertView.h in Headers */,
 				9FC1ADA8145F0C28005786F5 /* UILabel+VerticalAlignment.h in Headers */,
+				9FFA358814AB36A900507AEB /* EFServiceContainer-Protected.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
