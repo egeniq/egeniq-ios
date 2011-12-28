@@ -33,6 +33,20 @@
     return [self.services objectForKey:[NSNumber numberWithInt:serviceKey]];
 }
 
+- (id)serviceForKey:(NSUInteger)serviceKey initializer:(id (^)(void))initializer {
+    id service = [self.services objectForKey:[NSNumber numberWithInt:serviceKey]];
+    
+    if (service == nil && initializer != nil) {
+        service = initializer();
+        
+        if (service != nil) {
+            [self setService:service forKey:serviceKey];
+        }
+    }
+    
+    return service;
+}
+
 - (void)setService:(id)service forKey:(NSUInteger)serviceKey {
     [self.services setObject:service forKey:[NSNumber numberWithInt:serviceKey]];
 }
