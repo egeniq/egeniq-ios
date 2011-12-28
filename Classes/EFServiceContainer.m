@@ -6,8 +6,7 @@
 //  Copyright 2011 Egeniq. All rights reserved.
 //
 
-#import "EFServiceContainer.h"
-
+#import "EFServiceContainer-Protected.h"
 
 @interface EFServiceContainer() 
 
@@ -31,6 +30,20 @@
 
 - (id)serviceForKey:(NSUInteger)serviceKey {
     return [self.services objectForKey:[NSNumber numberWithInt:serviceKey]];
+}
+
+- (id)serviceForKey:(NSUInteger)serviceKey initializer:(id (^)(void))initializer {
+    id service = [self.services objectForKey:[NSNumber numberWithInt:serviceKey]];
+    
+    if (service == nil && initializer != nil) {
+        service = initializer();
+        
+        if (service != nil) {
+            [self setService:service forKey:serviceKey];
+        }
+    }
+    
+    return service;
 }
 
 - (void)setService:(id)service forKey:(NSUInteger)serviceKey {
