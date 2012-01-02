@@ -18,4 +18,9 @@
  */
 - (BOOL)isModal;
 
+/**
+ * Returns if the view of the receiver is visible (in between -viewDidAppear: and -viewDidDisappear: messages).
+ */
+@property (nonatomic, readonly, getter = isViewVisible) BOOL viewVisible;
+
 @end
