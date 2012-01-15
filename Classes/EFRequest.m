@@ -187,11 +187,13 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
         dispatch_async(queue, ^() {
             NSError *error = nil;
             id result = self.preProcessHandler(response, data, &error);
-            dispatch_async(dispatch_get_main_queue(), ^() {
-                self.resultHandler(response, result, error);
-            });
+            if (self.resultHandler) {
+                dispatch_async(dispatch_get_main_queue(), ^() {
+                    self.resultHandler(response, result, error);
+                });
+            }
         });
-    } else {
+    } else if (self.resultHandler) {
         dispatch_async(dispatch_get_main_queue(), ^() {
             self.resultHandler(response, data, nil);
         });
