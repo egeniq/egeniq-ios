@@ -126,6 +126,16 @@
     return CGSizeMake(width, ceil(y));
 }
 
+- (void)dealloc {
+    self.string = nil;
+    self.font = nil;
+    self.foregroundColor = nil;
+    self.truncationMode = nil;
+    self.alignmentMode = nil;
+
+    [super dealloc];
+}
+
 @end
 
 @interface EFRichTextView  ()
@@ -219,6 +229,11 @@
 // Measures the height needed for a given width using Core Text
 - (CGSize)frameSize {
     return [self.textView frameSize];
+}
+
+- (void)dealloc {
+    self.textView = nil;
+    [super dealloc];
 }
 
 @end
