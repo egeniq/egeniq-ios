@@ -62,6 +62,8 @@
 		D03265C2129D427C004143A3 /* EFMultiValueSpecifierCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */; };
 		D039302713F83BDD004B93FA /* EFRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = D039302513F83BDD004B93FA /* EFRequest.h */; };
 		D039302813F83BDD004B93FA /* EFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D039302613F83BDD004B93FA /* EFRequest.m */; };
+		D047100314D823B100811F82 /* EFDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D047100114D823B100811F82 /* EFDataManager.h */; };
+		D047100414D823B100811F82 /* EFDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D047100214D823B100811F82 /* EFDataManager.m */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
 		D06F7B05138537A1003B5A31 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B04138537A1003B5A31 /* QuartzCore.framework */; };
 		D06F7B08138537B1003B5A31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B07138537B1003B5A31 /* UIKit.framework */; };
@@ -147,6 +149,8 @@
 		D03265B8129D427C004143A3 /* EFMultiValueSpecifierCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFMultiValueSpecifierCell.m; sourceTree = "<group>"; };
 		D039302513F83BDD004B93FA /* EFRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFRequest.h; sourceTree = "<group>"; };
 		D039302613F83BDD004B93FA /* EFRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFRequest.m; sourceTree = "<group>"; };
+		D047100114D823B100811F82 /* EFDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDataManager.h; sourceTree = "<group>"; };
+		D047100214D823B100811F82 /* EFDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDataManager.m; sourceTree = "<group>"; };
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
@@ -379,6 +383,8 @@
 				922C195313F7250E00C46B8A /* EFDay.m */,
 				D089C5FC1327D3B8000A54F5 /* EFEntityGateway.h */,
 				D089C5FD1327D3B8000A54F5 /* EFEntityGateway.m */,
+				D047100114D823B100811F82 /* EFDataManager.h */,
+				D047100214D823B100811F82 /* EFDataManager.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -483,6 +489,7 @@
 				9F25DD18145730C1000E7B48 /* EFAlertView.h in Headers */,
 				9FC1ADA8145F0C28005786F5 /* UILabel+VerticalAlignment.h in Headers */,
 				9FFA358814AB36A900507AEB /* EFServiceContainer-Protected.h in Headers */,
+				D047100314D823B100811F82 /* EFDataManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +579,7 @@
 				925FBFA21415714B00C45B3B /* UIViewController+Utils.m in Sources */,
 				9F25DD19145730C1000E7B48 /* EFAlertView.m in Sources */,
 				9FC1ADA9145F0C28005786F5 /* UILabel+VerticalAlignment.m in Sources */,
+				D047100414D823B100811F82 /* EFDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
