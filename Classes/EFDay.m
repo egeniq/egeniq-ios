@@ -78,6 +78,13 @@
     return [self stringValue];
 }
 
+- (BOOL)isEqualToDay:(EFDay *)other {
+    return (self.year == other.year &&
+           self.month == other.month &&
+           self.day == other.day);
+}
+
+
 - (void)dealloc {    
     [super dealloc];
 }

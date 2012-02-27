@@ -25,4 +25,7 @@
 - (NSString *)description;
 - (NSDate *)dateValue;
 
+// Comparisons
+- (BOOL)isEqualToDay:(EFDay *)other;
+
 @end
