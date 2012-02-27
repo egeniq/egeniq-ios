@@ -58,6 +58,22 @@
     return [NSString stringWithFormat:@"%4d-%2d-%2d", self.year, self.month, self.day];
 }
 
+- (NSDate *)dateValue {
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    [cal setTimeZone:[NSTimeZone defaultTimeZone]];
+        
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setDay:self.day];
+    [components setMonth:self.month];
+    [components setYear:self.year];
+    
+    NSDate *result = [cal dateFromComponents:components];
+    
+    [components release];
+    
+    return result;
+}
+
 - (NSString *)description {
     return [self stringValue];
 }
