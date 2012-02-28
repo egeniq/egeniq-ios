@@ -33,4 +33,13 @@
  */
 - (void)exchangeDeviceToken:(NSData *)deviceToken;
 
+/**
+ * Send a new registration request to the server using the given
+ * device token at the given URL.
+ *
+ * @param deviceToken device token
+ * @param URL         token exchange URL
+ */
+- (void)exchangeDeviceToken:(NSData *)deviceToken URL:(NSURL *)URL;
+
 @end

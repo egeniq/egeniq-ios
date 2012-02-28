@@ -80,6 +80,9 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 - (NSString *)HTTPMethod;
 - (void)setHTTPMethod:(NSString *)method;
 
+- (NSURLRequestCachePolicy)cachePolicy;
+- (void)setCachePolicy:(NSURLRequestCachePolicy)cachePolicy;
+
 - (NSDictionary *)allHTTPHeaderFields;
 - (NSString *)valueForHTTPHeaderField:(NSString *)field;
 - (void)setAllHTTPHeaderFields:(NSDictionary *)headerFields;

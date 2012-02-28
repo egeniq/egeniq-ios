@@ -75,6 +75,7 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
         self.resultHandler = resultHandler;
         
         self.request = [NSMutableURLRequest requestWithURL:URL];
+        self.request.cachePolicy = NSURLRequestUseProtocolCachePolicy;        
         self.timeoutInterval = 30.0;
     }
     
@@ -90,6 +91,14 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 
 - (void)setHTTPMethod:(NSString *)method {
     self.request.HTTPMethod = method;
+}
+
+- (NSURLRequestCachePolicy)cachePolicy {
+    return self.request.cachePolicy;
+}
+
+- (void)setCachePolicy:(NSURLRequestCachePolicy)cachePolicy {
+    [self.request setCachePolicy:cachePolicy];
 }
 
 - (NSDictionary *)allHTTPHeaderFields {
@@ -152,7 +161,6 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 	self.incomingData = nil;
     self.incomingResponse = nil;
     
-    self.request.cachePolicy = NSURLRequestUseProtocolCachePolicy;
     self.request.timeoutInterval = self.timeoutInterval;
     self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
 }
@@ -179,11 +187,13 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
         dispatch_async(queue, ^() {
             NSError *error = nil;
             id result = self.preProcessHandler(response, data, &error);
-            dispatch_async(dispatch_get_main_queue(), ^() {
-                self.resultHandler(response, result, error);
-            });
+            if (self.resultHandler) {
+                dispatch_async(dispatch_get_main_queue(), ^() {
+                    self.resultHandler(response, result, error);
+                });
+            }
         });
-    } else {
+    } else if (self.resultHandler) {
         dispatch_async(dispatch_get_main_queue(), ^() {
             self.resultHandler(response, data, nil);
         });

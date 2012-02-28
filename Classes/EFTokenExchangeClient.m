@@ -19,10 +19,40 @@ static EFTokenExchangeClient *sharedInstance = nil;
 	return [defaults stringForKey:@"EFTECNotificationToken"];
 }
 
+- (void)setDeviceToken:(NSString *)deviceToken {
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	[defaults setValue:deviceToken forKey:@"EFTECDeviceToken"];
+	[defaults synchronize];
+}
+
+- (NSString *)deviceToken {
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+	return [defaults stringForKey:@"EFTECDeviceToken"];
+}
+
 - (void)exchangeDeviceToken:(NSData *)deviceToken {
+    NSURL *URL = [NSURL URLWithString:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"EFTECDeviceTokenExchangeURL"]];
+    [self exchangeDeviceToken:deviceToken URL:URL];
+}
+
+- (void)exchangeDeviceToken:(NSData *)deviceToken URL:(NSURL *)URL {
 	NSString *escapedDeviceToken = [deviceToken hexStringValue];
 	NSString *escapedNotificationToken = [self.notificationToken stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	
+    if ([[self deviceToken] isEqualToString:escapedDeviceToken] && [[self notificationToken] isEqualToString:escapedNotificationToken]) {
+        // The notification token we are about to send is the same as for the last successful attempt,
+        // stopping to reduce server load
+        return;
+    } else if ([[self deviceToken] isEqualToString:escapedDeviceToken]) {
+        // Same device token, but different notification token, tell server
+    } else {
+        // Different device token (perhaps user synced preferences to another/new device),
+        // store new device token and
+        // delete notification token as it must be invalid.
+        [self setDeviceToken:escapedDeviceToken];
+        [self setNotificationToken:nil];
+    }
+    
 	NSString *body;
 	if (escapedNotificationToken == nil) {
 	    body = [NSString stringWithFormat:@"deviceToken=%@&deviceFamily=ios", escapedDeviceToken];	
@@ -30,8 +60,7 @@ static EFTokenExchangeClient *sharedInstance = nil;
 	    body = [NSString stringWithFormat:@"deviceToken=%@&notificationToken=%@", escapedDeviceToken, escapedNotificationToken];
 	}
 	
-	NSString *url = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"EFTECDeviceTokenExchangeURL"];
-	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:url]];
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:URL];
 	[request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
 	[request setTimeoutInterval:15.0];
 	[request setHTTPMethod:@"POST"];
@@ -59,7 +88,7 @@ static EFTokenExchangeClient *sharedInstance = nil;
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
 	NSString *response = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 	if ([response length] > 0) {
-		[self setNotificationToken:response];
+     	[self setNotificationToken:response];
 	}
 	
 	[response release];	

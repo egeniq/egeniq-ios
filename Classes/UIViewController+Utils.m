@@ -20,4 +20,12 @@
     }
 }
 
+- (BOOL)isViewVisible {
+    if ([self isViewLoaded]) {
+        return ([self.view window] != nil);
+    }
+    
+    return NO;
+}
+
 @end
