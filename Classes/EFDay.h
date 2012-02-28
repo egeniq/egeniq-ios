@@ -23,5 +23,9 @@
 // Return a yyyy-mm-dd string
 - (NSString *)stringValue;
 - (NSString *)description;
+- (NSDate *)dateValue;
+
+// Comparisons
+- (BOOL)isEqualToDay:(EFDay *)other;
 
 @end
