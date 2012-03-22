@@ -136,16 +136,23 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
     }
 }
 
+- (NSData *)urlEncode:(NSData *)data usingEncoding:(NSStringEncoding)encoding {
+    NSString *value = [[[NSString alloc] initWithData:data encoding:encoding] autorelease];
+	NSString *encodedValue = (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)value, NULL, (CFStringRef)@"!*'\"();:@&=+$,/?%#[]% ", CFStringConvertNSStringEncodingToEncoding(encoding));
+    NSData *result = [encodedValue dataUsingEncoding:encoding];
+    return result;
+}
+
 - (void)addValue:(NSData *)value forHTTPPostField:(NSString *)field {
     NSMutableData *body = [NSMutableData dataWithData:self.HTTPBody];
     
     if ([body length] > 0) {
         [body appendData:[@"&" dataUsingEncoding:NSUTF8StringEncoding]];            
     }
-    
+
     [body appendData:[field dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[@"=" dataUsingEncoding:NSUTF8StringEncoding]];    
-    [body appendData:value];
+    [body appendData:[self urlEncode:value usingEncoding:NSUTF8StringEncoding]];
     
     self.HTTPBody = body;
 }
