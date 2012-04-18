@@ -42,6 +42,12 @@
 		C786497F14205FC300DB0DB7 /* EFRichTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C786497B14205FC300DB0DB7 /* EFRichTextView.m */; };
 		C786498014205FC300DB0DB7 /* NSMutableAttributedString+Convenience.h in Headers */ = {isa = PBXBuildFile; fileRef = C786497C14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.h */; };
 		C786498114205FC300DB0DB7 /* NSMutableAttributedString+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = C786497D14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.m */; };
+		C7955A8C153E91CE00971465 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B07138537B1003B5A31 /* UIKit.framework */; };
+		C7955A8D153E91CE00971465 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
+		C7955A93153E91CE00971465 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7955A91153E91CE00971465 /* InfoPlist.strings */; };
+		C7955A9F153E922600971465 /* EFDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7955A9E153E922600971465 /* EFDayTests.m */; };
+		C7955AA3153E935400971465 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7955AA2153E935400971465 /* libKiwi.a */; };
+		C7955AA5153E945C00971465 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7955AA4153E945C00971465 /* SenTestingKit.framework */; };
 		C7D0CF91142876D8003E9562 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D0CF90142876D8003E9562 /* CoreText.framework */; };
 		D011F501120C827700A07E28 /* EFImageViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFImageViewDataSource.h */; };
 		D011F503120C839000A07E28 /* EFImageViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFImageViewDelegate.h */; };
@@ -92,6 +98,16 @@
 		D0E522501320DD5300426493 /* NSData+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E5224E1320DD5300426493 /* NSData+Hex.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C7955AA0153E931B00971465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D067DCE411FB130E0047EFAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D067DCEF11FB130E0047EFAA;
+			remoteInfo = Egeniq;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		92256E4A140255930070F2F8 /* EFKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFKeyChain.h; sourceTree = "<group>"; };
 		92256E4B140255930070F2F8 /* EFKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFKeyChain.m; sourceTree = "<group>"; };
@@ -128,6 +144,13 @@
 		C786497B14205FC300DB0DB7 /* EFRichTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFRichTextView.m; sourceTree = "<group>"; };
 		C786497C14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Convenience.h"; sourceTree = "<group>"; };
 		C786497D14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Convenience.m"; sourceTree = "<group>"; };
+		C7955A89153E91CE00971465 /* EgeniqTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EgeniqTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7955A90153E91CE00971465 /* EgeniqTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EgeniqTests-Info.plist"; sourceTree = "<group>"; };
+		C7955A92153E91CE00971465 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C7955A97153E91CE00971465 /* EgeniqTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EgeniqTests-Prefix.pch"; sourceTree = "<group>"; };
+		C7955A9E153E922600971465 /* EFDayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDayTests.m; sourceTree = "<group>"; };
+		C7955AA2153E935400971465 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libKiwi.a; path = "External/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
+		C7955AA4153E945C00971465 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C7D0CF90142876D8003E9562 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		C7D0CF93142876E3003E9562 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D011F500120C827700A07E28 /* EFImageViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageViewDataSource.h; sourceTree = "<group>"; };
@@ -182,6 +205,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C7955A85153E91CE00971465 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7955AA3153E935400971465 /* libKiwi.a in Frameworks */,
+				C7955AA5153E945C00971465 /* SenTestingKit.framework in Frameworks */,
+				C7955A8C153E91CE00971465 /* UIKit.framework in Frameworks */,
+				C7955A8D153E91CE00971465 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D067DCED11FB130E0047EFAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,6 +298,25 @@
 			name = "Rich Text";
 			sourceTree = "<group>";
 		};
+		C7955A8E153E91CE00971465 /* EgeniqTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7955A9E153E922600971465 /* EFDayTests.m */,
+				C7955A8F153E91CE00971465 /* Supporting Files */,
+			);
+			path = EgeniqTests;
+			sourceTree = "<group>";
+		};
+		C7955A8F153E91CE00971465 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7955A90153E91CE00971465 /* EgeniqTests-Info.plist */,
+				C7955A91153E91CE00971465 /* InfoPlist.strings */,
+				C7955A97153E91CE00971465 /* EgeniqTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D011201013F8681A009B33E1 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +345,7 @@
 			children = (
 				D067DCE911FB130E0047EFAA /* Classes */,
 				D067DCEA11FB130E0047EFAA /* Other Sources */,
+				C7955A8E153E91CE00971465 /* EgeniqTests */,
 				D067DCEB11FB130E0047EFAA /* Frameworks */,
 				D067DCF111FB130E0047EFAA /* Products */,
 			);
@@ -324,6 +378,8 @@
 		D067DCEB11FB130E0047EFAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C7955AA2153E935400971465 /* libKiwi.a */,
+				C7955AA4153E945C00971465 /* SenTestingKit.framework */,
 				C7D0CF93142876E3003E9562 /* Security.framework */,
 				C7D0CF90142876D8003E9562 /* CoreText.framework */,
 				92256E50140257080070F2F8 /* Security.framework */,
@@ -340,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				D067DCF011FB130E0047EFAA /* libEgeniq.a */,
+				C7955A89153E91CE00971465 /* EgeniqTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -496,6 +553,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C7955A88153E91CE00971465 /* EgeniqTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7955A9B153E91CE00971465 /* Build configuration list for PBXNativeTarget "EgeniqTests" */;
+			buildPhases = (
+				C7955A84153E91CE00971465 /* Sources */,
+				C7955A85153E91CE00971465 /* Frameworks */,
+				C7955A86153E91CE00971465 /* Resources */,
+				C7955A87153E91CE00971465 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7955AA1153E931B00971465 /* PBXTargetDependency */,
+			);
+			name = EgeniqTests;
+			productName = EgeniqTests;
+			productReference = C7955A89153E91CE00971465 /* EgeniqTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		D067DCEF11FB130E0047EFAA /* Egeniq */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D067DCF711FB130E0047EFAA /* Build configuration list for PBXNativeTarget "Egeniq" */;
@@ -535,11 +611,47 @@
 			projectRoot = "";
 			targets = (
 				D067DCEF11FB130E0047EFAA /* Egeniq */,
+				C7955A88153E91CE00971465 /* EgeniqTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		C7955A86153E91CE00971465 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7955A93153E91CE00971465 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C7955A87153E91CE00971465 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		C7955A84153E91CE00971465 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7955A9F153E922600971465 /* EFDayTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D067DCEC11FB130E0047EFAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -585,7 +697,113 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C7955AA1153E931B00971465 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D067DCEF11FB130E0047EFAA /* Egeniq */;
+			targetProxy = C7955AA0153E931B00971465 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C7955A91153E91CE00971465 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7955A92153E91CE00971465 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		C7955A98153E91CE00971465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EgeniqTests/EgeniqTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "EgeniqTests/EgeniqTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/KiwiPublicHeaders";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C7955A99153E91CE00971465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EgeniqTests/EgeniqTests-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "EgeniqTests/EgeniqTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/KiwiPublicHeaders";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		C7955A9A153E91CE00971465 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "EgeniqTests/EgeniqTests-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "EgeniqTests/EgeniqTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/KiwiPublicHeaders";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Distribution;
+		};
 		D067DCF511FB130E0047EFAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -682,6 +900,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C7955A9B153E91CE00971465 /* Build configuration list for PBXNativeTarget "EgeniqTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7955A98153E91CE00971465 /* Debug */,
+				C7955A99153E91CE00971465 /* Release */,
+				C7955A9A153E91CE00971465 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D067DCE711FB130E0047EFAA /* Build configuration list for PBXProject "Egeniq" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
