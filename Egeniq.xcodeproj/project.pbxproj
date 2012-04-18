@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		92256E4C140255930070F2F8 /* EFKeyChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 92256E4A140255930070F2F8 /* EFKeyChain.h */; };
 		92256E4D140255930070F2F8 /* EFKeyChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 92256E4B140255930070F2F8 /* EFKeyChain.m */; };
-		92256E51140257080070F2F8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92256E50140257080070F2F8 /* Security.framework */; };
 		922C195413F7250E00C46B8A /* EFDateFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 922C195013F7250E00C46B8A /* EFDateFactory.h */; };
 		922C195513F7250E00C46B8A /* EFDateFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 922C195113F7250E00C46B8A /* EFDateFactory.m */; };
 		922C195613F7250E00C46B8A /* EFDay.h in Headers */ = {isa = PBXBuildFile; fileRef = 922C195213F7250E00C46B8A /* EFDay.h */; };
@@ -48,6 +47,16 @@
 		C7955A9F153E922600971465 /* EFDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7955A9E153E922600971465 /* EFDayTests.m */; };
 		C7955AA3153E935400971465 /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7955AA2153E935400971465 /* libKiwi.a */; };
 		C7955AA5153E945C00971465 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7955AA4153E945C00971465 /* SenTestingKit.framework */; };
+		C7955AB1153E99BE00971465 /* libEgeniq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF011FB130E0047EFAA /* libEgeniq.a */; };
+		C7955AB2153E99F800971465 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D089C6001327D629000A54F5 /* CoreData.framework */; };
+		C7955AB3153E99F800971465 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D0CF90142876D8003E9562 /* CoreText.framework */; };
+		C7955AB4153E99F800971465 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B04138537A1003B5A31 /* QuartzCore.framework */; };
+		C7955AB6153E99F800971465 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CDE2A123A963800247AD5 /* SystemConfiguration.framework */; };
+		C7955AB7153E9A7300971465 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D0CF93142876E3003E9562 /* Security.framework */; };
+		C7955AB9153E9AAF00971465 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7955AB8153E9AAF00971465 /* CoreGraphics.framework */; };
+		C7955AC7153EAC2D00971465 /* NSString+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = C7955AC5153EAC2D00971465 /* NSString+Utilities.h */; };
+		C7955AC8153EAC2D00971465 /* NSString+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C7955AC6153EAC2D00971465 /* NSString+Utilities.m */; };
+		C7955ACA153EACD800971465 /* NSString+UtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7955AC9153EACD800971465 /* NSString+UtilitiesTests.m */; };
 		C7D0CF91142876D8003E9562 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D0CF90142876D8003E9562 /* CoreText.framework */; };
 		D011F501120C827700A07E28 /* EFImageViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFImageViewDataSource.h */; };
 		D011F503120C839000A07E28 /* EFImageViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFImageViewDelegate.h */; };
@@ -99,7 +108,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C7955AA0153E931B00971465 /* PBXContainerItemProxy */ = {
+		C7955AAF153E98BF00971465 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D067DCE411FB130E0047EFAA /* Project object */;
 			proxyType = 1;
@@ -111,7 +120,6 @@
 /* Begin PBXFileReference section */
 		92256E4A140255930070F2F8 /* EFKeyChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFKeyChain.h; sourceTree = "<group>"; };
 		92256E4B140255930070F2F8 /* EFKeyChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFKeyChain.m; sourceTree = "<group>"; };
-		92256E50140257080070F2F8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		922C195013F7250E00C46B8A /* EFDateFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDateFactory.h; sourceTree = "<group>"; };
 		922C195113F7250E00C46B8A /* EFDateFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDateFactory.m; sourceTree = "<group>"; };
 		922C195213F7250E00C46B8A /* EFDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDay.h; sourceTree = "<group>"; };
@@ -151,6 +159,10 @@
 		C7955A9E153E922600971465 /* EFDayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDayTests.m; sourceTree = "<group>"; };
 		C7955AA2153E935400971465 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libKiwi.a; path = "External/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		C7955AA4153E945C00971465 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C7955AB8153E9AAF00971465 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C7955AC5153EAC2D00971465 /* NSString+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utilities.h"; sourceTree = "<group>"; };
+		C7955AC6153EAC2D00971465 /* NSString+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utilities.m"; sourceTree = "<group>"; };
+		C7955AC9153EACD800971465 /* NSString+UtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UtilitiesTests.m"; sourceTree = "<group>"; };
 		C7D0CF90142876D8003E9562 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		C7D0CF93142876E3003E9562 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D011F500120C827700A07E28 /* EFImageViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageViewDataSource.h; sourceTree = "<group>"; };
@@ -209,6 +221,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7955AB9153E9AAF00971465 /* CoreGraphics.framework in Frameworks */,
+				C7955AB4153E99F800971465 /* QuartzCore.framework in Frameworks */,
+				C7955AB7153E9A7300971465 /* Security.framework in Frameworks */,
+				C7955AB2153E99F800971465 /* CoreData.framework in Frameworks */,
+				C7955AB3153E99F800971465 /* CoreText.framework in Frameworks */,
+				C7955AB6153E99F800971465 /* SystemConfiguration.framework in Frameworks */,
+				C7955AB1153E99BE00971465 /* libEgeniq.a in Frameworks */,
 				C7955AA3153E935400971465 /* libKiwi.a in Frameworks */,
 				C7955AA5153E945C00971465 /* SenTestingKit.framework in Frameworks */,
 				C7955A8C153E91CE00971465 /* UIKit.framework in Frameworks */,
@@ -220,7 +239,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92256E51140257080070F2F8 /* Security.framework in Frameworks */,
 				C7D0CF91142876D8003E9562 /* CoreText.framework in Frameworks */,
 				D06F7B08138537B1003B5A31 /* UIKit.framework in Frameworks */,
 				D06F7B05138537A1003B5A31 /* QuartzCore.framework in Frameworks */,
@@ -302,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				C7955A9E153E922600971465 /* EFDayTests.m */,
+				C7955AC9153EACD800971465 /* NSString+UtilitiesTests.m */,
 				C7955A8F153E91CE00971465 /* Supporting Files */,
 			);
 			path = EgeniqTests;
@@ -324,6 +343,8 @@
 				923CDD76123A8CC300247AD5 /* EFQueue.h */,
 				923CDD77123A8CC300247AD5 /* EFQueue.m */,
 				925AA54C141284D200F63093 /* EFError.m */,
+				C7955AC5153EAC2D00971465 /* NSString+Utilities.h */,
+				C7955AC6153EAC2D00971465 /* NSString+Utilities.m */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -379,13 +400,13 @@
 			isa = PBXGroup;
 			children = (
 				C7955AA2153E935400971465 /* libKiwi.a */,
+				D089C6001327D629000A54F5 /* CoreData.framework */,
+				C7D0CF90142876D8003E9562 /* CoreText.framework */,
+				C7955AB8153E9AAF00971465 /* CoreGraphics.framework */,
 				C7955AA4153E945C00971465 /* SenTestingKit.framework */,
 				C7D0CF93142876E3003E9562 /* Security.framework */,
-				C7D0CF90142876D8003E9562 /* CoreText.framework */,
-				92256E50140257080070F2F8 /* Security.framework */,
 				D06F7B07138537B1003B5A31 /* UIKit.framework */,
 				D06F7B04138537A1003B5A31 /* QuartzCore.framework */,
-				D089C6001327D629000A54F5 /* CoreData.framework */,
 				923CDE2A123A963800247AD5 /* SystemConfiguration.framework */,
 				D067DCF211FB130E0047EFAA /* Foundation.framework */,
 			);
@@ -547,6 +568,7 @@
 				9FC1ADA8145F0C28005786F5 /* UILabel+VerticalAlignment.h in Headers */,
 				9FFA358814AB36A900507AEB /* EFServiceContainer-Protected.h in Headers */,
 				D047100314D823B100811F82 /* EFDataManager.h in Headers */,
+				C7955AC7153EAC2D00971465 /* NSString+Utilities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,7 +587,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C7955AA1153E931B00971465 /* PBXTargetDependency */,
+				C7955AB0153E98BF00971465 /* PBXTargetDependency */,
 			);
 			name = EgeniqTests;
 			productName = EgeniqTests;
@@ -649,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7955A9F153E922600971465 /* EFDayTests.m in Sources */,
+				C7955ACA153EACD800971465 /* NSString+UtilitiesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,16 +715,17 @@
 				9F25DD19145730C1000E7B48 /* EFAlertView.m in Sources */,
 				9FC1ADA9145F0C28005786F5 /* UILabel+VerticalAlignment.m in Sources */,
 				D047100414D823B100811F82 /* EFDataManager.m in Sources */,
+				C7955AC8153EAC2D00971465 /* NSString+Utilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C7955AA1153E931B00971465 /* PBXTargetDependency */ = {
+		C7955AB0153E98BF00971465 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D067DCEF11FB130E0047EFAA /* Egeniq */;
-			targetProxy = C7955AA0153E931B00971465 /* PBXContainerItemProxy */;
+			targetProxy = C7955AAF153E98BF00971465 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
