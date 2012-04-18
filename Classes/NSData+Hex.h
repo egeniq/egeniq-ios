@@ -11,4 +11,7 @@
  */
 - (NSString *)hexStringValue;
 
+- (NSString *)hexRepresentationWithSpaces:(BOOL)spaces capitals:(BOOL)capitals;
+
+
 @end
