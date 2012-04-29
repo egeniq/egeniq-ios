@@ -22,6 +22,8 @@
 		923CDDA8123A8F0A00247AD5 /* EFReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 923CDDA6123A8F0A00247AD5 /* EFReachability.h */; };
 		923CDDA9123A8F0A00247AD5 /* EFReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDDA7123A8F0A00247AD5 /* EFReachability.m */; };
 		923CDE2B123A963900247AD5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CDE2A123A963800247AD5 /* SystemConfiguration.framework */; };
+		924B0EA5154B0C120079764D /* EFTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 924B0EA4154B0C120079764D /* EFTextView.h */; };
+		924B0EA7154B0C200079764D /* EFTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 924B0EA6154B0C200079764D /* EFTextView.m */; };
 		925AA54D141284D200F63093 /* EFError.m in Sources */ = {isa = PBXBuildFile; fileRef = 925AA54C141284D200F63093 /* EFError.m */; };
 		925FBFA11415714B00C45B3B /* UIViewController+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 925FBF9F1415714B00C45B3B /* UIViewController+Utils.h */; };
 		925FBFA21415714B00C45B3B /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 925FBFA01415714B00C45B3B /* UIViewController+Utils.m */; };
@@ -135,6 +137,8 @@
 		923CDDA6123A8F0A00247AD5 /* EFReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFReachability.h; sourceTree = "<group>"; };
 		923CDDA7123A8F0A00247AD5 /* EFReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFReachability.m; sourceTree = "<group>"; };
 		923CDE2A123A963800247AD5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		924B0EA4154B0C120079764D /* EFTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTextView.h; sourceTree = "<group>"; };
+		924B0EA6154B0C200079764D /* EFTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTextView.m; sourceTree = "<group>"; };
 		925AA54C141284D200F63093 /* EFError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFError.m; sourceTree = "<group>"; };
 		925FBF9F1415714B00C45B3B /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
 		925FBFA01415714B00C45B3B /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
@@ -159,7 +163,7 @@
 		C7955A92153E91CE00971465 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7955A97153E91CE00971465 /* EgeniqTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EgeniqTests-Prefix.pch"; sourceTree = "<group>"; };
 		C7955A9E153E922600971465 /* EFDayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDayTests.m; sourceTree = "<group>"; };
-		C7955AA2153E935400971465 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libKiwi.a; path = "External/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
+		C7955AA2153E935400971465 /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "External/Kiwi/build/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		C7955AA4153E945C00971465 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C7955AB8153E9AAF00971465 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C7955AC5153EAC2D00971465 /* NSString+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utilities.h"; sourceTree = "<group>"; };
@@ -277,6 +281,15 @@
 				D0E522401320DC9A00426493 /* EFTokenExchangeClient.m */,
 			);
 			name = Net;
+			sourceTree = "<group>";
+		};
+		924B0EA2154B0BF30079764D /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				924B0EA6154B0C200079764D /* EFTextView.m */,
+				924B0EA4154B0C120079764D /* EFTextView.h */,
+			);
+			name = TextView;
 			sourceTree = "<group>";
 		};
 		92BFFA9313F952B8002D37A4 /* DI */ = {
@@ -474,6 +487,7 @@
 		D093CD3211FC627B000B51D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				924B0EA2154B0BF30079764D /* TextView */,
 				D06A5BDD13A3B48600BEEDEF /* Alert */,
 				D093CD3311FC6284000B51D8 /* Image */,
 				9FC1ADA4145F0C0A005786F5 /* Label */,
@@ -576,6 +590,7 @@
 				D047100314D823B100811F82 /* EFDataManager.h in Headers */,
 				C7955AC7153EAC2D00971465 /* NSString+Utilities.h in Headers */,
 				C7955ACD153EB8AD00971465 /* EFPlainWebView.h in Headers */,
+				924B0EA5154B0C120079764D /* EFTextView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,6 +739,7 @@
 				D047100414D823B100811F82 /* EFDataManager.m in Sources */,
 				C7955AC8153EAC2D00971465 /* NSString+Utilities.m in Sources */,
 				C7955ACE153EB8AD00971465 /* EFPlainWebView.m in Sources */,
+				924B0EA7154B0C200079764D /* EFTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,6 +956,7 @@
 				C7955A9A153E91CE00971465 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D067DCE711FB130E0047EFAA /* Build configuration list for PBXProject "Egeniq" */ = {
 			isa = XCConfigurationList;
