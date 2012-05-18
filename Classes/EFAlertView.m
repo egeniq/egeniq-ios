@@ -35,7 +35,7 @@
 #pragma mark -
 #pragma mark Initialization
 
-- (id)initWithTitle:(NSString *)title message:(NSString *)message confirmButtonTitle:(NSString *)confirmButtonTitle comfirmBlock:(EFAlertViewBlock)confirmBlock cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(EFAlertViewBlock)cancelBlock {
+- (id)initWithTitle:(NSString *)title message:(NSString *)message confirmButtonTitle:(NSString *)confirmButtonTitle confirmBlock:(EFAlertViewBlock)confirmBlock cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(EFAlertViewBlock)cancelBlock {
     self = [super initWithTitle:title message:message delegate:self cancelButtonTitle:cancelButtonTitle otherButtonTitles:confirmButtonTitle, nil];
     
     if (self != nil) {
@@ -49,19 +49,19 @@
 }
 
 - (id)initWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle block:(EFAlertViewBlock)block {
-    return [self initWithTitle:title message:message confirmButtonTitle:nil comfirmBlock:nil cancelButtonTitle:buttonTitle cancelBlock:block];
+    return [self initWithTitle:title message:message confirmButtonTitle:nil confirmBlock:nil cancelButtonTitle:buttonTitle cancelBlock:block];
 }
 
 #pragma mark -
 #pragma mark Showing
 
-+ (void)showWithTitle:(NSString *)title message:(NSString *)message confirmButtonTitle:(NSString *)confirmButtonTitle comfirmBlock:(EFAlertViewBlock)confirmBlock cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(EFAlertViewBlock)cancelBlock {
-    EFAlertView *alertView = [[[self alloc] initWithTitle:title message:message confirmButtonTitle:confirmButtonTitle comfirmBlock:confirmBlock cancelButtonTitle:cancelButtonTitle cancelBlock:cancelBlock] autorelease];
++ (void)showWithTitle:(NSString *)title message:(NSString *)message confirmButtonTitle:(NSString *)confirmButtonTitle confirmBlock:(EFAlertViewBlock)confirmBlock cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(EFAlertViewBlock)cancelBlock {
+    EFAlertView *alertView = [[[self alloc] initWithTitle:title message:message confirmButtonTitle:confirmButtonTitle confirmBlock:confirmBlock cancelButtonTitle:cancelButtonTitle cancelBlock:cancelBlock] autorelease];
     [alertView show];
 }
 
 + (void)showWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle block:(void (^)(void))block {
-    [self showWithTitle:title message:message confirmButtonTitle:nil comfirmBlock:nil cancelButtonTitle:buttonTitle cancelBlock:block];
+    [self showWithTitle:title message:message confirmButtonTitle:nil confirmBlock:nil cancelButtonTitle:buttonTitle cancelBlock:block];
 }
 
 + (void)showWithTitle:(NSString *)title message:(NSString *)message block:(EFAlertViewBlock)block {
