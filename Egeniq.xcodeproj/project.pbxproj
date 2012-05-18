@@ -22,6 +22,8 @@
 		923CDDA8123A8F0A00247AD5 /* EFReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 923CDDA6123A8F0A00247AD5 /* EFReachability.h */; };
 		923CDDA9123A8F0A00247AD5 /* EFReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDDA7123A8F0A00247AD5 /* EFReachability.m */; };
 		923CDE2B123A963900247AD5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CDE2A123A963800247AD5 /* SystemConfiguration.framework */; };
+		924B0EA5154B0C120079764D /* EFTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 924B0EA4154B0C120079764D /* EFTextView.h */; };
+		924B0EA7154B0C200079764D /* EFTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 924B0EA6154B0C200079764D /* EFTextView.m */; };
 		925AA54D141284D200F63093 /* EFError.m in Sources */ = {isa = PBXBuildFile; fileRef = 925AA54C141284D200F63093 /* EFError.m */; };
 		925FBFA11415714B00C45B3B /* UIViewController+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 925FBF9F1415714B00C45B3B /* UIViewController+Utils.h */; };
 		925FBFA21415714B00C45B3B /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 925FBFA01415714B00C45B3B /* UIViewController+Utils.m */; };
@@ -158,6 +160,8 @@
 		923CDDA6123A8F0A00247AD5 /* EFReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFReachability.h; sourceTree = "<group>"; };
 		923CDDA7123A8F0A00247AD5 /* EFReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFReachability.m; sourceTree = "<group>"; };
 		923CDE2A123A963800247AD5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		924B0EA4154B0C120079764D /* EFTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTextView.h; sourceTree = "<group>"; };
+		924B0EA6154B0C200079764D /* EFTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTextView.m; sourceTree = "<group>"; };
 		925AA54C141284D200F63093 /* EFError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFError.m; sourceTree = "<group>"; };
 		925FBF9F1415714B00C45B3B /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
 		925FBFA01415714B00C45B3B /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
@@ -327,6 +331,15 @@
 				D0E522401320DC9A00426493 /* EFTokenExchangeClient.m */,
 			);
 			name = Net;
+			sourceTree = "<group>";
+		};
+		924B0EA2154B0BF30079764D /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				924B0EA6154B0C200079764D /* EFTextView.m */,
+				924B0EA4154B0C120079764D /* EFTextView.h */,
+			);
+			name = TextView;
 			sourceTree = "<group>";
 		};
 		92BFFA9313F952B8002D37A4 /* DI */ = {
@@ -557,6 +570,7 @@
 				C7F7279B15452E3D0067B4F7 /* EFButtonsTableViewCell.m */,
 				C7F7279C15452E3D0067B4F7 /* EFTextFieldTableViewCell.h */,
 				C7F7279D15452E3D0067B4F7 /* EFTextFieldTableViewCell.m */,
+				924B0EA2154B0BF30079764D /* TextView */,
 				D06A5BDD13A3B48600BEEDEF /* Alert */,
 				D093CD3311FC6284000B51D8 /* Image */,
 				9FC1ADA4145F0C0A005786F5 /* Label */,
@@ -661,6 +675,7 @@
 				C7955ACD153EB8AD00971465 /* EFPlainWebView.h in Headers */,
 				C7F7279E15452E3D0067B4F7 /* EFButtonsTableViewCell.h in Headers */,
 				C7F727A015452E3D0067B4F7 /* EFTextFieldTableViewCell.h in Headers */,
+				924B0EA5154B0C120079764D /* EFTextView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -853,6 +868,7 @@
 				C7955ACE153EB8AD00971465 /* EFPlainWebView.m in Sources */,
 				C7F7279F15452E3D0067B4F7 /* EFButtonsTableViewCell.m in Sources */,
 				C7F727A115452E3D0067B4F7 /* EFTextFieldTableViewCell.m in Sources */,
+				924B0EA7154B0C200079764D /* EFTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

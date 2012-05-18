@@ -18,7 +18,7 @@ typedef void (^EFAlertViewBlock)(void);
 #pragma mark Initialization
 
 // Confirm/cancel alert view. Designated initializer.
-- (id)initWithTitle:(NSString *)title message:(NSString *)message confirmButtonTitle:(NSString *)confirmButtonTitle comfirmBlock:(EFAlertViewBlock)confirmBlock cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(EFAlertViewBlock)cancelBlock;
+- (id)initWithTitle:(NSString *)title message:(NSString *)message confirmButtonTitle:(NSString *)confirmButtonTitle confirmBlock:(EFAlertViewBlock)confirmBlock cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(EFAlertViewBlock)cancelBlock;
 
 // Informational alert view.
 - (id)initWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle block:(EFAlertViewBlock)block;
@@ -27,7 +27,7 @@ typedef void (^EFAlertViewBlock)(void);
 #pragma mark Showing
 
 // Confirm/cancel.
-+ (void)showWithTitle:(NSString *)title message:(NSString *)message confirmButtonTitle:(NSString *)confirmButtonTitle comfirmBlock:(EFAlertViewBlock)block cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(EFAlertViewBlock)cancelBlock;
++ (void)showWithTitle:(NSString *)title message:(NSString *)message confirmButtonTitle:(NSString *)confirmButtonTitle confirmBlock:(EFAlertViewBlock)block cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(EFAlertViewBlock)cancelBlock;
 // Info with customizable button.
 + (void)showWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle block:(EFAlertViewBlock)block;
 // Localized OK button.
