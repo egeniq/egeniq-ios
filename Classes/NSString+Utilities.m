@@ -213,4 +213,17 @@
     return encoded;
 }
 
+- (NSString *)luceneEscapedString {
+    // + - && || ! ( ) { } [ ] ^ " ~ * ? : \
+    
+    NSArray *characters = [NSArray arrayWithObjects:@"\\", @"+", @"-", @"&&", @"||", @"!", @"(", @")", @"{", @"}", @"[", @"]", @"^" @"\"", @"~", @"*", @"?", @":", nil];
+    NSMutableString *escapedString = [self mutableCopy];
+    for (NSString *character in characters) {
+        [escapedString replaceOccurrencesOfString:character withString:[@"\\" stringByAppendingString:character] options:0 range:NSMakeRange(0, [escapedString length])];
+    }
+    
+    return [escapedString autorelease];
+}
+  
+
 @end
