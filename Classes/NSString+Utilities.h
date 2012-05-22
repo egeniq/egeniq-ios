@@ -18,4 +18,6 @@
 - (NSString *)decodeHTMLCharacterEntities;
 - (NSString *)encodeHTMLCharacterEntities;
 
+- (NSString *)luceneEscapedString;
+
 @end
