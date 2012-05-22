@@ -62,6 +62,22 @@
 		C7955ACD153EB8AD00971465 /* EFPlainWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7955ACB153EB8AD00971465 /* EFPlainWebView.h */; };
 		C7955ACE153EB8AD00971465 /* EFPlainWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7955ACC153EB8AD00971465 /* EFPlainWebView.m */; };
 		C7D0CF91142876D8003E9562 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D0CF90142876D8003E9562 /* CoreText.framework */; };
+		C7F7279E15452E3D0067B4F7 /* EFButtonsTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C7F7279A15452E3D0067B4F7 /* EFButtonsTableViewCell.h */; };
+		C7F7279F15452E3D0067B4F7 /* EFButtonsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7279B15452E3D0067B4F7 /* EFButtonsTableViewCell.m */; };
+		C7F727A015452E3D0067B4F7 /* EFTextFieldTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C7F7279C15452E3D0067B4F7 /* EFTextFieldTableViewCell.h */; };
+		C7F727A115452E3D0067B4F7 /* EFTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7279D15452E3D0067B4F7 /* EFTextFieldTableViewCell.m */; };
+		C7F727C51545392E0067B4F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B07138537B1003B5A31 /* UIKit.framework */; };
+		C7F727C61545392E0067B4F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
+		C7F727C71545392E0067B4F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7955AB8153E9AAF00971465 /* CoreGraphics.framework */; };
+		C7F727CD1545392E0067B4F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7F727CB1545392E0067B4F7 /* InfoPlist.strings */; };
+		C7F727CF1545392E0067B4F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F727CE1545392E0067B4F7 /* main.m */; };
+		C7F727D31545392E0067B4F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F727D21545392E0067B4F7 /* AppDelegate.m */; };
+		C7F727DB1545394E0067B4F7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F727D81545394E0067B4F7 /* LoginViewController.xib */; };
+		C7F727DC1545394E0067B4F7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F727DA1545394E0067B4F7 /* LoginViewController.m */; };
+		C7F727E315453B070067B4F7 /* EFButtonsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7279B15452E3D0067B4F7 /* EFButtonsTableViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C7F727E415453B090067B4F7 /* EFTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F7279D15452E3D0067B4F7 /* EFTextFieldTableViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C7F727EA15453C410067B4F7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F727E815453C410067B4F7 /* MainViewController.m */; };
+		C7F727EB15453C410067B4F7 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7F727E915453C410067B4F7 /* MainViewController.xib */; };
 		D011F501120C827700A07E28 /* EFImageViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFImageViewDataSource.h */; };
 		D011F503120C839000A07E28 /* EFImageViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFImageViewDelegate.h */; };
 		D011F505120C85E400A07E28 /* EFImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F504120C85E400A07E28 /* EFImage.h */; };
@@ -113,6 +129,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		C7955AAF153E98BF00971465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D067DCE411FB130E0047EFAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D067DCEF11FB130E0047EFAA;
+			remoteInfo = Egeniq;
+		};
+		C7F727E515453B1D0067B4F7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D067DCE411FB130E0047EFAA /* Project object */;
 			proxyType = 1;
@@ -173,6 +196,23 @@
 		C7955ACC153EB8AD00971465 /* EFPlainWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFPlainWebView.m; sourceTree = "<group>"; };
 		C7D0CF90142876D8003E9562 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		C7D0CF93142876E3003E9562 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C7F7279A15452E3D0067B4F7 /* EFButtonsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFButtonsTableViewCell.h; sourceTree = "<group>"; };
+		C7F7279B15452E3D0067B4F7 /* EFButtonsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFButtonsTableViewCell.m; sourceTree = "<group>"; };
+		C7F7279C15452E3D0067B4F7 /* EFTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		C7F7279D15452E3D0067B4F7 /* EFTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		C7F727C31545392E0067B4F7 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7F727CA1545392E0067B4F7 /* Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Demo-Info.plist"; sourceTree = "<group>"; };
+		C7F727CC1545392E0067B4F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C7F727CE1545392E0067B4F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C7F727D01545392E0067B4F7 /* Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
+		C7F727D11545392E0067B4F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C7F727D21545392E0067B4F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C7F727D81545394E0067B4F7 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		C7F727D91545394E0067B4F7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		C7F727DA1545394E0067B4F7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		C7F727E715453C410067B4F7 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		C7F727E815453C410067B4F7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		C7F727E915453C410067B4F7 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		D011F500120C827700A07E28 /* EFImageViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageViewDataSource.h; sourceTree = "<group>"; };
 		D011F502120C839000A07E28 /* EFImageViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageViewDelegate.h; sourceTree = "<group>"; };
 		D011F504120C85E400A07E28 /* EFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImage.h; sourceTree = "<group>"; };
@@ -240,6 +280,16 @@
 				C7955AA5153E945C00971465 /* SenTestingKit.framework in Frameworks */,
 				C7955A8C153E91CE00971465 /* UIKit.framework in Frameworks */,
 				C7955A8D153E91CE00971465 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7F727C01545392E0067B4F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7F727C51545392E0067B4F7 /* UIKit.framework in Frameworks */,
+				C7F727C61545392E0067B4F7 /* Foundation.framework in Frameworks */,
+				C7F727C71545392E0067B4F7 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +403,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C7F727C81545392E0067B4F7 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				C7F727D11545392E0067B4F7 /* AppDelegate.h */,
+				C7F727D21545392E0067B4F7 /* AppDelegate.m */,
+				C7F727E715453C410067B4F7 /* MainViewController.h */,
+				C7F727E815453C410067B4F7 /* MainViewController.m */,
+				C7F727E915453C410067B4F7 /* MainViewController.xib */,
+				C7F727D91545394E0067B4F7 /* LoginViewController.h */,
+				C7F727DA1545394E0067B4F7 /* LoginViewController.m */,
+				C7F727D81545394E0067B4F7 /* LoginViewController.xib */,
+				C7F727C91545392E0067B4F7 /* Supporting Files */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		C7F727C91545392E0067B4F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C7F727CA1545392E0067B4F7 /* Demo-Info.plist */,
+				C7F727CB1545392E0067B4F7 /* InfoPlist.strings */,
+				C7F727CE1545392E0067B4F7 /* main.m */,
+				C7F727D01545392E0067B4F7 /* Demo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D011201013F8681A009B33E1 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,6 +461,7 @@
 				D067DCE911FB130E0047EFAA /* Classes */,
 				D067DCEA11FB130E0047EFAA /* Other Sources */,
 				C7955A8E153E91CE00971465 /* EgeniqTests */,
+				C7F727C81545392E0067B4F7 /* Demo */,
 				D067DCEB11FB130E0047EFAA /* Frameworks */,
 				D067DCF111FB130E0047EFAA /* Products */,
 			);
@@ -435,6 +513,7 @@
 			children = (
 				D067DCF011FB130E0047EFAA /* libEgeniq.a */,
 				C7955A89153E91CE00971465 /* EgeniqTests.octest */,
+				C7F727C31545392E0067B4F7 /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -487,6 +566,10 @@
 		D093CD3211FC627B000B51D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C7F7279A15452E3D0067B4F7 /* EFButtonsTableViewCell.h */,
+				C7F7279B15452E3D0067B4F7 /* EFButtonsTableViewCell.m */,
+				C7F7279C15452E3D0067B4F7 /* EFTextFieldTableViewCell.h */,
+				C7F7279D15452E3D0067B4F7 /* EFTextFieldTableViewCell.m */,
 				924B0EA2154B0BF30079764D /* TextView */,
 				D06A5BDD13A3B48600BEEDEF /* Alert */,
 				D093CD3311FC6284000B51D8 /* Image */,
@@ -590,6 +673,8 @@
 				D047100314D823B100811F82 /* EFDataManager.h in Headers */,
 				C7955AC7153EAC2D00971465 /* NSString+Utilities.h in Headers */,
 				C7955ACD153EB8AD00971465 /* EFPlainWebView.h in Headers */,
+				C7F7279E15452E3D0067B4F7 /* EFButtonsTableViewCell.h in Headers */,
+				C7F727A015452E3D0067B4F7 /* EFTextFieldTableViewCell.h in Headers */,
 				924B0EA5154B0C120079764D /* EFTextView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,6 +700,24 @@
 			productName = EgeniqTests;
 			productReference = C7955A89153E91CE00971465 /* EgeniqTests.octest */;
 			productType = "com.apple.product-type.bundle";
+		};
+		C7F727C21545392E0067B4F7 /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7F727D41545392E0067B4F7 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				C7F727BF1545392E0067B4F7 /* Sources */,
+				C7F727C01545392E0067B4F7 /* Frameworks */,
+				C7F727C11545392E0067B4F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7F727E615453B1D0067B4F7 /* PBXTargetDependency */,
+			);
+			name = Demo;
+			productName = Demo;
+			productReference = C7F727C31545392E0067B4F7 /* Demo.app */;
+			productType = "com.apple.product-type.application";
 		};
 		D067DCEF11FB130E0047EFAA /* Egeniq */ = {
 			isa = PBXNativeTarget;
@@ -656,6 +759,7 @@
 			targets = (
 				D067DCEF11FB130E0047EFAA /* Egeniq */,
 				C7955A88153E91CE00971465 /* EgeniqTests */,
+				C7F727C21545392E0067B4F7 /* Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -666,6 +770,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7955A93153E91CE00971465 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7F727C11545392E0067B4F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7F727CD1545392E0067B4F7 /* InfoPlist.strings in Resources */,
+				C7F727DB1545394E0067B4F7 /* LoginViewController.xib in Resources */,
+				C7F727EB15453C410067B4F7 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,6 +808,19 @@
 			files = (
 				C7955A9F153E922600971465 /* EFDayTests.m in Sources */,
 				C7955ACA153EACD800971465 /* NSString+UtilitiesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7F727BF1545392E0067B4F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7F727CF1545392E0067B4F7 /* main.m in Sources */,
+				C7F727D31545392E0067B4F7 /* AppDelegate.m in Sources */,
+				C7F727DC1545394E0067B4F7 /* LoginViewController.m in Sources */,
+				C7F727E315453B070067B4F7 /* EFButtonsTableViewCell.m in Sources */,
+				C7F727E415453B090067B4F7 /* EFTextFieldTableViewCell.m in Sources */,
+				C7F727EA15453C410067B4F7 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +866,8 @@
 				D047100414D823B100811F82 /* EFDataManager.m in Sources */,
 				C7955AC8153EAC2D00971465 /* NSString+Utilities.m in Sources */,
 				C7955ACE153EB8AD00971465 /* EFPlainWebView.m in Sources */,
+				C7F7279F15452E3D0067B4F7 /* EFButtonsTableViewCell.m in Sources */,
+				C7F727A115452E3D0067B4F7 /* EFTextFieldTableViewCell.m in Sources */,
 				924B0EA7154B0C200079764D /* EFTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -751,6 +880,11 @@
 			target = D067DCEF11FB130E0047EFAA /* Egeniq */;
 			targetProxy = C7955AAF153E98BF00971465 /* PBXContainerItemProxy */;
 		};
+		C7F727E615453B1D0067B4F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D067DCEF11FB130E0047EFAA /* Egeniq */;
+			targetProxy = C7F727E515453B1D0067B4F7 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -758,6 +892,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				C7955A92153E91CE00971465 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C7F727CB1545392E0067B4F7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7F727CC1545392E0067B4F7 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -849,6 +991,83 @@
 				USER_HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/KiwiPublicHeaders";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = octest;
+			};
+			name = Distribution;
+		};
+		C7F727D51545392E0067B4F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Demo/Demo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C7F727D61545392E0067B4F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Demo/Demo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C7F727D71545392E0067B4F7 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Demo/Demo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;
 		};
@@ -957,6 +1176,15 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C7F727D41545392E0067B4F7 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7F727D51545392E0067B4F7 /* Debug */,
+				C7F727D61545392E0067B4F7 /* Release */,
+				C7F727D71545392E0067B4F7 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		D067DCE711FB130E0047EFAA /* Build configuration list for PBXProject "Egeniq" */ = {
 			isa = XCConfigurationList;
