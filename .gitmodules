@@ -1,3 +1,6 @@
 [submodule "External/Kiwi"]
 	path = External/Kiwi
 	url = git://github.com/allending/Kiwi.git
+[submodule "External/JSONKit"]
+	path = External/JSONKit
+	url = https://github.com/johnezang/JSONKit.git
