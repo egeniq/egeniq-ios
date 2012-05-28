@@ -8,6 +8,30 @@
 
 #import "EFMultiValueSpecifierCell.h"
 
+@interface EFMultiValueSpecifierCell_TableViewController : UITableViewController
+
+@property (nonatomic, retain) NSIndexPath *selectedIndexPath;
+
+@end
+
+@implementation EFMultiValueSpecifierCell_TableViewController
+
+@synthesize selectedIndexPath = selectedIndexPath_;
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tableView scrollToRowAtIndexPath:self.selectedIndexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
+    [super viewWillAppear:animated];
+}
+
+- (void)dealloc {
+    self.selectedIndexPath = nil;
+    [super dealloc];
+}
+
+@end
+
+
+
 @implementation EFMultiValueSpecifierCell
 
 @synthesize delegate=delegate_;
@@ -52,10 +76,12 @@
 }
 
 - (UIViewController *)detailsViewController {
-	UITableViewController *viewController = [[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	EFMultiValueSpecifierCell_TableViewController *viewController = [[EFMultiValueSpecifierCell_TableViewController alloc] initWithStyle:UITableViewStyleGrouped];
 	viewController.navigationItem.title = self.textLabel.text;		
 	viewController.tableView.dataSource = self;
 	viewController.tableView.delegate = self;
+    NSInteger index = [self.values indexOfObject:self.value];		
+    viewController.selectedIndexPath = [NSIndexPath indexPathForRow:index inSection:0];
     return [viewController autorelease];
 }
 
@@ -63,7 +89,6 @@
     NSUInteger index = [self.values indexOfObject:self.value];		
     if (indexPath.row == index && cell.accessoryType != UITableViewCellAccessoryCheckmark) {
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;
-		[tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionMiddle animated:NO];
     }
 }
 
