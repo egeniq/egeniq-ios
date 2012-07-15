@@ -87,6 +87,8 @@
 		D039302813F83BDD004B93FA /* EFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D039302613F83BDD004B93FA /* EFRequest.m */; };
 		D047100314D823B100811F82 /* EFDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D047100114D823B100811F82 /* EFDataManager.h */; };
 		D047100414D823B100811F82 /* EFDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D047100214D823B100811F82 /* EFDataManager.m */; };
+		D048EA94145F23E90023ED53 /* UILabel+VerticalAlignment.h in Headers */ = {isa = PBXBuildFile; fileRef = D048EA92145F23E90023ED53 /* UILabel+VerticalAlignment.h */; };
+		D048EA95145F23E90023ED53 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = D048EA93145F23E90023ED53 /* UILabel+VerticalAlignment.m */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
 		D06F7B05138537A1003B5A31 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B04138537A1003B5A31 /* QuartzCore.framework */; };
 		D06F7B08138537B1003B5A31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B07138537B1003B5A31 /* UIKit.framework */; };
@@ -202,6 +204,8 @@
 		D039302613F83BDD004B93FA /* EFRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFRequest.m; sourceTree = "<group>"; };
 		D047100114D823B100811F82 /* EFDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDataManager.h; sourceTree = "<group>"; };
 		D047100214D823B100811F82 /* EFDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDataManager.m; sourceTree = "<group>"; };
+		D048EA92145F23E90023ED53 /* UILabel+VerticalAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlignment.h"; sourceTree = "<group>"; };
+		D048EA93145F23E90023ED53 /* UILabel+VerticalAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlignment.m"; sourceTree = "<group>"; };
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
@@ -315,8 +319,6 @@
 			children = (
 				C75D5827140510C1007E7B17 /* EFImageCache.h */,
 				C75D5828140510C1007E7B17 /* EFImageCache.m */,
-				C75D5829140510C1007E7B17 /* UIImageView+URL.h */,
-				C75D582A140510C1007E7B17 /* UIImageView+URL.m */,
 			);
 			name = "Image Cache";
 			sourceTree = "<group>";
@@ -500,6 +502,10 @@
 				C7A6C8EE1593401B00CC78C8 /* EFRefreshHeaderView.m */,
 				C7A6C8EF1593401B00CC78C8 /* EFTextView.h */,
 				C7A6C8F01593401B00CC78C8 /* EFTextView.m */,
+				D048EA92145F23E90023ED53 /* UILabel+VerticalAlignment.h */,
+				D048EA93145F23E90023ED53 /* UILabel+VerticalAlignment.m */,
+				C75D5829140510C1007E7B17 /* UIImageView+URL.h */,
+				C75D582A140510C1007E7B17 /* UIImageView+URL.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -597,6 +603,7 @@
 				766BD092156FB07E00E9FA12 /* JSONKit.h in Headers */,
 				C7A6C8F11593401B00CC78C8 /* EFRefreshHeaderView.h in Headers */,
 				C7A6C8F31593401B00CC78C8 /* EFTextView.h in Headers */,
+				D048EA94145F23E90023ED53 /* UILabel+VerticalAlignment.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,6 +755,7 @@
 				766BD093156FB07E00E9FA12 /* JSONKit.m in Sources */,
 				C7A6C8F21593401B00CC78C8 /* EFRefreshHeaderView.m in Sources */,
 				C7A6C8F41593401B00CC78C8 /* EFTextView.m in Sources */,
+				D048EA95145F23E90023ED53 /* UILabel+VerticalAlignment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

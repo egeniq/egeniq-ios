@@ -1,6 +1,5 @@
 #import "EFTokenExchangeClient.h"
 #import "NSData+Hex.h"
-#import "JSONKit.h"
 
 static EFTokenExchangeClient *sharedInstance = nil;
 
@@ -56,10 +55,9 @@ static EFTokenExchangeClient *sharedInstance = nil;
     
 	NSString *body;
 	if (escapedNotificationToken == nil) {
-	    body = [NSString stringWithFormat:@"appid=%@&deviceToken=%@&deviceFamily=ios", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"EFTECAppId"], escapedDeviceToken];	
+	    body = [NSString stringWithFormat:@"deviceToken=%@&deviceFamily=ios", escapedDeviceToken];	
 	} else {
-        URL = [URL URLByAppendingPathComponent:@";update"];
-	    body = [NSString stringWithFormat:@"appid=%@&deviceToken=%@&notificationToken=%@", [[NSBundle mainBundle] objectForInfoDictionaryKey:@"EFTECAppId"], escapedDeviceToken, escapedNotificationToken];
+	    body = [NSString stringWithFormat:@"deviceToken=%@&notificationToken=%@", escapedDeviceToken, escapedNotificationToken];
 	}
 	
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:URL];
@@ -88,10 +86,12 @@ static EFTokenExchangeClient *sharedInstance = nil;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSDictionary *responseJSON = [[JSONDecoder decoder] objectWithData:responseData];
-  	[self setNotificationToken:[responseJSON objectForKey:@"notificationToken"]];
+	NSString *response = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+	if ([response length] > 0) {
+     	[self setNotificationToken:response];
+	}
 	
-    [responseJSON release];
+	[response release];	
     [connection release];
     [responseData release];	
 	responseData = nil;	
