@@ -61,6 +61,10 @@
 		C7955ACA153EACD800971465 /* NSString+UtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7955AC9153EACD800971465 /* NSString+UtilitiesTests.m */; };
 		C7955ACD153EB8AD00971465 /* EFPlainWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7955ACB153EB8AD00971465 /* EFPlainWebView.h */; };
 		C7955ACE153EB8AD00971465 /* EFPlainWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7955ACC153EB8AD00971465 /* EFPlainWebView.m */; };
+		C7A6C8F11593401B00CC78C8 /* EFRefreshHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7A6C8ED1593401B00CC78C8 /* EFRefreshHeaderView.h */; };
+		C7A6C8F21593401B00CC78C8 /* EFRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A6C8EE1593401B00CC78C8 /* EFRefreshHeaderView.m */; };
+		C7A6C8F31593401B00CC78C8 /* EFTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7A6C8EF1593401B00CC78C8 /* EFTextView.h */; };
+		C7A6C8F41593401B00CC78C8 /* EFTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A6C8F01593401B00CC78C8 /* EFTextView.m */; };
 		C7D0CF91142876D8003E9562 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D0CF90142876D8003E9562 /* CoreText.framework */; };
 		D011F501120C827700A07E28 /* EFImageViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFImageViewDataSource.h */; };
 		D011F503120C839000A07E28 /* EFImageViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFImageViewDelegate.h */; };
@@ -171,6 +175,10 @@
 		C7955AC9153EACD800971465 /* NSString+UtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UtilitiesTests.m"; sourceTree = "<group>"; };
 		C7955ACB153EB8AD00971465 /* EFPlainWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPlainWebView.h; sourceTree = "<group>"; };
 		C7955ACC153EB8AD00971465 /* EFPlainWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFPlainWebView.m; sourceTree = "<group>"; };
+		C7A6C8ED1593401B00CC78C8 /* EFRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFRefreshHeaderView.h; sourceTree = "<group>"; };
+		C7A6C8EE1593401B00CC78C8 /* EFRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFRefreshHeaderView.m; sourceTree = "<group>"; };
+		C7A6C8EF1593401B00CC78C8 /* EFTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTextView.h; sourceTree = "<group>"; };
+		C7A6C8F01593401B00CC78C8 /* EFTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTextView.m; sourceTree = "<group>"; };
 		C7D0CF90142876D8003E9562 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		C7D0CF93142876E3003E9562 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D011F500120C827700A07E28 /* EFImageViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageViewDataSource.h; sourceTree = "<group>"; };
@@ -488,6 +496,10 @@
 				925FBFA01415714B00C45B3B /* UIViewController+Utils.m */,
 				C7955ACB153EB8AD00971465 /* EFPlainWebView.h */,
 				C7955ACC153EB8AD00971465 /* EFPlainWebView.m */,
+				C7A6C8ED1593401B00CC78C8 /* EFRefreshHeaderView.h */,
+				C7A6C8EE1593401B00CC78C8 /* EFRefreshHeaderView.m */,
+				C7A6C8EF1593401B00CC78C8 /* EFTextView.h */,
+				C7A6C8F01593401B00CC78C8 /* EFTextView.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -583,6 +595,8 @@
 				C7955AC7153EAC2D00971465 /* NSString+Utilities.h in Headers */,
 				C7955ACD153EB8AD00971465 /* EFPlainWebView.h in Headers */,
 				766BD092156FB07E00E9FA12 /* JSONKit.h in Headers */,
+				C7A6C8F11593401B00CC78C8 /* EFRefreshHeaderView.h in Headers */,
+				C7A6C8F31593401B00CC78C8 /* EFTextView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +746,8 @@
 				C7955AC8153EAC2D00971465 /* NSString+Utilities.m in Sources */,
 				C7955ACE153EB8AD00971465 /* EFPlainWebView.m in Sources */,
 				766BD093156FB07E00E9FA12 /* JSONKit.m in Sources */,
+				C7A6C8F21593401B00CC78C8 /* EFRefreshHeaderView.m in Sources */,
+				C7A6C8F41593401B00CC78C8 /* EFTextView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
