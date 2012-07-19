@@ -7,6 +7,13 @@ As-is, no warranties whatsoever, use at your own risk, etc. etc.
 
 Pull requests with improvements are very much appreciated!
 
+License: Apache License 2.0 (See LICENSE file)
+
 Todo:
 * Overview of what's in here and what you'd use it for
-* Add a license file (BSD, MIT, something that makes it easy to share)
+* Clean up documentation (especially headers)
+
+Have fun,
+The Egeniq Team
+
+http://www.egeniq.com
