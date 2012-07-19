@@ -22,8 +22,6 @@
 		923CDDA8123A8F0A00247AD5 /* EFReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 923CDDA6123A8F0A00247AD5 /* EFReachability.h */; };
 		923CDDA9123A8F0A00247AD5 /* EFReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CDDA7123A8F0A00247AD5 /* EFReachability.m */; };
 		923CDE2B123A963900247AD5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CDE2A123A963800247AD5 /* SystemConfiguration.framework */; };
-		924B0EA5154B0C120079764D /* EFTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 924B0EA4154B0C120079764D /* EFTextView.h */; };
-		924B0EA7154B0C200079764D /* EFTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 924B0EA6154B0C200079764D /* EFTextView.m */; };
 		925AA54D141284D200F63093 /* EFError.m in Sources */ = {isa = PBXBuildFile; fileRef = 925AA54C141284D200F63093 /* EFError.m */; };
 		925FBFA11415714B00C45B3B /* UIViewController+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 925FBF9F1415714B00C45B3B /* UIViewController+Utils.h */; };
 		925FBFA21415714B00C45B3B /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 925FBFA01415714B00C45B3B /* UIViewController+Utils.m */; };
@@ -61,6 +59,10 @@
 		C7955ACA153EACD800971465 /* NSString+UtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7955AC9153EACD800971465 /* NSString+UtilitiesTests.m */; };
 		C7955ACD153EB8AD00971465 /* EFPlainWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7955ACB153EB8AD00971465 /* EFPlainWebView.h */; };
 		C7955ACE153EB8AD00971465 /* EFPlainWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7955ACC153EB8AD00971465 /* EFPlainWebView.m */; };
+		C7A6C8F11593401B00CC78C8 /* EFRefreshHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7A6C8ED1593401B00CC78C8 /* EFRefreshHeaderView.h */; };
+		C7A6C8F21593401B00CC78C8 /* EFRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A6C8EE1593401B00CC78C8 /* EFRefreshHeaderView.m */; };
+		C7A6C8F31593401B00CC78C8 /* EFTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7A6C8EF1593401B00CC78C8 /* EFTextView.h */; };
+		C7A6C8F41593401B00CC78C8 /* EFTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A6C8F01593401B00CC78C8 /* EFTextView.m */; };
 		C7D0CF91142876D8003E9562 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D0CF90142876D8003E9562 /* CoreText.framework */; };
 		D011F501120C827700A07E28 /* EFImageViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFImageViewDataSource.h */; };
 		D011F503120C839000A07E28 /* EFImageViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFImageViewDelegate.h */; };
@@ -83,6 +85,8 @@
 		D039302813F83BDD004B93FA /* EFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D039302613F83BDD004B93FA /* EFRequest.m */; };
 		D047100314D823B100811F82 /* EFDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D047100114D823B100811F82 /* EFDataManager.h */; };
 		D047100414D823B100811F82 /* EFDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D047100214D823B100811F82 /* EFDataManager.m */; };
+		D048EA94145F23E90023ED53 /* UILabel+VerticalAlignment.h in Headers */ = {isa = PBXBuildFile; fileRef = D048EA92145F23E90023ED53 /* UILabel+VerticalAlignment.h */; };
+		D048EA95145F23E90023ED53 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = D048EA93145F23E90023ED53 /* UILabel+VerticalAlignment.m */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
 		D06F7B05138537A1003B5A31 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B04138537A1003B5A31 /* QuartzCore.framework */; };
 		D06F7B08138537B1003B5A31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B07138537B1003B5A31 /* UIKit.framework */; };
@@ -137,8 +141,6 @@
 		923CDDA6123A8F0A00247AD5 /* EFReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFReachability.h; sourceTree = "<group>"; };
 		923CDDA7123A8F0A00247AD5 /* EFReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFReachability.m; sourceTree = "<group>"; };
 		923CDE2A123A963800247AD5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		924B0EA4154B0C120079764D /* EFTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTextView.h; sourceTree = "<group>"; };
-		924B0EA6154B0C200079764D /* EFTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTextView.m; sourceTree = "<group>"; };
 		925AA54C141284D200F63093 /* EFError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFError.m; sourceTree = "<group>"; };
 		925FBF9F1415714B00C45B3B /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
 		925FBFA01415714B00C45B3B /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
@@ -171,6 +173,10 @@
 		C7955AC9153EACD800971465 /* NSString+UtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+UtilitiesTests.m"; sourceTree = "<group>"; };
 		C7955ACB153EB8AD00971465 /* EFPlainWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFPlainWebView.h; sourceTree = "<group>"; };
 		C7955ACC153EB8AD00971465 /* EFPlainWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFPlainWebView.m; sourceTree = "<group>"; };
+		C7A6C8ED1593401B00CC78C8 /* EFRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFRefreshHeaderView.h; sourceTree = "<group>"; };
+		C7A6C8EE1593401B00CC78C8 /* EFRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFRefreshHeaderView.m; sourceTree = "<group>"; };
+		C7A6C8EF1593401B00CC78C8 /* EFTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFTextView.h; sourceTree = "<group>"; };
+		C7A6C8F01593401B00CC78C8 /* EFTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTextView.m; sourceTree = "<group>"; };
 		C7D0CF90142876D8003E9562 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		C7D0CF93142876E3003E9562 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D011F500120C827700A07E28 /* EFImageViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageViewDataSource.h; sourceTree = "<group>"; };
@@ -194,6 +200,8 @@
 		D039302613F83BDD004B93FA /* EFRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFRequest.m; sourceTree = "<group>"; };
 		D047100114D823B100811F82 /* EFDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFDataManager.h; sourceTree = "<group>"; };
 		D047100214D823B100811F82 /* EFDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFDataManager.m; sourceTree = "<group>"; };
+		D048EA92145F23E90023ED53 /* UILabel+VerticalAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlignment.h"; sourceTree = "<group>"; };
+		D048EA93145F23E90023ED53 /* UILabel+VerticalAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlignment.m"; sourceTree = "<group>"; };
 		D067DCF011FB130E0047EFAA /* libEgeniq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEgeniq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067DCF211FB130E0047EFAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D067DCF411FB130E0047EFAA /* Egeniq_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Egeniq_Prefix.pch; sourceTree = "<group>"; };
@@ -283,15 +291,6 @@
 			name = Net;
 			sourceTree = "<group>";
 		};
-		924B0EA2154B0BF30079764D /* TextView */ = {
-			isa = PBXGroup;
-			children = (
-				924B0EA6154B0C200079764D /* EFTextView.m */,
-				924B0EA4154B0C120079764D /* EFTextView.h */,
-			);
-			name = TextView;
-			sourceTree = "<group>";
-		};
 		92BFFA9313F952B8002D37A4 /* DI */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,8 +315,6 @@
 			children = (
 				C75D5827140510C1007E7B17 /* EFImageCache.h */,
 				C75D5828140510C1007E7B17 /* EFImageCache.m */,
-				C75D5829140510C1007E7B17 /* UIImageView+URL.h */,
-				C75D582A140510C1007E7B17 /* UIImageView+URL.m */,
 			);
 			name = "Image Cache";
 			sourceTree = "<group>";
@@ -487,7 +484,6 @@
 		D093CD3211FC627B000B51D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				924B0EA2154B0BF30079764D /* TextView */,
 				D06A5BDD13A3B48600BEEDEF /* Alert */,
 				D093CD3311FC6284000B51D8 /* Image */,
 				9FC1ADA4145F0C0A005786F5 /* Label */,
@@ -498,6 +494,14 @@
 				925FBFA01415714B00C45B3B /* UIViewController+Utils.m */,
 				C7955ACB153EB8AD00971465 /* EFPlainWebView.h */,
 				C7955ACC153EB8AD00971465 /* EFPlainWebView.m */,
+				C7A6C8ED1593401B00CC78C8 /* EFRefreshHeaderView.h */,
+				C7A6C8EE1593401B00CC78C8 /* EFRefreshHeaderView.m */,
+				C7A6C8EF1593401B00CC78C8 /* EFTextView.h */,
+				C7A6C8F01593401B00CC78C8 /* EFTextView.m */,
+				D048EA92145F23E90023ED53 /* UILabel+VerticalAlignment.h */,
+				D048EA93145F23E90023ED53 /* UILabel+VerticalAlignment.m */,
+				C75D5829140510C1007E7B17 /* UIImageView+URL.h */,
+				C75D582A140510C1007E7B17 /* UIImageView+URL.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -590,7 +594,9 @@
 				D047100314D823B100811F82 /* EFDataManager.h in Headers */,
 				C7955AC7153EAC2D00971465 /* NSString+Utilities.h in Headers */,
 				C7955ACD153EB8AD00971465 /* EFPlainWebView.h in Headers */,
-				924B0EA5154B0C120079764D /* EFTextView.h in Headers */,
+				C7A6C8F11593401B00CC78C8 /* EFRefreshHeaderView.h in Headers */,
+				C7A6C8F31593401B00CC78C8 /* EFTextView.h in Headers */,
+				D048EA94145F23E90023ED53 /* UILabel+VerticalAlignment.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,7 +745,9 @@
 				D047100414D823B100811F82 /* EFDataManager.m in Sources */,
 				C7955AC8153EAC2D00971465 /* NSString+Utilities.m in Sources */,
 				C7955ACE153EB8AD00971465 /* EFPlainWebView.m in Sources */,
-				924B0EA7154B0C200079764D /* EFTextView.m in Sources */,
+				C7A6C8F21593401B00CC78C8 /* EFRefreshHeaderView.m in Sources */,
+				C7A6C8F41593401B00CC78C8 /* EFTextView.m in Sources */,
+				D048EA95145F23E90023ED53 /* UILabel+VerticalAlignment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

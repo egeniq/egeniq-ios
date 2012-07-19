@@ -36,7 +36,7 @@
         return nil;
     }
     
-    if (error != nil) {
+    if (error != NULL) {
         *error = nil;
     }
     
@@ -61,7 +61,7 @@
     
     if (status != noErr) {
         // No existing item found--simply return nil for the password
-        if (status != errSecItemNotFound) {
+        if (status != errSecItemNotFound && error != NULL) {
             //Only return an error if a real exception happened--not simply for "not found."
             // TODO: parse status
             *error = [NSError errorWithDomain: EFErrorDomain code: EFUnknownError userInfo: nil];
@@ -85,7 +85,7 @@
         if (status == errSecItemNotFound) {
             return nil;
         }
-        else {
+        else if (error != NULL) {
             // Something else went wrong. Simply return the normal Keychain API error code.
             *error = [NSError errorWithDomain:EFErrorDomain code:EFUnknownError userInfo: nil];
         }
@@ -99,7 +99,7 @@
         password = [[NSString alloc] initWithData:resultData encoding:NSUTF8StringEncoding];
     }
     else {
-        if (error != nil) {
+        if (error != NULL) {
             *error = [NSError errorWithDomain:EFErrorDomain code: -1999 userInfo: nil];
         }
     }
@@ -121,7 +121,7 @@
     NSError *getError = nil;
     NSString *existingPassword = [self passwordForUserId:userId serviceName:serviceName error:&getError];
         
-    if (error != nil) {
+    if (error != NULL) {
         *error = nil;
     }
     
@@ -176,10 +176,12 @@
         status = SecItemAdd((CFDictionaryRef) query, NULL);
     }
     
-    if (error != nil && status != noErr) {
+    if (error != NULL && status != noErr) {
         // Something went wrong with adding the new item. Return the Keychain error code.
         // todo: translate status to errorcode
+        
         *error = [NSError errorWithDomain:EFErrorDomain code:EFUnknownError userInfo: nil];
+        
         
         return NO;
     }
@@ -195,7 +197,7 @@
         return NO;
     }
     
-    if (error != nil) {
+    if (error != NULL) {
         *error = nil;
     }
     
@@ -206,7 +208,7 @@
     
     OSStatus status = SecItemDelete((CFDictionaryRef) query);
     
-    if (error != nil && status != noErr) {
+    if (error != NULL && status != noErr) {
         // todo translate status to errorcode
         *error = [NSError errorWithDomain:EFErrorDomain code:EFUnknownError userInfo: nil];		
         

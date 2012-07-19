@@ -20,6 +20,7 @@
 
 @interface EFSettingsViewModel : NSObject <EFSettingsViewDataSource, EFSettingsViewDelegate> {
     NSMutableArray *sections_;
+    NSMutableArray *visibleSections_;    
     NSMutableDictionary *sectionTitles_;
     NSMutableDictionary *sectionFooterViews_;    
     NSMutableDictionary *sectionFields_;
@@ -29,6 +30,7 @@
 @property(nonatomic, assign) IBOutlet NSObject<EFSettingsViewModelDelegate> *delegate;
 
 - (void)addSection:(NSString *)section withTitle:(NSString *)title;
+- (void)setHidden:(BOOL)hidden forSection:(NSString *)section;
 - (void)setTitle:(NSString *)title forSection:(NSString *)section;
 - (void)setFooterView:(UIView *)view forSection:(NSString *)section;
 - (void)removeSection:(NSString *)section;

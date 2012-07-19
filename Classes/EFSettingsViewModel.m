@@ -16,6 +16,7 @@
     self = [super init];
     if (self != nil) {
         sections_ = [[NSMutableArray alloc] init];
+        visibleSections_ = [[NSMutableArray alloc] init];        
         sectionTitles_ = [[NSMutableDictionary alloc] init];
         sectionFields_ = [[NSMutableDictionary alloc] init];
         sectionFooterViews_ = [[NSMutableDictionary alloc] init];
@@ -30,12 +31,21 @@
     [sections_ addObject:section];
     [sectionTitles_ setValue:title forKey:section];
     [sectionFields_ setObject:[NSMutableArray array] forKey:section];
+    [self setHidden:NO forSection:section];
 }
 
 - (void)setTitle:(NSString *)title forSection:(NSString *)section {
     [sectionTitles_ setValue:title forKey:section];    
 }
 
+- (void)setHidden:(BOOL)hidden forSection:(NSString *)section {
+    [visibleSections_ removeObject:section];
+    if (!hidden) {
+        [visibleSections_ addObject:section];
+    }
+    
+    visibleSections_ = [[NSMutableArray arrayWithArray:[sections_ filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self IN (%@)", visibleSections_]]] retain];
+}
 
 - (void)setFooterView:(UITableView *)view forSection:(NSString *)section {
     [sectionFooterViews_ setValue:view forKey:section];
@@ -47,6 +57,7 @@
     }
     
     [sections_ removeObject:section];
+    [visibleSections_ removeObject:section];
     [sectionTitles_ removeObjectForKey:section];
     [sectionFooterViews_ removeObjectForKey:section];
     
@@ -91,6 +102,7 @@
 
 - (void)removeAll {
     [sections_ removeAllObjects];
+    [visibleSections_ removeAllObjects];
     [sectionTitles_ removeAllObjects];
     [sectionFields_ removeAllObjects];
     [fields_ removeAllObjects];
@@ -120,20 +132,20 @@
 }
 
 - (NSUInteger)numberOfSectionsInSettingsView:(EFSettingsView *)settingsView {
-    return [sections_ count];
+    return [visibleSections_ count];
 }
 
 - (NSString *)settingsView:(EFSettingsView *)settingsView titleForSection:(NSInteger)section {
-    return [sectionTitles_ objectForKey:[sections_ objectAtIndex:section]];
+    return [sectionTitles_ objectForKey:[visibleSections_ objectAtIndex:section]];
 }
 
 - (NSInteger)settingsView:(EFSettingsView *)settingsView numberOfFieldsInSection:(NSInteger)section {
-    NSArray *fieldNames = [sectionFields_ objectForKey:[sections_ objectAtIndex:section]];
+    NSArray *fieldNames = [sectionFields_ objectForKey:[visibleSections_ objectAtIndex:section]];
     return [fieldNames count];
 }
 
 - (EFSpecifierCell *)settingsView:(EFSettingsView *)settingsView fieldAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *fieldNames = [sectionFields_ objectForKey:[sections_ objectAtIndex:indexPath.section]];
+    NSArray *fieldNames = [sectionFields_ objectForKey:[visibleSections_ objectAtIndex:indexPath.section]];
     NSString *fieldName = [fieldNames objectAtIndex:indexPath.row];
     return [self fieldWithName:fieldName];
 }
@@ -145,11 +157,12 @@
 }
 
 - (UIView *)settingsView:(EFSettingsView *)settingsView viewForFooterInSection:(NSInteger)section {
-    return [sectionFooterViews_ objectForKey:[sections_ objectAtIndex:section]];
+    return [sectionFooterViews_ objectForKey:[visibleSections_ objectAtIndex:section]];
 }
 
 - (void)dealloc {
     [sections_  release];
+    [visibleSections_ release];
     [sectionTitles_ release];
     [sectionFields_ release];
     [sectionFooterViews_ release];
