@@ -1,7 +1,7 @@
 Egeniq Library for iOS projects
 ===============================
 
-This project containssome of the utility classes we've developed to make our lives easier. If they make our lives easier, they may also make somebody else happy, so we've decided to make them publicly available.
+This project contains some of the utility classes we've developed to make our lives easier. If they make our lives easier, they may also make somebody else happy, so we've decided to make them publicly available.
 
 As-is, no warranties whatsoever, use at your own risk, etc. etc.
 
