@@ -17,4 +17,14 @@
  */
 - (id)initWithModelName:(NSString *)modelName;
 
+/**
+ * Initialize data manager with given model name and concurrency type.
+ */
+- (id)initWithModelName:(NSString *)modelName concurrencyType:(NSManagedObjectContextConcurrencyType)concurrencyType;
+
+/**
+ * Creates a child managed object context with the given concurrency type.
+ */
+- (NSManagedObjectContext *)childManagedObjectContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)concurrencyType;
+
 @end

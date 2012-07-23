@@ -85,8 +85,6 @@
 		D039302813F83BDD004B93FA /* EFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D039302613F83BDD004B93FA /* EFRequest.m */; };
 		D047100314D823B100811F82 /* EFDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D047100114D823B100811F82 /* EFDataManager.h */; };
 		D047100414D823B100811F82 /* EFDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D047100214D823B100811F82 /* EFDataManager.m */; };
-		D048EA94145F23E90023ED53 /* UILabel+VerticalAlignment.h in Headers */ = {isa = PBXBuildFile; fileRef = D048EA92145F23E90023ED53 /* UILabel+VerticalAlignment.h */; };
-		D048EA95145F23E90023ED53 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = D048EA93145F23E90023ED53 /* UILabel+VerticalAlignment.m */; };
 		D067DCF311FB130E0047EFAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
 		D06F7B05138537A1003B5A31 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B04138537A1003B5A31 /* QuartzCore.framework */; };
 		D06F7B08138537B1003B5A31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B07138537B1003B5A31 /* UIKit.framework */; };
@@ -160,7 +158,7 @@
 		C786497B14205FC300DB0DB7 /* EFRichTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFRichTextView.m; sourceTree = "<group>"; };
 		C786497C14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Convenience.h"; sourceTree = "<group>"; };
 		C786497D14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Convenience.m"; sourceTree = "<group>"; };
-		C7955A89153E91CE00971465 /* EgeniqTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EgeniqTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7955A89153E91CE00971465 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7955A90153E91CE00971465 /* EgeniqTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EgeniqTests-Info.plist"; sourceTree = "<group>"; };
 		C7955A92153E91CE00971465 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7955A97153E91CE00971465 /* EgeniqTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EgeniqTests-Prefix.pch"; sourceTree = "<group>"; };
@@ -431,7 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				D067DCF011FB130E0047EFAA /* libEgeniq.a */,
-				C7955A89153E91CE00971465 /* EgeniqTests.octest */,
+				C7955A89153E91CE00971465 /* Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -596,16 +594,15 @@
 				C7955ACD153EB8AD00971465 /* EFPlainWebView.h in Headers */,
 				C7A6C8F11593401B00CC78C8 /* EFRefreshHeaderView.h in Headers */,
 				C7A6C8F31593401B00CC78C8 /* EFTextView.h in Headers */,
-				D048EA94145F23E90023ED53 /* UILabel+VerticalAlignment.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C7955A88153E91CE00971465 /* EgeniqTests */ = {
+		C7955A88153E91CE00971465 /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C7955A9B153E91CE00971465 /* Build configuration list for PBXNativeTarget "EgeniqTests" */;
+			buildConfigurationList = C7955A9B153E91CE00971465 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				C7955A84153E91CE00971465 /* Sources */,
 				C7955A85153E91CE00971465 /* Frameworks */,
@@ -617,9 +614,9 @@
 			dependencies = (
 				C7955AB0153E98BF00971465 /* PBXTargetDependency */,
 			);
-			name = EgeniqTests;
+			name = Tests;
 			productName = EgeniqTests;
-			productReference = C7955A89153E91CE00971465 /* EgeniqTests.octest */;
+			productReference = C7955A89153E91CE00971465 /* Tests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 		D067DCEF11FB130E0047EFAA /* Egeniq */ = {
@@ -661,7 +658,7 @@
 			projectRoot = "";
 			targets = (
 				D067DCEF11FB130E0047EFAA /* Egeniq */,
-				C7955A88153E91CE00971465 /* EgeniqTests */,
+				C7955A88153E91CE00971465 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -747,7 +744,6 @@
 				C7955ACE153EB8AD00971465 /* EFPlainWebView.m in Sources */,
 				C7A6C8F21593401B00CC78C8 /* EFRefreshHeaderView.m in Sources */,
 				C7A6C8F41593401B00CC78C8 /* EFTextView.m in Sources */,
-				D048EA95145F23E90023ED53 /* UILabel+VerticalAlignment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -863,13 +859,10 @@
 		D067DCF511FB130E0047EFAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fvisibility=default";
 				SDKROOT = iphoneos;
@@ -880,13 +873,10 @@
 		D067DCF611FB130E0047EFAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fvisibility=default";
 				SDKROOT = iphoneos;
@@ -925,13 +915,10 @@
 		D0BA358613A1413200DE1B85 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fvisibility=default";
 				SDKROOT = iphoneos;
@@ -956,7 +943,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C7955A9B153E91CE00971465 /* Build configuration list for PBXNativeTarget "EgeniqTests" */ = {
+		C7955A9B153E91CE00971465 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C7955A98153E91CE00971465 /* Debug */,

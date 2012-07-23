@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C7955A88153E91CE00971465"
-               BuildableName = "EgeniqTests.octest"
-               BlueprintName = "EgeniqTests"
+               BuildableName = "Tests.octest"
+               BlueprintName = "Tests"
                ReferencedContainer = "container:Egeniq.xcodeproj">
             </BuildableReference>
          </TestableReference>

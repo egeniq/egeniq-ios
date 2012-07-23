@@ -18,6 +18,7 @@
 @property (nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, readonly) NSURL *persistentStoreURL;
 @property (nonatomic, strong) NSString *modelName;
+@property (nonatomic, assign) NSManagedObjectContextConcurrencyType concurrencyType;
 
 - (NSPersistentStore *)persistentStoreWithPersistentStoreCoordinator:(NSPersistentStoreCoordinator *)persistenStoreCoordinator error:(NSError **)error;
 
@@ -32,17 +33,23 @@
 @synthesize managedObjectModel = managedObjectModel_;
 @synthesize persistentStoreCoordinator = persistentStoreCoordinator_;
 @synthesize modelName = modelName_;
+@synthesize concurrencyType = concurrencyType_;
 
 #pragma mark - 
 #pragma mark Initialization
 - (id)initWithModelName:(NSString *)modelName {
+    return [self initWithModelName:modelName concurrencyType:NSConfinementConcurrencyType];
+}
+
+- (id)initWithModelName:(NSString *)modelName concurrencyType:(NSManagedObjectContextConcurrencyType)concurrencyType {
     self = [super init];
     
     if (self != nil) {
         self.modelName = modelName;
+        self.concurrencyType = concurrencyType; 
     }
     
-    return self;
+    return self;    
 }
 
 #pragma mark -
@@ -56,11 +63,17 @@
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     
     if (coordinator != nil) {
-        managedObjectContext_ = [[NSManagedObjectContext alloc] init];
+        managedObjectContext_ = [[NSManagedObjectContext alloc] initWithConcurrencyType:self.concurrencyType];
         [managedObjectContext_ setPersistentStoreCoordinator:coordinator];
     }
     
     return managedObjectContext_;
+}
+
+- (NSManagedObjectContext *)childManagedObjectContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)concurrencyType {
+    NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:concurrencyType];
+    [context setParentContext:self.managedObjectContext];
+    return [context autorelease];
 }
 
 - (NSManagedObjectModel *)managedObjectModel {
@@ -119,10 +132,14 @@
 }
 
 - (NSPersistentStore *)persistentStoreWithPersistentStoreCoordinator:(NSPersistentStoreCoordinator *)persistenStoreCoordinator error:(NSError **)error {
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+                             [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
+                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
+    
     NSPersistentStore *persistentStore = [persistenStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType
                                                                                  configuration:nil
                                                                                            URL:self.persistentStoreURL
-                                                                                       options:nil
+                                                                                       options:options
                                                                                          error:error];
     return persistentStore;
 }
