@@ -16,7 +16,7 @@ Todo:
 Note: 
 * We're gradually introducing stuff that requires iOS5. For projects that still need to support iOS4, use the 'ios4' branch.
 
-Have fun,
-The Egeniq Team
+Have fun!
 
+The Egeniq Team
 http://www.egeniq.com
