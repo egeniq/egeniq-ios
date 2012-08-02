@@ -43,6 +43,8 @@ typedef enum {
 @interface EFRefreshHeaderView : UIView 
 
 @property (nonatomic, assign) IBOutlet id <EFRefreshHeaderViewDelegate> delegate;
+@property (nonatomic, retain) UILabel *instructionLabel;
+@property (nonatomic, retain) UILabel *statusLabel;
 
 - (id)initWithFrame:(CGRect)frame arrowImageName:(NSString *)arrow textColor:(UIColor *)textColor;
 
