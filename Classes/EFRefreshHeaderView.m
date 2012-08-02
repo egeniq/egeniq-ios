@@ -40,8 +40,6 @@
     PullRefreshState state_;
 }
 
-@property (nonatomic, retain) UILabel *instructionLabel;
-@property (nonatomic, retain) UILabel *statusLabel;
 @property (nonatomic, retain) CALayer *arrowImage;
 @property (nonatomic, retain) UIActivityIndicatorView *activityView;
 @property (nonatomic, assign) PullRefreshState state;
