@@ -81,10 +81,11 @@
         return managedObjectModel_;
     }
 	
-    NSString *modelPath = [[NSBundle mainBundle] pathForResource:self.modelName ofType:@"momd"];
+    NSString *modelPath = [[NSBundle bundleForClass:[self class]] pathForResource:self.modelName ofType:@"momd"];
     
 	if (modelPath == nil) {
-		modelPath = [[NSBundle mainBundle] pathForResource:self.modelName ofType:@"mom"];
+		modelPath = [[NSBundle bundleForClass:[self class]]
+                     pathForResource:self.modelName ofType:@"mom"];
 	}
 	
     NSURL *modelURL = [NSURL fileURLWithPath:modelPath];
