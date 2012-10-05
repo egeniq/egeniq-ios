@@ -61,27 +61,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSInteger result = 0;
-    
-    for (NSInteger i = 0; i < [self.dataSource settingsView:self numberOfFieldsInSection:section]; i++) {
-        EFSpecifierCell *field = [self.dataSource settingsView:self fieldAtIndexPath:[NSIndexPath indexPathForRow:i inSection:section]];
-        result += field.hidden ? 0 : 1;
-    }
-    
-    return result;
+    return [self.dataSource settingsView:self numberOfFieldsInSection:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSInteger row = -1;
-    for (NSInteger i = 0; i < [self.dataSource settingsView:self numberOfFieldsInSection:indexPath.section]; i++) {
-        EFSpecifierCell *field = [self.dataSource settingsView:self fieldAtIndexPath:[NSIndexPath indexPathForRow:i inSection:indexPath.section]];
-        row += field.hidden ? 0 : 1;
-        if (row == indexPath.row) {
-            return field;
-        }
-    }
-    
-    return nil;
+    return [self.dataSource settingsView:self fieldAtIndexPath:indexPath];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

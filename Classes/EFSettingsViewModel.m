@@ -47,6 +47,16 @@
     visibleSections_ = [[NSMutableArray arrayWithArray:[sections_ filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self IN (%@)", visibleSections_]]] retain];
 }
 
+- (void)setHidden:(BOOL)hidden forFieldWithName:(NSString *)field {
+    [visibleFields_ removeObject:field];
+    if (!hidden) {
+        [visibleFields_ addObject:field];
+    }
+    
+    NSArray *fields = [self allFieldNames];
+    visibleFields_ = [[NSMutableArray arrayWithArray:[fields filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self IN (%@)", visibleFields_]]] retain];
+}
+
 - (void)setFooterView:(UITableView *)view forSection:(NSString *)section {
     [sectionFooterViews_ setValue:view forKey:section];
 }
@@ -78,6 +88,7 @@
     [fields_ setObject:field forKey:field.name];
     NSMutableArray *fieldNames = [sectionFields_ objectForKey:section];
     [fieldNames addObject:field.name];
+    [self setHidden:NO forFieldWithName:field.name];
 }
 
 - (EFSpecifierCell *)fieldWithName:(NSString *)name {
@@ -106,6 +117,7 @@
     [sectionTitles_ removeAllObjects];
     [sectionFields_ removeAllObjects];
     [fields_ removeAllObjects];
+    [visibleFields_ removeAllObjects];
 }
      
 - (void)loadValues:(NSDictionary *)values {
@@ -141,11 +153,12 @@
 
 - (NSInteger)settingsView:(EFSettingsView *)settingsView numberOfFieldsInSection:(NSInteger)section {
     NSArray *fieldNames = [sectionFields_ objectForKey:[visibleSections_ objectAtIndex:section]];
-    return [fieldNames count];
+    return [[NSMutableArray arrayWithArray:[fieldNames filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self IN (%@)", visibleFields_]]] count];
 }
 
 - (EFSpecifierCell *)settingsView:(EFSettingsView *)settingsView fieldAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *fieldNames = [sectionFields_ objectForKey:[visibleSections_ objectAtIndex:indexPath.section]];
+    fieldNames = [[NSArray arrayWithArray:fieldNames] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self in (%@)", visibleFields_]];
     NSString *fieldName = [fieldNames objectAtIndex:indexPath.row];
     return [self fieldWithName:fieldName];
 }
@@ -167,6 +180,7 @@
     [sectionFields_ release];
     [sectionFooterViews_ release];
     [fields_ release];
+    [visibleFields_ release];
     [super dealloc];
 }
 

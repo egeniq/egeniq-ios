@@ -20,7 +20,8 @@
 
 @interface EFSettingsViewModel : NSObject <EFSettingsViewDataSource, EFSettingsViewDelegate> {
     NSMutableArray *sections_;
-    NSMutableArray *visibleSections_;    
+    NSMutableArray *visibleSections_;
+    NSMutableArray *visibleFields_;
     NSMutableDictionary *sectionTitles_;
     NSMutableDictionary *sectionFooterViews_;    
     NSMutableDictionary *sectionFields_;
@@ -40,6 +41,7 @@
 - (EFSpecifierCell *)fieldWithName:(NSString *)name;
 - (void)removeFieldWithName:(NSString *)name;
 - (void)removeField:(EFSpecifierCell *)field;
+- (void)setHidden:(BOOL)hidden forFieldWithName:(NSString *)field;
 
 - (void)removeAll;
 
