@@ -39,6 +39,10 @@
 }
 
 - (void)setHidden:(BOOL)hidden forSection:(NSString *)section {
+    if (![sections_ containsObject:section]) {
+        return;
+    }
+    
     [visibleSections_ removeObject:section];
     if (!hidden) {
         [visibleSections_ addObject:section];
@@ -46,6 +50,10 @@
 }
 
 - (void)setHidden:(BOOL)hidden forFieldWithName:(NSString *)field {
+    if ([fields_ objectForKey:field] == nil) {
+        return;
+    }
+    
     [visibleFields_ removeObject:field];
     if (!hidden) {
         [visibleFields_ addObject:field];
