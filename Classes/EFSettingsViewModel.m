@@ -43,8 +43,6 @@
     if (!hidden) {
         [visibleSections_ addObject:section];
     }
-    
-    visibleSections_ = [[NSMutableArray arrayWithArray:[sections_ filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self IN (%@)", visibleSections_]]] retain];
 }
 
 - (void)setHidden:(BOOL)hidden forFieldWithName:(NSString *)field {
@@ -52,9 +50,6 @@
     if (!hidden) {
         [visibleFields_ addObject:field];
     }
-    
-    NSArray *fields = [self allFieldNames];
-    visibleFields_ = [[NSMutableArray arrayWithArray:[fields filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self IN (%@)", visibleFields_]]] retain];
 }
 
 - (void)setFooterView:(UITableView *)view forSection:(NSString *)section {
