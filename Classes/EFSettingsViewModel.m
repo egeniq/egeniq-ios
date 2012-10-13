@@ -20,7 +20,8 @@
         sectionTitles_ = [[NSMutableDictionary alloc] init];
         sectionFields_ = [[NSMutableDictionary alloc] init];
         sectionFooterViews_ = [[NSMutableDictionary alloc] init];
-        fields_ = [[NSMutableDictionary alloc] init];        
+        fields_ = [[NSMutableDictionary alloc] init];
+        visibleFields_ = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -39,24 +40,10 @@
 }
 
 - (void)setHidden:(BOOL)hidden forSection:(NSString *)section {
-    if (![sections_ containsObject:section]) {
-        return;
-    }
-    
-    [visibleSections_ removeObject:section];
-    if (!hidden) {
+    if (hidden && [sections_ containsObject:section] && [visibleSections_ containsObject:section]) {
+        [visibleSections_ removeObject:section];
+    } else if (!hidden && [sections_ containsObject:section] && ![visibleSections_ containsObject:section]) {
         [visibleSections_ addObject:section];
-    }
-}
-
-- (void)setHidden:(BOOL)hidden forFieldWithName:(NSString *)field {
-    if ([fields_ objectForKey:field] == nil) {
-        return;
-    }
-    
-    [visibleFields_ removeObject:field];
-    if (!hidden) {
-        [visibleFields_ addObject:field];
     }
 }
 
@@ -104,6 +91,7 @@
     }
     
     [fields_ removeObjectForKey:name];
+    [visibleFields_ removeObject:name];
     for (NSString *section in sections_) {
         NSMutableArray *fieldNames = [sectionFields_ objectForKey:section];
         [fieldNames removeObject:name];
@@ -112,6 +100,14 @@
 
 - (void)removeField:(EFSpecifierCell *)field {
     [self removeFieldWithName:field.name];
+}
+
+- (void)setHidden:(BOOL)hidden forFieldWithName:(NSString *)field {
+    if (hidden && [fields_ objectForKey:field] != nil && [visibleFields_ containsObject:field]) {
+        [visibleFields_ removeObject:field];
+    } else if (!hidden && [fields_ objectForKey:field] != nil && ![visibleFields_ containsObject:field]) {
+        [visibleFields_ addObject:field];
+    }
 }
 
 - (void)removeAll {
