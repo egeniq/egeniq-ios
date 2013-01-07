@@ -60,7 +60,7 @@
     [alertView show];
 }
 
-+ (void)showWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle block:(void (^)(void))block {
++ (void)showWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle block:(EFAlertViewBlock)block {
     [self showWithTitle:title message:message confirmButtonTitle:nil confirmBlock:nil cancelButtonTitle:buttonTitle cancelBlock:block];
 }
 
@@ -76,9 +76,9 @@
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
     
     if ([title isEqualToString:self.confirmButtonTitle] && self.confirmBlock != nil) {
-        self.confirmBlock();
+        self.confirmBlock(alertView);
     } else if ([title isEqualToString:self.cancelButtonTitle] && self.cancelBlock != nil) {
-        self.cancelBlock();
+        self.cancelBlock(alertView);
     }
 }
 
