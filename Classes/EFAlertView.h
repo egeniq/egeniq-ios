@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^EFAlertViewBlock)(void);
+typedef void (^EFAlertViewBlock)(UIAlertView *alertView);
 
 /**
  * Inspired by iOS Recipes #9.
