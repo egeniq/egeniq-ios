@@ -24,6 +24,13 @@
  */
 @property (nonatomic, readonly, copy) NSString *notificationToken;
 
+/**
+ * Returns the device token (if set).
+ *
+ * @return device token
+ */
+@property (nonatomic, readonly, copy) NSString *deviceToken;
+
 
 /**
  * Send a new registration request to the server using the given
