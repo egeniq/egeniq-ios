@@ -1,6 +1,6 @@
 //
 //  EFAlertView.m
-//  
+//
 //
 //  Created by Johan Kool on 29/8/2012.
 //  Copyright (c) 2012 Koolistov Pte. Ltd. All rights reserved.
@@ -38,14 +38,14 @@
 
 - (id)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... {
     EFAlertView *alertView = [self initWithTitle:title message:message cancelButtonTitle:cancelButtonTitle cancelBlock:nil];
-    
+
     va_list args;
     va_start(args, otherButtonTitles);
     for (NSString *arg = otherButtonTitles; arg != nil; arg = va_arg(args, NSString *)) {
         [alertView addButtonWithTitle:arg];
     }
     va_end(args);
-    
+
     return alertView;
 }
 
@@ -65,7 +65,7 @@
 }
 
 - (NSInteger)addButtonWithTitle:(NSString *)title
-                     block:(EFAlertViewBlock)block {
+                          block:(EFAlertViewBlock)block {
     NSUInteger buttonIndex = [super addButtonWithTitle:title];
     if (block) {
         self.blocks[buttonIndex] = block;
@@ -75,8 +75,8 @@
     return buttonIndex;
 }
 
-+ (void)showWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle block:(EFAlertViewBlock)block {
-    [self showWithTitle:title message:message confirmButtonTitle:nil confirmBlock:nil cancelButtonTitle:buttonTitle cancelBlock:block];
+- (NSInteger)addButtonWithTitle:(NSString *)title {
+    return [self addButtonWithTitle:title block:nil];
 }
 
 + (void)showWithTitle:(NSString *)title
@@ -87,17 +87,14 @@
     [alertView show];
 }
 
-#pragma mark -
-#pragma mark Alert view delegate
-
-- (void)alertView:(UIAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex {
-    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
-    
-    if ([title isEqualToString:self.confirmButtonTitle] && self.confirmBlock != nil) {
-        self.confirmBlock(alertView);
-    } else if ([title isEqualToString:self.cancelButtonTitle] && self.cancelBlock != nil) {
-        self.cancelBlock(alertView);
-    }
++ (void)showWithTitle:(NSString *)title
+              message:(NSString *)message
+    cancelButtonTitle:(NSString *)cancelButtonTitle
+          cancelBlock:(EFAlertViewBlock)cancelBlock
+   confirmButtonTitle:(NSString *)confirmButtonTitle
+         confirmBlock:(EFAlertViewBlock)confirmBlock {
+    EFAlertView *alertView = [self alertWithTitle:title message:message cancelButtonTitle:cancelButtonTitle cancelBlock:cancelBlock confirmButtonTitle:confirmButtonTitle confirmBlock:confirmBlock];
+    [alertView show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
