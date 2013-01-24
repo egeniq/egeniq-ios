@@ -28,6 +28,7 @@
 		92A300B113FBCAAD001BC6FA /* EFError.h in Headers */ = {isa = PBXBuildFile; fileRef = 92A300B013FBCAAD001BC6FA /* EFError.h */; };
 		92BFFA9713F952E2002D37A4 /* EFServiceContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 92BFFA9513F952E2002D37A4 /* EFServiceContainer.h */; };
 		92BFFA9813F952E2002D37A4 /* EFServiceContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 92BFFA9613F952E2002D37A4 /* EFServiceContainer.m */; };
+		92D6FB4B168EEA1500086F17 /* EFDataManager-Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 92D6FB4A168EEA1500086F17 /* EFDataManager-Protected.h */; };
 		9F25DD18145730C1000E7B48 /* EFAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F25DD16145730C1000E7B48 /* EFAlertView.h */; };
 		9F25DD19145730C1000E7B48 /* EFAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F25DD17145730C1000E7B48 /* EFAlertView.m */; };
 		9FC1ADA8145F0C28005786F5 /* UILabel+VerticalAlignment.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FC1ADA6145F0C28005786F5 /* UILabel+VerticalAlignment.h */; };
@@ -145,6 +146,7 @@
 		92A300B013FBCAAD001BC6FA /* EFError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFError.h; sourceTree = "<group>"; };
 		92BFFA9513F952E2002D37A4 /* EFServiceContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFServiceContainer.h; sourceTree = "<group>"; };
 		92BFFA9613F952E2002D37A4 /* EFServiceContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFServiceContainer.m; sourceTree = "<group>"; };
+		92D6FB4A168EEA1500086F17 /* EFDataManager-Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EFDataManager-Protected.h"; path = "../../../egeniq-ios/Classes/EFDataManager-Protected.h"; sourceTree = "<group>"; };
 		9F25DD16145730C1000E7B48 /* EFAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFAlertView.h; sourceTree = "<group>"; };
 		9F25DD17145730C1000E7B48 /* EFAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFAlertView.m; sourceTree = "<group>"; };
 		9FC1ADA6145F0C28005786F5 /* UILabel+VerticalAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlignment.h"; sourceTree = "<group>"; };
@@ -475,6 +477,7 @@
 				D089C5FD1327D3B8000A54F5 /* EFEntityGateway.m */,
 				D047100114D823B100811F82 /* EFDataManager.h */,
 				D047100214D823B100811F82 /* EFDataManager.m */,
+				92D6FB4A168EEA1500086F17 /* EFDataManager-Protected.h */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				C7955ACD153EB8AD00971465 /* EFPlainWebView.h in Headers */,
 				C7A6C8F11593401B00CC78C8 /* EFRefreshHeaderView.h in Headers */,
 				C7A6C8F31593401B00CC78C8 /* EFTextView.h in Headers */,
+				92D6FB4B168EEA1500086F17 /* EFDataManager-Protected.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
