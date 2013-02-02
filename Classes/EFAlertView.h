@@ -1,36 +1,57 @@
 //
 //  EFAlertView.h
+//  
 //
-//  Created by Allen Ding on 10/25/11.
-//  Copyright (c) 2011 Egeniq. All rights reserved.
+//  Created by Johan Kool on 29/8/2012.
+//  Copyright (c) 2012 Koolistov Pte. Ltd. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-typedef void (^EFAlertViewBlock)(void);
+typedef void (^EFAlertViewBlock)(UIAlertView *alertView);
 
 /**
- * Inspired by iOS Recipes #9.
+ 
+ Sample usage:
+ 
+ EFAlertView *alert = [EFAlertView alertWithTitle:NSLocalizedString(@"Title", @"") message:NSLocalizedString(@"Message", @"") cancelButtonTitle:NSLocalizedString(@"Cancel", @"") cancelBlock:^{
+     NSLog(@"Cancel");
+ }];
+ alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+ [alert addButtonWithTitle:NSLocalizedString(@"OK", @"") block:^(EFAlertView *alertView){
+     NSLog(@"OK: %@", [alertView textFieldAtIndex:0].text);
+ }];
+ [alert show];
+ 
  */
+
 @interface EFAlertView : UIAlertView
 
-#pragma mark -
-#pragma mark Initialization
++ (EFAlertView *)alertWithTitle:(NSString *)title
+                        message:(NSString *)message
+              cancelButtonTitle:(NSString *)cancelButtonTitle
+                    cancelBlock:(EFAlertViewBlock)cancelBlock;
 
-// Confirm/cancel alert view. Designated initializer.
-- (id)initWithTitle:(NSString *)title message:(NSString *)message confirmButtonTitle:(NSString *)confirmButtonTitle confirmBlock:(EFAlertViewBlock)confirmBlock cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(EFAlertViewBlock)cancelBlock;
++ (EFAlertView *)alertWithTitle:(NSString *)title
+                        message:(NSString *)message
+              cancelButtonTitle:(NSString *)cancelButtonTitle
+                    cancelBlock:(EFAlertViewBlock)cancelBlock
+             confirmButtonTitle:(NSString *)confirmButtonTitle
+                   confirmBlock:(EFAlertViewBlock)confirmBlock;
 
-// Informational alert view.
-- (id)initWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle block:(EFAlertViewBlock)block;
+- (NSInteger)addButtonWithTitle:(NSString *)title
+                          block:(EFAlertViewBlock)block;
 
-#pragma mark -
-#pragma mark Showing
++ (void)showWithTitle:(NSString *)title
+              message:(NSString *)message
+    cancelButtonTitle:(NSString *)cancelButtonTitle
+          cancelBlock:(EFAlertViewBlock)cancelBlock;
 
-// Confirm/cancel.
-+ (void)showWithTitle:(NSString *)title message:(NSString *)message confirmButtonTitle:(NSString *)confirmButtonTitle confirmBlock:(EFAlertViewBlock)block cancelButtonTitle:(NSString *)cancelButtonTitle cancelBlock:(EFAlertViewBlock)cancelBlock;
-// Info with customizable button.
-+ (void)showWithTitle:(NSString *)title message:(NSString *)message buttonTitle:(NSString *)buttonTitle block:(EFAlertViewBlock)block;
-// Localized OK button.
-+ (void)showWithTitle:(NSString *)title message:(NSString *)message block:(EFAlertViewBlock)block;
++ (void)showWithTitle:(NSString *)title
+              message:(NSString *)message
+    cancelButtonTitle:(NSString *)cancelButtonTitle
+          cancelBlock:(EFAlertViewBlock)cancelBlock
+   confirmButtonTitle:(NSString *)confirmButtonTitle
+         confirmBlock:(EFAlertViewBlock)confirmBlock;
 
 @end
