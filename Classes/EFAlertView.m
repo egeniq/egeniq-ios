@@ -55,7 +55,7 @@
         self.blocks = [NSMutableArray array];
         if (cancelButtonTitle) {
             if (cancelBlock) {
-                self.blocks[0] = cancelBlock;
+                self.blocks[0] = [cancelBlock copy];
             } else {
                 self.blocks[0] = [NSNull null];
             }
@@ -68,7 +68,7 @@
                           block:(EFAlertViewBlock)block {
     NSUInteger buttonIndex = [super addButtonWithTitle:title];
     if (block) {
-        self.blocks[buttonIndex] = block;
+        self.blocks[buttonIndex] = [block copy];
     } else {
         self.blocks[buttonIndex] = [NSNull null];
     }
