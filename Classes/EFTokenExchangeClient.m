@@ -39,12 +39,11 @@ static EFTokenExchangeClient *sharedInstance = nil;
 	NSString *escapedDeviceToken = [deviceToken hexStringValue];
 	NSString *escapedNotificationToken = [self.notificationToken stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	
-    if ([[self deviceToken] isEqualToString:escapedDeviceToken] && [[self notificationToken] isEqualToString:escapedNotificationToken]) {
-        // The notification token we are about to send is the same as for the last successful attempt,
-        // stopping to reduce server load
+    if ([[self deviceToken] isEqualToString:escapedDeviceToken] && self.notificationToken != nil) {
+        // The device token hasn't changed, and we already have a notification token, so we don't need to get one.
         return;
     } else if ([[self deviceToken] isEqualToString:escapedDeviceToken]) {
-        // Same device token, but different notification token, tell server
+        // Same device token, but we don't have a notificationtoken yet
     } else {
         // Different device token (perhaps user synced preferences to another/new device),
         // store new device token and
