@@ -17,15 +17,13 @@
         // Hide image views, but keep scroll indicators visible (some trial and error showed those have size 7)
         if ([subview isKindOfClass:[UIImageView class]] && (subview.frame.size.width != 7.0f && subview.frame.size.height != 7.0f)) {
             subview.hidden = YES;
-        } else {
-            [self hideImageViewsInView:subview];
         }
     }
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    [self hideImageViewsInView:self];
+    [self hideImageViewsInView:self.scrollView];
     [super setBackgroundColor:self.backgroundColor];
 }
 
