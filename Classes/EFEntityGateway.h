@@ -21,6 +21,8 @@
 - (id)initWithEntityName:(NSString *)entityName
     managedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
+- (EFEntityGateway *)gatewayWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+
 - (NSManagedObject *)insertNewObject;
 - (NSManagedObject *)insertNewObjectWithData:(NSDictionary *)data;
 - (NSManagedObject *)insertNewObjectWithData:(NSDictionary *)data 
