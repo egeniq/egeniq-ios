@@ -290,6 +290,7 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 - (void)dealloc {
     self.completionHandler = nil;
     self.resultHandler = nil;
+    self.progressHandler = nil;
     self.preProcessHandler = nil;
     
     [self.connection cancel];
