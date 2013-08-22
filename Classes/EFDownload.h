@@ -12,6 +12,7 @@
 
 typedef NSData * (^EFDownloadPreProcessBlock)(NSURLResponse *response, NSData *data, NSError **error);
 typedef void (^EFDownloadResultBlock)(NSURLResponse *response, NSURL *targetURL, NSError *error);
+typedef void (^EFDownloadProgressBlock)(long long bytesWritten, long long totalBytesWritten, long long expectedTotalBytes);
 typedef void (^EFDownloadCompletionBlock)();
 
 @interface EFDownload : NSObject <EFQueueable> {
@@ -21,6 +22,7 @@ typedef void (^EFDownloadCompletionBlock)();
 @property (nonatomic, retain) EFRequest *request;
 @property (nonatomic, retain) NSURL *targetURL;
 @property (nonatomic, copy) EFDownloadPreProcessBlock preProcessHandler;
+@property (nonatomic, copy) EFDownloadProgressBlock progressHandler;
 @property (nonatomic, copy) EFDownloadResultBlock resultHandler;
 
 + (id)download;
