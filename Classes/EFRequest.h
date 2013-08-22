@@ -12,6 +12,7 @@
 
 typedef id (^EFRequestPreProcessBlock)(NSURLResponse *response, NSData *data, NSError **error);
 typedef void (^EFRequestResultBlock)(NSURLResponse *response, id result, NSError *error);
+typedef void (^EFRequestDownloadProgressBlock)(long long bytesWritten, long long totalBytesWritten, long long expectedTotalBytes);
 typedef void (^EFRequestCompletionBlock)();
 
 // Errorcode definition. Note that EFRequest does not set these error codes, but
@@ -51,6 +52,8 @@ typedef enum {
  * The result handler is executed on the main thread.
  */
 @property (nonatomic, copy) EFRequestResultBlock resultHandler;
+
+@property (nonatomic, copy) EFRequestDownloadProgressBlock progressHandler;
 
 /**
  * The request object. It should generally not be necessary to work
