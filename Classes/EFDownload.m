@@ -103,6 +103,14 @@
     [self.request cancel];
 }
 
+- (void)setProgressHandler:(EFDownloadProgressBlock)progressHandler {
+    self.request.progressHandler = progressHandler;
+}
+
+- (EFDownloadProgressBlock)progressHandler {
+    return self.request.progressHandler;
+}
+
 #pragma mark -
 #pragma mark Clean-up
 

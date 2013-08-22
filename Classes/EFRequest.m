@@ -17,6 +17,7 @@
 @property (nonatomic, retain, readwrite) NSMutableURLRequest *request;
 @property (nonatomic, retain) NSURLResponse *incomingResponse;
 @property (nonatomic, retain) NSMutableData *incomingData;
+@property (nonatomic, assign) long long expectedContentLength;
 
 @end
 
@@ -37,6 +38,7 @@
 @synthesize connection=connection_;
 @synthesize incomingResponse=incomingResponse_;
 @synthesize incomingData=incomingData_;
+@synthesize expectedContentLength=expectedContentLength_;
 
 #pragma mark -
 #pragma mark Initialization
@@ -212,6 +214,10 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
 	[self.incomingData appendData:data];
+
+    if (self.progressHandler) {
+        self.progressHandler([data length], [self.incomingData length], self.expectedContentLength);
+    }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -225,6 +231,8 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 
     self.incomingResponse = response;
     self.incomingData = [NSMutableData dataWithLength:0];
+
+    self.expectedContentLength = [response expectedContentLength];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
