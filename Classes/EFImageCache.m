@@ -174,6 +174,7 @@
                 
                 [self.downloadPerImageView removeObjectForKey:key];
             }];
+            imageDownload.executeResultHandlerOnMainThread = NO;
             [imageDownload start];
             
             [self.downloadPerImageView setObject:[NSDictionary dictionaryWithObjectsAndKeys:imageDownload, @"download", cacheURL, @"cacheURL", nil] forKey:key];
