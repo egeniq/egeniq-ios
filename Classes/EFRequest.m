@@ -173,7 +173,7 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
     
     self.request.timeoutInterval = self.timeoutInterval;
     self.connection = [[NSURLConnection alloc] initWithRequest:self.request delegate:self startImmediately:NO];
-    if (self.executeResultHandlerOnMainThread) {
+    if (!self.executeResultHandlerOnMainThread) {
         [self.connection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
     }
     [self.connection start];
