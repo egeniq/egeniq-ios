@@ -152,6 +152,7 @@
 		9FC1ADA6145F0C28005786F5 /* UILabel+VerticalAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlignment.h"; sourceTree = "<group>"; };
 		9FC1ADA7145F0C28005786F5 /* UILabel+VerticalAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlignment.m"; sourceTree = "<group>"; };
 		9FFA358714AB36A900507AEB /* EFServiceContainer-Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EFServiceContainer-Protected.h"; sourceTree = "<group>"; };
+		C71EC8F617FC001100ED9D30 /* EFMACROS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFMACROS.h; sourceTree = "<group>"; };
 		C75D5827140510C1007E7B17 /* EFImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageCache.h; sourceTree = "<group>"; };
 		C75D5828140510C1007E7B17 /* EFImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageCache.m; sourceTree = "<group>"; };
 		C75D5829140510C1007E7B17 /* UIImageView+URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+URL.h"; sourceTree = "<group>"; };
@@ -389,6 +390,7 @@
 		D067DCE911FB130E0047EFAA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C71EC8F617FC001100ED9D30 /* EFMACROS.h */,
 				C786497814205FB600DB0DB7 /* Rich Text */,
 				C75D5830140510C6007E7B17 /* Image Cache */,
 				92256E481402556F0070F2F8 /* Security */,
