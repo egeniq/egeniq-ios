@@ -30,6 +30,10 @@
     return self;
 }
 
+- (EFEntityGateway *)gatewayWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
+    return [[self class] entityGatewayWithEntityName:self.entityName managedObjectContext:managedObjectContext];
+}
+
 #ifdef __BLOCKS__
 - (void)usingManagedObjectContext:(NSManagedObjectContext *)managedObjectContext 
                      executeBlock:(void(^)())executeBlock {

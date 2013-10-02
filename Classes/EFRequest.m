@@ -17,6 +17,7 @@
 @property (nonatomic, retain, readwrite) NSMutableURLRequest *request;
 @property (nonatomic, retain) NSURLResponse *incomingResponse;
 @property (nonatomic, retain) NSMutableData *incomingData;
+@property (nonatomic, assign) long long expectedContentLength;
 
 @end
 
@@ -37,6 +38,7 @@
 @synthesize connection=connection_;
 @synthesize incomingResponse=incomingResponse_;
 @synthesize incomingData=incomingData_;
+@synthesize expectedContentLength=expectedContentLength_;
 
 #pragma mark -
 #pragma mark Initialization
@@ -73,7 +75,8 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
         self.URL = URL;
         self.preProcessHandler = preProcessHandler;
         self.resultHandler = resultHandler;
-        
+        self.executeResultHandlerOnMainThread = YES;
+
         self.request = [NSMutableURLRequest requestWithURL:URL];
         self.request.cachePolicy = NSURLRequestUseProtocolCachePolicy;        
         self.timeoutInterval = 30.0;
@@ -169,7 +172,11 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
     self.incomingResponse = nil;
     
     self.request.timeoutInterval = self.timeoutInterval;
-    self.connection = [NSURLConnection connectionWithRequest:self.request delegate:self];
+    self.connection = [[NSURLConnection alloc] initWithRequest:self.request delegate:self startImmediately:NO];
+    if (!self.executeResultHandlerOnMainThread) {
+        [self.connection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    }
+    [self.connection start];
 }
 
 - (void)start {
@@ -195,15 +202,23 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
             NSError *error = nil;
             id result = self.preProcessHandler(response, data, &error);
             if (self.resultHandler) {
-                dispatch_async(dispatch_get_main_queue(), ^() {
+                if (self.executeResultHandlerOnMainThread) {
+                    dispatch_async(dispatch_get_main_queue(), ^() {
+                        self.resultHandler(response, result, error);
+                    });
+                } else {
                     self.resultHandler(response, result, error);
-                });
+                }
             }
         });
     } else if (self.resultHandler) {
-        dispatch_async(dispatch_get_main_queue(), ^() {
+        if (self.executeResultHandlerOnMainThread) {
+            dispatch_async(dispatch_get_main_queue(), ^() {
+                self.resultHandler(response, data, nil);
+            });
+        } else {
             self.resultHandler(response, data, nil);
-        });
+        }
     }
 }
 
@@ -212,6 +227,10 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
 	[self.incomingData appendData:data];
+
+    if (self.progressHandler) {
+        self.progressHandler([data length], [self.incomingData length], self.expectedContentLength);
+    }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -225,6 +244,8 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 
     self.incomingResponse = response;
     self.incomingData = [NSMutableData dataWithLength:0];
+
+    self.expectedContentLength = [response expectedContentLength];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
@@ -282,6 +303,7 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 - (void)dealloc {
     self.completionHandler = nil;
     self.resultHandler = nil;
+    self.progressHandler = nil;
     self.preProcessHandler = nil;
     
     [self.connection cancel];

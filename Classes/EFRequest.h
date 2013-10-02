@@ -12,6 +12,7 @@
 
 typedef id (^EFRequestPreProcessBlock)(NSURLResponse *response, NSData *data, NSError **error);
 typedef void (^EFRequestResultBlock)(NSURLResponse *response, id result, NSError *error);
+typedef void (^EFRequestDownloadProgressBlock)(long long bytesWritten, long long totalBytesWritten, long long expectedTotalBytes);
 typedef void (^EFRequestCompletionBlock)();
 
 // Errorcode definition. Note that EFRequest does not set these error codes, but
@@ -52,6 +53,8 @@ typedef enum {
  */
 @property (nonatomic, copy) EFRequestResultBlock resultHandler;
 
+@property (nonatomic, copy) EFRequestDownloadProgressBlock progressHandler;
+
 /**
  * The request object. It should generally not be necessary to work
  * with this property directly, but in some scenario's you will want
@@ -62,7 +65,9 @@ typedef enum {
 
 @property (nonatomic, assign) NSTimeInterval timeoutInterval;
 @property (nonatomic, assign) BOOL allowSelfSignedSSLCertificate;
- 
+
+@property (nonatomic, assign) BOOL executeResultHandlerOnMainThread; // defaults to YES
+
 @property (nonatomic, assign, readonly, getter=isLoading) BOOL isLoading;
 
 + (id)request;
