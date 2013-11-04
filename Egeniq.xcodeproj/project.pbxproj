@@ -34,6 +34,8 @@
 		9FC1ADA8145F0C28005786F5 /* UILabel+VerticalAlignment.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FC1ADA6145F0C28005786F5 /* UILabel+VerticalAlignment.h */; };
 		9FC1ADA9145F0C28005786F5 /* UILabel+VerticalAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC1ADA7145F0C28005786F5 /* UILabel+VerticalAlignment.m */; };
 		9FFA358814AB36A900507AEB /* EFServiceContainer-Protected.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFA358714AB36A900507AEB /* EFServiceContainer-Protected.h */; };
+		B53B02A51827EC920052D99A /* EFSettingsButton.h in Headers */ = {isa = PBXBuildFile; fileRef = B53B02A31827EC920052D99A /* EFSettingsButton.h */; };
+		B53B02A61827EC920052D99A /* EFSettingsButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B53B02A41827EC920052D99A /* EFSettingsButton.m */; };
 		C75D582B140510C1007E7B17 /* EFImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = C75D5827140510C1007E7B17 /* EFImageCache.h */; };
 		C75D582C140510C1007E7B17 /* EFImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C75D5828140510C1007E7B17 /* EFImageCache.m */; };
 		C75D582D140510C1007E7B17 /* UIImageView+URL.h in Headers */ = {isa = PBXBuildFile; fileRef = C75D5829140510C1007E7B17 /* UIImageView+URL.h */; };
@@ -152,6 +154,8 @@
 		9FC1ADA6145F0C28005786F5 /* UILabel+VerticalAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+VerticalAlignment.h"; sourceTree = "<group>"; };
 		9FC1ADA7145F0C28005786F5 /* UILabel+VerticalAlignment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+VerticalAlignment.m"; sourceTree = "<group>"; };
 		9FFA358714AB36A900507AEB /* EFServiceContainer-Protected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EFServiceContainer-Protected.h"; sourceTree = "<group>"; };
+		B53B02A31827EC920052D99A /* EFSettingsButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFSettingsButton.h; sourceTree = "<group>"; };
+		B53B02A41827EC920052D99A /* EFSettingsButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFSettingsButton.m; sourceTree = "<group>"; };
 		C71EC8F617FC001100ED9D30 /* EFMACROS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFMACROS.h; sourceTree = "<group>"; };
 		C75D5827140510C1007E7B17 /* EFImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageCache.h; sourceTree = "<group>"; };
 		C75D5828140510C1007E7B17 /* EFImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFImageCache.m; sourceTree = "<group>"; };
@@ -372,6 +376,8 @@
 				D02372D1132911D800B77A44 /* EFSettingsView.m */,
 				D02372D9132925AC00B77A44 /* EFSettingsViewModel.h */,
 				D02372DA132925B200B77A44 /* EFSettingsViewModel.m */,
+				B53B02A31827EC920052D99A /* EFSettingsButton.h */,
+				B53B02A41827EC920052D99A /* EFSettingsButton.m */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -585,6 +591,7 @@
 				D039302713F83BDD004B93FA /* EFRequest.h in Headers */,
 				92BFFA9713F952E2002D37A4 /* EFServiceContainer.h in Headers */,
 				92A300B113FBCAAD001BC6FA /* EFError.h in Headers */,
+				B53B02A51827EC920052D99A /* EFSettingsButton.h in Headers */,
 				92256E4C140255930070F2F8 /* EFKeyChain.h in Headers */,
 				C75D582B140510C1007E7B17 /* EFImageCache.h in Headers */,
 				C75D582D140510C1007E7B17 /* UIImageView+URL.h in Headers */,
@@ -723,6 +730,7 @@
 				D03265BC129D427C004143A3 /* EFSpecifierCell.m in Sources */,
 				D03265BE129D427C004143A3 /* EFTextFieldSpecifierCell.m in Sources */,
 				D03265C0129D427C004143A3 /* EFToggleSwitchSpecifierCell.m in Sources */,
+				B53B02A61827EC920052D99A /* EFSettingsButton.m in Sources */,
 				D03265C2129D427C004143A3 /* EFMultiValueSpecifierCell.m in Sources */,
 				D0937B8E12A50B29000E050E /* EFSliderSpecifierCell.m in Sources */,
 				D0E522421320DC9A00426493 /* EFTokenExchangeClient.m in Sources */,
