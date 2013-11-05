@@ -38,11 +38,6 @@
 	tableView_.delegate = self;
 	tableView_.dataSource = self;
 	tableView_.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-    
-    if ([tableView_ respondsToSelector:@selector(setSeparatorInset:)]) {
-        [tableView_ setSeparatorInset:UIEdgeInsetsZero];
-    }
-
 	[self addSubview:tableView_];
 }
 
@@ -59,12 +54,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     if ([self.dataSource respondsToSelector:@selector(settingsView:titleForSection:)]) {
-        if ([tableView_ respondsToSelector:@selector(setSeparatorInset:)] && [self.dataSource settingsView:self titleForSection:section] != nil) {
-            // Setting seperator edge inset also removes inset from titleheader. Add 2 whitespaces to 'fix' this.
-            return [NSString stringWithFormat:@"\u00A0\u00A0%@", [self.dataSource settingsView:self titleForSection:section]];
-        } else {
-            return [self.dataSource settingsView:self titleForSection:section];
-        }
+        return [self.dataSource settingsView:self titleForSection:section];
     } else {
         return nil;
     }

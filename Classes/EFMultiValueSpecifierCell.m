@@ -80,9 +80,6 @@
 	viewController.navigationItem.title = self.textLabel.text;		
 	viewController.tableView.dataSource = self;
 	viewController.tableView.delegate = self;
-    if ([viewController.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
-        [viewController.tableView setSeparatorInset:UIEdgeInsetsZero];
-    }
     NSInteger index = [self.values indexOfObject:self.value];
     viewController.selectedIndexPath = [NSIndexPath indexPathForRow:index inSection:0];
     return [viewController autorelease];
