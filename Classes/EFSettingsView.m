@@ -53,8 +53,8 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if ([self.dataSource respondsToSelector:@selector(settingsView:titleForSection:)]) {    
-        return [self.dataSource settingsView:self titleForSection:section];        
+    if ([self.dataSource respondsToSelector:@selector(settingsView:titleForSection:)]) {
+        return [self.dataSource settingsView:self titleForSection:section];
     } else {
         return nil;
     }
