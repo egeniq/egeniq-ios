@@ -37,7 +37,7 @@
     
     if (self.isBorderVisible) {
         self.topBorder.frame = CGRectMake(0.0f, 0.0f, self.frame.size.width, 1.0f);
-        self.bottomBorder.frame =CGRectMake(0.0f, self.frame.size.height - 1.0f, self.frame.size.width, 1.0f);
+        self.bottomBorder.frame = CGRectMake(0.0f, self.frame.size.height - 1.0f, self.frame.size.width, 1.0f);
     }
 }
 
