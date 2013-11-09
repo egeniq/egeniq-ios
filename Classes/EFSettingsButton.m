@@ -18,6 +18,10 @@
 
 @implementation EFSettingsButton
 
++ (id)button {
+    return [EFSettingsButton buttonWithType:UIButtonTypeSystem];
+}
+
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {

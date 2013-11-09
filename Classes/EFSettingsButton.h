@@ -12,6 +12,8 @@
     
 }
 
++ (id)button;
+
 @property (nonatomic, assign, getter=isBorderVisible) BOOL borderVisible;
 @property (nonatomic, assign) CGColorRef borderColor;
 
