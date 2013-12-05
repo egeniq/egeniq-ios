@@ -19,7 +19,7 @@
 @implementation EFSettingsButton
 
 + (id)button {
-    return [EFSettingsButton buttonWithType:UIButtonTypeSystem];
+    return [EFSettingsButton buttonWithType:UIButtonTypeCustom];
 }
 
 - (id)initWithFrame:(CGRect)frame {
