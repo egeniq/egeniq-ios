@@ -51,7 +51,7 @@
             service = initializer();
             
             if (service != nil) {
-                [self setService:service forKey:serviceKey];
+                [self.services setObject:service forKey:@(serviceKey)];
             }
         }
         
