@@ -13,4 +13,12 @@
  */
 @interface EFServiceContainer : NSObject
 
+/** @name Public methods for accessing container */
+
+/**
+ *
+ * @return Shared instance of the service container
+ */
++ (instancetype)sharedInstance;
+
 @end

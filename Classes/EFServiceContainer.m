@@ -16,7 +16,16 @@
 
 @implementation EFServiceContainer
 
-@synthesize services=services_;
++ (instancetype)sharedInstance {
+    static id instance = nil;
+    static dispatch_once_t onceToken;
+
+    dispatch_once(&onceToken, ^{
+        instance = [[self alloc] init];
+    });
+
+    return instance;
+}
 
 - (id)init {
     self = [super init];
@@ -29,25 +38,31 @@
 }
 
 - (id)serviceForKey:(NSUInteger)serviceKey {
-    return [self.services objectForKey:[NSNumber numberWithInteger:serviceKey]];
+    @synchronized(self) {
+        return [self.services objectForKey:@(serviceKey)];
+    }
 }
 
 - (id)serviceForKey:(NSUInteger)serviceKey initializer:(id (^)(void))initializer {
-    id service = [self.services objectForKey:[NSNumber numberWithInteger:serviceKey]];
-    
-    if (service == nil && initializer != nil) {
-        service = initializer();
+    @synchronized(self) {
+        id service = [self.services objectForKey:@(serviceKey)];
         
-        if (service != nil) {
-            [self setService:service forKey:serviceKey];
+        if (service == nil && initializer != nil) {
+            service = initializer();
+            
+            if (service != nil) {
+                [self setService:service forKey:serviceKey];
+            }
         }
+        
+        return service;
     }
-    
-    return service;
 }
 
 - (void)setService:(id)service forKey:(NSUInteger)serviceKey {
-    [self.services setObject:service forKey:[NSNumber numberWithInteger:serviceKey]];
+    @synchronized(self) {
+        [self.services setObject:service forKey:@(serviceKey)];
+    }
 }
 
 - (void)dealloc {
