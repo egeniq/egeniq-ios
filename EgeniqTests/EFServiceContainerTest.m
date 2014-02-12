@@ -58,4 +58,17 @@
     XCTAssertEqualObjects(service1, service2, @"Expected the same service");
 }
 
+- (void)testSameServiceOnDifferentThreads {
+    __block NSObject *service1;
+    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        MYTestContainer *test = [MYTestContainer sharedInstance];
+        service1 = test.testService;
+    });
+
+    MYTestContainer *test2 = [MYTestContainer sharedInstance];
+    NSObject *service2 = test2.testService;
+
+    XCTAssertEqualObjects(service1, service2, @"Expected the same service");
+}
+
 @end
