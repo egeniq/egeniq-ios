@@ -48,4 +48,14 @@
     XCTAssertTrue([test isKindOfClass:[MYTestContainer class]], @"Ensure correct class is instantiated");
 }
 
+- (void)testSameService {
+    MYTestContainer *test = [MYTestContainer sharedInstance];
+    NSObject *service1 = test.testService;
+
+    MYTestContainer *test2 = [MYTestContainer sharedInstance];
+    NSObject *service2 = test2.testService;
+
+    XCTAssertEqualObjects(service1, service2, @"Expected the same service");
+}
+
 @end
