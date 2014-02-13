@@ -29,12 +29,22 @@
       buildConfiguration = "Debug">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C7955A88153E91CE00971465"
                BuildableName = "Tests.octest"
                BlueprintName = "Tests"
+               ReferencedContainer = "container:Egeniq.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C7BEB86A18ABD4D5008F62AE"
+               BuildableName = "Egeniq Tests.xctest"
+               BlueprintName = "Egeniq Tests"
                ReferencedContainer = "container:Egeniq.xcodeproj">
             </BuildableReference>
          </TestableReference>
