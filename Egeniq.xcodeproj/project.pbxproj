@@ -59,6 +59,8 @@
 		C7BEB87F18ABD4DF008F62AE /* EFServiceContainerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C7BEB86518ABD339008F62AE /* EFServiceContainerTest.m */; };
 		C7BEB88218ABD8FA008F62AE /* libEgeniq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF011FB130E0047EFAA /* libEgeniq.a */; };
 		C7D0CF91142876D8003E9562 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7D0CF90142876D8003E9562 /* CoreText.framework */; };
+		C7F1C7751925D48D00B037CF /* EFFlatButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C7F1C7731925D48D00B037CF /* EFFlatButton.h */; };
+		C7F1C7761925D48D00B037CF /* EFFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C7F1C7741925D48D00B037CF /* EFFlatButton.m */; };
 		D011F501120C827700A07E28 /* EFImageViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F500120C827700A07E28 /* EFImageViewDataSource.h */; };
 		D011F503120C839000A07E28 /* EFImageViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F502120C839000A07E28 /* EFImageViewDelegate.h */; };
 		D011F505120C85E400A07E28 /* EFImage.h in Headers */ = {isa = PBXBuildFile; fileRef = D011F504120C85E400A07E28 /* EFImage.h */; };
@@ -177,6 +179,8 @@
 		C7BEB87818ABD4D6008F62AE /* Egeniq Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Egeniq Tests-Prefix.pch"; sourceTree = "<group>"; };
 		C7D0CF90142876D8003E9562 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		C7D0CF93142876E3003E9562 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C7F1C7731925D48D00B037CF /* EFFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFFlatButton.h; sourceTree = "<group>"; };
+		C7F1C7741925D48D00B037CF /* EFFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFFlatButton.m; sourceTree = "<group>"; };
 		D011F500120C827700A07E28 /* EFImageViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageViewDataSource.h; sourceTree = "<group>"; };
 		D011F502120C839000A07E28 /* EFImageViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImageViewDelegate.h; sourceTree = "<group>"; };
 		D011F504120C85E400A07E28 /* EFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFImage.h; sourceTree = "<group>"; };
@@ -350,6 +354,15 @@
 			name = Disfunctional;
 			sourceTree = "<group>";
 		};
+		C7F1C7771925D49200B037CF /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				C7F1C7731925D48D00B037CF /* EFFlatButton.h */,
+				C7F1C7741925D48D00B037CF /* EFFlatButton.m */,
+			);
+			name = Button;
+			sourceTree = "<group>";
+		};
 		D011201013F8681A009B33E1 /* General */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +502,7 @@
 			isa = PBXGroup;
 			children = (
 				D06A5BDD13A3B48600BEEDEF /* Alert */,
+				C7F1C7771925D49200B037CF /* Button */,
 				D093CD3311FC6284000B51D8 /* Image */,
 				9FC1ADA4145F0C0A005786F5 /* Label */,
 				D03265AC129D4245004143A3 /* Settings */,
@@ -600,6 +614,7 @@
 				C7955AC7153EAC2D00971465 /* NSString+Utilities.h in Headers */,
 				C7955ACD153EB8AD00971465 /* EFPlainWebView.h in Headers */,
 				C7A6C8F11593401B00CC78C8 /* EFRefreshHeaderView.h in Headers */,
+				C7F1C7751925D48D00B037CF /* EFFlatButton.h in Headers */,
 				C7A6C8F31593401B00CC78C8 /* EFTextView.h in Headers */,
 				92D6FB4B168EEA1500086F17 /* EFDataManager-Protected.h in Headers */,
 			);
@@ -719,6 +734,7 @@
 				D0E522501320DD5300426493 /* NSData+Hex.m in Sources */,
 				D089C5FF1327D3B8000A54F5 /* EFEntityGateway.m in Sources */,
 				D02372D3132911D800B77A44 /* EFSettingsView.m in Sources */,
+				C7F1C7761925D48D00B037CF /* EFFlatButton.m in Sources */,
 				D02372DC132925B500B77A44 /* EFSettingsViewModel.m in Sources */,
 				D073A90913299739004FA0AA /* EFDummySpecifierCell.m in Sources */,
 				D09C2F99132B821D00D3B57F /* EFNumberFieldSpecifierCell.m in Sources */,
