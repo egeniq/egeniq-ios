@@ -55,7 +55,7 @@
 }
 
 - (NSString *)stringValue {
-    return [NSString stringWithFormat:@"%4d-%2d-%2d", self.year, self.month, self.day];
+    return [NSString stringWithFormat:@"%4d-%2d-%2d", (int)self.year, (int)self.month, (int)self.day];
 }
 
 - (NSDate *)dateValue {

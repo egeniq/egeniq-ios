@@ -18,7 +18,7 @@
 //  Copyright 2011 Egeniq. All rights reserved.
 //
 
-NSString *const EFErrorDomain;
+extern NSString *const EFErrorDomain;
 
 typedef enum {
     

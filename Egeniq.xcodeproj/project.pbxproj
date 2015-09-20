@@ -52,7 +52,6 @@
 		C7A6C8F21593401B00CC78C8 /* EFRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A6C8EE1593401B00CC78C8 /* EFRefreshHeaderView.m */; };
 		C7A6C8F31593401B00CC78C8 /* EFTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = C7A6C8EF1593401B00CC78C8 /* EFTextView.h */; };
 		C7A6C8F41593401B00CC78C8 /* EFTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A6C8F01593401B00CC78C8 /* EFTextView.m */; };
-		C7BEB86D18ABD4D5008F62AE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7BEB86C18ABD4D5008F62AE /* XCTest.framework */; };
 		C7BEB86E18ABD4D5008F62AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D067DCF211FB130E0047EFAA /* Foundation.framework */; };
 		C7BEB86F18ABD4D5008F62AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D06F7B07138537B1003B5A31 /* UIKit.framework */; };
 		C7BEB87518ABD4D6008F62AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7BEB87318ABD4D6008F62AE /* InfoPlist.strings */; };
@@ -160,7 +159,6 @@
 		C786497C14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Convenience.h"; sourceTree = "<group>"; };
 		C786497D14205FC300DB0DB7 /* NSMutableAttributedString+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Convenience.m"; sourceTree = "<group>"; };
 		C7955A9E153E922600971465 /* EFDayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EFDayTests.m; path = ../EgeniqTests/EFDayTests.m; sourceTree = "<group>"; };
-		C7955AA4153E945C00971465 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C7955AB8153E9AAF00971465 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C7955AC5153EAC2D00971465 /* NSString+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utilities.h"; sourceTree = "<group>"; };
 		C7955AC6153EAC2D00971465 /* NSString+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utilities.m"; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 		C7A6C8F01593401B00CC78C8 /* EFTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EFTextView.m; sourceTree = "<group>"; };
 		C7BEB86518ABD339008F62AE /* EFServiceContainerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EFServiceContainerTest.m; path = ../EgeniqTests/EFServiceContainerTest.m; sourceTree = "<group>"; };
 		C7BEB86B18ABD4D5008F62AE /* Egeniq Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Egeniq Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7BEB86C18ABD4D5008F62AE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C7BEB87218ABD4D6008F62AE /* Egeniq Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Egeniq Tests-Info.plist"; sourceTree = "<group>"; };
 		C7BEB87418ABD4D6008F62AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C7BEB87818ABD4D6008F62AE /* Egeniq Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Egeniq Tests-Prefix.pch"; sourceTree = "<group>"; };
@@ -240,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7BEB88218ABD8FA008F62AE /* libEgeniq.a in Frameworks */,
-				C7BEB86D18ABD4D5008F62AE /* XCTest.framework in Frameworks */,
 				C7BEB86F18ABD4D5008F62AE /* UIKit.framework in Frameworks */,
 				C7BEB86E18ABD4D5008F62AE /* Foundation.framework in Frameworks */,
 			);
@@ -432,13 +428,11 @@
 				D089C6001327D629000A54F5 /* CoreData.framework */,
 				C7D0CF90142876D8003E9562 /* CoreText.framework */,
 				C7955AB8153E9AAF00971465 /* CoreGraphics.framework */,
-				C7955AA4153E945C00971465 /* SenTestingKit.framework */,
 				C7D0CF93142876E3003E9562 /* Security.framework */,
 				D06F7B07138537B1003B5A31 /* UIKit.framework */,
 				D06F7B04138537A1003B5A31 /* QuartzCore.framework */,
 				923CDE2A123A963800247AD5 /* SystemConfiguration.framework */,
 				D067DCF211FB130E0047EFAA /* Foundation.framework */,
-				C7BEB86C18ABD4D5008F62AE /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -664,7 +658,7 @@
 		D067DCE411FB130E0047EFAA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Egeniq;
 				TargetAttributes = {
 					C7BEB86A18ABD4D5008F62AE = {
@@ -785,7 +779,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -812,6 +805,7 @@
 				INFOPLIST_FILE = "Egeniq Tests/Egeniq Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.egeniq.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -821,7 +815,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -841,6 +834,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				INFOPLIST_FILE = "Egeniq Tests/Egeniq Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.egeniq.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = xctest;
@@ -851,7 +845,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -871,6 +864,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				INFOPLIST_FILE = "Egeniq Tests/Egeniq Tests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.egeniq.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = xctest;
@@ -880,13 +874,16 @@
 		D067DCF511FB130E0047EFAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -896,6 +893,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-fvisibility=default";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -905,13 +903,15 @@
 		D067DCF611FB130E0047EFAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -958,13 +958,15 @@
 		D0BA358613A1413200DE1B85 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

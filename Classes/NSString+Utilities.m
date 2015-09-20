@@ -35,7 +35,7 @@
 - (NSString *)md5Hash {
     unsigned char hashedChars[CC_MD5_DIGEST_LENGTH];
     CC_MD5([self UTF8String],
-            [self lengthOfBytesUsingEncoding:NSUTF8StringEncoding], 
+            (int)[self lengthOfBytesUsingEncoding:NSUTF8StringEncoding],
             hashedChars);
     NSMutableString* output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
     
@@ -48,7 +48,7 @@
 - (NSString *)sha1Hash {
     unsigned char hashedChars[CC_SHA1_DIGEST_LENGTH];
     CC_SHA1([self UTF8String],
-            [self lengthOfBytesUsingEncoding:NSUTF8StringEncoding], 
+            (int)[self lengthOfBytesUsingEncoding:NSUTF8StringEncoding],
             hashedChars);
     NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
     

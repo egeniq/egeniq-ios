@@ -142,7 +142,7 @@
 	int firstNeededPageIndex = floorf(CGRectGetMinX(visibleBounds) / CGRectGetWidth(visibleBounds));
 	int lastNeededPageIndex = floorf((CGRectGetMaxX(visibleBounds) - 1) / CGRectGetWidth(visibleBounds));
 	firstNeededPageIndex = MAX(firstNeededPageIndex, 0);
-	lastNeededPageIndex = MIN(lastNeededPageIndex, [self imageCount] - 1);
+	lastNeededPageIndex = MIN(lastNeededPageIndex, (int)[self imageCount] - 1);
 
 	// Recycle no-longer-visible pages
 	for (EFImageZoomView *page in visiblePages_) {
