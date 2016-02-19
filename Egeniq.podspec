@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Egeniq"
-  s.version      = "0.1.1"
+  s.version      = "0.1.2"
   s.summary      = "Egeniq Library for iOS projects"
 
   s.description  = <<-DESC
@@ -18,9 +18,6 @@ Pod::Spec.new do |s|
   Todo:
   * Overview of what's in here and what you'd use it for
   * Clean up documentation (especially headers)
-
-  Note: 
-  * We're gradually introducing stuff that requires iOS5. For projects that still need to support iOS4, use the 'ios4' branch.
 
   Have fun!
 
@@ -47,5 +44,6 @@ Pod::Spec.new do |s|
   s.exclude_files = 'Classes/Exclude'
 
   s.frameworks = 'CoreText', 'UIKit', 'QuartzCore', 'CoreData', 'Foundation', 'SystemConfiguration'
+  s.requires_arc = false
 
 end
