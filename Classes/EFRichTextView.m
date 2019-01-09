@@ -44,6 +44,7 @@
 }
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     self.layer.bounds = self.bounds;
     // In anticipation of the iPad 3: UIKit normally takes care of setting the right scale
     // Note that this assumes we'll be shown on the main screen!

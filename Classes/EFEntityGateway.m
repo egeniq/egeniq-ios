@@ -36,7 +36,7 @@
 
 #ifdef __BLOCKS__
 - (void)usingManagedObjectContext:(NSManagedObjectContext *)managedObjectContext 
-                     executeBlock:(void(^)())executeBlock {
+                     executeBlock:(void(^)(void))executeBlock {
     NSManagedObjectContext *oldContext = self.managedObjectContext;
     self.managedObjectContext = managedObjectContext;
     executeBlock();
