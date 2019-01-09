@@ -69,6 +69,7 @@
 }
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     CGRect frame = self.frame;
     UIColor *textColor = TEXT_COLOR;
     NSString *arrow = @"blueArrow.png";
@@ -85,7 +86,7 @@
     label.font = [UIFont systemFontOfSize:14.0f];
     label.textColor = textColor;
     label.backgroundColor = [UIColor clearColor];
-    label.textAlignment = UITextAlignmentLeft;
+    label.textAlignment = NSTextAlignmentLeft;
     [self addSubview:label];
     self.instructionLabel = label;
     

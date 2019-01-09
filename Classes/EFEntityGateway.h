@@ -60,6 +60,6 @@
 
 
 - (void)usingManagedObjectContext:(NSManagedObjectContext *)managedObjectContext 
-                     executeBlock:(void(^)())executeBlock;
+                     executeBlock:(void(^)(void))executeBlock;
 
 @end

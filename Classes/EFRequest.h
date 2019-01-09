@@ -13,7 +13,7 @@
 typedef id (^EFRequestPreProcessBlock)(NSURLResponse *response, NSData *data, NSError **error);
 typedef void (^EFRequestResultBlock)(NSURLResponse *response, id result, NSError *error);
 typedef void (^EFRequestDownloadProgressBlock)(long long bytesWritten, long long totalBytesWritten, long long expectedTotalBytes);
-typedef void (^EFRequestCompletionBlock)();
+typedef void (^EFRequestCompletionBlock)(void);
 
 // Errorcode definition. Note that EFRequest does not set these error codes, but
 // result and completion blocks can use them to communicate certain error conditions

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Egeniq"
-  s.version      = "0.1.2"
+  s.version      = "0.2"
   s.summary      = "Egeniq Library for iOS projects"
 
   s.description  = <<-DESC
@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
                      "Johan Kool" => "johan@egeniq.com",
                      "Felix De Vliegher" => "felix@egeniq.com"}
 
-  s.platform     = :ios, '5.1.1'
+  s.platform     = :ios, '8.0'
 
   s.source       = { :git => "https://github.com/egeniq/egeniq-ios.git", :tag => s.version.to_s }
 

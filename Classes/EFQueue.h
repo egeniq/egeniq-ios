@@ -18,7 +18,7 @@ typedef enum {
 	EFQueuePriorityMin
 } EFQueuePriority;
 
-typedef void (^EFQueueableCompletionBlock)();
+typedef void (^EFQueueableCompletionBlock)(void);
 
 @protocol EFQueueable <NSObject>
 
