@@ -28,6 +28,7 @@ typedef enum {
 }
 
 @property (nonatomic, retain) NSURL *URL;
+@property (nonatomic, retain) NSURLCredential *loginCredentials;
 
 /**
  * The pre-process handler can be implemented to process/convert data

@@ -285,15 +285,24 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 - (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *) space {
     if ([[space authenticationMethod] isEqualToString:NSURLAuthenticationMethodServerTrust]) {
         return self.allowSelfSignedSSLCertificate; // result doesn't matter for properly signed certs
+    } else if ([[space authenticationMethod] isEqualToString:NSURLAuthenticationMethodHTTPBasic] ||
+               [[space authenticationMethod] isEqualToString:NSURLAuthenticationMethodHTTPDigest]) {
+        return self.loginCredentials != nil;
     } else {
         return NO;
     }
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge {
-    if ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust] &&
+    NSURLProtectionSpace *space = challenge.protectionSpace;
+
+    if ([[space authenticationMethod] isEqualToString:NSURLAuthenticationMethodServerTrust] &&
         self.allowSelfSignedSSLCertificate) {
         [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
+    } else if (([[space authenticationMethod] isEqualToString:NSURLAuthenticationMethodHTTPBasic] ||
+                [[space authenticationMethod] isEqualToString:NSURLAuthenticationMethodHTTPDigest]) &&
+               self.loginCredentials != nil) {
+        [[challenge sender] useCredential:self.loginCredentials forAuthenticationChallenge:challenge];
     }
 }
 
