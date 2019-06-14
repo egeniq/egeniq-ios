@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Egeniq"
-  s.version      = "0.2.0"
+  s.version      = "0.2.1"
   s.summary      = "Egeniq Library for iOS projects"
 
   s.description  = <<-DESC
