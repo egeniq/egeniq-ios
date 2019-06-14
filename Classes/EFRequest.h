@@ -68,6 +68,7 @@ typedef enum {
 @property (nonatomic, assign) BOOL allowSelfSignedSSLCertificate;
 
 @property (nonatomic, assign) BOOL executeResultHandlerOnMainThread; // defaults to YES
+@property (nonatomic, assign) BOOL executeCompletionHandlerOnMainThread; // defaults to YES
 
 @property (nonatomic, assign, readonly, getter=isLoading) BOOL isLoading;
 

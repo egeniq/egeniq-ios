@@ -8,16 +8,18 @@
 
 #import "EFRequest.h"
 
-@interface EFRequest ()
+@interface EFRequest () <NSURLSessionDataDelegate>
 
 @property (nonatomic, assign, getter=isLoading) BOOL isLoading;
 
 @property (nonatomic, copy) EFRequestCompletionBlock completionHandler;
-@property (nonatomic, retain) NSURLConnection *connection;
+@property (nonatomic, retain) NSURLSession *session;
+@property (nonatomic, retain) NSURLSessionTask *task;
 @property (nonatomic, retain, readwrite) NSMutableURLRequest *request;
 @property (nonatomic, retain) NSURLResponse *incomingResponse;
 @property (nonatomic, retain) NSMutableData *incomingData;
 @property (nonatomic, assign) long long expectedContentLength;
+@property (nonatomic, assign) short loginAttempts;
 
 @end
 
@@ -35,7 +37,8 @@
 @synthesize request=request_;
 
 @synthesize completionHandler=completionHandler_;
-@synthesize connection=connection_;
+@synthesize session=session_;
+@synthesize task=task_;
 @synthesize incomingResponse=incomingResponse_;
 @synthesize incomingData=incomingData_;
 @synthesize expectedContentLength=expectedContentLength_;
@@ -76,6 +79,7 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
         self.preProcessHandler = preProcessHandler;
         self.resultHandler = resultHandler;
         self.executeResultHandlerOnMainThread = YES;
+        self.executeCompletionHandlerOnMainThread = YES;
 
         self.request = [NSMutableURLRequest requestWithURL:URL];
         self.request.cachePolicy = NSURLRequestUseProtocolCachePolicy;        
@@ -165,6 +169,7 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 
 - (void)startWithCompletionHandler:(EFRequestCompletionBlock)completionHandler {
     self.isLoading = YES;
+    self.loginAttempts = 0;
     
     self.completionHandler = completionHandler;
     
@@ -172,11 +177,11 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
     self.incomingResponse = nil;
     
     self.request.timeoutInterval = self.timeoutInterval;
-    self.connection = [[NSURLConnection alloc] initWithRequest:self.request delegate:self startImmediately:NO];
-    if (!self.executeResultHandlerOnMainThread) {
-        [self.connection scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
-    }
-    [self.connection start];
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration ephemeralSessionConfiguration];
+    config.timeoutIntervalForRequest = self.timeoutInterval;
+    self.session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:nil];
+    self.task = [self.session dataTaskWithRequest:self.request];
+    [self.task resume];
 }
 
 - (void)start {
@@ -184,15 +189,7 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 }
 
 - (void)cancel {
-    self.isLoading = NO;    
-    
-	[self.connection cancel];
-	self.connection = nil;
-    
-	self.incomingData = nil;
-    self.incomingResponse = nil;
-    
-    self.completionHandler = nil;
+    [self.session invalidateAndCancel];
 }
 
 - (void)processResponse:(NSURLResponse *)response data:(NSData *)data {
@@ -223,9 +220,30 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
 }
 
 #pragma mark -
-#pragma mark NSURLConnection delegate
+#pragma mark NSURLSessionDataDelegate
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
+    if (self.allowSelfSignedSSLCertificate && [challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
+        completionHandler(NSURLSessionAuthChallengeUseCredential, [[NSURLCredential alloc] initWithTrust: challenge.protectionSpace.serverTrust]);
+    } else {
+        completionHandler(NSURLSessionAuthChallengePerformDefaultHandling, nil);
+    }
+}
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
+    if (self.loginCredentials != nil && ([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodHTTPDigest] || [challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodHTTPBasic])) {
+        self.loginAttempts += 1;
+        if (self.loginAttempts > 5) {
+            completionHandler(NSURLSessionAuthChallengeCancelAuthenticationChallenge, nil);
+        } else {
+            completionHandler(NSURLSessionAuthChallengeUseCredential, self.loginCredentials);
+        }
+    } else {
+        completionHandler(NSURLSessionAuthChallengePerformDefaultHandling, nil);
+    }
+}
+
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
 	[self.incomingData appendData:data];
 
     if (self.progressHandler) {
@@ -233,11 +251,11 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
     }
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    // The following might look a bit weird, but NSURLConnection calls didReceiveResponse at the
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
+    // The following might look a bit weird, but NSURLSession calls didReceiveResponse at the
     // start of a new response, e.g. when the data still needs to be loaded. This means in a 
     // multipart result request we only have both the response and data if either didReceiveResponse
-    // is called for a subsequent response or connectionDidFinishLoading is called.
+    // is called for a subsequent response or didCompleteWithError is called.
     if (self.incomingResponse != nil) {
         [self processResponse:self.incomingResponse data:self.incomingData];
     }
@@ -246,38 +264,57 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
     self.incomingData = [NSMutableData dataWithLength:0];
 
     self.expectedContentLength = [response expectedContentLength];
+    
+    completionHandler(NSURLSessionResponseAllow);
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error {
+    self.isLoading = NO;
+    
+    self.task = nil;
+    self.session = nil;
+    
+    self.incomingData = nil;
+    self.incomingResponse = nil;
+    
+    self.completionHandler = nil;
+}
+
+- (void)URLSession:(NSURLSession *)session task:(nonnull NSURLSessionTask *)task didCompleteWithError:(nullable NSError *)error {
     self.isLoading = NO;    
     
-    if (self.incomingResponse != nil) {
+    if (error == nil && self.incomingResponse != nil) {
         [self processResponse:self.incomingResponse data:self.incomingData];
     }
     
     self.incomingResponse = nil;
     self.incomingData = nil;
-    self.connection = nil;
+    self.task = nil;
+    self.session = nil;
+    
+    if (error != nil && self.resultHandler != nil) {
+        EFRequestResultBlock handler = self.resultHandler;
+        
+        if (self.executeCompletionHandlerOnMainThread) {
+            dispatch_async(dispatch_get_main_queue(), ^() {
+                handler(nil, nil, error);
+            });
+        } else {
+            handler(nil, nil, error);
+        }
+    }
     
     if (self.completionHandler != nil) {
-        self.completionHandler();
-        self.completionHandler = nil;
-    }
-}
+        EFRequestCompletionBlock handler = self.completionHandler;
+        
+        if (self.executeCompletionHandlerOnMainThread) {
+            dispatch_async(dispatch_get_main_queue(), ^() {
+                handler();
+            });
+        } else {
+            handler();
+        }
 
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    self.isLoading = NO;    
-    
-    self.incomingResponse = nil;
-    self.incomingData = nil;
-    self.connection = nil;
-    
-    if (self.resultHandler != nil) {
-        self.resultHandler(nil, nil, error);
-    }
-    
-    if (self.completionHandler != nil) {
-        self.completionHandler();
         self.completionHandler = nil;
     }
 }
@@ -315,8 +352,9 @@ preProcessHandler:(EFRequestPreProcessBlock)preProcessHandler
     self.progressHandler = nil;
     self.preProcessHandler = nil;
     
-    [self.connection cancel];
-    self.connection = nil;
+    [self.session invalidateAndCancel];
+    self.task = nil;
+    self.session = nil;
     
     self.incomingData = nil;
     self.incomingResponse = nil;
